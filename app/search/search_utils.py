@@ -4,6 +4,17 @@ import re
 from os.path import join as pjoin
 from pathlib import Path
 
+"""
+TODO:
+Given function:
+    Where in other functions is it called?
+    What is it called by?
+    Return type?
+    Input types? / List of args for function
+
+Given for loop:
+    
+"""
 
 def is_test_file(file_path: str) -> bool:
     """Check if a file is a test file.
