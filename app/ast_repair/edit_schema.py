@@ -78,6 +78,14 @@ We accept a few flexible shapes, all normalized to a list of edits:
           ]
         }
 
+        
+
+TO NOTE: 
+
+
+IF LIST OF EDITS (I.E MULTIPLE) FOR LITE <=> WRONG EDIT (propagation check type)
+
+
 In all cases, we parse and validate into `List[ASTEdit]`.
 
 Future (Phase 2) extensions:
