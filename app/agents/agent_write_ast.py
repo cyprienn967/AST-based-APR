@@ -1,6 +1,7 @@
 # agent_write_ast.py
 
 import json
+from dataclasses import dataclass
 from typing import List
 
 from app.model.common import SELECTED_MODEL
@@ -17,6 +18,13 @@ instead of code patches. You MUST output JSON conforming exactly to the AST edit
 
 If no change is needed, output [] and nothing else.
 """
+
+
+@dataclass
+class ASTGenerationResult:
+    edits: List[ASTEdit]
+    prompt: str
+    raw_response: str | None
 
 
 def _format_prompt(
@@ -84,7 +92,7 @@ def generate_ast_edits(
     intended_behavior: str,
     ast_dump: str,
     allow_multiple: bool = False,
-) -> List[ASTEdit]:
+) -> ASTGenerationResult:
     """
     Core LLM call: returns List[ASTEdit].
 
@@ -107,30 +115,32 @@ def generate_ast_edits(
         {"role": "user", "content": user_prompt},
     ]
 
+    content = None
+
     try:
         content, _, _, _ = SELECTED_MODEL.call(
             messages=messages,
             response_format="json_object",
         )
     except Exception:
-        return []
+        return ASTGenerationResult([], user_prompt, None)
 
     if not content:
-        return []
+        return ASTGenerationResult([], user_prompt, None)
 
     content = content.strip()
 
     try:
         json_text = _extract_json_region(content)
     except Exception:
-        return []
+        return ASTGenerationResult([], user_prompt, content)
 
     try:
         edits = parse_edits_from_json_str(json_text)
     except EditSchemaError:
-        return []
+        return ASTGenerationResult([], user_prompt, content)
 
     if not allow_multiple and len(edits) > 1:
-        return []
+        return ASTGenerationResult([], user_prompt, content)
 
-    return edits
+    return ASTGenerationResult(edits, user_prompt, content)

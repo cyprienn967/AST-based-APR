@@ -98,6 +98,7 @@ def main():
     config.enable_validation = args.enable_validation
     config.enable_angelic = args.enable_angelic
     config.enable_perfect_angelic = args.enable_perfect_angelic
+    config.enable_ast_patch_agent = args.enable_ast_patch
     config.only_save_sbfl_result = args.save_sbfl_result
     config.only_reproduce = args.reproduce
 
@@ -281,6 +282,12 @@ def add_task_related_args(parser: ArgumentParser) -> None:
         action="store_true",
         default=False,
         help="(Experimental) Enable perfect angelic debugging; overrides --enable-angelic",
+    )
+    parser.add_argument(
+        "--enable-ast-patch",
+        action="store_true",
+        default=False,
+        help="Enable AST-based patch generation pipeline.",
     )
     parser.add_argument(
         "--save-sbfl-result",

@@ -50,13 +50,14 @@ Output JSON structure:
         "file": "path/to/file",
         "class": "ClassName",
         "method": "method_name",
-        "intended_behavior": "This code should ..."
+        "intended_behavior": "Describe exactly how this code should behave after being fixed."
       },
       ...
   ]
 }
 
-If something is missing, fill it with empty string.
+Each bug location MUST include a non-empty intended_behavior field.
+If you do not know the file/class/method, use an empty string for that field.
 Return ONLY JSON. No explanation.
 """
 
@@ -166,7 +167,7 @@ def is_valid_response(data: Any) -> tuple[bool, str]:
     """
 
     if not isinstance(data, dict):
-        return False, "JSON root must be an object"
+        return False, "Json is not a dict"
 
     # Validate bug_locations or API_calls exist
     api_calls = data.get("API_calls")
@@ -180,15 +181,14 @@ def is_valid_response(data: Any) -> tuple[bool, str]:
         # Validate bug locations minimally
         for loc in bug_locations:
             if not isinstance(loc, dict):
-                return False, "Each bug location must be an object"
+                return False, "Bug location is not a dict"
 
-            if loc.get("file") or loc.get("class") or loc.get("method"):
-                continue
+            if not (loc.get("file") or loc.get("class") or loc.get("method")):
+                return False, "Bug location not detailed enough (need file/class/method)"
 
-            return (
-                False,
-                "Each bug location must specify at least one of: file, class, method"
-            )
+            intended = loc.get("intended_behavior", "")
+            if not isinstance(intended, str) or not intended.strip():
+                return False, "Each bug location must include intended_behavior text"
 
         return True, "OK"
 
@@ -198,16 +198,16 @@ def is_valid_response(data: Any) -> tuple[bool, str]:
 
     for api_call in api_calls:
         if not isinstance(api_call, str):
-            return False, "API call must be a string"
+            return False, "Every API call must be a string"
 
         try:
             func_name, func_args = parse_function_invocation(api_call)
         except Exception:
-            return False, f"Malformed API call: {api_call}"
+            return False, "Every API call must be of form func_name(arg1, ...)"
 
         backend_fn = getattr(SearchBackend, func_name, None)
         if backend_fn is None:
-            return False, f"API call uses nonexistent function '{func_name}'"
+            return False, f"API call {func_name} calls a non-existent function"
 
         # unwrap decorators
         while "__wrapped__" in getattr(backend_fn, "__dict__", {}):

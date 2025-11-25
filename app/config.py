@@ -23,6 +23,8 @@ enable_angelic: bool = False
 # whether to do perfect angelic debugging
 enable_perfect_angelic: bool = False
 
+# whether to enable AST-based patch generation
+enable_ast_patch_agent: bool = False
 
 # A special mode to only save SBFL result and exit
 only_save_sbfl_result: bool = False
