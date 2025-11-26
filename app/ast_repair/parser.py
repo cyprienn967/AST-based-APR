@@ -1,14 +1,12 @@
 """
-parser.py produces root_ast (the actual AST) and then metadata:
-root_ast: the full Python AST for the file
-metadata: an ASTMetadata instance populated with:
-    node_id → AST node
-    parent/children relationships
-    line spans
+parser.py
 
-how to call parser.py:
-    from app.ast_repair.parser import parse_file_to_ast
-    ast_root, metadata = parse_file_to_ast(filepath)
+Produces:
+    root_ast: full Python AST for the file
+    metadata: ASTMetadata instance with:
+        • node_id → AST node
+        • parent and children relationships
+        • line spans (start/end)
 """
 
 from __future__ import annotations
@@ -20,29 +18,29 @@ from app.ast_repair.metadata import ASTMetadata
 
 def parse_file_to_ast(file_path: str) -> Tuple[ast.AST, ASTMetadata]:
     """
-    build AST + metadat then return both (as a tuple)
+    Parse a Python file and build:
+        • AST tree (root)
+        • ASTMetadata with structural information
 
-    This function guarantees:
-        • root_ast is a valid Python ast.AST
-        • metadata.node_index contains all nodes
-        • metadata.parent/children reflect the true tree
-        • line_map contains start/end line information where possible
+    Guarantees:
+        • metadata.node_index: all nodes included
+        • parent/children relationships correct
+        • line_map spans populated when available
     """
+
     with open(file_path, "r", encoding="utf-8") as f:
         source = f.read()
 
     # Parse file → raw Python AST
     root = ast.parse(source, filename=file_path)
 
-    # Metadata structure
+    # Metadata accumulator
     metadata = ASTMetadata()
 
     # DFS traversal to assign IDs and record structure
-    def visit(node: ast.AST, parent_id: int | None):
-        # Assign unique ID
+    def visit(node: ast.AST, parent_id: int | None) -> int:
         node_id = metadata.register_node(node, parent_id)
 
-        # Visit children
         for child in ast.iter_child_nodes(node):
             child_id = visit(child, node_id)
             metadata.add_child(node_id, child_id)
