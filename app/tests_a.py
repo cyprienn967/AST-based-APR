@@ -2,6 +2,16 @@
 #     python test_ast_repair/tests_personA.py
 
 
+'''
+
+Run in root (AST-based-APR/)
+
+python -m app.tests_a
+
+if correct, will print 'All Person A tests passed'
+
+'''
+
 import os
 import ast
 import tempfile
