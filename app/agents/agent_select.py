@@ -16,7 +16,11 @@ SYSTEM_PROMPT = (
 def run(
     issue_statement: str, patch_contents: list[str]
 ) -> tuple[int, str, MessageThread]:
-    model = common.MODEL_HUB["gpt-4-0125-preview"]
+    model = common.MODEL_HUB.get("gpt-4-0125-preview")
+    if model is None:
+        model = common.SELECTED_MODEL
+    if model is None:
+        raise RuntimeError("No model registered for agent_select")
     model.setup()
 
     prefix_thread = MessageThread()

@@ -2,6 +2,8 @@
 An agent, which is only responsible for the write_patch tool call.
 """
 
+import ast
+import json
 from collections import defaultdict
 from collections.abc import Generator
 from copy import deepcopy
@@ -12,8 +14,14 @@ from typing import TypeAlias
 
 from loguru import logger
 
+from app import config
 from app.agents import agent_common
+from app.agents import agent_write_ast as ast_agent
 from app.agents.agent_common import InvalidLLMResponse
+from app.ast_repair.apply_edits import ASTEditApplicationError, apply_edits
+from app.ast_repair.diff import unified_diff_str
+from app.ast_repair.parser import parse_file_to_ast
+from app.ast_repair.serialize import ast_to_source
 from app.data_structures import BugLocation, MessageThread
 from app.log import print_acr, print_patch_generation
 from app.model import common
@@ -164,6 +172,9 @@ class PatchAgent:
         self,
         history_handles: list[PatchHandle] | None = None,
     ) -> tuple[bool, str, str, MessageThread]:
+        if config.enable_ast_patch_agent:
+            return self._write_ast_patch()
+
         history_handles = history_handles or []
 
         thread = self._construct_init_thread()
@@ -202,6 +213,267 @@ class PatchAgent:
             diff_content,
             thread,
         )
+
+    # ------------------------------------------------------------------
+    # AST-based patch generation
+    # ------------------------------------------------------------------
+
+    def _write_ast_patch(self) -> tuple[bool, str, str, MessageThread]:
+        if not self.bug_locs:
+            logger.warning("AST patch agent requires bug locations but none were provided.")
+            return False, "AST patch agent requires bug locations.", "", MessageThread()
+
+        for bug_loc in self.bug_locs:
+            result = self._attempt_ast_patch_for_location(bug_loc)
+            if result is not None:
+                return result
+
+        logger.warning("AST patch agent could not produce any viable edits.")
+        failed_thread = MessageThread()
+        failed_thread.add_system(ast_agent.SYSTEM_PROMPT)
+        failed_thread.add_user("AST agent failed to produce edits for all locations.")
+        return False, "AST patch agent could not produce a fix.", "", failed_thread
+
+    def _attempt_ast_patch_for_location(
+        self,
+        bug_loc: BugLocation,
+    ) -> tuple[bool, str, str, MessageThread] | None:
+        try:
+            original_source = Path(bug_loc.abs_file_path).read_text()
+        except FileNotFoundError:
+            logger.warning("Bug location file not found: {}", bug_loc.abs_file_path)
+            return None
+
+        try:
+            root_ast, metadata = parse_file_to_ast(bug_loc.abs_file_path)
+        except Exception as exc:
+            logger.warning("Failed to parse AST for {}: {}", bug_loc.rel_file_path, exc)
+            return None
+
+        if bug_loc.start is None or bug_loc.end is None:
+            logger.warning("Bug location missing line numbers: {}", bug_loc.rel_file_path)
+            return None
+
+        candidate_nodes = self._candidate_nodes_covering_range(
+            metadata, bug_loc.start, bug_loc.end
+        )
+        if not candidate_nodes:
+            logger.debug("No AST candidates covering {}:{}-{}", bug_loc.rel_file_path, bug_loc.start, bug_loc.end)
+            return None
+
+        source_lines = original_source.splitlines()
+        ast_dump = self._build_ast_dump(metadata, source_lines, candidate_nodes)
+
+        code_snippet = self._strip_line_numbers(bug_loc.code)
+        intent = bug_loc.intended_behavior.strip()
+
+        generation = ast_agent.generate_ast_edits(
+            self.issue_stmt,
+            bug_loc.rel_file_path,
+            code_snippet,
+            intent,
+            ast_dump,
+            allow_multiple=False,
+        )
+
+        if not generation.edits:
+            logger.debug("AST agent returned no edits for {}", bug_loc.rel_file_path)
+            return None
+
+        try:
+            apply_edits(root_ast, metadata, generation.edits)
+        except ASTEditApplicationError as exc:
+            logger.warning("Failed to apply AST edits for {}: {}", bug_loc.rel_file_path, exc)
+            return None
+
+        try:
+            new_source = ast_to_source(root_ast)
+        except Exception as exc:
+            logger.warning("Failed to serialize AST for {}: {}", bug_loc.rel_file_path, exc)
+            return None
+
+        if new_source == original_source:
+            logger.debug("AST edits produced no changes for {}", bug_loc.rel_file_path)
+            return None
+
+        diff_content = unified_diff_str(
+            original_source,
+            new_source,
+            bug_loc.rel_file_path,
+        )
+        if not diff_content.strip():
+            logger.debug("AST diff empty for {}", bug_loc.rel_file_path)
+            return None
+
+        assistant_msg = generation.raw_response or self._format_edits_as_json(generation.edits)
+        thread = MessageThread()
+        thread.add_system(ast_agent.SYSTEM_PROMPT)
+        thread.add_user(generation.prompt)
+        thread.add_model(assistant_msg or "")
+
+        print_acr(f"```diff\n{diff_content}\n```", "AST patch diff")
+
+        return True, assistant_msg or "", diff_content, thread
+
+    @staticmethod
+    def _strip_line_numbers(snippet: str) -> str:
+        cleaned: list[str] = []
+        for line in snippet.splitlines():
+            parts = line.lstrip().split(" ", 1)
+            if parts and parts[0].isdigit():
+                if len(parts) == 2:
+                    cleaned.append(parts[1])
+                else:
+                    cleaned.append("")
+            else:
+                cleaned.append(line)
+        return "\n".join(cleaned).strip()
+
+    @staticmethod
+    def _format_edits_as_json(edits: list) -> str:
+        payload = []
+        for edit in edits:
+            entry = {
+                "op": edit.op,
+                "target": {"node_id": edit.target_node_id},
+            }
+            if edit.new_code is not None:
+                entry["new_code"] = edit.new_code
+            payload.append(entry)
+        return json.dumps(payload, indent=2)
+
+    @staticmethod
+    def _candidate_nodes_covering_range(metadata, start_line: int, end_line: int, limit: int = 5) -> list[int]:
+        covering: list[tuple[int, int, int]] = []
+        overlapping: list[tuple[int, int, int]] = []
+
+        for node_id, (start, end) in metadata.line_map.items():
+            if start is None or end is None:
+                continue
+            span = end - start if end is not None and start is not None else float("inf")
+            if start <= start_line and end_line <= end:
+                covering.append((node_id, span, start))
+            elif (start <= end_line and end >= start_line):
+                overlapping.append((node_id, span, start))
+
+        covering.sort(key=lambda item: (item[1], item[2]))
+        overlapping.sort(key=lambda item: (item[1], item[2]))
+
+        ordered = [node_id for node_id, _, _ in covering[:limit]]
+        if not ordered:
+            ordered = [node_id for node_id, _, _ in overlapping[:limit]]
+        return ordered
+
+    def _build_ast_dump(self, metadata, source_lines: list[str], candidate_nodes: list[int]) -> str:
+        lines: list[str] = []
+        lines.append("Suspicious AST nodes (sorted by size):")
+        for node_id in candidate_nodes[:5]:
+            node = metadata.get_node_by_id(node_id)
+            start, end = metadata.get_line_span(node_id)
+            lines.append(
+                f"- node {node_id}: {type(node).__name__} (lines {start}-{end})"
+            )
+
+        root_id = candidate_nodes[0]
+        lines.append("")
+        lines.append("Top candidate subtree:")
+        lines.append(self._format_subtree(metadata, root_id, source_lines))
+        lines.append("")
+        lines.append("File-level symbols:")
+        lines.append(self._file_symbol_summary(metadata))
+        return "\n".join(lines)
+
+    def _format_subtree(
+        self,
+        metadata,
+        root_id: int,
+        source_lines: list[str],
+        max_nodes: int = 80,
+        max_depth: int = 6,
+    ) -> str:
+        output: list[str] = []
+        visited = 0
+
+        def visit(node_id: int, depth: int) -> None:
+            nonlocal visited
+            if visited >= max_nodes:
+                return
+
+            node = metadata.get_node_by_id(node_id)
+            start, end = metadata.get_line_span(node_id)
+            snippet = self._extract_source_snippet(source_lines, start, end)
+            indent = "  " * depth
+            output.append(
+                f"{indent}- [{node_id}] {type(node).__name__} (lines {start}-{end}){snippet}"
+            )
+            visited += 1
+
+            if depth >= max_depth:
+                return
+
+            for child in metadata.get_children(node_id):
+                visit(child, depth + 1)
+
+        visit(root_id, 0)
+
+        if visited >= max_nodes:
+            output.append("  ... (subtree truncated)")
+
+        return "\n".join(output)
+
+    @staticmethod
+    def _extract_source_snippet(
+        source_lines: list[str],
+        start_line: int | None,
+        end_line: int | None,
+        max_chars: int = 120,
+    ) -> str:
+        if start_line is None or end_line is None:
+            return ""
+
+        start_idx = max(start_line - 1, 0)
+        end_idx = min(end_line, len(source_lines))
+        if start_idx >= end_idx or start_idx >= len(source_lines):
+            return ""
+
+        snippet = " ".join(line.strip() for line in source_lines[start_idx:end_idx])
+        snippet = snippet.strip()
+        if not snippet:
+            return ""
+        if len(snippet) > max_chars:
+            snippet = snippet[: max_chars - 3] + "..."
+        return f" :: {snippet}"
+
+    def _file_symbol_summary(self, metadata, max_entries: int = 20) -> str:
+        entries: list[tuple[int, str]] = []
+
+        for node_id, node in metadata.node_index.items():
+            start, end = metadata.get_line_span(node_id)
+            start_val = start if start is not None else float("inf")
+            span_str = f"{start}-{end}"
+
+            if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
+                prefix = ""
+                parent_id = metadata.get_parent(node_id)
+                if parent_id is not None:
+                    parent_node = metadata.get_node_by_id(parent_id)
+                    if isinstance(parent_node, ast.ClassDef):
+                        prefix = f"{parent_node.name}."
+                entries.append(
+                    (start_val, f"[{node_id}] def {prefix}{node.name} (lines {span_str})")
+                )
+            elif isinstance(node, ast.ClassDef):
+                entries.append(
+                    (start_val, f"[{node_id}] class {node.name} (lines {span_str})")
+                )
+
+        entries = [entry for entry in entries if entry[0] != float("inf")]
+        entries.sort(key=lambda item: item[0])
+
+        if not entries:
+            return "No class or function metadata available."
+
+        return "\n".join(item[1] for item in entries[:max_entries])
 
     def _construct_init_thread(self) -> MessageThread:
         """
