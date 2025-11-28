@@ -309,7 +309,11 @@ def _run_one_task(
 
     bug_locs: list[BugLocation]
     bug_locs, search_msg_thread = api_manager.search_manager.search_iterative(
-        api_manager.task, sbfl_result, repro_stderr, reproduced_test_content
+        api_manager.task,
+        sbfl_result,
+        repro_stderr,
+        reproduced_test_content,
+        sbfl_ranked_lines=api_manager.sbfl_ranked_lines,
     )
 
     logger.info("Search completed. Bug locations: {}", bug_locs)

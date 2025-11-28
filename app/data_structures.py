@@ -11,7 +11,7 @@ from openai.types.chat.chat_completion_message_tool_call import (
 )
 
 from app import utils as apputils
-from app.search import search_utils
+from app.code_utils import read_code_snippet
 
 
 @dataclass
@@ -306,9 +306,7 @@ class BugLocation:
 
         # we know the line numbers are reliable, so just get the actual
         # code here again to be safe
-        self.code = search_utils.get_code_snippets(
-            self.abs_file_path, self.start, self.end
-        )
+        self.code = read_code_snippet(self.abs_file_path, self.start, self.end, with_lineno=True)
 
     def to_dict(self):
         return {

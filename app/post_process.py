@@ -22,7 +22,7 @@ from loguru import logger
 from app import utils as apputils
 from app.agents.patch_utils import apply_edit, parse_edits
 from app.model import common
-from app.search.search_utils import is_test_file
+from app.code_utils import is_test_file
 
 
 def count_and_organize_tasks(
