@@ -134,15 +134,12 @@ def run(text: str) -> tuple[str, MessageThread]:
     msg_thread.add_system(PROXY_PROMPT)
     msg_thread.add_user(text)
 
-    # NOTE: Use response_format="json_object" if supported.
-    # LiteLLM will send OpenAI-style {"type":"json_object"} for GPTs,
-    # and None for non-GPT models (completely safe).
     try:
         if common.SELECTED_MODEL is None:
             raise RuntimeError("SELECTED_MODEL is not initialized")
         model_resp, *_ = common.SELECTED_MODEL.call(
             msg_thread.to_msg(),
-            response_format="json_object",
+            response_format="text",
         )
     except Exception as exc:
         logger.error(f"Proxy agent model error: {exc}")

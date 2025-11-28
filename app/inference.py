@@ -192,7 +192,10 @@ def select_patch(task: Task, output_dir: str | PathLike) -> tuple[str, dict]:
                     )
                     reason = "agent-selected,multiple-pass-regression"
                 except Exception:
-                    index = -1
+                    logger.warning(
+                        "Agent selection failed; falling back to last candidate."
+                    )
+                    index = max(len(candidate_patches) - 1, 0)
                     reason = "agent-error,multiple-pass-regression"
                 selected_patch = candidate_patches[index]
         elif len(candidate_patches) == 1:
@@ -220,7 +223,12 @@ def select_patch(task: Task, output_dir: str | PathLike) -> tuple[str, dict]:
                     )
                     reason = "agent-selected,none-pass-regression"
                 except Exception:
-                    index = -1
+                    logger.warning(
+                        "Agent selection failed; choosing last available patch."
+                    )
+                    if not patches:
+                        raise RuntimeError("No patches produced; cannot select one.")
+                    index = len(patches) - 1
                     reason = "agent-error,none-pass-regression"
                 selected_patch = patches[index]
 
