@@ -16,7 +16,7 @@ SYSTEM_PROMPT = (
 def run(
     issue_statement: str, patch_contents: list[str]
 ) -> tuple[int, str, MessageThread]:
-    model = common.MODEL_HUB.get("gpt-4-0125-preview")
+    model = common.MODEL_HUB.get("gpt-4o-2024-05-13")
     if model is None:
         model = common.SELECTED_MODEL
     if model is None:
