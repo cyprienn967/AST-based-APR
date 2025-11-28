@@ -286,8 +286,8 @@ def add_task_related_args(parser: ArgumentParser) -> None:
     parser.add_argument(
         "--enable-ast-patch",
         action="store_true",
-        default=False,
-        help="Enable AST-based patch generation pipeline.",
+        default=True,
+        help="Enable AST-based patch generation pipeline (always on in AST-based APR).",
     )
     parser.add_argument(
         "--save-sbfl-result",
