@@ -14,7 +14,7 @@ from typing import Any
 from loguru import logger
 
 from app.data_structures import MessageThread
-from app.model.common import SELECTED_MODEL
+from app.model import common
 from app.post_process import ExtractStatus, is_valid_json
 from app.search.search_backend import SearchBackend
 from app.utils import parse_function_invocation
@@ -138,7 +138,9 @@ def run(text: str) -> tuple[str, MessageThread]:
     # LiteLLM will send OpenAI-style {"type":"json_object"} for GPTs,
     # and None for non-GPT models (completely safe).
     try:
-        model_resp, *_ = SELECTED_MODEL.call(
+        if common.SELECTED_MODEL is None:
+            raise RuntimeError("SELECTED_MODEL is not initialized")
+        model_resp, *_ = common.SELECTED_MODEL.call(
             msg_thread.to_msg(),
             response_format="json_object",
         )
