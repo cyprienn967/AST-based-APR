@@ -2,7 +2,7 @@ import os
 import sys
 import threading
 from abc import ABC, abstractmethod
-from typing import Literal
+from typing import Literal, Optional
 
 import litellm
 from litellm import cost_per_token
@@ -191,7 +191,7 @@ def get_all_model_names():
 
 
 # To be set at runtime - the selected model for a run
-SELECTED_MODEL: Model
+SELECTED_MODEL: Optional[Model] = None
 
 
 def set_model(model_name: str):
