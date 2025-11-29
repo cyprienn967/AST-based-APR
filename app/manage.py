@@ -9,7 +9,6 @@ from app import log
 from app.agents import agent_reproducer
 from app.analysis import sbfl
 from app.analysis.sbfl import NoCoverageData
-from app.search.search_manage import SearchManager
 
 # from app.api.python.validation import PythonValidator
 from app.task import Task
@@ -22,9 +21,6 @@ class ProjectApiManager:
 
         # where to write our output
         self.output_dir = os.path.abspath(output_dir)
-
-        # build search manager
-        self.search_manager = SearchManager(self.task.project_path, self.output_dir)
 
         # record layered API calls
         self.tool_call_layers: list[list[Mapping]] = []

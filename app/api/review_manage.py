@@ -21,13 +21,14 @@ PatchHandle = str
 class ReviewManager:
     def __init__(
         self,
-        context_thread: MessageThread,
         task: Task,
         output_dir: str,
         test_agent: TestAgent,
         repro_result_map: (
             dict[tuple[PatchHandle, TestHandle], ReproResult] | None
         ) = None,
+        sbfl_line_scores: dict[str, dict[int, float]] | None = None,
+        traceback_text: str = "",
     ) -> None:
         self.issue_stmt = task.get_issue_statement()
         self.ast_agent = ASTAgent(
@@ -42,6 +43,10 @@ class ReviewManager:
         )
         self.output_dir = output_dir
         self._patch_handles: list[PatchHandle] = []
+        
+        # Store SBFL and traceback info for passing to ASTAgent
+        self.sbfl_line_scores = sbfl_line_scores or {}
+        self.traceback_text = traceback_text
 
     def patch_only_generator(
         self,
@@ -53,8 +58,13 @@ class ReviewManager:
                 if not file_path:
                     raise InvalidLLMResponse("Could not determine file to patch")
                 
+                # Get SBFL scores for this specific file
+                file_sbfl_scores = self.sbfl_line_scores.get(file_path, {})
+                
                 success, response, patch_content = self.ast_agent.write_patch_for_file(
                     file_path,
+                    sbfl_line_scores=file_sbfl_scores,
+                    traceback_text=self.traceback_text,
                 )
                 
                 if not success:
@@ -112,8 +122,13 @@ class ReviewManager:
         if not file_path:
             raise InvalidLLMResponse("Could not determine file to patch")
         
+        # Get SBFL scores for this specific file
+        file_sbfl_scores = self.sbfl_line_scores.get(file_path, {})
+        
         success, response, patch_content = self.ast_agent.write_patch_for_file(
             file_path,
+            sbfl_line_scores=file_sbfl_scores,
+            traceback_text=self.traceback_text,
         )
         
         if not success:
@@ -158,8 +173,13 @@ class ReviewManager:
                 if not file_path:
                     raise InvalidLLMResponse("Could not determine file to patch")
                 
+                # Get SBFL scores for this specific file
+                file_sbfl_scores = self.sbfl_line_scores.get(file_path, {})
+                
                 success, response, patch_content = self.ast_agent.write_patch_for_file(
                     file_path,
+                    sbfl_line_scores=file_sbfl_scores,
+                    traceback_text=self.traceback_text,
                 )
                 
                 if not success:
@@ -187,15 +207,36 @@ class ReviewManager:
     def _get_buggy_file(self) -> str | None:
         """
         Determine the file to patch from the task.
+        Priority:
+        1. Explicit file_to_edit attribute
+        2. File with highest SBFL score
+        3. First Python file in repo
         """
         if hasattr(self.task, 'file_to_edit'):
             return self.task.file_to_edit
-        if hasattr(self.task, 'repo_path'):
-            # Try to find the main Python file
-            repo_path = Path(self.task.repo_path)
-            for py_file in repo_path.glob("**/*.py"):
+        
+        # Use SBFL results to find the most suspicious file
+        if self.sbfl_line_scores:
+            # Find file with highest total suspiciousness
+            file_scores = {}
+            for file_path, line_scores in self.sbfl_line_scores.items():
+                total_score = sum(line_scores.values())
+                file_scores[file_path] = total_score
+            
+            if file_scores:
+                most_suspicious_file = max(file_scores.items(), key=lambda x: x[1])[0]
+                logger.info("Selected file {} based on SBFL (score: {})", 
+                          most_suspicious_file, file_scores[most_suspicious_file])
+                return most_suspicious_file
+        
+        # Fallback: find any Python file
+        if hasattr(self.task, 'project_path'):
+            project_path = Path(self.task.project_path)
+            for py_file in project_path.glob("**/*.py"):
                 if "__pycache__" not in str(py_file):
+                    logger.warning("No SBFL data; using first Python file: {}", py_file)
                     return str(py_file)
+        
         return None
 
     @classmethod

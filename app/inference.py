@@ -18,7 +18,6 @@ from app.agents.agent_reproducer import NoReproductionStep, TestAgent
 from app.api import validation
 from app.api.review_manage import ReviewManager
 from app.api.validation import evaluate_patch
-from app.data_structures import BugLocation
 from app.log import print_banner, print_issue
 from app.manage import ProjectApiManager
 from app.model.common import set_model
@@ -307,33 +306,33 @@ def _run_one_task(
     else:
         sbfl_result = ""
 
-    bug_locs: list[BugLocation]
-    bug_locs, search_msg_thread = api_manager.search_manager.search_iterative(
-        api_manager.task,
-        sbfl_result,
-        repro_stderr,
-        reproduced_test_content,
-        sbfl_ranked_lines=api_manager.sbfl_ranked_lines,
-    )
-
-    logger.info("Search completed. Bug locations: {}", bug_locs)
-
-    # logger.info("Additional class context code: {}", class_context_code)
-    # done with search; dump the tool calls used for recording
-    api_manager.search_manager.dump_tool_call_layers_to_file()
+    # AST-based localization happens inside ASTAgent.write_patch_for_file()
+    # We just need to pass the context information
+    logger.info("Preparing for AST-based patch generation")
+    
+    # Convert SBFL ranked lines to a dict for easier lookup
+    sbfl_line_scores = {}
+    target_files = set()
+    if api_manager.sbfl_ranked_lines:
+        for file_path, line_num, score in api_manager.sbfl_ranked_lines:
+            if file_path not in sbfl_line_scores:
+                sbfl_line_scores[file_path] = {}
+            sbfl_line_scores[file_path][line_num] = score
+            target_files.add(file_path)
+    
+    logger.info("SBFL identified {} suspicious files", len(target_files))
 
     # Write patch
     print_banner("PATCH GENERATION")
     logger.debug("Gathered enough information. Invoking write_patch.")
 
     review_manager = ReviewManager(
-        search_msg_thread,
-        bug_locs,
-        api_manager.search_manager,
         api_manager.task,
         output_dir,
         test_agent,
         repro_result_map,
+        sbfl_line_scores=sbfl_line_scores,
+        traceback_text=repro_stderr,
     )
 
     if config.reproduce_and_review and reproduced:

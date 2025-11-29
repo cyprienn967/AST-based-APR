@@ -20,10 +20,12 @@ from unidiff import PatchSet
 
 from app import config
 from app import utils as apputils
-from app.agents.agent_write_patch import PatchHandle
 from app.analysis.sbfl import method_ranges_in_file
 from app.data_structures import MethodId
 from app.task import SweTask, Task
+
+# Type alias for patch handle
+PatchHandle = str
 
 
 def perfect_angelic_debug(

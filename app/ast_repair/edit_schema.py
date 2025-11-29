@@ -151,6 +151,14 @@ class ASTEdit:
     op: str
     target_node_id: int
     new_code: Optional[str] = None
+    
+    def to_dict(self) -> Dict[str, Any]:
+        """Convert to dictionary for JSON serialization."""
+        return {
+            "op": self.op,
+            "target": {"node_id": self.target_node_id},
+            "new_code": self.new_code,
+        }
 
 
 # ----------------------------------------------------------------------
