@@ -38,11 +38,11 @@ def extract_subtree(md: ASTMetadata, node_id: int) -> ast.AST:
     Person B will give edits relative to this subtree.
 
     NOTE:
-        md.get_node_by_id(node_id) directly returns the node object in the tree.
+        We retrieve the node directly from md.node_index.
         We do NOT deep-copy here; the edit pipeline will apply modifications
         through node_id → AST node references.
     """
-    return md.get_node_by_id(node_id)
+    return md.node_index[node_id]
 
 
 # -----------------------------------------------------------------------------

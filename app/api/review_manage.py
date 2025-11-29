@@ -8,19 +8,20 @@ from app.agents import agent_reviewer
 from app.agents.agent_common import InvalidLLMResponse
 from app.agents.agent_reproducer import TestAgent, TestHandle
 from app.agents.agent_reviewer import Review, ReviewDecision
-from app.agents.agent_write_patch import PatchAgent, PatchHandle
-from app.data_structures import BugLocation, MessageThread, ReproResult
+from app.agents.agent_write_ast import ASTAgent
+from app.data_structures import MessageThread, ReproResult
 from app.log import print_acr, print_review
-from app.search.search_manage import SearchManager
 from app.task import SweTask, Task
+
+
+# Type alias for patch handle
+PatchHandle = str
 
 
 class ReviewManager:
     def __init__(
         self,
         context_thread: MessageThread,
-        bug_locs: list[BugLocation],
-        search_manager: SearchManager,
         task: Task,
         output_dir: str,
         test_agent: TestAgent,
@@ -29,31 +30,38 @@ class ReviewManager:
         ) = None,
     ) -> None:
         self.issue_stmt = task.get_issue_statement()
-        self.patch_agent = PatchAgent(
+        self.ast_agent = ASTAgent(
             task,
-            search_manager,
             self.issue_stmt,
-            context_thread,
-            bug_locs,
             output_dir,
         )
-        # self.test_agent = TestAgent(task, output_dir)
         self.test_agent = test_agent
         self.task: Task = task
         self.repro_result_map: dict[tuple[PatchHandle, TestHandle], ReproResult] = dict(
             repro_result_map or {}
         )
         self.output_dir = output_dir
+        self._patch_handles: list[PatchHandle] = []
 
     def patch_only_generator(
         self,
     ) -> Generator[tuple[PatchHandle, str], str | None, None]:
         try:
             while True:
-                (
-                    patch_handle,
-                    patch_content,
-                ) = self.patch_agent.write_applicable_patch_without_feedback()
+                # Get the main file to patch
+                file_path = self._get_buggy_file()
+                if not file_path:
+                    raise InvalidLLMResponse("Could not determine file to patch")
+                
+                success, response, patch_content = self.ast_agent.write_patch_for_file(
+                    file_path,
+                )
+                
+                if not success:
+                    raise InvalidLLMResponse(f"Patch generation failed: {response}")
+                
+                patch_handle = f"ast_patch_{len(self._patch_handles)}"
+                self._patch_handles.append(patch_handle)
                 self.save_patch(patch_handle, patch_content)
 
                 yield patch_handle, patch_content
@@ -92,18 +100,27 @@ class ReviewManager:
             test_handle = self.test_agent._history[-1]
             test_content = self.test_agent._tests[test_handle]
             orig_repro_result = self.repro_result_map[
-                (PatchAgent.EMPTY_PATCH_HANDLE, test_handle)
+                ("EMPTY_PATCH", test_handle)
             ]
 
-        coords = (PatchAgent.EMPTY_PATCH_HANDLE, test_handle)
+        coords = ("EMPTY_PATCH", test_handle)
         self.repro_result_map[coords] = orig_repro_result
         self.save_execution_result(orig_repro_result, *coords)
 
         # write the first patch
-        (
-            patch_handle,
-            patch_content,
-        ) = self.patch_agent.write_applicable_patch_without_feedback()
+        file_path = self._get_buggy_file()
+        if not file_path:
+            raise InvalidLLMResponse("Could not determine file to patch")
+        
+        success, response, patch_content = self.ast_agent.write_patch_for_file(
+            file_path,
+        )
+        
+        if not success:
+            raise InvalidLLMResponse(f"Patch generation failed: {response}")
+        
+        patch_handle = f"ast_patch_{len(self._patch_handles)}"
+        self._patch_handles.append(patch_handle)
         self.save_patch(patch_handle, patch_content)
 
         for _ in range(rounds):
@@ -135,18 +152,21 @@ class ReviewManager:
 
                 print_acr(evaluation_msg, "Patch evaluation")
 
-                if evaluation_msg:
-                    self.patch_agent.add_feedback(patch_handle, evaluation_msg)
-
             if review.patch_decision == ReviewDecision.NO:
-                feedback = self.compose_feedback_for_patch_generation(
-                    review, test_content
+                # Generate new patch (feedback is not used in AST-based approach)
+                file_path = self._get_buggy_file()
+                if not file_path:
+                    raise InvalidLLMResponse("Could not determine file to patch")
+                
+                success, response, patch_content = self.ast_agent.write_patch_for_file(
+                    file_path,
                 )
-                self.patch_agent.add_feedback(patch_handle, feedback)
-                (
-                    patch_handle,
-                    patch_content,
-                ) = self.patch_agent.write_applicable_patch_with_feedback()
+                
+                if not success:
+                    raise InvalidLLMResponse(f"Patch generation failed: {response}")
+                
+                patch_handle = f"ast_patch_{len(self._patch_handles)}"
+                self._patch_handles.append(patch_handle)
                 self.save_patch(patch_handle, patch_content)
 
             if review.test_decision == ReviewDecision.NO:
@@ -160,31 +180,23 @@ class ReviewManager:
                     orig_repro_result,
                 ) = self.test_agent.write_reproducing_test_with_feedback()
                 self.test_agent.save_test(test_handle)
-                coords = (PatchAgent.EMPTY_PATCH_HANDLE, test_handle)
+                coords = ("EMPTY_PATCH", test_handle)
                 self.repro_result_map[coords] = orig_repro_result
                 self.save_execution_result(orig_repro_result, *coords)
 
-    @classmethod
-    def compose_feedback_for_patch_generation(cls, review: Review, test: str) -> str:
-        return (
-            f"The previous patch failed a test written by another developer.\n"
-            f"Rethink about the code context, reflect, and write another patch.\n"
-            f"You can also write the new patch at other locations.\n"
-            f"Here is the test file:\n"
-            "```\n"
-            f"{test}"
-            "```\n"
-            f"By executing the test file with and without the patch,"
-            " the following analysis can be made:\n"
-            "\n"
-            f"{review.patch_analysis}\n"
-            "\n"
-            "Therefore, the patch does not correctly resovle the issue.\n"
-            "\n"
-            "To correct the patch, here is the advice given by another engineer:\n"
-            "\n"
-            f"{review.patch_advice}"
-        )
+    def _get_buggy_file(self) -> str | None:
+        """
+        Determine the file to patch from the task.
+        """
+        if hasattr(self.task, 'file_to_edit'):
+            return self.task.file_to_edit
+        if hasattr(self.task, 'repo_path'):
+            # Try to find the main Python file
+            repo_path = Path(self.task.repo_path)
+            for py_file in repo_path.glob("**/*.py"):
+                if "__pycache__" not in str(py_file):
+                    return str(py_file)
+        return None
 
     @classmethod
     def compose_feedback_for_test_generation(cls, review: Review, patch: str) -> str:
@@ -237,49 +249,3 @@ class ReviewManager:
 
 if __name__ == "__main__":
     pass
-    # import json
-    # from pathlib import Path
-    # from shutil import copy2
-
-    # from icecream import ic
-
-    # from app.model import common
-    # from app.model.register import register_all_models
-    # from app.raw_tasks import RawSweTask
-
-    # register_all_models()
-    # common.set_model("gpt-4-0125-preview")
-    # ic(common.SELECTED_MODEL)
-
-    # meta_path = Path(
-    #     "/home/crhf/projects/reverse-prompt/acr-plus/output/applicable_patch/django__django-11999_2024-05-18_10-45-42/meta.json"
-    # )
-    # meta = json.loads(meta_path.read_text())
-    # raw_task = RawSweTask(**meta)
-    # task = raw_task.to_task()
-
-    # conv_path = Path(
-    #     "/home/crhf/projects/reverse-prompt/acr-private/results/acr-run-1/applicable_patch/django__django-11999_2024-04-06_12-54-29/conversation_round_2.json"
-    # )
-    # msgs = json.loads(conv_path.read_text())
-    # thread = MessageThread()
-    # for msg in msgs:
-    #     content = msg["content"]
-    #     role = msg["role"]
-    #     if role == "system":
-    #         thread.add_system(content)
-    #     elif role == "user":
-    #         thread.add_user(content)
-    #     elif role == "assistant":
-    #         thread.add_model(content, [])
-    #     else:
-    #         assert False, role
-
-    # output_dir = Path("output", "test_review")
-    # output_dir.mkdir(exist_ok=True)
-    # copy2(meta_path, output_dir)
-    # rm = ReviewManager(thread, task, str(output_dir))
-    # # patch_gen = rm.generator()
-    # # ic(patch_gen.send(None))
-    # # ic(patch_gen.send("patch ain't correct"))
-    # write_patch_iterative_with_review(thread, task, str(output_dir))

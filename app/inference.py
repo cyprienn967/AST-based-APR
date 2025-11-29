@@ -14,7 +14,7 @@ from app import config
 from app.agents import agent_select
 from app.agents.agent_common import InvalidLLMResponse
 from app.agents.agent_reproducer import NoReproductionStep, TestAgent
-from app.agents.agent_write_patch import PatchAgent
+# EMPTY_PATCH_HANDLE constant (no longer using PatchAgent)
 from app.api import validation
 from app.api.review_manage import ReviewManager
 from app.api.validation import evaluate_patch
@@ -286,7 +286,7 @@ def _run_one_task(
         )
         test_agent.save_test(test_handle)
 
-        coord = (PatchAgent.EMPTY_PATCH_HANDLE, test_handle)
+        coord = ("EMPTY_PATCH", test_handle)
         repro_result_map[coord] = orig_repro_result
 
         if orig_repro_result.reproduced:

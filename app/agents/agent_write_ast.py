@@ -1,8 +1,12 @@
 # agent_write_ast.py
 
+import ast
 import json
 from dataclasses import dataclass
-from typing import List
+from pathlib import Path
+from typing import List, Dict, Optional
+
+from loguru import logger
 
 from app.model.common import SELECTED_MODEL
 from app.ast_repair.edit_schema import (
@@ -11,6 +15,9 @@ from app.ast_repair.edit_schema import (
     EditSchemaError,
     ASTEdit,
 )
+from app.ast_repair.serialize import ast_to_source
+from app.ast_repair.localize import localize_fault
+from app.ast_repair.parser import parse_file_to_ast
 
 
 SYSTEM_PROMPT = """You are AutoCodeRover-AST, an agent that produces AST edit actions
@@ -144,3 +151,257 @@ def generate_ast_edits(
         return ASTGenerationResult([], user_prompt, content)
 
     return ASTGenerationResult(edits, user_prompt, content)
+
+
+def write_ast_edits_for_file(
+    file_path: str,
+    issue_context: str,
+    intended_behavior: str,
+    sbfl_line_scores: Optional[Dict[int, float]] = None,
+    traceback_text: str = "",
+    failing_line: Optional[int] = None,
+    top_k: int = 3,
+    allow_multiple: bool = False,
+) -> ASTGenerationResult:
+    """
+    Main entry point: Localize faults + Generate AST edits.
+    
+    This is the unified interface that combines:
+      1. localize_fault() - finds suspicious nodes
+      2. LLM generation - produces edits for each suspicious node
+    
+    Args:
+        file_path: absolute path to the file to edit
+        issue_context: the issue description
+        intended_behavior: expected behavior after fix
+        sbfl_line_scores: SBFL scores (line_num -> score). If None, starts empty
+        traceback_text: stderr from failing test (optional)
+        failing_line: deepest failing line number (optional)
+        top_k: how many suspicious nodes to localize
+        allow_multiple: whether to allow multiple edits per location
+    
+    Returns:
+        ASTGenerationResult with all edits and prompts
+    """
+    
+    # Parse the file
+    try:
+        root_ast, metadata = parse_file_to_ast(file_path)
+    except Exception as exc:
+        return ASTGenerationResult([], f"Failed to parse {file_path}: {exc}", None)
+    
+    # Get SBFL scores if not provided
+    if sbfl_line_scores is None:
+        sbfl_line_scores = {}
+    
+    # Localize faults
+    try:
+        bug_locations = localize_fault(
+            root_ast,
+            metadata,
+            sbfl_line_scores,
+            traceback_text,
+            failing_line,
+            top_k=top_k,
+        )
+    except Exception as exc:
+        return ASTGenerationResult([], f"Localization failed: {exc}", None)
+    
+    if not bug_locations:
+        return ASTGenerationResult([], "No suspicious nodes found by localization", None)
+    
+    # Get relative path for the prompt
+    rel_path = Path(file_path).name  # Just use filename for now
+    
+    # Generate edits from each bug location
+    all_edits: List[ASTEdit] = []
+    all_prompts: List[str] = []
+    last_response = None
+    
+    for bug_loc in bug_locations:
+        # Extract subtree source
+        try:
+            subtree_source = ast_to_source(bug_loc.subtree)
+        except Exception:
+            continue
+        
+        # Create AST dump of just the subtree
+        subtree_ast_dump = ast.dump(bug_loc.subtree, indent=2)
+        
+        # Format prompt
+        user_prompt = _format_prompt(
+            issue_context,
+            rel_path,
+            subtree_source,
+            subtree_ast_dump,
+            intended_behavior,
+        )
+        # Add node ID context
+        user_prompt += f"\n<target_node_id>{bug_loc.node_id}</target_node_id>"
+        all_prompts.append(user_prompt)
+        
+        # Call LLM
+        messages = [
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": user_prompt},
+        ]
+        
+        try:
+            content, _, _, _ = SELECTED_MODEL.call(
+                messages=messages,
+                response_format="json_object",
+            )
+        except Exception:
+            continue
+        
+        if not content:
+            continue
+        
+        content = content.strip()
+        last_response = content
+        
+        # Extract and parse JSON
+        try:
+            json_text = _extract_json_region(content)
+            edits = parse_edits_from_json_str(json_text)
+        except Exception:
+            continue
+        
+        # Enforce single edit if needed
+        if not allow_multiple and len(edits) > 1:
+            continue
+        
+        all_edits.extend(edits)
+    
+    combined_prompt = "\n---\n".join(all_prompts) if all_prompts else ""
+    return ASTGenerationResult(all_edits, combined_prompt, last_response)
+
+
+# =============================================================================
+# ASTAgent: New orchestrator that replaces PatchAgent
+# =============================================================================
+
+class ASTAgent:
+    """
+    Orchestrator for AST-based patch generation.
+    
+    This replaces the old PatchAgent which used search APIs.
+    
+    New flow:
+      1. Localize faults using localize_fault()
+      2. Generate AST edits using write_ast_edits_for_file()
+      3. Apply edits to generate patches
+    """
+    
+    def __init__(
+        self,
+        task,
+        issue_stmt: str,
+        output_dir: str,
+    ):
+        """
+        Args:
+            task: Task object with project metadata
+            issue_stmt: Issue description from the task
+            output_dir: Directory to save outputs
+        """
+        self.task = task
+        self.issue_stmt = issue_stmt
+        self.output_dir = output_dir
+        
+        self._request_idx = -1
+        self._responses: dict[str, str] = {}
+        self._diffs: dict[str, str] = {}
+    
+    def write_patch_for_file(
+        self,
+        file_path: str,
+        sbfl_line_scores: Optional[Dict[int, float]] = None,
+        traceback_text: str = "",
+        failing_line: Optional[int] = None,
+        top_k: int = 3,
+    ) -> tuple[bool, str, str]:
+        """
+        Generate a patch for a file using AST-based localization and editing.
+        
+        Args:
+            file_path: Absolute path to file to edit
+            sbfl_line_scores: SBFL suspiciousness scores (optional)
+            traceback_text: Stderr from failing test (optional)
+            failing_line: Deepest failing line (optional)
+            top_k: Number of suspicious nodes to localize
+        
+        Returns:
+            (success: bool, patch_response: str, diff_content: str)
+        """
+        from app.ast_repair.apply_edits import apply_edits, ASTEditApplicationError
+        from app.ast_repair.diff import unified_diff_str
+        
+        self._request_idx += 1
+        
+        # Get original source
+        try:
+            original_source = Path(file_path).read_text()
+        except FileNotFoundError:
+            logger.warning("File not found: {}", file_path)
+            return False, "File not found", ""
+        
+        # Parse AST
+        try:
+            root_ast, metadata = parse_file_to_ast(file_path)
+        except Exception as exc:
+            logger.warning("Failed to parse {}: {}", file_path, exc)
+            return False, f"Parse failed: {exc}", ""
+        
+        # Generate edits using new method
+        try:
+            generation = write_ast_edits_for_file(
+                file_path,
+                self.issue_stmt,
+                getattr(self.task, "intended_behavior", "Fix the issue"),
+                sbfl_line_scores=sbfl_line_scores,
+                traceback_text=traceback_text,
+                failing_line=failing_line,
+                top_k=top_k,
+                allow_multiple=False,
+            )
+        except Exception as exc:
+            logger.warning("Edit generation failed: {}", exc)
+            return False, f"Edit generation failed: {exc}", ""
+        
+        if not generation.edits:
+            logger.info("No edits generated for {}", file_path)
+            return False, "No edits generated", ""
+        
+        # Apply edits
+        try:
+            apply_edits(root_ast, metadata, generation.edits)
+        except ASTEditApplicationError as exc:
+            logger.warning("Failed to apply edits: {}", exc)
+            return False, f"Apply failed: {exc}", ""
+        
+        # Serialize back to source
+        try:
+            new_source = ast_to_source(root_ast)
+        except Exception as exc:
+            logger.warning("Serialization failed: {}", exc)
+            return False, f"Serialization failed: {exc}", ""
+        
+        if new_source == original_source:
+            logger.info("Edits produced no changes to {}", file_path)
+            return False, "No changes", ""
+        
+        # Generate diff
+        rel_path = Path(file_path).relative_to(self.task.repo_path).as_posix() if hasattr(self.task, 'repo_path') else Path(file_path).name
+        diff_content = unified_diff_str(original_source, new_source, rel_path)
+        
+        if not diff_content.strip():
+            logger.info("Diff is empty for {}", file_path)
+            return False, "Empty diff", ""
+        
+        # Store results
+        handle = f"ast_patch_{self._request_idx}"
+        self._responses[handle] = generation.raw_response or json.dumps([e.to_dict() for e in generation.edits])
+        self._diffs[handle] = diff_content
+        
+        return True, self._responses[handle], diff_content
