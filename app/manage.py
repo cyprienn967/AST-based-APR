@@ -28,6 +28,8 @@ class ProjectApiManager:
 
         # record layered API calls
         self.tool_call_layers: list[list[Mapping]] = []
+        # raw SBFL ranked lines (abs_path, line, score)
+        self.sbfl_ranked_lines: list[tuple[str, int, float]] = []
 
     ###################################################################
     ########################## API functions ##########################
@@ -45,7 +47,9 @@ class ProjectApiManager:
         log_file = None
         try:
             test_file_names, ranked_lines, log_file = sbfl.run(self.task)
+            self.sbfl_ranked_lines = ranked_lines
         except NoCoverageData as e:
+            self.sbfl_ranked_lines = []
             sbfl_result_file.write_text("")
             sbfl_method_result_file.write_text("")
 
