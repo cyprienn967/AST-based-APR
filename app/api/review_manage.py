@@ -3,6 +3,7 @@ from collections.abc import Generator
 from pathlib import Path
 
 from loguru import logger
+import re
 
 from app.agents import agent_reviewer
 from app.agents.agent_common import InvalidLLMResponse
@@ -16,6 +17,93 @@ from app.task import SweTask, Task
 
 # Type alias for patch handle
 PatchHandle = str
+
+
+def select_file_from_issue(issue_text: str, candidate_files: list[Path]) -> Path:
+    """
+    Select the most relevant file from candidates based on issue text.
+    
+    Uses keyword matching to find files/classes/functions mentioned in the issue.
+    
+    Args:
+        issue_text: The issue description/statement
+        candidate_files: List of Path objects for Python files
+    
+    Returns:
+        The most relevant Path, or the first file if no matches found
+    """
+    if not candidate_files:
+        raise ValueError("No candidate files provided")
+    
+    # Extract potential file/class/function names from issue
+    # Look for patterns like: "in file.py", "class ClassName", "function func_name", etc.
+    file_mentions = re.findall(r'(?:file|module|script)\s+[\w./]+\.py', issue_text, re.IGNORECASE)
+    class_mentions = re.findall(r'(?:class|cls)\s+([A-Z][a-zA-Z0-9_]*)', issue_text)
+    func_mentions = re.findall(r'(?:function|func|method|def)\s+([a-z_][a-z0-9_]*)', issue_text, re.IGNORECASE)
+    
+    # Also look for Python identifiers (PascalCase for classes, snake_case for functions/files)
+    pascal_case = re.findall(r'\b([A-Z][a-zA-Z0-9]{2,})\b', issue_text)
+    snake_case = re.findall(r'\b([a-z_][a-z0-9_]{3,})\b', issue_text)
+    
+    all_keywords = set()
+    all_keywords.update(class_mentions)
+    all_keywords.update(func_mentions)
+    all_keywords.update(pascal_case[:10])  # Limit to avoid noise
+    all_keywords.update(snake_case[:20])
+    
+    # Remove common words
+    common_words = {'the', 'this', 'that', 'with', 'from', 'have', 'should', 'would', 
+                    'could', 'when', 'where', 'which', 'their', 'there', 'these', 'those',
+                    'about', 'after', 'before', 'error', 'issue', 'problem', 'function',
+                    'method', 'class', 'module', 'file', 'code', 'return', 'value'}
+    all_keywords = {kw for kw in all_keywords if kw.lower() not in common_words}
+    
+    # Score each file by keyword matches
+    file_scores = {}
+    for file_path in candidate_files:
+        score = 0
+        file_content = file_path.stem  # filename without extension
+        
+        try:
+            # Read file to check for class/function definitions
+            with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+                content = f.read(50000)  # First 50KB
+                
+                # Check for keyword matches in content
+                for keyword in all_keywords:
+                    # Filename match (highest weight)
+                    if keyword.lower() in file_content.lower():
+                        score += 10
+                    
+                    # Class definition match
+                    if re.search(rf'\bclass\s+{re.escape(keyword)}\b', content):
+                        score += 5
+                    
+                    # Function definition match
+                    if re.search(rf'\bdef\s+{re.escape(keyword)}\b', content):
+                        score += 3
+                    
+                    # General mention in code
+                    if keyword in content:
+                        score += 1
+        except Exception:
+            # If we can't read the file, just use filename matching
+            for keyword in all_keywords:
+                if keyword.lower() in file_content.lower():
+                    score += 5
+        
+        file_scores[file_path] = score
+    
+    # Return file with highest score
+    if file_scores:
+        best_file = max(file_scores.items(), key=lambda x: x[1])
+        if best_file[1] > 0:
+            logger.info(f"Selected file {best_file[0]} based on issue analysis (score: {best_file[1]})")
+            return best_file[0]
+    
+    # Default to first file
+    logger.warning(f"No keyword matches; using first file: {candidate_files[0]}")
+    return candidate_files[0]
 
 
 class ReviewManager:
@@ -210,7 +298,8 @@ class ReviewManager:
         Priority:
         1. Explicit file_to_edit attribute
         2. File with highest SBFL score
-        3. First Python file in repo
+        3. File matching issue statement keywords (semantic selection)
+        4. First Python file in repo
         """
         if hasattr(self.task, 'file_to_edit'):
             return self.task.file_to_edit
@@ -229,13 +318,25 @@ class ReviewManager:
                           most_suspicious_file, file_scores[most_suspicious_file])
                 return most_suspicious_file
         
-        # Fallback: find any Python file
+        # Fallback: use issue statement to find relevant files
         if hasattr(self.task, 'project_path'):
             project_path = Path(self.task.project_path)
-            for py_file in project_path.glob("**/*.py"):
-                if "__pycache__" not in str(py_file):
-                    logger.warning("No SBFL data; using first Python file: {}", py_file)
-                    return str(py_file)
+            all_py_files = [
+                f for f in project_path.glob("**/*.py") 
+                if "__pycache__" not in str(f) and "test" not in str(f).lower()
+            ]
+            
+            if all_py_files:
+                try:
+                    # Use issue analysis to select most relevant file
+                    selected_file = select_file_from_issue(
+                        self.issue_stmt,
+                        all_py_files
+                    )
+                    return str(selected_file)
+                except Exception as e:
+                    logger.warning("Issue-based file selection failed: {}; using first file", e)
+                    return str(all_py_files[0])
         
         return None
 

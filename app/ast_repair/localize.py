@@ -139,7 +139,36 @@ def localize_fault(
     )
 
     if not combined:
-        return []
+        # Fallback: when we have zero localization signals (no SBFL, no traceback, no failing line),
+        # use uniform scoring over statement-level nodes to avoid complete failure.
+        # This ensures we can still attempt repairs even with minimal information.
+        import logging
+        logging.warning("No localization signals available; using uniform fallback scoring")
+        
+        fallback_scores = {}
+        for nid, node in md.node_index.items():
+            # Score statement-level and definition nodes (not tiny expressions)
+            # These are the most likely edit targets
+            if isinstance(node, (
+                ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef,
+                ast.If, ast.For, ast.While, ast.With, ast.Try,
+                ast.Assign, ast.AugAssign, ast.AnnAssign,
+                ast.Return, ast.Raise, ast.Assert,
+                ast.Expr  # Expression statements (often function calls)
+            )):
+                # Give a weak uniform score
+                # Prefer smaller nodes (more specific)
+                start, end = md.line_map.get(nid, (None, None))
+                if start is not None and end is not None:
+                    span = end - start + 1
+                    # Inverse of span: smaller nodes get higher score
+                    fallback_scores[nid] = 1.0 / max(span, 1)
+        
+        if fallback_scores:
+            combined = fallback_scores
+        else:
+            # Truly no viable candidates
+            return []
 
     # 5. --- Pick top-K suspicious node_ids ----------------------------------
     top_nodes = pick_top_nodes(combined, max_nodes=top_k)
