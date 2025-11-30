@@ -94,6 +94,7 @@ def main():
 
     # acr related
     config.conv_round_limit = args.conv_round_limit
+    config.overall_retry_limit = args.overall_retry_limit
     config.enable_sbfl = args.enable_sbfl
     config.enable_validation = args.enable_validation
     config.enable_angelic = args.enable_angelic
@@ -306,6 +307,12 @@ def add_task_related_args(parser: ArgumentParser) -> None:
         type=str,
         default=1,
         help="Number of processes to run the tasks in parallel.",
+    )
+    parser.add_argument(
+        "--overall-retry-limit",
+        type=int,
+        default=3,
+        help="Number of overall retries for the entire workflow per task.",
     )
 
 

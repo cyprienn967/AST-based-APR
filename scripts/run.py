@@ -114,6 +114,7 @@ def run_agent(
     enable_perfect_angelic: bool,
     print_more: bool,
     conv_round_limit: int,
+    overall_retry_limit: int,
     num_processes: int,
 ):
     """
@@ -140,6 +141,7 @@ def run_agent(
     cmd += f"--model {' '.join(model)} "
     cmd += f"--model-temperature {temperature} "
     cmd += f"--conv-round-limit {conv_round_limit} "
+    cmd += f"--overall-retry-limit {overall_retry_limit} "
     cmd += f"--num-processes {num_processes} "
     if enbale_sbfl:
         cmd += "--enable-sbfl "
@@ -385,6 +387,7 @@ def main():
         "DEFAULT", "enable_perfect_angelic", fallback=False
     )
     conv_round_limit = config.getint("DEFAULT", "conv_round_limit", fallback=15)
+    overall_retry_limit = config.getint("DEFAULT", "overall_retry_limit", fallback=3)
 
     print_more = config.getboolean("DEFAULT", "print", fallback=False)
     num_processes = int(config_dict["num_processes"])
@@ -414,6 +417,7 @@ def main():
             enable_perfect_angelic,
             print_more,
             conv_round_limit,
+            overall_retry_limit,
             num_processes,
         )
 
