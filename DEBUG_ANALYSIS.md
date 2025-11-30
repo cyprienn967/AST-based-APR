@@ -51,12 +51,17 @@ main() [parent process]
 
 ## The Fix
 
-Added model re-registration in the subprocess:
+Added model re-registration in `do_inference()`, right after the log file handler is set up:
 
 ```python
-def run_raw_task(task: RawTask) -> bool:
+def do_inference(python_task: Task, task_output_dir: str) -> bool:
+    # Set up log file handler first
+    logger.add(pjoin(task_output_dir, log_file_name), ...)
+    
     # IMPORTANT: Re-register all models in subprocess
     # When running in subprocess, MODEL_HUB needs to be repopulated
+    # We do this AFTER logger.add() so the debug logs actually get written to info.log
+    logger.debug("🔍 [SUBPROCESS DEBUG] Registering models in subprocess...")
     register_all_models()
     
     # Set the initial model for this subprocess
@@ -64,11 +69,14 @@ def run_raw_task(task: RawTask) -> bool:
         common.set_model(config.models[0])
 ```
 
+**Why in `do_inference()` and not `run_raw_task()`?**
+Because `logger.add()` is called in `do_inference()` to set up the `info.log` file handler. Any debug logs before this point won't be written to the log file!
+
 ## Debug Logging Added
 
 Added comprehensive debug logging with 🔍 and 🚨 emoji prefixes to:
 
-1. **app/main.py - `run_raw_task()`**:
+1. **app/main.py - `do_inference()`**:
    - Log MODEL_HUB state before/after registration
    - Log SELECTED_MODEL state at each step
    - Log config.models
