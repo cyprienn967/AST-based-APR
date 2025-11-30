@@ -261,18 +261,31 @@ class PatchAgent:
             logger.debug("No AST candidates covering {}:{}-{}", bug_loc.rel_file_path, bug_loc.start, bug_loc.end)
             return None
 
-        source_lines = original_source.splitlines()
-        ast_dump = self._build_ast_dump(metadata, source_lines, candidate_nodes)
-
+        # Use the first candidate node as target
+        target_node_id = candidate_nodes[0]
+        
         code_snippet = self._strip_line_numbers(bug_loc.code)
         intent = bug_loc.intended_behavior.strip()
+        
+        # Create annotated code instead of AST dump
+        from app.ast_repair.localize import annotate_code_with_node_ids
+        try:
+            annotated_code = annotate_code_with_node_ids(
+                code_snippet,
+                metadata,
+                target_node_id,
+                max_annotations=15
+            )
+        except Exception:
+            annotated_code = code_snippet
 
         generation = ast_agent.generate_ast_edits(
             self.issue_stmt,
             bug_loc.rel_file_path,
             code_snippet,
             intent,
-            ast_dump,
+            annotated_code,
+            target_node_id,
             allow_multiple=False,
         )
 
