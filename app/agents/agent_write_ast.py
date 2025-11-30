@@ -9,7 +9,7 @@ from typing import List, Dict, Optional
 from loguru import logger
 
 from app.agents.agent_common import extract_json_from_response
-from app.model.common import SELECTED_MODEL
+from app.model import common as model_common
 from app.ast_repair.edit_schema import (
     schema_description,
     parse_edits_from_json_str,
@@ -181,15 +181,15 @@ def generate_ast_edits(
     content = None
 
     # Debug: Check if SELECTED_MODEL is None
-    if SELECTED_MODEL is None:
+    if model_common.SELECTED_MODEL is None:
         logger.error("🚨 [AST AGENT DEBUG] SELECTED_MODEL is None! Cannot make LLM call.")
         logger.error("🚨 [AST AGENT DEBUG] This means the model was not initialized in the subprocess.")
         return ASTGenerationResult([], user_prompt, None)
     
-    logger.debug(f"🔍 [AST AGENT DEBUG] SELECTED_MODEL: {SELECTED_MODEL.name if SELECTED_MODEL else 'None'}")
+    logger.debug(f"🔍 [AST AGENT DEBUG] SELECTED_MODEL: {model_common.SELECTED_MODEL.name if model_common.SELECTED_MODEL else 'None'}")
 
     try:
-        content, _, _, _ = SELECTED_MODEL.call(
+        content, _, _, _ = model_common.SELECTED_MODEL.call(
             messages=messages,
             # Removed response_format="json_object" for 30% speed improvement
             # Prompt already requests JSON, and _extract_json_region() handles mixed output
@@ -341,14 +341,14 @@ def write_ast_edits_for_file(
         ]
         
         # Debug: Check if SELECTED_MODEL is None before calling
-        if SELECTED_MODEL is None:
+        if model_common.SELECTED_MODEL is None:
             logger.error("🚨 [AST AGENT DEBUG] SELECTED_MODEL is None at node {}! Skipping.", bug_loc.node_id)
             continue
         
-        logger.debug(f"🔍 [AST AGENT DEBUG] Calling LLM for node {bug_loc.node_id} with model: {SELECTED_MODEL.name}")
+        logger.debug(f"🔍 [AST AGENT DEBUG] Calling LLM for node {bug_loc.node_id} with model: {model_common.SELECTED_MODEL.name}")
         
         try:
-            content, _, _, _ = SELECTED_MODEL.call(
+            content, _, _, _ = model_common.SELECTED_MODEL.call(
                 messages=messages,
                 # Removed response_format="json_object" for 30% speed improvement
                 # Prompt already requests JSON, and _extract_json_region() handles mixed output
