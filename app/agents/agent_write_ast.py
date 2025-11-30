@@ -8,6 +8,7 @@ from typing import List, Dict, Optional
 
 from loguru import logger
 
+from app.agents.agent_common import extract_json_from_response
 from app.model.common import SELECTED_MODEL
 from app.ast_repair.edit_schema import (
     schema_description,
@@ -194,13 +195,15 @@ def generate_ast_edits(
     content = content.strip()
 
     try:
-        json_text = _extract_json_region(content)
-    except Exception:
+        json_text = extract_json_from_response(content)
+    except Exception as e:
+        logger.debug("Failed to extract JSON from response: {}", e)
         return ASTGenerationResult([], user_prompt, content)
 
     try:
         edits = parse_edits_from_json_str(json_text)
-    except EditSchemaError:
+    except EditSchemaError as e:
+        logger.debug("Failed to parse edits from JSON: {}", e)
         return ASTGenerationResult([], user_prompt, content)
 
     if not allow_multiple and len(edits) > 1:
@@ -338,9 +341,10 @@ def write_ast_edits_for_file(
         
         # Extract and parse JSON
         try:
-            json_text = _extract_json_region(content)
+            json_text = extract_json_from_response(content)
             edits = parse_edits_from_json_str(json_text)
-        except Exception:
+        except Exception as e:
+            logger.debug("Failed to parse edits for node {}: {}", bug_loc.node_id, e)
             continue
         
         # Enforce single edit if needed
