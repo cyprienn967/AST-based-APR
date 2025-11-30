@@ -70,5 +70,6 @@ def register_all_models() -> None:
     common.register_model(gemini.GeminiPro())
     common.register_model(gemini.Gemini15Pro())
 
-    # register default model as selected
-    common.SELECTED_MODEL = gpt.Gpt35_Turbo0125()
+    # NOTE: Do not set a default SELECTED_MODEL here!
+    # The model should be set explicitly by the calling code based on config.models
+    # Setting it here causes issues in subprocesses where models need to be re-registered
