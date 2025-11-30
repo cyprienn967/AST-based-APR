@@ -3,6 +3,7 @@ from collections import Counter
 
 from tenacity import retry, stop_after_attempt
 
+from app.agents.agent_common import extract_json_from_response
 from app.data_structures import MessageThread
 from app.model import common
 
@@ -78,7 +79,8 @@ def run(
         responses.append(response)
 
         try:
-            data = json.loads(response)
+            json_str = extract_json_from_response(response)
+            data = json.loads(json_str)
             index = int(data["patch_number"]) - 1
             reason = data["reason"]
         except Exception:

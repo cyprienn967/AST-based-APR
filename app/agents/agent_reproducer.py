@@ -9,7 +9,7 @@ from typing import TypeAlias
 from loguru import logger
 from tenacity import retry, stop_after_attempt
 
-from app.agents.agent_common import InvalidLLMResponse
+from app.agents.agent_common import InvalidLLMResponse, extract_json_from_response
 from app.data_structures import MessageThread, ReproResult
 from app.log import print_acr, print_reproducer
 from app.model.gpt import common
@@ -154,7 +154,10 @@ class TestAgent:
                 # Removed response_format="json_object" for speed improvement
             )
 
-            result = json.loads(response)[key]
+            # Try to extract JSON from markdown code blocks first
+            json_str = extract_json_from_response(response)
+            
+            result = json.loads(json_str)[key]
 
             if not isinstance(result, bool):
                 raise InvalidLLMResponse

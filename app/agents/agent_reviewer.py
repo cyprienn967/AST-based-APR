@@ -8,7 +8,7 @@ from enum import Enum
 
 from loguru import logger
 
-from app.agents.agent_common import InvalidLLMResponse
+from app.agents.agent_common import InvalidLLMResponse, extract_json_from_response
 from app.data_structures import MessageThread, ReproResult
 from app.model import common
 
@@ -63,7 +63,8 @@ class ReviewDecision(Enum):
 
 def extract_review_result(content: str) -> Review | None:
     try:
-        data = json.loads(content)
+        json_str = extract_json_from_response(content)
+        data = json.loads(json_str)
 
         review = Review(
             patch_decision=ReviewDecision(data["patch-correct"].lower()),
