@@ -1,0 +1,308 @@
+2025-11-30 23:00:40.836 | DEBUG    | 🔍 [SUBPROCESS DEBUG] Registering models in subprocess...
+2025-11-30 23:00:40.836 | DEBUG    | 🔍 [SUBPROCESS DEBUG] MODEL_HUB before registration: ['gpt-4o-2024-08-06', 'gpt-4o-2024-05-13', 'gpt-4o-mini-2024-07-18', 'gpt-4-turbo-2024-04-09', 'gpt-4-0125-preview', 'gpt-4-1106-preview', 'gpt-3.5-turbo-0125', 'gpt-3.5-turbo-1106', 'gpt-3.5-turbo-16k-0613', 'gpt-3.5-turbo-0613', 'gpt-4-0613', 'o1-mini', 'o1-2024-12-17', 'claude-3-opus-20240229', 'claude-3-sonnet-20240229', 'claude-3-haiku-20240307', 'claude-3-5-sonnet-20240620', 'claude-3-5-sonnet-20241022', 'bedrock/anthropic.claude-3-opus-20240229-v1:0', 'bedrock/anthropic.claude-3-sonnet-20240229-v1:0', 'bedrock/anthropic.claude-3-haiku-20240307-v1:0', 'bedrock/us.amazon.nova-lite-v1:0', 'bedrock/us.amazon.nova-pro-v1:0', 'bedrock/us.amazon.nova-micro-v1:0', 'bedrock/anthropic.claude-3-5-sonnet-20241022-v2:0', 'llama3', 'llama3:70b', 'groq/llama3-8b-8192', 'groq/llama3-70b-8192', 'groq/mixtral-8x7b-32768', 'groq/gemma-7b-it', 'litellm-gpt-4o-2024-05-13', 'litellm-gpt-4-turbo-2024-04-09', 'litellm-gpt-4-0125-preview', 'litellm-gpt-4-1106-preview', 'litellm-gpt-3.5-turbo-0125', 'litellm-gpt-3.5-turbo-1106', 'litellm-gpt-3.5-turbo-16k-0613', 'litellm-gpt-3.5-turbo-0613', 'litellm-gpt-4-0613', 'azure/gpt-4', 'azure/gpt-4o', 'azure/gpt-35-turbo', 'azure/gpt-35-turbo-16k', 'azure/o1-mini', 'gemini-1.0-pro-002', 'gemini-1.5-pro-preview-0409']
+2025-11-30 23:00:40.836 | DEBUG    | 🔍 [SUBPROCESS DEBUG] SELECTED_MODEL before registration: <app.model.gpt.Gpt4o_20240513 object at 0x790dc6caf0b0>
+2025-11-30 23:00:40.837 | DEBUG    | 🔍 [SUBPROCESS DEBUG] MODEL_HUB after registration: ['gpt-4o-2024-08-06', 'gpt-4o-2024-05-13', 'gpt-4o-mini-2024-07-18', 'gpt-4-turbo-2024-04-09', 'gpt-4-0125-preview', 'gpt-4-1106-preview', 'gpt-3.5-turbo-0125', 'gpt-3.5-turbo-1106', 'gpt-3.5-turbo-16k-0613', 'gpt-3.5-turbo-0613', 'gpt-4-0613', 'o1-mini', 'o1-2024-12-17', 'claude-3-opus-20240229', 'claude-3-sonnet-20240229', 'claude-3-haiku-20240307', 'claude-3-5-sonnet-20240620', 'claude-3-5-sonnet-20241022', 'bedrock/anthropic.claude-3-opus-20240229-v1:0', 'bedrock/anthropic.claude-3-sonnet-20240229-v1:0', 'bedrock/anthropic.claude-3-haiku-20240307-v1:0', 'bedrock/us.amazon.nova-lite-v1:0', 'bedrock/us.amazon.nova-pro-v1:0', 'bedrock/us.amazon.nova-micro-v1:0', 'bedrock/anthropic.claude-3-5-sonnet-20241022-v2:0', 'llama3', 'llama3:70b', 'groq/llama3-8b-8192', 'groq/llama3-70b-8192', 'groq/mixtral-8x7b-32768', 'groq/gemma-7b-it', 'litellm-gpt-4o-2024-05-13', 'litellm-gpt-4-turbo-2024-04-09', 'litellm-gpt-4-0125-preview', 'litellm-gpt-4-1106-preview', 'litellm-gpt-3.5-turbo-0125', 'litellm-gpt-3.5-turbo-1106', 'litellm-gpt-3.5-turbo-16k-0613', 'litellm-gpt-3.5-turbo-0613', 'litellm-gpt-4-0613', 'azure/gpt-4', 'azure/gpt-4o', 'azure/gpt-35-turbo', 'azure/gpt-35-turbo-16k', 'azure/o1-mini', 'gemini-1.0-pro-002', 'gemini-1.5-pro-preview-0409']
+2025-11-30 23:00:40.837 | DEBUG    | 🔍 [SUBPROCESS DEBUG] SELECTED_MODEL after registration: <app.model.gpt.Gpt4o_20240513 object at 0x790dc6caf0b0>
+2025-11-30 23:00:40.837 | DEBUG    | 🔍 [SUBPROCESS DEBUG] config.models: ['gpt-4o-2024-05-13']
+2025-11-30 23:00:40.837 | DEBUG    | 🔍 [SUBPROCESS DEBUG] Setting model to: gpt-4o-2024-05-13
+2025-11-30 23:00:40.837 | DEBUG    | 🔍 [SUBPROCESS DEBUG] SELECTED_MODEL after set_model: <app.model.gpt.Gpt4o_20240513 object at 0x790dc6caf0b0>
+2025-11-30 23:00:40.933 | INFO     | Running command: source /root/miniconda3/etc/profile.d/conda.sh ; conda activate setup_sympy__sympy__1.13 ; python -m pip install -e . ; conda deactivate
+2025-11-30 23:00:44.702 | INFO     | Running command: source /root/miniconda3/etc/profile.d/conda.sh ; conda activate setup_sympy__sympy__1.13 ; python -m pip install xmlrunner coverage pytest pytest-cov decorator ; conda deactivate
+2025-11-30 23:00:45.528 | INFO     | Starting overall retry 0 with model gpt-4o-2024-05-13
+2025-11-30 23:00:46.788 | INFO     | Model (gpt-4o-2024-05-13) API request cost info: input_tokens=258, output_tokens=17, cost=0.001545
+2025-11-30 23:00:51.449 | INFO     | Model (gpt-4o-2024-05-13) API request cost info: input_tokens=436, output_tokens=514, cost=0.009890
+2025-11-30 23:00:52.593 | INFO     | Generated and cached reproducer for future retries
+2025-11-30 23:00:52.593 | INFO     | Running SBFL (first retry)
+2025-11-30 23:00:52.596 | INFO     | Running command: source /root/miniconda3/etc/profile.d/conda.sh ; conda activate setup_sympy__sympy__1.13 ; python -m pytest --cov --cov-context=test --no-header -rA --tb=no -p no:cacheprovider sympy/physics/units/tests/test_prefixes.py ; conda deactivate
+2025-11-30 23:01:07.827 | INFO     | SBFL result (lines): [('sympy/conftest.py', 64, 64, 1.0), ('sympy/conftest.py', 68, 68, 1.0), ('sympy/conftest.py', 70, 70, 1.0), ('sympy/core/cache.py', 27, 32, 1.0), ('sympy/core/decorators.py', 101, 102, 1.0), ('sympy/core/decorators.py', 106, 106, 1.0), ('sympy/core/decorators.py', 229, 229, 1.0), ('sympy/core/decorators.py', 234, 234, 1.0), ('sympy/core/decorators.py', 236, 236, 1.0), ('sympy/core/expr.py', 228, 228, 1.0), ('sympy/core/expr.py', 231, 232, 1.0), ('sympy/core/numbers.py', 254, 254, 1.0), ('sympy/core/numbers.py', 257, 258, 1.0), ('sympy/core/numbers.py', 260, 261, 1.0), ('sympy/core/numbers.py', 265, 267, 1.0), ('sympy/core/numbers.py', 1590, 1590, 1.0), ('sympy/core/numbers.py', 1627, 1627, 1.0), ('sympy/core/numbers.py', 1629, 1629, 1.0), ('sympy/core/numbers.py', 1634, 1634, 1.0), ('sympy/core/numbers.py', 1636, 1636, 1.0), ('sympy/core/numbers.py', 1641, 1642, 1.0), ('sympy/core/numbers.py', 1645, 1645, 1.0), ('sympy/core/numbers.py', 1652, 1652, 1.0), ('sympy/core/numbers.py', 1655, 1655, 1.0), ('sympy/core/numbers.py', 1657, 1661, 1.0), ('sympy/core/numbers.py', 2091, 2091, 1.0), ('sympy/core/numbers.py', 2099, 2100, 1.0), ('sympy/core/numbers.py', 2106, 2108, 1.0), ('sympy/core/numbers.py', 2110, 2110, 1.0), ('sympy/core/numbers.py', 2112, 2114, 1.0), ('sympy/core/numbers.py', 2217, 2218, 1.0), ('sympy/core/numbers.py', 2220, 2221, 1.0), ('sympy/core/numbers.py', 2290, 2290, 1.0), ('sympy/core/power.py', 284, 285, 1.0), ('sympy/core/power.py', 287, 288, 1.0), ('sympy/core/power.py', 292, 293, 1.0), ('sympy/core/power.py', 297, 298, 1.0), ('sympy/core/power.py', 311, 312, 1.0), ('sympy/core/power.py', 314, 314, 1.0), ('sympy/core/power.py', 324, 324, 1.0), ('sympy/core/power.py', 326, 327, 1.0), ('sympy/core/sympify.py', 415, 416, 1.0), ('sympy/core/sympify.py', 451, 451, 1.0), ('sympy/core/sympify.py', 459, 459, 1.0), ('sympy/core/sympify.py', 481, 481, 1.0), ('sympy/core/sympify.py', 483, 484, 1.0), ('sympy/core/sympify.py', 486, 486, 1.0), ('sympy/core/sympify.py', 488, 488, 1.0), ('sympy/core/sympify.py', 490, 491, 1.0), ('sympy/core/sympify.py', 493, 495, 1.0), ('sympy/core/sympify.py', 499, 499, 1.0), ('sympy/parsing/sympy_parser.py', 536, 537, 1.0), ('sympy/parsing/sympy_parser.py', 539, 544, 1.0), ('sympy/parsing/sympy_parser.py', 546, 547, 1.0), ('sympy/parsing/sympy_parser.py', 549, 549, 1.0), ('sympy/parsing/sympy_parser.py', 551, 551, 1.0), ('sympy/parsing/sympy_parser.py', 554, 554, 1.0), ('sympy/parsing/sympy_parser.py', 557, 557, 1.0), ('sympy/parsing/sympy_parser.py', 565, 565, 1.0), ('sympy/parsing/sympy_parser.py', 571, 575, 1.0), ('sympy/parsing/sympy_parser.py', 578, 578, 1.0), ('sympy/parsing/sympy_parser.py', 580, 580, 1.0), ('sympy/parsing/sympy_parser.py', 582, 582, 1.0), ('sympy/parsing/sympy_parser.py', 591, 594, 1.0), ('sympy/parsing/sympy_parser.py', 596, 596, 1.0), ('sympy/parsing/sympy_parser.py', 620, 620, 1.0), ('sympy/parsing/sympy_parser.py', 622, 622, 1.0), ('sympy/parsing/sympy_parser.py', 627, 630, 1.0), ('sympy/parsing/sympy_parser.py', 638, 638, 1.0), ('sympy/parsing/sympy_parser.py', 640, 640, 1.0), ('sympy/parsing/sympy_parser.py', 642, 642, 1.0), ('sympy/parsing/sympy_parser.py', 644, 646, 1.0), ('sympy/parsing/sympy_parser.py', 651, 654, 1.0), ('sympy/parsing/sympy_parser.py', 657, 657, 1.0), ('sympy/parsing/sympy_parser.py', 659, 659, 1.0), ('sympy/parsing/sympy_parser.py', 661, 661, 1.0), ('sympy/parsing/sympy_parser.py', 671, 671, 1.0), ('sympy/parsing/sympy_parser.py', 673, 673, 1.0), ('sympy/parsing/sympy_parser.py', 677, 679, 1.0), ('sympy/parsing/sympy_parser.py', 691, 692, 1.0), ('sympy/parsing/sympy_parser.py', 694, 694, 1.0), ('sympy/parsing/sympy_parser.py', 696, 696, 1.0), ('sympy/parsing/sympy_parser.py', 700, 700, 1.0), ('sympy/parsing/sympy_parser.py', 702, 702, 1.0), ('sympy/parsing/sympy_parser.py', 704, 704, 1.0), ('sympy/parsing/sympy_parser.py', 706, 706, 1.0), ('sympy/parsing/sympy_parser.py', 752, 752, 1.0), ('sympy/parsing/sympy_parser.py', 763, 763, 1.0), ('sympy/parsing/sympy_parser.py', 765, 766, 1.0), ('sympy/parsing/sympy_parser.py', 784, 784, 1.0), ('sympy/parsing/sympy_parser.py', 786, 786, 1.0), ('sympy/parsing/sympy_parser.py', 889, 892, 1.0), ('sympy/parsing/sympy_parser.py', 894, 895, 1.0), ('sympy/parsing/sympy_parser.py', 897, 897, 1.0), ('sympy/parsing/sympy_parser.py', 906, 908, 1.0), ('sympy/parsing/sympy_parser.py', 1040, 1041, 1.0), ('sympy/parsing/sympy_parser.py', 1047, 1049, 1.0), ('sympy/parsing/sympy_parser.py', 1051, 1056, 1.0), ('sympy/parsing/sympy_parser.py', 1061, 1062, 1.0), ('sympy/parsing/sympy_parser.py', 1070, 1070, 1.0), ('sympy/parsing/sympy_parser.py', 1072, 1072, 1.0), ('sympy/parsing/sympy_parser.py', 1074, 1074, 1.0), ('sympy/parsing/sympy_parser.py', 1077, 1078, 1.0), ('sympy/parsing/sympy_parser.py', 1080, 1080, 1.0), ('sympy/parsing/sympy_parser.py', 1082, 1082, 1.0), ('sympy/physics/units/prefixes.py', 35, 38, 1.0), ('sympy/physics/units/prefixes.py', 40, 47, 1.0), ('sympy/physics/units/prefixes.py', 74, 76, 1.0), ('sympy/physics/units/prefixes.py', 82, 83, 1.0), ('sympy/physics/units/prefixes.py', 86, 86, 1.0), ('sympy/physics/units/prefixes.py', 88, 89, 1.0), ('sympy/printing/str.py', 677, 677, 1.0), ('sympy/printing/str.py', 679, 679, 1.0), ('sympy/utilities/iterables.py', 3072, 3072, 1.0), ('sympy/utilities/iterables.py', 3074, 3075, 1.0), ('sympy/utilities/iterables.py', 3078, 3079, 1.0), ('sympy/utilities/misc.py', 551, 553, 1.0), ('sympy/utilities/misc.py', 555, 555, 1.0), ('sympy/core/_print_helpers.py', 28, 29, 0.7071067811865475), ('sympy/core/assumptions.py', 470, 470, 0.7071067811865475), ('sympy/core/assumptions.py', 472, 472, 0.7071067811865475), ('sympy/core/assumptions.py', 474, 475, 0.7071067811865475), ('sympy/core/assumptions.py', 478, 479, 0.7071067811865475), ('sympy/core/basic.py', 114, 114, 0.7071067811865475), ('sympy/core/basic.py', 163, 165, 0.7071067811865475), ('sympy/core/basic.py', 167, 168, 0.7071067811865475), ('sympy/core/cache.py', 71, 72, 0.7071067811865475), ('sympy/core/cache.py', 77, 77, 0.7071067811865475), ('sympy/core/facts.py', 580, 580, 0.7071067811865475), ('sympy/core/facts.py', 587, 587, 0.7071067811865475), ('sympy/core/facts.py', 593, 594, 0.7071067811865475), ('sympy/core/facts.py', 608, 610, 0.7071067811865475), ('sympy/core/facts.py', 612, 613, 0.7071067811865475), ('sympy/core/facts.py', 615, 616, 0.7071067811865475), ('sympy/core/facts.py', 619, 620, 0.7071067811865475), ('sympy/core/facts.py', 624, 624, 0.7071067811865475), ('sympy/core/facts.py', 627, 627, 0.7071067811865475), ('sympy/core/facts.py', 630, 631, 0.7071067811865475), ('sympy/core/logic.py', 109, 109, 0.7071067811865475), ('sympy/core/logic.py', 111, 112, 0.7071067811865475), ('sympy/core/numbers.py', 2244, 2245, 0.7071067811865475), ('sympy/core/symbol.py', 260, 261, 0.7071067811865475), ('sympy/core/symbol.py', 267, 267, 0.7071067811865475), ('sympy/core/symbol.py', 295, 296, 0.7071067811865475), ('sympy/core/symbol.py', 300, 300, 0.7071067811865475), ('sympy/core/symbol.py', 310, 310, 0.7071067811865475), ('sympy/core/symbol.py', 313, 313, 0.7071067811865475), ('sympy/core/symbol.py', 315, 316, 0.7071067811865475), ('sympy/core/symbol.py', 318, 319, 0.7071067811865475), ('sympy/core/symbol.py', 321, 323, 0.7071067811865475), ('sympy/core/symbol.py', 342, 342, 0.7071067811865475), ('sympy/core/symbol.py', 347, 347, 0.7071067811865475), ('sympy/core/sympify.py', 73, 74, 0.7071067811865475), ('sympy/core/sympify.py', 361, 364, 0.7071067811865475), ('sympy/core/sympify.py', 370, 370, 0.7071067811865475), ('sympy/core/sympify.py', 373, 373, 0.7071067811865475), ('sympy/core/sympify.py', 376, 376, 0.7071067811865475), ('sympy/core/sympify.py', 378, 379, 0.7071067811865475), ('sympy/core/sympify.py', 381, 383, 0.7071067811865475), ('sympy/core/sympify.py', 385, 385, 0.7071067811865475), ('sympy/core/sympify.py', 391, 392, 0.7071067811865475), ('sympy/core/sympify.py', 395, 395, 0.7071067811865475), ('sympy/core/sympify.py', 402, 403, 0.7071067811865475), ('sympy/core/sympify.py', 412, 412, 0.7071067811865475), ('sympy/core/sympify.py', 422, 422, 0.7071067811865475), ('sympy/core/sympify.py', 448, 448, 0.7071067811865475), ('sympy/core/sympify.py', 528, 528, 0.7071067811865475), ('sympy/physics/units/prefixes.py', 51, 51, 0.7071067811865475), ('sympy/physics/units/prefixes.py', 55, 55, 0.7071067811865475), ('sympy/physics/units/prefixes.py', 59, 59, 0.7071067811865475), ('sympy/physics/units/prefixes.py', 68, 68, 0.7071067811865475), ('sympy/printing/printer.py', 252, 253, 0.7071067811865475), ('sympy/printing/printer.py', 256, 256, 0.7071067811865475), ('sympy/printing/printer.py', 259, 259, 0.7071067811865475), ('sympy/printing/printer.py', 261, 262, 0.7071067811865475), ('sympy/printing/printer.py', 264, 265, 0.7071067811865475), ('sympy/printing/printer.py', 267, 267, 0.7071067811865475), ('sympy/printing/printer.py', 274, 274, 0.7071067811865475), ('sympy/printing/printer.py', 292, 292, 0.7071067811865475), ('sympy/printing/printer.py', 302, 303, 0.7071067811865475), ('sympy/printing/printer.py', 307, 307, 0.7071067811865475), ('sympy/printing/printer.py', 315, 316, 0.7071067811865475), ('sympy/printing/printer.py', 318, 318, 0.7071067811865475), ('sympy/printing/printer.py', 322, 322, 0.7071067811865475), ('sympy/printing/printer.py', 327, 331, 0.7071067811865475), ('sympy/printing/printer.py', 335, 335, 0.7071067811865475), ('sympy/printing/printer.py', 372, 372, 0.7071067811865475), ('sympy/printing/str.py', 846, 846, 0.7071067811865475), ('sympy/printing/str.py', 997, 998, 0.7071067811865475), ('sympy/printing/str.py', 1000, 1000, 0.7071067811865475), ('conftest.py', 58, 59, 0.5773502691896258), ('conftest.py', 63, 63, 0.5773502691896258), ('conftest.py', 67, 67, 0.5773502691896258)]
+2025-11-30 23:01:07.827 | INFO     | SBFL result (methods): [('sympy/conftest.py', '', 'file_clear_cache', 1.0), ('sympy/conftest.py', '', 'check_disabled', 1.0), ('sympy/core/cache.py', '_cache', 'clear_cache', 1.0), ('sympy/core/decorators.py', '', 'call_highest_priority', 1.0), ('sympy/core/decorators.py', '_SympifyWrapper', 'make_wrapped', 1.0), ('sympy/core/expr.py', 'Expr', '_pow', 1.0), ('sympy/core/expr.py', 'Expr', '__pow__', 1.0), ('sympy/core/numbers.py', '', 'igcd', 1.0), ('sympy/core/numbers.py', 'Rational', '__new__', 1.0), ('sympy/core/numbers.py', 'Integer', '__new__', 1.0), ('sympy/core/numbers.py', 'Integer', '__rmul__', 1.0), ('sympy/core/numbers.py', 'Integer', '__hash__', 1.0), ('sympy/core/power.py', 'Pow', '__new__', 1.0), ('sympy/core/sympify.py', '', 'sympify', 1.0), ('sympy/parsing/sympy_parser.py', '', 'auto_symbol', 1.0), ('sympy/parsing/sympy_parser.py', '', 'lambda_notation', 1.0), ('sympy/parsing/sympy_parser.py', '', 'factorial_notation', 1.0), ('sympy/parsing/sympy_parser.py', '', 'convert_xor', 1.0), ('sympy/parsing/sympy_parser.py', '', 'repeated_decimals', 1.0), ('sympy/parsing/sympy_parser.py', '', 'auto_number', 1.0), ('sympy/parsing/sympy_parser.py', '', 'stringify_expr', 1.0), ('sympy/parsing/sympy_parser.py', '', 'eval_expr', 1.0), ('sympy/parsing/sympy_parser.py', '', 'parse_expr', 1.0), ('sympy/physics/units/prefixes.py', 'Prefix', '__new__', 1.0), ('sympy/physics/units/prefixes.py', 'Prefix', '__repr__', 1.0), ('sympy/physics/units/prefixes.py', 'Prefix', '__mul__', 1.0), ('sympy/printing/str.py', 'StrPrinter', '_print_Integer', 1.0), ('sympy/utilities/iterables.py', '', 'iterable', 1.0), ('sympy/utilities/misc.py', '', 'as_int', 1.0), ('sympy/core/_print_helpers.py', 'Printable', '__str__', 0.7071067811865475), ('sympy/core/assumptions.py', 'StdFactKB', '__init__', 0.7071067811865475), ('sympy/core/basic.py', 'Basic', '__sympy__', 0.7071067811865475), ('sympy/core/basic.py', 'Basic', '__new__', 0.7071067811865475), ('sympy/core/cache.py', '', '__cacheit', 0.7071067811865475), ('sympy/core/facts.py', 'FactKB', '__init__', 0.7071067811865475), ('sympy/core/facts.py', 'FactKB', '_tell', 0.7071067811865475), ('sympy/core/facts.py', 'FactKB', 'deduce_all_facts', 0.7071067811865475), ('sympy/core/logic.py', '', 'fuzzy_bool', 0.7071067811865475), ('sympy/core/numbers.py', 'Integer', '__eq__', 0.7071067811865475), ('sympy/core/symbol.py', 'Symbol', '_sanitize', 0.7071067811865475), ('sympy/core/symbol.py', 'Symbol', '__new__', 0.7071067811865475), ('sympy/core/symbol.py', 'Symbol', '__xnew__', 0.7071067811865475), ('sympy/core/symbol.py', 'Symbol', '__xnew_cached_', 0.7071067811865475), ('sympy/core/sympify.py', '', '_is_numpy_instance', 0.7071067811865475), ('sympy/core/sympify.py', '', '_sympify', 0.7071067811865475), ('sympy/physics/units/prefixes.py', 'Prefix', 'name', 0.7071067811865475), ('sympy/physics/units/prefixes.py', 'Prefix', 'abbrev', 0.7071067811865475), ('sympy/physics/units/prefixes.py', 'Prefix', 'scale_factor', 0.7071067811865475), ('sympy/physics/units/prefixes.py', 'Prefix', 'base', 0.7071067811865475), ('sympy/printing/printer.py', 'Printer', '_get_initial_settings', 0.7071067811865475), ('sympy/printing/printer.py', 'Printer', '__init__', 0.7071067811865475), ('sympy/printing/printer.py', 'Printer', 'doprint', 0.7071067811865475), ('sympy/printing/printer.py', 'Printer', '_print', 0.7071067811865475), ('sympy/printing/printer.py', '_PrintFunction', '__call__', 0.7071067811865475), ('sympy/printing/str.py', 'StrPrinter', '_print_Symbol', 0.7071067811865475), ('sympy/printing/str.py', '', 'sstr', 0.7071067811865475), ('conftest.py', '', 'pytest_runtest_setup', 0.5773502691896258)]
+2025-11-30 23:01:07.827 | INFO     | Cached SBFL results for future retries
+2025-11-30 23:01:07.827 | INFO     | Preparing for AST-based patch generation
+2025-11-30 23:01:07.827 | INFO     | Micro-edit fast path enabled (testing top 5 nodes before LLM)
+2025-11-30 23:01:07.827 | INFO     | SBFL identified 22 suspicious files
+2025-11-30 23:01:07.828 | DEBUG    | Gathered enough information. Invoking write_patch.
+2025-11-30 23:01:07.828 | INFO     | Start generating patches with reviewer
+2025-11-30 23:01:07.828 | DEBUG    | Skipping framework file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/sympy/conftest.py
+2025-11-30 23:01:07.829 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/sympy/core/cache.py | max=1.00 avg=0.90 suspicious_lines=9 size_penalty=1.0 issue_boost=0.20 final=3.59
+2025-11-30 23:01:07.829 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/sympy/core/decorators.py | max=1.00 avg=1.00 suspicious_lines=6 size_penalty=1.0 issue_boost=0.20 final=3.67
+2025-11-30 23:01:07.829 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/sympy/core/expr.py (4165 lines)
+2025-11-30 23:01:07.830 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/sympy/core/expr.py | max=1.00 avg=0.75 suspicious_lines=3 size_penalty=0.5 issue_boost=0.20 final=1.67
+2025-11-30 23:01:07.830 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/sympy/core/numbers.py (4596 lines)
+2025-11-30 23:01:07.830 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/sympy/core/numbers.py | max=1.00 avg=0.88 suspicious_lines=40 size_penalty=0.5 issue_boost=0.20 final=1.97
+2025-11-30 23:01:07.831 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/sympy/core/power.py (2004 lines)
+2025-11-30 23:01:07.831 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/sympy/core/power.py | max=1.00 avg=1.00 suspicious_lines=14 size_penalty=0.5 issue_boost=0.20 final=1.88
+2025-11-30 23:01:07.831 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/sympy/core/sympify.py | max=1.00 avg=0.67 suspicious_lines=39 size_penalty=1.0 issue_boost=0.20 final=3.67
+2025-11-30 23:01:07.831 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/sympy/parsing/sympy_parser.py (1264 lines)
+2025-11-30 23:01:07.831 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/sympy/parsing/sympy_parser.py | max=1.00 avg=1.00 suspicious_lines=96 size_penalty=0.5 issue_boost=0.50 final=2.97
+2025-11-30 23:01:07.832 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/sympy/physics/units/prefixes.py | max=1.00 avg=0.63 suspicious_lines=24 size_penalty=1.0 issue_boost=1.00 final=5.75
+2025-11-30 23:01:07.832 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/sympy/printing/str.py (1027 lines)
+2025-11-30 23:01:07.832 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/sympy/printing/str.py | max=1.00 avg=0.80 suspicious_lines=6 size_penalty=0.5 issue_boost=0.20 final=1.72
+2025-11-30 23:01:07.832 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/sympy/utilities/iterables.py (3179 lines)
+2025-11-30 23:01:07.833 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/sympy/utilities/iterables.py | max=1.00 avg=1.00 suspicious_lines=5 size_penalty=0.5 issue_boost=0.20 final=1.83
+2025-11-30 23:01:07.833 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/sympy/utilities/misc.py | max=1.00 avg=1.00 suspicious_lines=4 size_penalty=1.0 issue_boost=0.20 final=3.65
+2025-11-30 23:01:07.833 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/sympy/core/_print_helpers.py | max=0.71 avg=0.71 suspicious_lines=2 size_penalty=1.0 issue_boost=0.20 final=2.57
+2025-11-30 23:01:07.833 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/sympy/core/assumptions.py | max=0.71 avg=0.71 suspicious_lines=6 size_penalty=1.0 issue_boost=0.20 final=2.62
+2025-11-30 23:01:07.834 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/sympy/core/basic.py (2233 lines)
+2025-11-30 23:01:07.834 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/sympy/core/basic.py | max=0.71 avg=0.08 suspicious_lines=6 size_penalty=0.5 issue_boost=0.20 final=0.93
+2025-11-30 23:01:07.834 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/sympy/core/facts.py | max=0.71 avg=0.71 suspicious_lines=17 size_penalty=1.0 issue_boost=0.20 final=2.75
+2025-11-30 23:01:07.834 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/sympy/core/logic.py | max=0.71 avg=0.71 suspicious_lines=3 size_penalty=1.0 issue_boost=0.20 final=2.58
+2025-11-30 23:01:07.834 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/sympy/core/symbol.py | max=0.71 avg=0.26 suspicious_lines=17 size_penalty=1.0 issue_boost=0.20 final=2.21
+2025-11-30 23:01:07.835 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/sympy/printing/printer.py | max=0.71 avg=0.71 suspicious_lines=25 size_penalty=1.0 issue_boost=0.20 final=2.85
+2025-11-30 23:01:07.835 | DEBUG    | Skipping framework file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/conftest.py
+2025-11-30 23:01:07.835 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/sympy/physics/units/dimensions.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.60 final=0.00
+2025-11-30 23:01:07.835 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/sympy/physics/units/quantities.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.60 final=0.00
+2025-11-30 23:01:07.835 | INFO     | Selected file /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.13/sympy/physics/units/prefixes.py based on improved SBFL (score: 5.75)
+2025-11-30 23:01:10.443 | INFO     | ============================================================
+2025-11-30 23:01:10.443 | INFO     | FAST PATH: Testing micro-edits on top 5 nodes
+2025-11-30 23:01:10.443 | INFO     | ============================================================
+2025-11-30 23:01:10.443 | INFO     | Found 0 micro-editable candidates
+2025-11-30 23:01:10.443 | INFO     | No micro-editable nodes. Skipping fast path.
+2025-11-30 23:01:13.061 | DEBUG    | Skipping oversized subtree (100 lines) at node 8
+2025-11-30 23:01:13.061 | DEBUG    | Processing bug location 21 with 14 lines of code
+2025-11-30 23:01:13.062 | DEBUG    | 🔍 [AST AGENT DEBUG] Calling LLM for node 21 with model: gpt-4o-2024-05-13
+2025-11-30 23:01:14.307 | INFO     | Model (gpt-4o-2024-05-13) API request cost info: input_tokens=1010, output_tokens=36, cost=0.005590
+2025-11-30 23:01:14.307 | DEBUG    | Processing bug location 272 with 14 lines of code
+2025-11-30 23:01:14.307 | DEBUG    | 🔍 [AST AGENT DEBUG] Calling LLM for node 272 with model: gpt-4o-2024-05-13
+2025-11-30 23:01:15.391 | INFO     | Model (gpt-4o-2024-05-13) API request cost info: input_tokens=982, output_tokens=34, cost=0.005420
+2025-11-30 23:01:15.511 | ERROR    | Command '['git', 'apply', '/tmp/tmpidiiuato.diff']' returned non-zero exit status 128.
+Traceback (most recent call last):
+
+  File "/opt/auto-code-rover/app/main.py", line 691, in <module>
+    main()
+    └ <function main at 0x790dc6f2a840>
+
+  File "/opt/auto-code-rover/app/main.py", line 122, in main
+    run_task_groups(groups, num_processes, organize_output=True)
+    │               │       └ 4
+    │               └ {'setup_sympy__sympy__1.12': [<app.raw_tasks.RawSweTask object at 0x790dbd0d4b60>, <app.raw_tasks.RawSweTask object at 0x790d...
+    └ <function run_task_groups at 0x790dbf417880>
+
+  File "/opt/auto-code-rover/app/main.py", line 413, in run_task_groups
+    run_task_groups_parallel(task_groups, num_processes)
+    │                        │            └ 4
+    │                        └ {'setup_sympy__sympy__1.12': [<app.raw_tasks.RawSweTask object at 0x790dbd0d4b60>, <app.raw_tasks.RawSweTask object at 0x790d...
+    └ <function run_task_groups_parallel at 0x790dbf4179c0>
+
+  File "/opt/auto-code-rover/app/main.py", line 451, in run_task_groups_parallel
+    executor.map(run_task_group, group_ids, group_tasks)
+    │        │   │               │          └ ([<app.raw_tasks.RawSweTask object at 0x790dbd0d4b60>, <app.raw_tasks.RawSweTask object at 0x790dbd0d4b90>], [<app.raw_tasks....
+    │        │   │               └ ('setup_sympy__sympy__1.12', 'setup_sympy__sympy__1.13')
+    │        │   └ <function run_task_group at 0x790dbf417a60>
+    │        └ <function ProcessPoolExecutor.map at 0x790dc6b0d3a0>
+    └ <concurrent.futures.process.ProcessPoolExecutor object at 0x790dbf5e0da0>
+
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/concurrent/futures/process.py", line 859, in map
+    results = super().map(partial(_process_chunk, fn),
+                          │       │               └ <function run_task_group at 0x790dbf417a60>
+                          │       └ <function _process_chunk at 0x790dc6b0c360>
+                          └ <class 'functools.partial'>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/concurrent/futures/_base.py", line 608, in map
+    fs = [self.submit(fn, *args) for args in zip(*iterables)]
+          │    │      │    │         │            └ (<generator object _get_chunks at 0x790dbf432c50>,)
+          │    │      │    │         └ ((('setup_sympy__sympy__1.12', [<app.raw_tasks.RawSweTask object at 0x790dbd0d4b60>, <app.raw_tasks.RawSweTask object at 0x79...
+          │    │      │    └ ((('setup_sympy__sympy__1.12', [<app.raw_tasks.RawSweTask object at 0x790dbd0d4b60>, <app.raw_tasks.RawSweTask object at 0x79...
+          │    │      └ functools.partial(<function _process_chunk at 0x790dc6b0c360>, <function run_task_group at 0x790dbf417a60>)
+          │    └ <function ProcessPoolExecutor.submit at 0x790dc6b0d300>
+          └ <concurrent.futures.process.ProcessPoolExecutor object at 0x790dbf5e0da0>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/concurrent/futures/process.py", line 831, in submit
+    self._start_executor_manager_thread()
+    │    └ <function ProcessPoolExecutor._start_executor_manager_thread at 0x790dc6b0d080>
+    └ <concurrent.futures.process.ProcessPoolExecutor object at 0x790dbf5e0da0>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/concurrent/futures/process.py", line 770, in _start_executor_manager_thread
+    self._launch_processes()
+    │    └ <function ProcessPoolExecutor._launch_processes at 0x790dc6b0d1c0>
+    └ <concurrent.futures.process.ProcessPoolExecutor object at 0x790dbf5e0da0>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/concurrent/futures/process.py", line 797, in _launch_processes
+    self._spawn_process()
+    │    └ <function ProcessPoolExecutor._spawn_process at 0x790dc6b0d260>
+    └ <concurrent.futures.process.ProcessPoolExecutor object at 0x790dbf5e0da0>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/concurrent/futures/process.py", line 807, in _spawn_process
+    p.start()
+    │ └ <function BaseProcess.start at 0x790dc6ce44a0>
+    └ <ForkProcess name='ForkProcess-2' parent=7056 unknown>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+    │    │        │    │      └ <ForkProcess name='ForkProcess-2' parent=7056 unknown>
+    │    │        │    └ <staticmethod(<function ForkProcess._Popen at 0x790dc6d4d4e0>)>
+    │    │        └ <ForkProcess name='ForkProcess-2' parent=7056 unknown>
+    │    └ None
+    └ <ForkProcess name='ForkProcess-2' parent=7056 unknown>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/multiprocessing/context.py", line 282, in _Popen
+    return Popen(process_obj)
+           │     └ <ForkProcess name='ForkProcess-2' parent=7056 unknown>
+           └ <class 'multiprocessing.popen_fork.Popen'>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+    │    │       └ <ForkProcess name='ForkProcess-2' parent=7056 unknown>
+    │    └ <function Popen._launch at 0x790dbf43f1a0>
+    └ <multiprocessing.popen_fork.Popen object at 0x790dbf439a00>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/multiprocessing/popen_fork.py", line 71, in _launch
+    code = process_obj._bootstrap(parent_sentinel=child_r)
+           │           │                          └ 15
+           │           └ <function BaseProcess._bootstrap at 0x790dc6ce4ea0>
+           └ <ForkProcess name='ForkProcess-2' parent=7056 unknown>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x790dc6ce4400>
+    └ <ForkProcess name='ForkProcess-2' parent=7056 unknown>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <ForkProcess name='ForkProcess-2' parent=7056 unknown>
+    │    │        │    └ (<concurrent.futures.process._SafeQueue object at 0x790dbf43a240>, <multiprocessing.queues.SimpleQueue object at 0x790dbf6864...
+    │    │        └ <ForkProcess name='ForkProcess-2' parent=7056 unknown>
+    │    └ <function _process_worker at 0x790dc6b0c4a0>
+    └ <ForkProcess name='ForkProcess-2' parent=7056 unknown>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/concurrent/futures/process.py", line 263, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+        │         │   │         │       │         └ {}
+        │         │   │         │       └ <concurrent.futures.process._CallItem object at 0x790dc6caf410>
+        │         │   │         └ ((('setup_sympy__sympy__1.13', [<app.raw_tasks.RawSweTask object at 0x790dbf4398e0>]),),)
+        │         │   └ <concurrent.futures.process._CallItem object at 0x790dc6caf410>
+        │         └ functools.partial(<function _process_chunk at 0x790dc6b0c360>, <function run_task_group at 0x790dbf417a60>)
+        └ <concurrent.futures.process._CallItem object at 0x790dc6caf410>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/concurrent/futures/process.py", line 212, in _process_chunk
+    return [fn(*args) for args in chunk]
+            │   │         │       └ (('setup_sympy__sympy__1.13', [<app.raw_tasks.RawSweTask object at 0x790dbf4398e0>]),)
+            │   │         └ ('setup_sympy__sympy__1.13', [<app.raw_tasks.RawSweTask object at 0x790dbf4398e0>])
+            │   └ ('setup_sympy__sympy__1.13', [<app.raw_tasks.RawSweTask object at 0x790dbf4398e0>])
+            └ <function run_task_group at 0x790dbf417a60>
+
+  File "/opt/auto-code-rover/app/main.py", line 466, in run_task_group
+    run_task_in_subprocess(task)
+    │                      └ <app.raw_tasks.RawSweTask object at 0x790dbf4398e0>
+    └ <function run_task_in_subprocess at 0x790dbf417b00>
+
+  File "/opt/auto-code-rover/app/main.py", line 476, in run_task_in_subprocess
+    executor.submit(run_raw_task, task)
+    │        │      │             └ <app.raw_tasks.RawSweTask object at 0x790dbf4398e0>
+    │        │      └ <function run_raw_task at 0x790dbf417ba0>
+    │        └ <function ProcessPoolExecutor.submit at 0x790dc6b0d300>
+    └ <concurrent.futures.process.ProcessPoolExecutor object at 0x790dbf4385f0>
+
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/concurrent/futures/process.py", line 831, in submit
+    self._start_executor_manager_thread()
+    │    └ <function ProcessPoolExecutor._start_executor_manager_thread at 0x790dc6b0d080>
+    └ <concurrent.futures.process.ProcessPoolExecutor object at 0x790dbf4385f0>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/concurrent/futures/process.py", line 770, in _start_executor_manager_thread
+    self._launch_processes()
+    │    └ <function ProcessPoolExecutor._launch_processes at 0x790dc6b0d1c0>
+    └ <concurrent.futures.process.ProcessPoolExecutor object at 0x790dbf4385f0>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/concurrent/futures/process.py", line 797, in _launch_processes
+    self._spawn_process()
+    │    └ <function ProcessPoolExecutor._spawn_process at 0x790dc6b0d260>
+    └ <concurrent.futures.process.ProcessPoolExecutor object at 0x790dbf4385f0>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/concurrent/futures/process.py", line 807, in _spawn_process
+    p.start()
+    │ └ <function BaseProcess.start at 0x790dc6ce44a0>
+    └ <ForkProcess name='ForkProcess-2:1' parent=7058 started>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+    │    │        │    │      └ <ForkProcess name='ForkProcess-2:1' parent=7058 started>
+    │    │        │    └ <staticmethod(<function ForkProcess._Popen at 0x790dc6d4d4e0>)>
+    │    │        └ <ForkProcess name='ForkProcess-2:1' parent=7058 started>
+    │    └ None
+    └ <ForkProcess name='ForkProcess-2:1' parent=7058 started>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/multiprocessing/context.py", line 282, in _Popen
+    return Popen(process_obj)
+           │     └ <ForkProcess name='ForkProcess-2:1' parent=7058 started>
+           └ <class 'multiprocessing.popen_fork.Popen'>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+    │    │       └ <ForkProcess name='ForkProcess-2:1' parent=7058 started>
+    │    └ <function Popen._launch at 0x790dbf43f1a0>
+    └ <multiprocessing.popen_fork.Popen object at 0x790dbf438a70>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/multiprocessing/popen_fork.py", line 71, in _launch
+    code = process_obj._bootstrap(parent_sentinel=child_r)
+           │           │                          └ 24
+           │           └ <function BaseProcess._bootstrap at 0x790dc6ce4ea0>
+           └ <ForkProcess name='ForkProcess-2:1' parent=7058 started>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x790dc6ce4400>
+    └ <ForkProcess name='ForkProcess-2:1' parent=7058 started>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <ForkProcess name='ForkProcess-2:1' parent=7058 started>
+    │    │        │    └ (<concurrent.futures.process._SafeQueue object at 0x790dbf439910>, <multiprocessing.queues.SimpleQueue object at 0x790dbf4381...
+    │    │        └ <ForkProcess name='ForkProcess-2:1' parent=7058 started>
+    │    └ <function _process_worker at 0x790dc6b0c4a0>
+    └ <ForkProcess name='ForkProcess-2:1' parent=7058 started>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/concurrent/futures/process.py", line 263, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+        │         │   │         │       │         └ {}
+        │         │   │         │       └ <concurrent.futures.process._CallItem object at 0x790dbf4399a0>
+        │         │   │         └ (<app.raw_tasks.RawSweTask object at 0x790dbf438ad0>,)
+        │         │   └ <concurrent.futures.process._CallItem object at 0x790dbf4399a0>
+        │         └ <function run_raw_task at 0x790dbf417ba0>
+        └ <concurrent.futures.process._CallItem object at 0x790dbf4399a0>
+
+> File "/opt/auto-code-rover/app/main.py", line 508, in run_raw_task
+    run_ok = do_inference(task.to_task(), task_output_dir)
+             │            │    │          └ '/opt/auto-code-rover/experiment/vanilla-lite/sympy__sympy-24909_2025-11-30_23-00-40'
+             │            │    └ <function RawSweTask.to_task at 0x790dbf416b60>
+             │            └ <app.raw_tasks.RawSweTask object at 0x790dbf438ad0>
+             └ <function do_inference at 0x790dbf417d80>
+
+  File "/opt/auto-code-rover/app/main.py", line 625, in do_inference
+    run_ok = inference.run_one_task(
+             │         └ <function run_one_task at 0x790dbfbfc720>
+             └ <module 'app.inference' from '/opt/auto-code-rover/app/inference.py'>
+
+  File "/opt/auto-code-rover/app/inference.py", line 137, in run_one_task
+    if _run_one_task(str(out_dir), api_manager, task.get_issue_statement(), idx, shared_cache):
+       │                 │         │            │    │                      │    └ {'sbfl_line_scores': None, 'sbfl_result': 'Top-5 suspicious methods:\nSuspicious method #1:\n<file>sympy/conftest.py</file> <...
+       │                 │         │            │    │                      └ 0
+       │                 │         │            │    └ <function SweTask.get_issue_statement at 0x790dbff66b60>
+       │                 │         │            └ SweTask(task_id='sympy__sympy-24909', problem_statement="Bug with milli prefix\nWhat happened:\r\n```\r\nIn [1]: from sympy.p...
+       │                 │         └ <app.manage.ProjectApiManager object at 0x790dbf43a570>
+       │                 └ PosixPath('/opt/auto-code-rover/experiment/vanilla-lite/sympy__sympy-24909_2025-11-30_23-00-40/output_0')
+       └ <function _run_one_task at 0x790dbfbffc40>
+
+  File "/opt/auto-code-rover/app/inference.py", line 402, in _run_one_task
+    return write_patch_iterative_with_review(
+           └ <function write_patch_iterative_with_review at 0x790dc617af20>
+
+  File "/opt/auto-code-rover/app/inference.py", line 39, in write_patch_iterative_with_review
+    patch_handle, patch_content = patch_gen.send(eval_summary)
+                                  │         │    └ None
+                                  │         └ <method 'send' of 'generator' objects>
+                                  └ <generator object ReviewManager.generator at 0x790dbf4326b0>
+
+  File "/opt/auto-code-rover/app/api/review_manage.py", line 182, in generator
+    yield from self._generator(rounds)
+               │    │          └ 5
+               │    └ <function ReviewManager._generator at 0x790dbfbff100>
+               └ <app.api.review_manage.ReviewManager object at 0x790dbd0d6600>
+
+  File "/opt/auto-code-rover/app/api/review_manage.py", line 232, in _generator
+    patched_repro_result = self.task.execute_reproducer(
+                           │    │    └ <function SweTask.execute_reproducer at 0x790dbff672e0>
+                           │    └ SweTask(task_id='sympy__sympy-24909', problem_statement="Bug with milli prefix\nWhat happened:\r\n```\r\nIn [1]: from sympy.p...
+                           └ <app.api.review_manage.ReviewManager object at 0x790dbd0d6600>
+
+  File "/opt/auto-code-rover/app/task.py", line 425, in execute_reproducer
+    with cm:
+         └ <contextlib._GeneratorContextManager object at 0x790dbff15e50>
+
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+                │    └ <generator object Task.apply_patch at 0x790dbcf19240>
+                └ <contextlib._GeneratorContextManager object at 0x790dbff15e50>
+
+  File "/opt/auto-code-rover/app/task.py", line 82, in apply_patch
+    subprocess.run(
+    │          └ <function run at 0x790dc6afcf40>
+    └ <module 'subprocess' from '/root/miniconda3/envs/auto-code-rover/lib/python3.12/subprocess.py'>
+
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+          │                  │        │       └ ['git', 'apply', '/tmp/tmpidiiuato.diff']
+          │                  │        └ <Popen: returncode: 128 args: ['git', 'apply', '/tmp/tmpidiiuato.diff']>
+          │                  └ 128
+          └ <class 'subprocess.CalledProcessError'>
+
+subprocess.CalledProcessError: Command '['git', 'apply', '/tmp/tmpidiiuato.diff']' returned non-zero exit status 128.
+2025-11-30 23:01:15.516 | INFO     | Task sympy__sympy-24909 failed with exception: Command '['git', 'apply', '/tmp/tmpidiiuato.diff']' returned non-zero exit status 128..
+2025-11-30 23:01:15.518 | INFO     | No patch generated. You can try running ACR again.

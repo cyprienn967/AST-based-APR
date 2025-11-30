@@ -1,0 +1,6 @@
+{
+    "stdout": "(2*U - V)x(U + V)\n2*Ux(U + V) - Vx(U + V)\n\n",
+    "stderr": "Traceback (most recent call last):\n  File \"/tmp/reproducer-pf81o1p3.py\"\n    30: assert expanded_terms == expected_terms, \"Expansion is incomplete\"\nAssertionError: Expansion is incomplete\n\nERROR conda.cli.main_run:execute(124): `conda run python /tmp/reproducer-pf81o1p3.py` failed. (See above for error)\n",
+    "returncode": 1,
+    "triggered": true
+}
