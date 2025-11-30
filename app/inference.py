@@ -105,6 +105,16 @@ def run_one_task(task: Task, output_dir: str, model_names: Iterable[str]) -> boo
     assert model_names
 
     model_name_cycle = cycle(model_names)
+    
+    # Cache for SBFL and reproducer results (shared across retries)
+    shared_cache = {
+        "sbfl_line_scores": None,
+        "sbfl_result": None,
+        "reproducer_test_handle": None,
+        "reproducer_test_content": None,
+        "reproducer_result": None,
+        "repro_stderr": None,
+    }
 
     for idx in range(config.overall_retry_limit):
         model_name = next(model_name_cycle)
@@ -124,7 +134,7 @@ def run_one_task(task: Task, output_dir: str, model_names: Iterable[str]) -> boo
 
         api_manager = ProjectApiManager(task, str(out_dir))
 
-        if _run_one_task(str(out_dir), api_manager, task.get_issue_statement()):
+        if _run_one_task(str(out_dir), api_manager, task.get_issue_statement(), idx, shared_cache):
             logger.info("Overall retry {} succeeded; ending workflow", idx)
             break
 
@@ -268,7 +278,11 @@ def may_pass_regression_tests(task: Task, patch_file: str | PathLike) -> bool:
 
 
 def _run_one_task(
-    output_dir: str, api_manager: ProjectApiManager, problem_stmt: str
+    output_dir: str, 
+    api_manager: ProjectApiManager, 
+    problem_stmt: str,
+    retry_idx: int,
+    shared_cache: dict
 ) -> bool:
     print_banner("Starting AutoCodeRover on the following issue")
     print_issue(problem_stmt)
@@ -279,30 +293,74 @@ def _run_one_task(
     repro_stderr = ""
     reproduced = False
     reproduced_test_content = None
-    try:
-        test_handle, test_content, orig_repro_result = (
-            test_agent.write_reproducing_test_without_feedback()
-        )
-        test_agent.save_test(test_handle)
+    
+    # Reuse reproducer from first retry to save 20-30 seconds per retry
+    if retry_idx == 0:
+        # First retry: generate reproducer
+        try:
+            test_handle, test_content, orig_repro_result = (
+                test_agent.write_reproducing_test_without_feedback()
+            )
+            test_agent.save_test(test_handle)
 
-        coord = ("EMPTY_PATCH", test_handle)
-        repro_result_map[coord] = orig_repro_result
+            coord = ("EMPTY_PATCH", test_handle)
+            repro_result_map[coord] = orig_repro_result
 
-        if orig_repro_result.reproduced:
-            repro_stderr = orig_repro_result.stderr
-            reproduced = True
-            reproduced_test_content = test_content
-        # TODO: utilize the test for localization
-    except NoReproductionStep:
-        logger.info(
-            "Test agent decides that the issue statement does not contain "
-            "reproduction steps; skipping reproducer tracing"
-        )
-    except InvalidLLMResponse:
-        logger.warning("Failed to write a reproducer test; skipping reproducer tracing")
+            if orig_repro_result.reproduced:
+                repro_stderr = orig_repro_result.stderr
+                reproduced = True
+                reproduced_test_content = test_content
+            
+            # Cache for future retries
+            shared_cache["reproducer_test_handle"] = test_handle
+            shared_cache["reproducer_test_content"] = test_content
+            shared_cache["reproducer_result"] = orig_repro_result
+            shared_cache["repro_stderr"] = repro_stderr
+            
+            logger.info("Generated and cached reproducer for future retries")
+        except NoReproductionStep:
+            logger.info(
+                "Test agent decides that the issue statement does not contain "
+                "reproduction steps; skipping reproducer tracing"
+            )
+            shared_cache["reproducer_test_handle"] = None
+        except InvalidLLMResponse:
+            logger.warning("Failed to write a reproducer test; skipping reproducer tracing")
+            shared_cache["reproducer_test_handle"] = None
+    else:
+        # Subsequent retries: reuse cached reproducer
+        if shared_cache["reproducer_test_handle"] is not None:
+            logger.info("Reusing cached reproducer from retry 0")
+            test_handle = shared_cache["reproducer_test_handle"]
+            test_content = shared_cache["reproducer_test_content"]
+            orig_repro_result = shared_cache["reproducer_result"]
+            repro_stderr = shared_cache["repro_stderr"]
+            
+            coord = ("EMPTY_PATCH", test_handle)
+            repro_result_map[coord] = orig_repro_result
+            
+            if orig_repro_result.reproduced:
+                reproduced = True
+                reproduced_test_content = test_content
+        else:
+            logger.info("No cached reproducer available (reproduction was skipped)")
 
+    # Cache SBFL results across retries to save 15-20 seconds per retry
     if config.enable_sbfl:
-        sbfl_result, *_ = api_manager.fault_localization()
+        if retry_idx == 0:
+            # First retry: run SBFL
+            logger.info("Running SBFL (first retry)")
+            sbfl_result, *_ = api_manager.fault_localization()
+            
+            # Cache the results
+            shared_cache["sbfl_result"] = sbfl_result
+            shared_cache["sbfl_ranked_lines"] = api_manager.sbfl_ranked_lines
+            logger.info("Cached SBFL results for future retries")
+        else:
+            # Subsequent retries: reuse cached SBFL
+            logger.info("Reusing cached SBFL results from retry 0")
+            sbfl_result = shared_cache["sbfl_result"]
+            api_manager.sbfl_ranked_lines = shared_cache["sbfl_ranked_lines"]
     else:
         sbfl_result = ""
 
