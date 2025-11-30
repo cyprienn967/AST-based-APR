@@ -180,12 +180,26 @@ def generate_ast_edits(
 
     content = None
 
+    # Debug: Check if SELECTED_MODEL is None
+    if SELECTED_MODEL is None:
+        logger.error("🚨 [AST AGENT DEBUG] SELECTED_MODEL is None! Cannot make LLM call.")
+        logger.error("🚨 [AST AGENT DEBUG] This means the model was not initialized in the subprocess.")
+        return ASTGenerationResult([], user_prompt, None)
+    
+    logger.debug(f"🔍 [AST AGENT DEBUG] SELECTED_MODEL: {SELECTED_MODEL.name if SELECTED_MODEL else 'None'}")
+
     try:
         content, _, _, _ = SELECTED_MODEL.call(
             messages=messages,
             # Removed response_format="json_object" for 30% speed improvement
             # Prompt already requests JSON, and _extract_json_region() handles mixed output
         )
+    except AttributeError as e:
+        if "'NoneType' object has no attribute 'call'" in str(e):
+            logger.error("🚨 [AST AGENT DEBUG] SELECTED_MODEL.call() failed because SELECTED_MODEL is None")
+            logger.error(f"🚨 [AST AGENT DEBUG] Exception: {e}")
+        logger.debug("LLM call failed: {}", e)
+        return ASTGenerationResult([], user_prompt, None)
     except Exception as e:
         logger.debug("LLM call failed: {}", e)
         return ASTGenerationResult([], user_prompt, None)
@@ -326,12 +340,25 @@ def write_ast_edits_for_file(
             {"role": "user", "content": user_prompt},
         ]
         
+        # Debug: Check if SELECTED_MODEL is None before calling
+        if SELECTED_MODEL is None:
+            logger.error("🚨 [AST AGENT DEBUG] SELECTED_MODEL is None at node {}! Skipping.", bug_loc.node_id)
+            continue
+        
+        logger.debug(f"🔍 [AST AGENT DEBUG] Calling LLM for node {bug_loc.node_id} with model: {SELECTED_MODEL.name}")
+        
         try:
             content, _, _, _ = SELECTED_MODEL.call(
                 messages=messages,
                 # Removed response_format="json_object" for 30% speed improvement
                 # Prompt already requests JSON, and _extract_json_region() handles mixed output
             )
+        except AttributeError as e:
+            if "'NoneType' object has no attribute 'call'" in str(e):
+                logger.error("🚨 [AST AGENT DEBUG] SELECTED_MODEL.call() failed for node {} because SELECTED_MODEL is None", bug_loc.node_id)
+                logger.error(f"🚨 [AST AGENT DEBUG] Exception: {e}")
+            logger.debug("LLM call failed for node {}: {}", bug_loc.node_id, e)
+            continue
         except Exception as e:
             logger.debug("LLM call failed for node {}: {}", bug_loc.node_id, e)
             continue

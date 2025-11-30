@@ -486,6 +486,26 @@ def run_raw_task(task: RawTask) -> bool:
     Returns:
         Whether the task completed successfully.
     """
+    # IMPORTANT: Re-register all models in subprocess
+    # When running in subprocess, MODEL_HUB needs to be repopulated
+    logger.debug("🔍 [SUBPROCESS DEBUG] Registering models in subprocess...")
+    logger.debug(f"🔍 [SUBPROCESS DEBUG] MODEL_HUB before registration: {list(common.MODEL_HUB.keys())}")
+    logger.debug(f"🔍 [SUBPROCESS DEBUG] SELECTED_MODEL before registration: {common.SELECTED_MODEL}")
+    
+    register_all_models()
+    
+    logger.debug(f"🔍 [SUBPROCESS DEBUG] MODEL_HUB after registration: {list(common.MODEL_HUB.keys())}")
+    logger.debug(f"🔍 [SUBPROCESS DEBUG] SELECTED_MODEL after registration: {common.SELECTED_MODEL}")
+    logger.debug(f"🔍 [SUBPROCESS DEBUG] config.models: {config.models}")
+    
+    # Set the initial model for this subprocess
+    if config.models:
+        logger.debug(f"🔍 [SUBPROCESS DEBUG] Setting model to: {config.models[0]}")
+        common.set_model(config.models[0])
+        logger.debug(f"🔍 [SUBPROCESS DEBUG] SELECTED_MODEL after set_model: {common.SELECTED_MODEL}")
+    else:
+        logger.warning("⚠️ [SUBPROCESS DEBUG] No models configured, will use default")
+    
     if config.only_eval_reproducer:
         assert isinstance(task, RawSweTask)
         evaluate_swe_issue_reproducers(task)
