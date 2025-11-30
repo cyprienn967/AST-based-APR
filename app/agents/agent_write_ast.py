@@ -356,6 +356,7 @@ class ASTAgent:
         traceback_text: str = "",
         failing_line: Optional[int] = None,
         top_k: int = 3,
+        enable_fast_path: bool = True,
     ) -> tuple[bool, str, str]:
         """
         Generate a patch for a file using AST-based localization and editing.
@@ -366,6 +367,7 @@ class ASTAgent:
             traceback_text: Stderr from failing test (optional)
             failing_line: Deepest failing line (optional)
             top_k: Number of suspicious nodes to localize
+            enable_fast_path: Whether to try micro-edit fast path before LLM
         
         Returns:
             (success: bool, patch_response: str, diff_content: str)
@@ -389,6 +391,53 @@ class ASTAgent:
             logger.warning("Failed to parse {}: {}", file_path, exc)
             return False, f"Parse failed: {exc}", ""
         
+        # NEW: Try micro-edit fast path first (if enabled and test_cmd available)
+        if enable_fast_path and hasattr(self.task, 'test_cmd'):
+            from app.ast_repair.micro_edits import try_micro_edit_fast_path
+            from app.ast_repair.localize import localize_fault, get_ranked_node_ids
+            
+            # Run localization to get ranked nodes
+            try:
+                if sbfl_line_scores is None:
+                    sbfl_line_scores = {}
+                
+                bug_locations = localize_fault(
+                    root_ast,
+                    metadata,
+                    sbfl_line_scores,
+                    traceback_text,
+                    failing_line,
+                    top_k=top_k,
+                )
+                
+                if bug_locations:
+                    # Extract ranked node IDs
+                    ranked_node_ids = get_ranked_node_ids(bug_locations)
+                    
+                    # Try fast path
+                    fast_path_result = try_micro_edit_fast_path(
+                        root_ast=root_ast,
+                        metadata=metadata,
+                        sbfl_ranked_nodes=ranked_node_ids,
+                        file_path=file_path,
+                        task=self.task,
+                        max_nodes=5
+                    )
+                    
+                    if fast_path_result:
+                        patch_content, description = fast_path_result
+                        logger.info("Fast path succeeded with: {}", description)
+                        
+                        # Store and return
+                        handle = f"micro_edit_patch_{self._request_idx}"
+                        self._responses[handle] = description
+                        self._diffs[handle] = patch_content
+                        
+                        return True, description, patch_content
+            except Exception as e:
+                logger.debug("Fast path failed or skipped: {}", e)
+        
+        # Fast path didn't work - continue with LLM approach (ORIGINAL rankings preserved!)
         # Generate edits using new method
         try:
             generation = write_ast_edits_for_file(

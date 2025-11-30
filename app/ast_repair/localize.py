@@ -134,6 +134,23 @@ def expansion_chain(md: ASTMetadata, nid: int) -> List[int]:
     return chain  # smallest → largest
 
 
+def get_ranked_node_ids(bug_locations: List[BugLocation]) -> List[int]:
+    """
+    Extract node IDs from BugLocation objects in order.
+    These maintain the original SBFL ranking.
+    
+    Used by micro-edit fast path to get top suspicious nodes
+    without modifying the original localization scores.
+    
+    Args:
+        bug_locations: List of BugLocation objects from localize_fault()
+    
+    Returns:
+        List of node_ids in order of suspiciousness (highest first)
+    """
+    return [loc.node_id for loc in bug_locations]
+
+
 # -----------------------------------------------------------------------------
 # BugLocation record returned to Person B
 # -----------------------------------------------------------------------------

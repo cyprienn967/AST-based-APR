@@ -13,6 +13,7 @@ from app.agents.agent_write_ast import ASTAgent
 from app.data_structures import MessageThread, ReproResult
 from app.log import print_acr, print_review
 from app.task import SweTask, Task
+from app import config
 
 
 # Type alias for patch handle
@@ -153,6 +154,7 @@ class ReviewManager:
                     file_path,
                     sbfl_line_scores=file_sbfl_scores,
                     traceback_text=self.traceback_text,
+                    enable_fast_path=config.enable_micro_edit_fast_path,
                 )
                 
                 if not success:
@@ -268,6 +270,7 @@ class ReviewManager:
                     file_path,
                     sbfl_line_scores=file_sbfl_scores,
                     traceback_text=self.traceback_text,
+                    enable_fast_path=config.enable_micro_edit_fast_path,
                 )
                 
                 if not success:

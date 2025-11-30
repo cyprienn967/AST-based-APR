@@ -368,6 +368,10 @@ def _run_one_task(
     # We just need to pass the context information
     logger.info("Preparing for AST-based patch generation")
     
+    # Log micro-edit fast path status
+    if config.enable_micro_edit_fast_path:
+        logger.info("Micro-edit fast path enabled (testing top 5 nodes before LLM)")
+    
     # Convert SBFL ranked lines to a dict for easier lookup
     sbfl_line_scores = {}
     target_files = set()

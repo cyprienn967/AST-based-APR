@@ -26,6 +26,9 @@ enable_perfect_angelic: bool = False
 # whether to enable AST-based patch generation
 enable_ast_patch_agent: bool = True
 
+# whether to enable micro-edit fast path routing (rule-based simple bug fixes)
+enable_micro_edit_fast_path: bool = True
+
 # A special mode to only save SBFL result and exit
 only_save_sbfl_result: bool = False
 

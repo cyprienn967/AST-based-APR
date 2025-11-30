@@ -348,3 +348,52 @@ def _delete_node(parent: Optional[ast.AST], target: ast.AST) -> None:
         raise ASTEditApplicationError(
             "delete: could not find target stmt in any parent stmt list"
         )
+
+
+# ---------------------------------------------------------------------------
+# Helper for micro-edits: replace any node by node_id
+# ---------------------------------------------------------------------------
+
+def replace_node_in_ast(
+    root: ast.AST,
+    target_node_id: int,
+    new_node: ast.AST,
+    metadata: ASTMetadata
+) -> None:
+    """
+    Replace a node in the AST by traversing and finding it via node_id.
+    Modifies root in-place.
+    
+    This is used by the micro-edit fast path to apply simple syntactic
+    transformations (operator swaps, constant tweaks) without full LLM edits.
+    
+    Args:
+        root: The root AST node
+        target_node_id: The node_id to replace
+        new_node: The new AST node to insert
+        metadata: ASTMetadata with node_index and parent mappings
+    
+    Raises:
+        ValueError: If node cannot be found or replaced
+    """
+    # Find parent
+    parent_id = metadata.parent.get(target_node_id)
+    if parent_id is None:
+        # Target is root - cannot replace root itself
+        raise ValueError("Cannot replace root node")
+    
+    parent_node = metadata.node_index[parent_id]
+    target_node = metadata.node_index[target_node_id]
+    
+    # Find which field contains target_node in parent
+    for field_name, field_value in ast.iter_fields(parent_node):
+        if field_value is target_node:
+            setattr(parent_node, field_name, new_node)
+            return
+        elif isinstance(field_value, list):
+            for i, item in enumerate(field_value):
+                if item is target_node:
+                    field_value[i] = new_node
+                    return
+    
+    raise ValueError(f"Could not find node {target_node_id} in parent {parent_id}")
