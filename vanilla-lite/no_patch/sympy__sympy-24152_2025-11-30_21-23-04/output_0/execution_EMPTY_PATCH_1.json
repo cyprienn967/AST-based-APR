@@ -1,0 +1,6 @@
+{
+    "stdout": "AssertionError occurred.\n\n",
+    "stderr": "Traceback (most recent call last):\n  File \"/tmp/reproducer-t6phrpny.py\"\n    28: assert expanded_P == expected_result, \"TensorProduct Expansion Issue: The expanded form is incomplete or incorrect. Got: {}\".format(expanded_P)\nAssertionError: TensorProduct Expansion Issue: The expanded form is incomplete or incorrect. Got: 2*Ux(U + V) - Vx(U + V)\nTraceback (most recent call last):\n  File \"/tmp/reproducer-t6phrpny.py\", line 33, in <module>\n    raise e\n  File \"/tmp/reproducer-t6phrpny.py\", line 28, in <module>\n    assert expanded_P == expected_result, \"TensorProduct Expansion Issue: The expanded form is incomplete or incorrect. Got: {}\".format(expanded_P)\nAssertionError: TensorProduct Expansion Issue: The expanded form is incomplete or incorrect. Got: 2*Ux(U + V) - Vx(U + V)\n\nERROR conda.cli.main_run:execute(124): `conda run python /tmp/reproducer-t6phrpny.py` failed. (See above for error)\n",
+    "returncode": 1,
+    "triggered": true
+}

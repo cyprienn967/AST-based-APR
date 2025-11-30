@@ -1,0 +1,427 @@
+2025-11-30 21:24:46.335 | INFO     | Running command: source /root/miniconda3/etc/profile.d/conda.sh ; conda activate setup_sympy__sympy__1.12 ; python -m pip install -e . ; conda deactivate
+2025-11-30 21:24:47.748 | INFO     | Running command: source /root/miniconda3/etc/profile.d/conda.sh ; conda activate setup_sympy__sympy__1.12 ; python -m pip install xmlrunner coverage pytest pytest-cov decorator ; conda deactivate
+2025-11-30 21:24:48.515 | INFO     | Starting overall retry 0 with model gpt-4o-2024-05-13
+2025-11-30 21:24:49.216 | INFO     | Model (gpt-4o-2024-05-13) API request cost info: input_tokens=353, output_tokens=18, cost=0.002035
+2025-11-30 21:24:54.090 | INFO     | Model (gpt-4o-2024-05-13) API request cost info: input_tokens=531, output_tokens=477, cost=0.009810
+2025-11-30 21:24:55.501 | INFO     | registered non reproducing test 0
+2025-11-30 21:25:00.276 | INFO     | Model (gpt-4o-2024-05-13) API request cost info: input_tokens=1381, output_tokens=519, cost=0.014690
+2025-11-30 21:25:01.478 | INFO     | registered non reproducing test 1
+2025-11-30 21:25:06.119 | INFO     | Model (gpt-4o-2024-05-13) API request cost info: input_tokens=1469, output_tokens=496, cost=0.014785
+2025-11-30 21:25:07.310 | INFO     | registered non reproducing test 2
+2025-11-30 21:25:07.310 | WARNING  | Failed to write a reproducer test; skipping reproducer tracing
+2025-11-30 21:25:07.310 | INFO     | Running SBFL (first retry)
+2025-11-30 21:25:07.313 | INFO     | Running command: source /root/miniconda3/etc/profile.d/conda.sh ; conda activate setup_sympy__sympy__1.12 ; python -m pytest --cov --cov-context=test --no-header -rA --tb=no -p no:cacheprovider sympy/physics/units/tests/test_quantities.py ; conda deactivate
+2025-11-30 21:25:23.943 | INFO     | SBFL result (lines): [('sympy/core/mul.py', 2023, 2025, 0.7071067811865475), ('sympy/core/numbers.py', 2140, 2140, 0.7071067811865475), ('sympy/physics/units/dimensions.py', 177, 177, 0.7071067811865475), ('sympy/physics/units/dimensions.py', 183, 184, 0.7071067811865475), ('sympy/physics/units/unitsystem.py', 173, 180, 0.7071067811865475), ('sympy/physics/units/unitsystem.py', 182, 182, 0.7071067811865475), ('sympy/printing/precedence.py', 62, 62, 0.7071067811865475), ('sympy/printing/precedence.py', 64, 64, 0.7071067811865475), ('sympy/printing/printer.py', 285, 286, 0.7071067811865475), ('sympy/printing/str.py', 265, 265, 0.7071067811865475), ('sympy/printing/str.py', 271, 275, 0.7071067811865475), ('sympy/printing/str.py', 314, 315, 0.7071067811865475), ('sympy/printing/str.py', 319, 319, 0.7071067811865475), ('sympy/printing/str.py', 321, 322, 0.7071067811865475), ('sympy/printing/str.py', 324, 324, 0.7071067811865475), ('sympy/printing/str.py', 326, 327, 0.7071067811865475), ('sympy/printing/str.py', 333, 333, 0.7071067811865475), ('sympy/printing/str.py', 344, 346, 0.7071067811865475), ('sympy/printing/str.py', 356, 356, 0.7071067811865475), ('sympy/printing/str.py', 362, 362, 0.7071067811865475), ('sympy/printing/str.py', 364, 364, 0.7071067811865475), ('sympy/printing/str.py', 366, 367, 0.7071067811865475), ('sympy/printing/str.py', 370, 370, 0.7071067811865475), ('sympy/printing/str.py', 374, 375, 0.7071067811865475), ('sympy/printing/precedence.py', 123, 123, 0.5773502691896258), ('sympy/printing/precedence.py', 125, 126, 0.5773502691896258), ('sympy/printing/precedence.py', 129, 133, 0.5773502691896258), ('sympy/printing/precedence.py', 135, 135, 0.5773502691896258), ('sympy/printing/str.py', 34, 34, 0.5773502691896258), ('sympy/printing/str.py', 37, 37, 0.5773502691896258), ('sympy/core/expr.py', 385, 385, 0.5), ('sympy/core/expr.py', 394, 394, 0.5), ('sympy/core/expr.py', 1332, 1333, 0.5), ('sympy/core/numbers.py', 2261, 2262, 0.5), ('sympy/core/numbers.py', 2265, 2266, 0.5), ('sympy/core/power.py', 349, 350, 0.5), ('sympy/core/power.py', 352, 352, 0.5), ('sympy/physics/units/dimensions.py', 53, 55, 0.5), ('sympy/physics/units/dimensions.py', 57, 59, 0.5), ('sympy/physics/units/dimensions.py', 62, 64, 0.5), ('sympy/physics/units/dimensions.py', 66, 66, 0.5), ('sympy/core/mul.py', 824, 824, 0.4472135954999579), ('sympy/core/numbers.py', 2137, 2137, 0.4472135954999579), ('sympy/core/symbol.py', 359, 359, 0.4472135954999579), ('sympy/core/mul.py', 177, 177, 0.4082482904638631), ('sympy/core/mul.py', 179, 180, 0.4082482904638631), ('sympy/core/numbers.py', 2215, 2217, 0.4082482904638631), ('sympy/physics/units/unitsystem.py', 156, 167, 0.4082482904638631), ('sympy/core/basic.py', 2046, 2046, 0.3779644730092272), ('sympy/physics/units/dimensions.py', 48, 48, 0.3779644730092272), ('sympy/physics/units/dimensions.py', 87, 88, 0.3779644730092272), ('sympy/core/basic.py', 1602, 1608, 0.35355339059327373), ('sympy/core/basic.py', 1612, 1613, 0.35355339059327373), ('sympy/core/mul.py', 183, 187, 0.35355339059327373), ('sympy/core/mul.py', 194, 195, 0.35355339059327373), ('sympy/core/mul.py', 815, 815, 0.35355339059327373), ('sympy/core/mul.py', 818, 819, 0.35355339059327373), ('sympy/physics/units/dimensions.py', 41, 43, 0.35355339059327373), ('sympy/physics/units/dimensions.py', 50, 50, 0.35355339059327373), ('sympy/physics/units/dimensions.py', 230, 231, 0.35355339059327373), ('sympy/core/add.py', 283, 284, 0.3333333333333333), ('sympy/core/basic.py', 1620, 1625, 0.3333333333333333), ('sympy/core/basic.py', 1627, 1628, 0.3333333333333333), ('sympy/core/mul.py', 840, 840, 0.3333333333333333), ('sympy/physics/units/dimensions.py', 226, 228, 0.3333333333333333), ('sympy/core/_print_helpers.py', 28, 29, 0.31622776601683794), ('sympy/core/expr.py', 1319, 1320, 0.31622776601683794), ('sympy/core/expr.py', 1323, 1324, 0.31622776601683794), ('sympy/core/expr.py', 1329, 1330, 0.31622776601683794), ('sympy/core/expr.py', 1338, 1338, 0.31622776601683794), ('sympy/core/expr.py', 1344, 1344, 0.31622776601683794), ('sympy/core/numbers.py', 626, 626, 0.31622776601683794), ('sympy/core/power.py', 340, 342, 0.31622776601683794), ('sympy/logic/boolalg.py', 421, 421, 0.31622776601683794), ('sympy/physics/units/quantities.py', 146, 148, 0.31622776601683794), ('sympy/printing/printer.py', 252, 253, 0.31622776601683794), ('sympy/printing/printer.py', 256, 256, 0.31622776601683794), ('sympy/printing/printer.py', 259, 259, 0.31622776601683794), ('sympy/printing/printer.py', 261, 262, 0.31622776601683794), ('sympy/printing/printer.py', 264, 265, 0.31622776601683794), ('sympy/printing/printer.py', 267, 267, 0.31622776601683794), ('sympy/printing/printer.py', 274, 274, 0.31622776601683794), ('sympy/printing/printer.py', 292, 292, 0.31622776601683794), ('sympy/printing/printer.py', 302, 303, 0.31622776601683794), ('sympy/printing/printer.py', 307, 307, 0.31622776601683794), ('sympy/printing/printer.py', 315, 316, 0.31622776601683794), ('sympy/printing/printer.py', 318, 318, 0.31622776601683794), ('sympy/printing/printer.py', 322, 322, 0.31622776601683794), ('sympy/printing/printer.py', 327, 331, 0.31622776601683794), ('sympy/printing/printer.py', 335, 335, 0.31622776601683794), ('sympy/printing/printer.py', 372, 372, 0.31622776601683794), ('sympy/printing/str.py', 848, 848, 0.31622776601683794), ('sympy/printing/str.py', 883, 883, 0.31622776601683794), ('sympy/printing/str.py', 885, 885, 0.31622776601683794), ('sympy/printing/str.py', 999, 1000, 0.31622776601683794), ('sympy/printing/str.py', 1002, 1002, 0.31622776601683794), ('sympy/core/expr.py', 198, 198, 0.30151134457776363), ('sympy/logic/boolalg.py', 460, 460, 0.30151134457776363), ('sympy/physics/units/dimensions.py', 71, 72, 0.30151134457776363), ('sympy/physics/units/quantities.py', 164, 166, 0.30151134457776363), ('sympy/core/basic.py', 1365, 1365, 0.2886751345948129), ('sympy/core/basic.py', 1373, 1373, 0.2886751345948129), ('sympy/physics/units/unitsystem.py', 107, 107, 0.2886751345948129), ('sympy/core/expr.py', 891, 891, 0.2773500981126146), ('sympy/core/numbers.py', 2242, 2246, 0.2773500981126146), ('sympy/core/numbers.py', 3148, 3148, 0.2773500981126146), ('sympy/physics/units/quantities.py', 142, 142, 0.2773500981126146), ('sympy/core/add.py', 256, 256, 0.2672612419124244), ('sympy/core/add.py', 260, 260, 0.2672612419124244), ('sympy/core/add.py', 265, 265, 0.2672612419124244), ('sympy/core/add.py', 269, 269, 0.2672612419124244), ('sympy/core/add.py', 277, 277, 0.2672612419124244), ('sympy/core/add.py', 287, 287, 0.2672612419124244), ('sympy/core/add.py', 297, 298, 0.2672612419124244), ('sympy/core/add.py', 307, 307, 0.2672612419124244), ('sympy/core/add.py', 313, 313, 0.2672612419124244), ('sympy/core/add.py', 321, 321, 0.2672612419124244), ('sympy/core/add.py', 324, 325, 0.2672612419124244), ('sympy/core/add.py', 340, 340, 0.2672612419124244), ('sympy/core/basic.py', 378, 383, 0.2672612419124244), ('sympy/core/assumptions.py', 553, 554, 0.2581988897471611), ('sympy/core/assumptions.py', 599, 599, 0.2581988897471611), ('sympy/core/assumptions.py', 611, 612, 0.2581988897471611), ('sympy/core/basic.py', 239, 243, 0.2581988897471611), ('sympy/core/basic.py', 245, 247, 0.2581988897471611), ('sympy/core/expr.py', 852, 854, 0.2581988897471611), ('sympy/core/expr.py', 894, 894, 0.2581988897471611), ('sympy/core/numbers.py', 1878, 1879, 0.2581988897471611), ('sympy/core/add.py', 38, 38, 0.25), ('sympy/core/add.py', 202, 208, 0.25), ('sympy/core/add.py', 210, 210, 0.25), ('sympy/core/add.py', 213, 213, 0.25), ('sympy/core/add.py', 218, 218, 0.25), ('sympy/core/add.py', 221, 221, 0.25), ('sympy/core/add.py', 223, 223, 0.25), ('sympy/core/add.py', 225, 225, 0.25), ('sympy/core/add.py', 227, 227, 0.25), ('sympy/core/add.py', 230, 230, 0.25), ('sympy/core/add.py', 244, 244, 0.25), ('sympy/core/add.py', 317, 319, 0.25), ('sympy/core/add.py', 343, 343, 0.25), ('sympy/core/add.py', 346, 346, 0.25), ('sympy/core/add.py', 349, 349, 0.25), ('sympy/core/add.py', 362, 362, 0.25), ('sympy/core/add.py', 381, 381, 0.25), ('sympy/core/add.py', 384, 384, 0.25), ('sympy/core/add.py', 387, 387, 0.25), ('sympy/core/add.py', 392, 392, 0.25), ('sympy/core/add.py', 395, 395, 0.25), ('sympy/core/basic.py', 234, 237, 0.25), ('sympy/core/core.py', 78, 81, 0.25), ('sympy/core/expr.py', 255, 256, 0.25), ('sympy/core/expr.py', 259, 259, 0.25), ('sympy/core/basic.py', 1266, 1266, 0.24253562503633297), ('sympy/core/basic.py', 1342, 1347, 0.24253562503633297), ('sympy/core/basic.py', 1355, 1357, 0.24253562503633297), ('sympy/core/basic.py', 1359, 1359, 0.24253562503633297), ('sympy/core/core.py', 83, 92, 0.24253562503633297), ('sympy/core/mul.py', 393, 394, 0.24253562503633297), ('sympy/core/mul.py', 524, 526, 0.24253562503633297), ('sympy/core/mul.py', 530, 533, 0.24253562503633297), ('sympy/core/mul.py', 830, 830, 0.24253562503633297), ('sympy/core/mul.py', 832, 832, 0.24253562503633297), ('sympy/core/power.py', 986, 987, 0.24253562503633297), ('sympy/core/power.py', 989, 989, 0.24253562503633297), ('sympy/core/traversal.py', 27, 31, 0.24253562503633297), ('sympy/core/assumptions.py', 587, 590, 0.23570226039551587), ('sympy/core/core.py', 102, 104, 0.23570226039551587), ('sympy/core/power.py', 328, 328, 0.23570226039551587), ('sympy/core/power.py', 330, 330, 0.23570226039551587), ('sympy/core/power.py', 347, 347, 0.23570226039551587), ('sympy/physics/units/quantities.py', 38, 40, 0.23570226039551587), ('sympy/physics/units/quantities.py', 63, 64, 0.23570226039551587), ('sympy/physics/units/unitsystem.py', 85, 88, 0.23570226039551587), ('sympy/core/core.py', 97, 99, 0.22941573387056174), ('sympy/core/decorators.py', 60, 60, 0.22941573387056174), ('sympy/core/decorators.py', 63, 63, 0.22941573387056174), ('sympy/core/decorators.py', 65, 65, 0.22941573387056174), ('sympy/core/expr.py', 223, 223, 0.22941573387056174), ('sympy/core/numbers.py', 740, 740, 0.22941573387056174), ('sympy/core/numbers.py', 757, 757, 0.22941573387056174), ('sympy/core/numbers.py', 759, 759, 0.22941573387056174), ('sympy/core/numbers.py', 1739, 1740, 0.22941573387056174), ('sympy/core/numbers.py', 1742, 1742, 0.22941573387056174), ('sympy/core/numbers.py', 1744, 1744, 0.22941573387056174), ('sympy/core/numbers.py', 1747, 1747, 0.22941573387056174), ('sympy/core/numbers.py', 2207, 2209, 0.22941573387056174), ('sympy/core/numbers.py', 2211, 2211, 0.22941573387056174), ('sympy/core/symbol.py', 326, 326, 0.22941573387056174), ('sympy/physics/units/quantities.py', 33, 34, 0.22941573387056174), ('sympy/core/assumptions.py', 475, 476, 0.22360679774997896), ('sympy/core/basic.py', 228, 232, 0.22360679774997896), ('sympy/core/core.py', 94, 94, 0.22360679774997896), ('sympy/core/expr.py', 218, 218, 0.22360679774997896), ('sympy/core/symbol.py', 300, 300, 0.22360679774997896), ('sympy/core/symbol.py', 303, 304, 0.22360679774997896), ('sympy/core/symbol.py', 314, 314, 0.22360679774997896), ('sympy/core/symbol.py', 317, 321, 0.22360679774997896), ('sympy/physics/units/dimensions.py', 173, 173, 0.22360679774997896), ('sympy/physics/units/quantities.py', 42, 42, 0.22360679774997896), ('sympy/physics/units/quantities.py', 52, 52, 0.22360679774997896), ('sympy/physics/units/quantities.py', 69, 69, 0.22360679774997896), ('sympy/physics/units/quantities.py', 71, 78, 0.22360679774997896), ('sympy/physics/units/quantities.py', 80, 80, 0.22360679774997896), ('sympy/physics/units/quantities.py', 85, 85, 0.22360679774997896), ('sympy/physics/units/quantities.py', 90, 90, 0.22360679774997896), ('sympy/core/basic.py', 748, 748, 0.2182178902359924), ('sympy/core/basic.py', 1538, 1546, 0.2182178902359924), ('sympy/core/basic.py', 1557, 1557, 0.2182178902359924), ('sympy/core/basic.py', 1585, 1586, 0.2182178902359924), ('sympy/core/basic.py', 1588, 1589, 0.2182178902359924), ('sympy/core/basic.py', 1599, 1599, 0.2182178902359924), ('sympy/core/basic.py', 1615, 1616, 0.2182178902359924), ('sympy/core/basic.py', 1618, 1618, 0.2182178902359924), ('sympy/core/basic.py', 1630, 1631, 0.2182178902359924), ('sympy/core/numbers.py', 2249, 2249, 0.2182178902359924), ('sympy/core/operations.py', 95, 96, 0.2182178902359924), ('sympy/physics/units/dimensions.py', 152, 152, 0.2182178902359924), ('sympy/physics/units/dimensions.py', 155, 155, 0.2182178902359924), ('sympy/physics/units/dimensions.py', 157, 157, 0.2182178902359924), ('sympy/physics/units/dimensions.py', 160, 160, 0.2182178902359924), ('sympy/physics/units/dimensions.py', 162, 162, 0.2182178902359924), ('sympy/physics/units/dimensions.py', 165, 165, 0.2182178902359924), ('sympy/physics/units/dimensions.py', 167, 169, 0.2182178902359924), ('sympy/core/basic.py', 226, 226, 0.21320071635561041), ('sympy/core/basic.py', 401, 401, 0.21320071635561041), ('sympy/core/core.py', 76, 76, 0.21320071635561041), ('sympy/core/power.py', 284, 285, 0.21320071635561041), ('sympy/core/power.py', 287, 288, 0.21320071635561041), ('sympy/core/power.py', 292, 293, 0.21320071635561041), ('sympy/core/power.py', 297, 298, 0.21320071635561041), ('sympy/core/power.py', 311, 312, 0.21320071635561041), ('sympy/core/power.py', 314, 314, 0.21320071635561041), ('sympy/core/power.py', 324, 324, 0.21320071635561041), ('sympy/core/power.py', 326, 326, 0.21320071635561041), ('sympy/core/sympify.py', 74, 75, 0.21320071635561041), ('sympy/core/sympify.py', 392, 393, 0.21320071635561041), ('sympy/core/sympify.py', 396, 396, 0.21320071635561041), ('sympy/core/sympify.py', 403, 404, 0.21320071635561041), ('sympy/core/sympify.py', 413, 413, 0.21320071635561041), ('sympy/core/sympify.py', 423, 424, 0.21320071635561041), ('sympy/core/sympify.py', 443, 447, 0.21320071635561041), ('sympy/core/sympify.py', 449, 450, 0.21320071635561041), ('sympy/physics/units/dimensions.py', 69, 69, 0.21320071635561041), ('sympy/physics/units/unitsystem.py', 79, 80, 0.21320071635561041), ('sympy/physics/units/unitsystem.py', 82, 82, 0.21320071635561041), ('sympy/core/expr.py', 228, 228, 0.20851441405707477), ('sympy/core/expr.py', 231, 232, 0.20851441405707477), ('sympy/core/sympify.py', 19, 20, 0.20851441405707477), ('sympy/core/sympify.py', 386, 386, 0.20851441405707477), ('sympy/physics/units/unitsystem.py', 76, 76, 0.20851441405707477), ('sympy/core/basic.py', 371, 372, 0.20412414523193154), ('sympy/core/decorators.py', 229, 231, 0.20412414523193154), ('sympy/core/assumptions.py', 499, 502, 0.2), ('sympy/core/assumptions.py', 504, 504, 0.2), ('sympy/core/assumptions.py', 535, 535, 0.2), ('sympy/core/assumptions.py', 538, 538, 0.2), ('sympy/core/assumptions.py', 541, 542, 0.2), ('sympy/core/assumptions.py', 545, 545, 0.2), ('sympy/core/assumptions.py', 557, 560, 0.2), ('sympy/core/assumptions.py', 566, 566, 0.2), ('sympy/core/assumptions.py', 576, 577, 0.2), ('sympy/core/expr.py', 2008, 2008, 0.2), ('sympy/core/symbol.py', 342, 342, 0.2), ('sympy/core/symbol.py', 354, 355, 0.2), ('sympy/core/assumptions.py', 479, 480, 0.19611613513818404), ('sympy/core/facts.py', 612, 613, 0.19611613513818404), ('sympy/core/mul.py', 35, 35, 0.19611613513818404), ('sympy/core/mul.py', 276, 281, 0.19611613513818404), ('sympy/core/mul.py', 284, 285, 0.19611613513818404), ('sympy/core/mul.py', 299, 299, 0.19611613513818404), ('sympy/core/mul.py', 303, 304, 0.19611613513818404), ('sympy/core/mul.py', 306, 306, 0.19611613513818404), ('sympy/core/mul.py', 308, 308, 0.19611613513818404), ('sympy/core/mul.py', 311, 311, 0.19611613513818404), ('sympy/core/mul.py', 314, 314, 0.19611613513818404), ('sympy/core/mul.py', 317, 317, 0.19611613513818404), ('sympy/core/mul.py', 319, 319, 0.19611613513818404), ('sympy/core/mul.py', 322, 322, 0.19611613513818404), ('sympy/core/mul.py', 335, 335, 0.19611613513818404), ('sympy/core/mul.py', 337, 337, 0.19611613513818404), ('sympy/core/mul.py', 341, 341, 0.19611613513818404), ('sympy/core/mul.py', 360, 360, 0.19611613513818404), ('sympy/core/mul.py', 371, 371, 0.19611613513818404), ('sympy/core/mul.py', 375, 375, 0.19611613513818404), ('sympy/core/mul.py', 382, 382, 0.19611613513818404), ('sympy/core/mul.py', 386, 386, 0.19611613513818404), ('sympy/core/mul.py', 389, 389, 0.19611613513818404), ('sympy/core/mul.py', 416, 416, 0.19611613513818404), ('sympy/core/mul.py', 467, 479, 0.19611613513818404), ('sympy/core/mul.py', 482, 482, 0.19611613513818404), ('sympy/core/mul.py', 485, 485, 0.19611613513818404), ('sympy/core/mul.py', 509, 513, 0.19611613513818404), ('sympy/core/mul.py', 520, 521, 0.19611613513818404), ('sympy/core/mul.py', 535, 536, 0.19611613513818404), ('sympy/core/mul.py', 539, 539, 0.19611613513818404), ('sympy/core/mul.py', 545, 545, 0.19611613513818404), ('sympy/core/mul.py', 549, 549, 0.19611613513818404), ('sympy/core/mul.py', 551, 551, 0.19611613513818404), ('sympy/core/mul.py', 553, 553, 0.19611613513818404), ('sympy/core/mul.py', 555, 555, 0.19611613513818404), ('sympy/core/mul.py', 559, 560, 0.19611613513818404), ('sympy/core/mul.py', 562, 562, 0.19611613513818404), ('sympy/core/mul.py', 566, 567, 0.19611613513818404), ('sympy/core/mul.py', 577, 577, 0.19611613513818404), ('sympy/core/mul.py', 581, 583, 0.19611613513818404), ('sympy/core/mul.py', 625, 625, 0.19611613513818404), ('sympy/core/mul.py', 629, 629, 0.19611613513818404), ('sympy/core/mul.py', 653, 653, 0.19611613513818404), ('sympy/core/mul.py', 656, 656, 0.19611613513818404), ('sympy/core/mul.py', 672, 672, 0.19611613513818404), ('sympy/core/mul.py', 684, 684, 0.19611613513818404), ('sympy/core/mul.py', 694, 696, 0.19611613513818404), ('sympy/core/mul.py', 699, 700, 0.19611613513818404), ('sympy/core/mul.py', 703, 703, 0.19611613513818404), ('sympy/core/mul.py', 706, 706, 0.19611613513818404), ('sympy/core/mul.py', 710, 711, 0.19611613513818404), ('sympy/core/mul.py', 716, 716, 0.19611613513818404), ('sympy/core/numbers.py', 1038, 1038, 0.19611613513818404), ('sympy/core/numbers.py', 1042, 1042, 0.19611613513818404), ('sympy/core/numbers.py', 1053, 1053, 0.19611613513818404), ('sympy/core/numbers.py', 1055, 1058, 0.19611613513818404), ('sympy/core/numbers.py', 2039, 2039, 0.19611613513818404), ('sympy/core/numbers.py', 3111, 3111, 0.19611613513818404), ('sympy/core/numbers.py', 3424, 3424, 0.19611613513818404), ('sympy/core/numbers.py', 3590, 3590, 0.19611613513818404), ('sympy/core/operations.py', 84, 86, 0.19611613513818404), ('sympy/core/operations.py', 98, 101, 0.19611613513818404), ('sympy/core/operations.py', 103, 103, 0.19611613513818404), ('sympy/core/operations.py', 106, 106, 0.19611613513818404), ('sympy/core/operations.py', 114, 114, 0.19611613513818404), ('sympy/core/operations.py', 116, 116, 0.19611613513818404), ('sympy/core/operations.py', 119, 120, 0.19611613513818404), ('sympy/core/operations.py', 122, 123, 0.19611613513818404), ('sympy/core/basic.py', 156, 160, 0.19245008972987526), ('sympy/core/logic.py', 109, 109, 0.19245008972987526), ('sympy/core/logic.py', 111, 112, 0.19245008972987526), ('sympy/core/numbers.py', 1871, 1872, 0.19245008972987526), ('sympy/core/numbers.py', 1875, 1875, 0.19245008972987526), ('sympy/core/numbers.py', 1881, 1881, 0.19245008972987526), ('sympy/core/numbers.py', 1885, 1885, 0.19245008972987526), ('sympy/core/numbers.py', 1889, 1889, 0.19245008972987526), ('sympy/core/numbers.py', 1915, 1915, 0.19245008972987526), ('sympy/core/numbers.py', 2204, 2205, 0.19245008972987526), ('sympy/core/operations.py', 56, 57, 0.19245008972987526), ('sympy/core/operations.py', 60, 63, 0.19245008972987526), ('sympy/core/operations.py', 67, 68, 0.19245008972987526), ('sympy/core/operations.py', 91, 91, 0.19245008972987526), ('sympy/core/operations.py', 93, 93, 0.19245008972987526), ('sympy/core/symbol.py', 260, 261, 0.19245008972987526), ('sympy/core/symbol.py', 267, 267, 0.19245008972987526), ('sympy/core/symbol.py', 295, 296, 0.19245008972987526), ('sympy/core/basic.py', 780, 780, 0.1889822365046136), ('sympy/core/basic.py', 1979, 1983, 0.1889822365046136), ('sympy/core/basic.py', 1985, 1986, 0.1889822365046136), ('sympy/core/basic.py', 1988, 1988, 0.1889822365046136), ('sympy/core/basic.py', 1993, 1993, 0.1889822365046136), ('sympy/core/basic.py', 1996, 1996, 0.1889822365046136), ('sympy/core/core.py', 71, 71, 0.1889822365046136), ('sympy/core/decorators.py', 101, 102, 0.1889822365046136), ('sympy/core/decorators.py', 106, 106, 0.1889822365046136), ('sympy/core/decorators.py', 234, 234, 0.1889822365046136), ('sympy/core/decorators.py', 236, 236, 0.1889822365046136), ('sympy/core/numbers.py', 2288, 2288, 0.1889822365046136), ('sympy/core/sympify.py', 362, 365, 0.1889822365046136), ('sympy/core/sympify.py', 371, 371, 0.1889822365046136), ('sympy/core/sympify.py', 374, 374, 0.1889822365046136), ('sympy/core/sympify.py', 377, 377, 0.1889822365046136), ('sympy/core/sympify.py', 379, 380, 0.1889822365046136), ('sympy/core/sympify.py', 382, 384, 0.1889822365046136), ('sympy/core/sympify.py', 529, 529, 0.1889822365046136), ('sympy/core/assumptions.py', 471, 471, 0.18569533817705186), ('sympy/core/assumptions.py', 473, 473, 0.18569533817705186), ('sympy/core/basic.py', 374, 374, 0.18569533817705186), ('sympy/core/expr.py', 156, 156, 0.18569533817705186), ('sympy/core/facts.py', 580, 580, 0.18569533817705186), ('sympy/core/facts.py', 587, 587, 0.18569533817705186), ('sympy/core/facts.py', 593, 594, 0.18569533817705186), ('sympy/core/facts.py', 608, 610, 0.18569533817705186), ('sympy/core/facts.py', 615, 616, 0.18569533817705186), ('sympy/core/facts.py', 619, 620, 0.18569533817705186), ('sympy/core/facts.py', 624, 624, 0.18569533817705186), ('sympy/core/facts.py', 627, 627, 0.18569533817705186), ('sympy/core/facts.py', 630, 631, 0.18569533817705186), ('sympy/core/basic.py', 127, 129, 0.18257418583505536), ('sympy/core/basic.py', 131, 132, 0.18257418583505536), ('sympy/core/cache.py', 71, 72, 0.18257418583505536), ('sympy/core/cache.py', 77, 77, 0.18257418583505536), ('conftest.py', 60, 61, 0.17677669529663687), ('conftest.py', 65, 65, 0.17677669529663687), ('conftest.py', 69, 69, 0.17677669529663687)]
+2025-11-30 21:25:23.943 | INFO     | SBFL result (methods): [('sympy/core/mul.py', 'Mul', 'as_ordered_factors', 0.7071067811865475), ('sympy/core/numbers.py', 'Integer', '__abs__', 0.7071067811865475), ('sympy/physics/units/dimensions.py', 'Dimension', 'symbol', 0.7071067811865475), ('sympy/physics/units/dimensions.py', 'Dimension', '__str__', 0.7071067811865475), ('sympy/physics/units/unitsystem.py', 'UnitSystem', '_collect_factor_and_dimension', 0.7071067811865475), ('sympy/printing/precedence.py', '', 'precedence_Mul', 0.7071067811865475), ('sympy/printing/printer.py', 'Printer', 'order', 0.7071067811865475), ('sympy/printing/str.py', 'StrPrinter', '_print_Mul', 0.7071067811865475), ('sympy/printing/precedence.py', '', 'precedence', 0.5773502691896258), ('sympy/printing/str.py', 'StrPrinter', 'parenthesize', 0.5773502691896258), ('sympy/core/expr.py', 'Expr', '__format__', 0.5), ('sympy/core/expr.py', 'Expr', 'args_cnc', 0.5), ('sympy/core/numbers.py', 'Integer', '__lt__', 0.5), ('sympy/core/power.py', 'Pow', '__new__', 0.5), ('sympy/physics/units/dimensions.py', '_QuantityMapper', 'set_quantity_scale_factor', 0.5), ('sympy/core/mul.py', 'Mul', 'as_coeff_mul', 0.4472135954999579), ('sympy/core/symbol.py', 'Symbol', 'sort_key', 0.4472135954999579), ('sympy/core/mul.py', 'Mul', 'could_extract_minus_sign', 0.4082482904638631), ('sympy/core/numbers.py', 'Integer', '__rmul__', 0.4082482904638631), ('sympy/core/basic.py', 'Atom', 'class_key', 0.3779644730092272), ('sympy/physics/units/dimensions.py', '_QuantityMapper', 'set_quantity_dimension', 0.3779644730092272), ('sympy/physics/units/dimensions.py', '_QuantityMapper', 'get_quantity_scale_factor', 0.3779644730092272), ('sympy/core/basic.py', 'Basic', 'replace', 0.35355339059327373), ('sympy/core/mul.py', 'Mul', '__neg__', 0.35355339059327373), ('sympy/physics/units/dimensions.py', 'Dimension', '__mul__', 0.35355339059327373), ('sympy/core/add.py', 'Add', 'flatten', 0.3333333333333333), ('sympy/core/mul.py', 'Mul', 'as_coeff_Mul', 0.3333333333333333), ('sympy/core/_print_helpers.py', 'Printable', '__str__', 0.31622776601683794), ('sympy/core/numbers.py', 'Number', 'could_extract_minus_sign', 0.31622776601683794), ('sympy/logic/boolalg.py', 'BooleanFalse', '__bool__', 0.31622776601683794), ('sympy/physics/units/quantities.py', 'Quantity', 'dimension', 0.31622776601683794), ('sympy/printing/printer.py', 'Printer', '_get_initial_settings', 0.31622776601683794), ('sympy/printing/printer.py', 'Printer', '__init__', 0.31622776601683794), ('sympy/printing/printer.py', 'Printer', 'doprint', 0.31622776601683794), ('sympy/printing/printer.py', 'Printer', '_print', 0.31622776601683794), ('sympy/printing/printer.py', '_PrintFunction', '__call__', 0.31622776601683794), ('sympy/printing/str.py', 'StrPrinter', '_print_Symbol', 0.31622776601683794), ('sympy/printing/str.py', 'StrPrinter', '_print_Quantity', 0.31622776601683794), ('sympy/printing/str.py', '', 'sstr', 0.31622776601683794), ('sympy/core/expr.py', 'Expr', '__add__', 0.30151134457776363), ('sympy/physics/units/dimensions.py', '_QuantityMapper', 'get_quantity_dimension', 0.30151134457776363), ('sympy/physics/units/quantities.py', 'Quantity', 'scale_factor', 0.30151134457776363), ('sympy/core/basic.py', 'Basic', '_has', 0.2886751345948129), ('sympy/physics/units/unitsystem.py', 'UnitSystem', 'get_default_unit_system', 0.2886751345948129), ('sympy/core/expr.py', 'Expr', '_eval_is_extended_positive', 0.2773500981126146), ('sympy/core/numbers.py', 'Integer', '__eq__', 0.2773500981126146), ('sympy/core/numbers.py', 'One', '__neg__', 0.2773500981126146), ('sympy/physics/units/quantities.py', 'Quantity', 'name', 0.2773500981126146), ('sympy/core/basic.py', 'Basic', '__eq__', 0.2672612419124244), ('sympy/core/assumptions.py', '', '_ask', 0.2581988897471611), ('sympy/core/basic.py', 'Basic', 'compare', 0.2581988897471611), ('sympy/core/expr.py', 'Expr', '_eval_is_extended_positive_negative', 0.2581988897471611), ('sympy/core/expr.py', 'Expr', '_eval_is_extended_negative', 0.2581988897471611), ('sympy/core/numbers.py', 'Rational', '__eq__', 0.2581988897471611), ('sympy/core/add.py', '', '_addsort', 0.25), ('sympy/core/core.py', 'BasicMeta', '__cmp__', 0.25), ('sympy/core/expr.py', 'Expr', '__truediv__', 0.25), ('sympy/core/basic.py', 'Basic', 'has', 0.24253562503633297), ('sympy/core/mul.py', 'Mul', 'flatten', 0.24253562503633297), ('sympy/core/power.py', 'Pow', 'as_base_exp', 0.24253562503633297), ('sympy/core/traversal.py', '', 'iterargs', 0.24253562503633297), ('sympy/core/core.py', 'BasicMeta', '__gt__', 0.23570226039551587), ('sympy/physics/units/quantities.py', 'Quantity', '__new__', 0.23570226039551587), ('sympy/physics/units/unitsystem.py', 'UnitSystem', 'get_quantity_scale_factor', 0.23570226039551587), ('sympy/core/core.py', 'BasicMeta', '__lt__', 0.22941573387056174), ('sympy/core/decorators.py', '', '__sympifyit', 0.22941573387056174), ('sympy/core/expr.py', 'Expr', '__rmul__', 0.22941573387056174), ('sympy/core/numbers.py', 'Number', '__mul__', 0.22941573387056174), ('sympy/core/numbers.py', 'Rational', '__mul__', 0.22941573387056174), ('sympy/core/numbers.py', 'Integer', '__mul__', 0.22941573387056174), ('sympy/core/symbol.py', 'Symbol', '__xnew_cached_', 0.22941573387056174), ('sympy/core/assumptions.py', 'StdFactKB', '__init__', 0.22360679774997896), ('sympy/core/expr.py', 'Expr', '__mul__', 0.22360679774997896), ('sympy/core/symbol.py', 'Symbol', '__xnew__', 0.22360679774997896), ('sympy/physics/units/dimensions.py', 'Dimension', 'name', 0.22360679774997896), ('sympy/core/basic.py', 'Basic', 'func', 0.2182178902359924), ('sympy/core/numbers.py', 'Integer', '__ne__', 0.2182178902359924), ('sympy/core/operations.py', 'AssocOp', '__new__', 0.2182178902359924), ('sympy/physics/units/dimensions.py', 'Dimension', '__new__', 0.2182178902359924), ('sympy/core/basic.py', 'Basic', '__ne__', 0.21320071635561041), ('sympy/core/sympify.py', '', '_is_numpy_instance', 0.21320071635561041), ('sympy/core/sympify.py', '', 'sympify', 0.21320071635561041), ('sympy/physics/units/unitsystem.py', 'UnitSystem', 'get_quantity_dimension', 0.21320071635561041), ('sympy/core/expr.py', 'Expr', '_pow', 0.20851441405707477), ('sympy/core/expr.py', 'Expr', '__pow__', 0.20851441405707477), ('sympy/core/sympify.py', 'SympifyError', '__init__', 0.20851441405707477), ('sympy/physics/units/unitsystem.py', 'UnitSystem', 'get_dimension_system', 0.20851441405707477), ('sympy/core/decorators.py', '_SympifyWrapper', 'make_wrapped', 0.20412414523193154), ('sympy/core/assumptions.py', '', 'make_property', 0.2), ('sympy/core/expr.py', 'Expr', 'as_base_exp', 0.2), ('sympy/core/symbol.py', 'Symbol', '_hashable_content', 0.2), ('sympy/core/symbol.py', 'Symbol', 'assumptions0', 0.2), ('sympy/core/facts.py', 'FactKB', 'deduce_all_facts', 0.19611613513818404), ('sympy/core/mul.py', '', '_mulsort', 0.19611613513818404), ('sympy/core/numbers.py', 'Float', '__new__', 0.19611613513818404), ('sympy/core/numbers.py', 'Rational', 'as_coeff_Mul', 0.19611613513818404), ('sympy/core/numbers.py', 'Zero', '__bool__', 0.19611613513818404), ('sympy/core/numbers.py', 'Infinity', '__eq__', 0.19611613513818404), ('sympy/core/numbers.py', 'NegativeInfinity', '__eq__', 0.19611613513818404), ('sympy/core/operations.py', 'AssocOp', '_from_args', 0.19611613513818404), ('sympy/core/basic.py', 'Basic', '__hash__', 0.19245008972987526), ('sympy/core/logic.py', '', 'fuzzy_bool', 0.19245008972987526), ('sympy/core/symbol.py', 'Symbol', '_sanitize', 0.19245008972987526), ('sympy/core/symbol.py', 'Symbol', '__new__', 0.19245008972987526), ('sympy/core/basic.py', 'Basic', 'args', 0.1889822365046136), ('sympy/core/basic.py', 'Basic', '_exec_constructor_postprocessors', 0.1889822365046136), ('sympy/core/core.py', 'BasicMeta', '__init__', 0.1889822365046136), ('sympy/core/decorators.py', '', 'call_highest_priority', 0.1889822365046136), ('sympy/core/numbers.py', 'Integer', '__hash__', 0.1889822365046136), ('sympy/core/sympify.py', '', '_sympify', 0.1889822365046136), ('sympy/core/expr.py', 'Expr', '_hashable_content', 0.18569533817705186), ('sympy/core/facts.py', 'FactKB', '__init__', 0.18569533817705186), ('sympy/core/facts.py', 'FactKB', '_tell', 0.18569533817705186), ('sympy/core/basic.py', 'Basic', '__new__', 0.18257418583505536), ('sympy/core/cache.py', '', '__cacheit', 0.18257418583505536), ('conftest.py', '', 'pytest_runtest_setup', 0.17677669529663687)]
+2025-11-30 21:25:23.943 | INFO     | Cached SBFL results for future retries
+2025-11-30 21:25:23.943 | INFO     | Preparing for AST-based patch generation
+2025-11-30 21:25:23.943 | INFO     | Micro-edit fast path enabled (testing top 5 nodes before LLM)
+2025-11-30 21:25:23.944 | INFO     | SBFL identified 94 suspicious files
+2025-11-30 21:25:23.944 | DEBUG    | Gathered enough information. Invoking write_patch.
+2025-11-30 21:25:23.945 | INFO     | Start generating patches without reviewer
+2025-11-30 21:25:23.945 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/mul.py (2133 lines)
+2025-11-30 21:25:23.946 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/mul.py | max=0.71 avg=0.07 suspicious_lines=3 size_penalty=0.5 issue_boost=0.20 final=0.91
+2025-11-30 21:25:23.946 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/numbers.py (4496 lines)
+2025-11-30 21:25:23.946 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/numbers.py | max=0.71 avg=0.03 suspicious_lines=1 size_penalty=0.5 issue_boost=0.20 final=0.87
+2025-11-30 21:25:23.947 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/physics/units/dimensions.py | max=0.71 avg=0.14 suspicious_lines=3 size_penalty=1.0 issue_boost=1.00 final=3.17
+2025-11-30 21:25:23.947 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/physics/units/unitsystem.py | max=0.71 avg=0.15 suspicious_lines=3 size_penalty=1.0 issue_boost=0.90 final=3.04
+2025-11-30 21:25:23.947 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/printing/precedence.py | max=0.71 avg=0.44 suspicious_lines=2 size_penalty=1.0 issue_boost=0.20 final=2.25
+2025-11-30 21:25:23.947 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/printing/printer.py | max=0.71 avg=0.30 suspicious_lines=2 size_penalty=1.0 issue_boost=0.20 final=2.08
+2025-11-30 21:25:23.947 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/printing/str.py (1029 lines)
+2025-11-30 21:25:23.948 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/printing/str.py | max=0.71 avg=0.35 suspicious_lines=26 size_penalty=0.5 issue_boost=0.20 final=1.22
+2025-11-30 21:25:23.948 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/expr.py (4156 lines)
+2025-11-30 21:25:23.948 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/expr.py | max=0.50 avg=0.02 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.61
+2025-11-30 21:25:23.949 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/power.py (2004 lines)
+2025-11-30 21:25:23.949 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/power.py | max=0.50 avg=0.02 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.61
+2025-11-30 21:25:23.949 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/symbol.py | max=0.45 avg=0.05 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=1.13
+2025-11-30 21:25:23.949 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/basic.py (2189 lines)
+2025-11-30 21:25:23.950 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/basic.py | max=0.38 avg=0.08 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.50
+2025-11-30 21:25:23.950 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/add.py (1280 lines)
+2025-11-30 21:25:23.950 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/add.py | max=0.33 avg=0.04 suspicious_lines=0 size_penalty=0.5 issue_boost=0.70 final=0.60
+2025-11-30 21:25:23.950 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/_print_helpers.py | max=0.32 avg=0.32 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=1.14
+2025-11-30 21:25:23.951 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/logic/boolalg.py (3565 lines)
+2025-11-30 21:25:23.951 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/logic/boolalg.py | max=0.32 avg=0.07 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.42
+2025-11-30 21:25:23.951 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/physics/units/quantities.py | max=0.32 avg=0.08 suspicious_lines=0 size_penalty=1.0 issue_boost=0.60 final=1.13
+2025-11-30 21:25:23.951 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/assumptions.py | max=0.26 avg=0.10 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.74
+2025-11-30 21:25:23.951 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/core.py | max=0.25 avg=0.21 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.85
+2025-11-30 21:25:23.952 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/traversal.py | max=0.24 avg=0.04 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.62
+2025-11-30 21:25:23.952 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/decorators.py | max=0.23 avg=0.08 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.64
+2025-11-30 21:25:23.952 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/operations.py | max=0.22 avg=0.13 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.68
+2025-11-30 21:25:23.952 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/sympify.py | max=0.21 avg=0.16 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.70
+2025-11-30 21:25:23.952 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/facts.py | max=0.20 avg=0.13 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.63
+2025-11-30 21:25:23.953 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/logic.py | max=0.19 avg=0.03 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.49
+2025-11-30 21:25:23.953 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/cache.py | max=0.18 avg=0.03 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.48
+2025-11-30 21:25:23.953 | DEBUG    | Skipping framework file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/conftest.py
+2025-11-30 21:25:23.953 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/assumptions/wrapper.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.953 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/concrete/expr_with_limits.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.953 | DEBUG    | Skipping framework file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/conftest.py
+2025-11-30 21:25:23.954 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/containers.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.954 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/evalf.py (1797 lines)
+2025-11-30 21:25:23.954 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/evalf.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.954 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/exprtools.py (1569 lines)
+2025-11-30 21:25:23.955 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/exprtools.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.955 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/function.py (3391 lines)
+2025-11-30 21:25:23.955 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/function.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.956 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/relational.py (1599 lines)
+2025-11-30 21:25:23.956 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/relational.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.956 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/rules.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.956 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/singleton.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.956 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/core/sorting.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.957 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/functions/elementary/complexes.py (1465 lines)
+2025-11-30 21:25:23.957 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/functions/elementary/complexes.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.957 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/functions/elementary/exponential.py (1291 lines)
+2025-11-30 21:25:23.957 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/functions/elementary/exponential.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.957 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/functions/elementary/integers.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.958 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/functions/elementary/miscellaneous.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.958 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/functions/elementary/piecewise.py (1486 lines)
+2025-11-30 21:25:23.958 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/functions/elementary/piecewise.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.958 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/functions/elementary/trigonometric.py (3674 lines)
+2025-11-30 21:25:23.959 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/functions/elementary/trigonometric.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.959 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/integrals/heurisch.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.959 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/integrals/integrals.py (1633 lines)
+2025-11-30 21:25:23.959 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/integrals/integrals.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.960 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/integrals/manualintegrate.py (1923 lines)
+2025-11-30 21:25:23.960 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/integrals/manualintegrate.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.960 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/integrals/risch.py (1858 lines)
+2025-11-30 21:25:23.960 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/integrals/risch.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.961 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/matrices/common.py (3300 lines)
+2025-11-30 21:25:23.961 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/matrices/common.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.961 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/matrices/dense.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.961 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/matrices/determinant.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.962 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/matrices/matrices.py (2300 lines)
+2025-11-30 21:25:23.962 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/matrices/matrices.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.962 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/matrices/reductions.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.962 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/matrices/repmatrix.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.963 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/matrices/solvers.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.963 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/matrices/utilities.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.963 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/multipledispatch/core.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.963 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/multipledispatch/dispatcher.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.964 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/ntheory/factor_.py (2654 lines)
+2025-11-30 21:25:23.964 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/ntheory/factor_.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=0.5 issue_boost=0.70 final=0.00
+2025-11-30 21:25:23.964 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/ntheory/generate.py (1037 lines)
+2025-11-30 21:25:23.964 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/ntheory/generate.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.964 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/ntheory/multinomial.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.965 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/ntheory/primetest.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.965 | DEBUG    | Skipping framework file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/physics/units/__init__.py
+2025-11-30 21:25:23.965 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/physics/units/prefixes.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.60 final=0.00
+2025-11-30 21:25:23.965 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/physics/units/util.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.60 final=0.00
+2025-11-30 21:25:23.965 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/polys/constructor.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.965 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/polys/densebasic.py (1881 lines)
+2025-11-30 21:25:23.966 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/polys/densebasic.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.966 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/polys/densetools.py (1309 lines)
+2025-11-30 21:25:23.966 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/polys/densetools.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.966 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/polys/domains/domain.py (1304 lines)
+2025-11-30 21:25:23.966 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/polys/domains/domain.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.967 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/polys/domains/expressionrawdomain.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.967 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/polys/domains/field.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.967 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/polys/domains/fractionfield.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.967 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/polys/domains/integerring.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.967 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/polys/domains/ring.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.967 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/polys/fields.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.968 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/polys/matrices/domainmatrix.py (1692 lines)
+2025-11-30 21:25:23.968 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/polys/matrices/domainmatrix.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.968 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/polys/matrices/sdm.py (1232 lines)
+2025-11-30 21:25:23.968 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/polys/matrices/sdm.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.969 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/polys/monomials.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.969 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/polys/orderings.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.969 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/polys/polyclasses.py (1800 lines)
+2025-11-30 21:25:23.969 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/polys/polyclasses.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.969 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/polys/polyoptions.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.970 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/polys/polytools.py (7332 lines)
+2025-11-30 21:25:23.970 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/polys/polytools.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.971 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/polys/polyutils.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.971 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/polys/rationaltools.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.971 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/polys/rings.py (2467 lines)
+2025-11-30 21:25:23.971 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/polys/rings.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.971 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/sets/setexpr.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.972 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/sets/sets.py (2744 lines)
+2025-11-30 21:25:23.972 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/sets/sets.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.972 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/simplify/cse_opts.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.973 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/simplify/hyperexpand.py (2494 lines)
+2025-11-30 21:25:23.973 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/simplify/hyperexpand.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.973 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/simplify/powsimp.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.973 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/simplify/radsimp.py (1235 lines)
+2025-11-30 21:25:23.973 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/simplify/radsimp.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.974 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/simplify/simplify.py (2150 lines)
+2025-11-30 21:25:23.974 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/simplify/simplify.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.974 | DEBUG    | Skipping framework file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/testing/pytest.py
+2025-11-30 21:25:23.974 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/utilities/exceptions.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.975 | DEBUG    | Applying size penalty to large file: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/utilities/iterables.py (3052 lines)
+2025-11-30 21:25:23.975 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/utilities/iterables.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=0.5 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.975 | DEBUG    | File: /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/utilities/misc.py | max=0.00 avg=0.00 suspicious_lines=0 size_penalty=1.0 issue_boost=0.20 final=0.00
+2025-11-30 21:25:23.975 | INFO     | Selected file /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/physics/units/dimensions.py based on improved SBFL (score: 3.17)
+2025-11-30 21:25:52.769 | INFO     | ============================================================
+2025-11-30 21:25:52.769 | INFO     | FAST PATH: Testing micro-edits on top 5 nodes
+2025-11-30 21:25:52.769 | INFO     | ============================================================
+2025-11-30 21:25:52.769 | INFO     | Found 0 micro-editable candidates
+2025-11-30 21:25:52.769 | INFO     | No micro-editable nodes. Skipping fast path.
+2025-11-30 21:26:21.639 | DEBUG    | Skipping oversized subtree (54 lines) at node 31
+2025-11-30 21:26:21.639 | DEBUG    | Processing bug location 133 with 8 lines of code
+2025-11-30 21:26:21.641 | DEBUG    | Skipping oversized subtree (151 lines) at node 387
+2025-11-30 21:26:21.641 | INFO     | No edits generated for /opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.12/sympy/physics/units/dimensions.py
+2025-11-30 21:26:21.642 | INFO     | Aborting patch-only with exception: Patch generation failed: No edits generated
+2025-11-30 21:26:21.642 | INFO     | Invoked write_patch. Since there is no reproducer, the workflow will be terminated.
+2025-11-30 21:26:21.642 | INFO     | Overall retry 0 failed; proceeding to next retry
+2025-11-30 21:26:21.642 | INFO     | Starting patch selection
+2025-11-30 21:26:25.036 | INFO     | Model (gpt-4o-2024-05-13) API request cost info: input_tokens=326, output_tokens=304, cost=0.006190
+2025-11-30 21:26:32.193 | INFO     | Model (gpt-4o-2024-05-13) API request cost info: input_tokens=644, output_tokens=743, cost=0.014365
+2025-11-30 21:26:33.029 | INFO     | Model (gpt-4o-2024-05-13) API request cost info: input_tokens=1518, output_tokens=21, cost=0.007905
+2025-11-30 21:26:33.601 | INFO     | Model (gpt-4o-2024-05-13) API request cost info: input_tokens=1518, output_tokens=15, cost=0.007815
+2025-11-30 21:26:37.960 | INFO     | Model (gpt-4o-2024-05-13) API request cost info: input_tokens=1518, output_tokens=492, cost=0.014970
+2025-11-30 21:26:39.666 | INFO     | Model (gpt-4o-2024-05-13) API request cost info: input_tokens=326, output_tokens=166, cost=0.004120
+2025-11-30 21:26:44.814 | INFO     | Model (gpt-4o-2024-05-13) API request cost info: input_tokens=506, output_tokens=601, cost=0.011545
+2025-11-30 21:26:45.419 | INFO     | Model (gpt-4o-2024-05-13) API request cost info: input_tokens=1238, output_tokens=22, cost=0.006520
+2025-11-30 21:26:45.987 | INFO     | Model (gpt-4o-2024-05-13) API request cost info: input_tokens=1238, output_tokens=23, cost=0.006535
+2025-11-30 21:26:46.584 | INFO     | Model (gpt-4o-2024-05-13) API request cost info: input_tokens=1238, output_tokens=18, cost=0.006460
+2025-11-30 21:26:48.905 | INFO     | Model (gpt-4o-2024-05-13) API request cost info: input_tokens=326, output_tokens=224, cost=0.004990
+2025-11-30 21:26:54.878 | INFO     | Model (gpt-4o-2024-05-13) API request cost info: input_tokens=564, output_tokens=690, cost=0.013170
+2025-11-30 21:26:55.341 | INFO     | Model (gpt-4o-2024-05-13) API request cost info: input_tokens=1385, output_tokens=8, cost=0.007045
+2025-11-30 21:26:55.897 | INFO     | Model (gpt-4o-2024-05-13) API request cost info: input_tokens=1385, output_tokens=10, cost=0.007075
+2025-11-30 21:26:56.485 | INFO     | Model (gpt-4o-2024-05-13) API request cost info: input_tokens=1385, output_tokens=17, cost=0.007180
+2025-11-30 21:26:56.485 | WARNING  | Agent selection failed; choosing last available patch.
+2025-11-30 21:26:56.587 | ERROR    | No patches produced; cannot select one.
+Traceback (most recent call last):
+
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+             │   │       └ {}
+             │   └ ('collect_factor_and_dimension does not detect equivalent dimensions in addition\nCode to reproduce:\r\n```python\r\nfrom sym...
+             └ <function run at 0x757a45483d80>
+
+  File "/opt/auto-code-rover/app/agents/agent_select.py", line 97, in run
+    raise RuntimeError("out-of-bound patch selection by LLM")
+
+RuntimeError: out-of-bound patch selection by LLM
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "/opt/auto-code-rover/app/inference.py", line 230, in select_patch
+    index, agent_comment, thread = agent_select.run(
+           │                       │            └ <function run at 0x757a3f55b6a0>
+           │                       └ <module 'app.agents.agent_select' from '/opt/auto-code-rover/app/agents/agent_select.py'>
+           └ None
+
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/site-packages/tenacity/__init__.py", line 289, in wrapped_f
+    return self(f, *args, **kw)
+           │    │   │       └ {}
+           │    │   └ ('collect_factor_and_dimension does not detect equivalent dimensions in addition\nCode to reproduce:\r\n```python\r\nfrom sym...
+           │    └ <function run at 0x757a45483d80>
+           └ <Retrying object at 0x757a454919a0 (stop=<tenacity.stop.stop_after_attempt object at 0x757a457dbbf0>, wait=<tenacity.wait.wai...
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+         │    │                └ <RetryCallState 129167899082192: attempt #3; slept for 0.0; last result: failed (RuntimeError out-of-bound patch selection by...
+         │    └ <function BaseRetrying.iter at 0x757a45483240>
+         └ <Retrying object at 0x757a454919a0 (stop=<tenacity.stop.stop_after_attempt object at 0x757a457dbbf0>, wait=<tenacity.wait.wai...
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/site-packages/tenacity/__init__.py", line 326, in iter
+    raise retry_exc from fut.exception()
+          │              │   └ <function Future.exception at 0x757a462e44a0>
+          │              └ <Future at 0x757a3f524f20 state=finished raised RuntimeError>
+          └ RetryError(<Future at 0x757a3f524f20 state=finished raised RuntimeError>)
+
+tenacity.RetryError: RetryError[<Future at 0x757a3f524f20 state=finished raised RuntimeError>]
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/opt/auto-code-rover/app/main.py", line 670, in <module>
+    main()
+    └ <function main at 0x757a4655e840>
+
+  File "/opt/auto-code-rover/app/main.py", line 122, in main
+    run_task_groups(groups, num_processes, organize_output=True)
+    │               │       └ 4
+    │               └ {'setup_sympy__sympy__1.12': [<app.raw_tasks.RawSweTask object at 0x757a3c917d40>, <app.raw_tasks.RawSweTask object at 0x757a...
+    └ <function run_task_groups at 0x757a3ec2a980>
+
+  File "/opt/auto-code-rover/app/main.py", line 413, in run_task_groups
+    run_task_groups_parallel(task_groups, num_processes)
+    │                        │            └ 4
+    │                        └ {'setup_sympy__sympy__1.12': [<app.raw_tasks.RawSweTask object at 0x757a3c917d40>, <app.raw_tasks.RawSweTask object at 0x757a...
+    └ <function run_task_groups_parallel at 0x757a3ec2aac0>
+
+  File "/opt/auto-code-rover/app/main.py", line 451, in run_task_groups_parallel
+    executor.map(run_task_group, group_ids, group_tasks)
+    │        │   │               │          └ ([<app.raw_tasks.RawSweTask object at 0x757a3c917d40>, <app.raw_tasks.RawSweTask object at 0x757a3c917d70>], [<app.raw_tasks....
+    │        │   │               └ ('setup_sympy__sympy__1.12', 'setup_sympy__sympy__1.13')
+    │        │   └ <function run_task_group at 0x757a3ec2ab60>
+    │        └ <function ProcessPoolExecutor.map at 0x757a4613d3a0>
+    └ <concurrent.futures.process.ProcessPoolExecutor object at 0x757a3ebab9e0>
+
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/concurrent/futures/process.py", line 859, in map
+    results = super().map(partial(_process_chunk, fn),
+                          │       │               └ <function run_task_group at 0x757a3ec2ab60>
+                          │       └ <function _process_chunk at 0x757a4613c360>
+                          └ <class 'functools.partial'>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/concurrent/futures/_base.py", line 608, in map
+    fs = [self.submit(fn, *args) for args in zip(*iterables)]
+          │    │      │    │         │            └ (<generator object _get_chunks at 0x757a3ea4f4c0>,)
+          │    │      │    │         └ ((('setup_sympy__sympy__1.12', [<app.raw_tasks.RawSweTask object at 0x757a3c917d40>, <app.raw_tasks.RawSweTask object at 0x75...
+          │    │      │    └ ((('setup_sympy__sympy__1.12', [<app.raw_tasks.RawSweTask object at 0x757a3c917d40>, <app.raw_tasks.RawSweTask object at 0x75...
+          │    │      └ functools.partial(<function _process_chunk at 0x757a4613c360>, <function run_task_group at 0x757a3ec2ab60>)
+          │    └ <function ProcessPoolExecutor.submit at 0x757a4613d300>
+          └ <concurrent.futures.process.ProcessPoolExecutor object at 0x757a3ebab9e0>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/concurrent/futures/process.py", line 831, in submit
+    self._start_executor_manager_thread()
+    │    └ <function ProcessPoolExecutor._start_executor_manager_thread at 0x757a4613d080>
+    └ <concurrent.futures.process.ProcessPoolExecutor object at 0x757a3ebab9e0>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/concurrent/futures/process.py", line 770, in _start_executor_manager_thread
+    self._launch_processes()
+    │    └ <function ProcessPoolExecutor._launch_processes at 0x757a4613d1c0>
+    └ <concurrent.futures.process.ProcessPoolExecutor object at 0x757a3ebab9e0>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/concurrent/futures/process.py", line 797, in _launch_processes
+    self._spawn_process()
+    │    └ <function ProcessPoolExecutor._spawn_process at 0x757a4613d260>
+    └ <concurrent.futures.process.ProcessPoolExecutor object at 0x757a3ebab9e0>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/concurrent/futures/process.py", line 807, in _spawn_process
+    p.start()
+    │ └ <function BaseProcess.start at 0x757a463104a0>
+    └ <ForkProcess name='ForkProcess-1' parent=1354 unknown>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+    │    │        │    │      └ <ForkProcess name='ForkProcess-1' parent=1354 unknown>
+    │    │        │    └ <staticmethod(<function ForkProcess._Popen at 0x757a4637d4e0>)>
+    │    │        └ <ForkProcess name='ForkProcess-1' parent=1354 unknown>
+    │    └ None
+    └ <ForkProcess name='ForkProcess-1' parent=1354 unknown>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/multiprocessing/context.py", line 282, in _Popen
+    return Popen(process_obj)
+           │     └ <ForkProcess name='ForkProcess-1' parent=1354 unknown>
+           └ <class 'multiprocessing.popen_fork.Popen'>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+    │    │       └ <ForkProcess name='ForkProcess-1' parent=1354 unknown>
+    │    └ <function Popen._launch at 0x757a3ea4b1a0>
+    └ <multiprocessing.popen_fork.Popen object at 0x757a3f43a780>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/multiprocessing/popen_fork.py", line 71, in _launch
+    code = process_obj._bootstrap(parent_sentinel=child_r)
+           │           │                          └ 13
+           │           └ <function BaseProcess._bootstrap at 0x757a46310ea0>
+           └ <ForkProcess name='ForkProcess-1' parent=1354 unknown>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x757a46310400>
+    └ <ForkProcess name='ForkProcess-1' parent=1354 unknown>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <ForkProcess name='ForkProcess-1' parent=1354 unknown>
+    │    │        │    └ (<concurrent.futures.process._SafeQueue object at 0x757a3ea56bd0>, <multiprocessing.queues.SimpleQueue object at 0x757a3ea567...
+    │    │        └ <ForkProcess name='ForkProcess-1' parent=1354 unknown>
+    │    └ <function _process_worker at 0x757a4613c4a0>
+    └ <ForkProcess name='ForkProcess-1' parent=1354 unknown>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/concurrent/futures/process.py", line 263, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+        │         │   │         │       │         └ {}
+        │         │   │         │       └ <concurrent.futures.process._CallItem object at 0x757a462f8320>
+        │         │   │         └ ((('setup_sympy__sympy__1.12', [<app.raw_tasks.RawSweTask object at 0x757a3ea563c0>, <app.raw_tasks.RawSweTask object at 0x75...
+        │         │   └ <concurrent.futures.process._CallItem object at 0x757a462f8320>
+        │         └ functools.partial(<function _process_chunk at 0x757a4613c360>, <function run_task_group at 0x757a3ec2ab60>)
+        └ <concurrent.futures.process._CallItem object at 0x757a462f8320>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/concurrent/futures/process.py", line 212, in _process_chunk
+    return [fn(*args) for args in chunk]
+            │   │         │       └ (('setup_sympy__sympy__1.12', [<app.raw_tasks.RawSweTask object at 0x757a3ea563c0>, <app.raw_tasks.RawSweTask object at 0x757...
+            │   │         └ ('setup_sympy__sympy__1.12', [<app.raw_tasks.RawSweTask object at 0x757a3ea563c0>, <app.raw_tasks.RawSweTask object at 0x757a...
+            │   └ ('setup_sympy__sympy__1.12', [<app.raw_tasks.RawSweTask object at 0x757a3ea563c0>, <app.raw_tasks.RawSweTask object at 0x757a...
+            └ <function run_task_group at 0x757a3ec2ab60>
+
+  File "/opt/auto-code-rover/app/main.py", line 466, in run_task_group
+    run_task_in_subprocess(task)
+    │                      └ <app.raw_tasks.RawSweTask object at 0x757a3ea55dc0>
+    └ <function run_task_in_subprocess at 0x757a3ec2ac00>
+
+  File "/opt/auto-code-rover/app/main.py", line 476, in run_task_in_subprocess
+    executor.submit(run_raw_task, task)
+    │        │      │             └ <app.raw_tasks.RawSweTask object at 0x757a3ea55dc0>
+    │        │      └ <function run_raw_task at 0x757a3ec2aca0>
+    │        └ <function ProcessPoolExecutor.submit at 0x757a4613d300>
+    └ <concurrent.futures.process.ProcessPoolExecutor object at 0x757a3ee0a120>
+
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/concurrent/futures/process.py", line 831, in submit
+    self._start_executor_manager_thread()
+    │    └ <function ProcessPoolExecutor._start_executor_manager_thread at 0x757a4613d080>
+    └ <concurrent.futures.process.ProcessPoolExecutor object at 0x757a3ee0a120>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/concurrent/futures/process.py", line 770, in _start_executor_manager_thread
+    self._launch_processes()
+    │    └ <function ProcessPoolExecutor._launch_processes at 0x757a4613d1c0>
+    └ <concurrent.futures.process.ProcessPoolExecutor object at 0x757a3ee0a120>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/concurrent/futures/process.py", line 797, in _launch_processes
+    self._spawn_process()
+    │    └ <function ProcessPoolExecutor._spawn_process at 0x757a4613d260>
+    └ <concurrent.futures.process.ProcessPoolExecutor object at 0x757a3ee0a120>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/concurrent/futures/process.py", line 807, in _spawn_process
+    p.start()
+    │ └ <function BaseProcess.start at 0x757a463104a0>
+    └ <ForkProcess name='ForkProcess-1:2' parent=1355 started>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+    │    │        │    │      └ <ForkProcess name='ForkProcess-1:2' parent=1355 started>
+    │    │        │    └ <staticmethod(<function ForkProcess._Popen at 0x757a4637d4e0>)>
+    │    │        └ <ForkProcess name='ForkProcess-1:2' parent=1355 started>
+    │    └ None
+    └ <ForkProcess name='ForkProcess-1:2' parent=1355 started>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/multiprocessing/context.py", line 282, in _Popen
+    return Popen(process_obj)
+           │     └ <ForkProcess name='ForkProcess-1:2' parent=1355 started>
+           └ <class 'multiprocessing.popen_fork.Popen'>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+    │    │       └ <ForkProcess name='ForkProcess-1:2' parent=1355 started>
+    │    └ <function Popen._launch at 0x757a3ea4b1a0>
+    └ <multiprocessing.popen_fork.Popen object at 0x757a3ea54fe0>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/multiprocessing/popen_fork.py", line 71, in _launch
+    code = process_obj._bootstrap(parent_sentinel=child_r)
+           │           │                          └ 22
+           │           └ <function BaseProcess._bootstrap at 0x757a46310ea0>
+           └ <ForkProcess name='ForkProcess-1:2' parent=1355 started>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x757a46310400>
+    └ <ForkProcess name='ForkProcess-1:2' parent=1355 started>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <ForkProcess name='ForkProcess-1:2' parent=1355 started>
+    │    │        │    └ (<concurrent.futures.process._SafeQueue object at 0x757a3ea551f0>, <multiprocessing.queues.SimpleQueue object at 0x757a3ea550...
+    │    │        └ <ForkProcess name='ForkProcess-1:2' parent=1355 started>
+    │    └ <function _process_worker at 0x757a4613c4a0>
+    └ <ForkProcess name='ForkProcess-1:2' parent=1355 started>
+  File "/root/miniconda3/envs/auto-code-rover/lib/python3.12/concurrent/futures/process.py", line 263, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+        │         │   │         │       │         └ {}
+        │         │   │         │       └ <concurrent.futures.process._CallItem object at 0x757a3ee0bf20>
+        │         │   │         └ (<app.raw_tasks.RawSweTask object at 0x757a3ea54ef0>,)
+        │         │   └ <concurrent.futures.process._CallItem object at 0x757a3ee0bf20>
+        │         └ <function run_raw_task at 0x757a3ec2aca0>
+        └ <concurrent.futures.process._CallItem object at 0x757a3ee0bf20>
+
+> File "/opt/auto-code-rover/app/main.py", line 508, in run_raw_task
+    run_ok = do_inference(task.to_task(), task_output_dir)
+             │            │    │          └ '/opt/auto-code-rover/experiment/vanilla-lite/sympy__sympy-24213_2025-11-30_21-24-46'
+             │            │    └ <function RawSweTask.to_task at 0x757a3ec29c60>
+             │            └ <app.raw_tasks.RawSweTask object at 0x757a3ea54ef0>
+             └ <function do_inference at 0x757a3ec2ae80>
+
+  File "/opt/auto-code-rover/app/main.py", line 604, in do_inference
+    run_ok = inference.run_one_task(
+             │         └ <function run_one_task at 0x757a3f1fb1a0>
+             └ <module 'app.inference' from '/opt/auto-code-rover/app/inference.py'>
+
+  File "/opt/auto-code-rover/app/inference.py", line 145, in run_one_task
+    selected, details = select_patch(task, output_dir)
+                        │            │     └ '/opt/auto-code-rover/experiment/vanilla-lite/sympy__sympy-24213_2025-11-30_21-24-46'
+                        │            └ SweTask(task_id='sympy__sympy-24213', problem_statement='collect_factor_and_dimension does not detect equivalent dimensions i...
+                        └ <function select_patch at 0x757a3f1fb240>
+
+  File "/opt/auto-code-rover/app/inference.py", line 239, in select_patch
+    raise RuntimeError("No patches produced; cannot select one.")
+
+RuntimeError: No patches produced; cannot select one.
+2025-11-30 21:26:56.592 | INFO     | Task sympy__sympy-24213 failed with exception: No patches produced; cannot select one..
+2025-11-30 21:26:56.593 | INFO     | No patch generated. You can try running ACR again.

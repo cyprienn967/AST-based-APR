@@ -186,10 +186,12 @@ def generate_ast_edits(
             # Removed response_format="json_object" for 30% speed improvement
             # Prompt already requests JSON, and _extract_json_region() handles mixed output
         )
-    except Exception:
+    except Exception as e:
+        logger.debug("LLM call failed: {}", e)
         return ASTGenerationResult([], user_prompt, None)
 
     if not content:
+        logger.debug("LLM returned empty content")
         return ASTGenerationResult([], user_prompt, None)
 
     content = content.strip()
@@ -330,10 +332,12 @@ def write_ast_edits_for_file(
                 # Removed response_format="json_object" for 30% speed improvement
                 # Prompt already requests JSON, and _extract_json_region() handles mixed output
             )
-        except Exception:
+        except Exception as e:
+            logger.debug("LLM call failed for node {}: {}", bug_loc.node_id, e)
             continue
         
         if not content:
+            logger.debug("LLM returned empty content for node {}", bug_loc.node_id)
             continue
         
         content = content.strip()
