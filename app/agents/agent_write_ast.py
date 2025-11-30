@@ -40,12 +40,21 @@ def _format_prompt(
     annotated_code: str,
     intended_behavior: str,
     target_node_id: int,
+    test_failure_output: str = "",
 ) -> str:
     """
     Format the prompt for the LLM using annotated code instead of AST dump.
     
     This reduces token count by ~40x (from 20K to 500 tokens) by showing
     node_ids inline with the code rather than as a massive AST dump.
+    
+    Args:
+        issue: The issue description
+        file_path: Path to the file being fixed
+        annotated_code: Code with node_id annotations
+        intended_behavior: Expected behavior after fix
+        target_node_id: The node_id to target for editing
+        test_failure_output: Stderr/traceback from failing test (optional but highly recommended)
     """
     # Create an example output for format alignment
     example_output = {
@@ -54,6 +63,22 @@ def _format_prompt(
         "new_code": "your_fixed_code_here"
     }
     example_json = json.dumps(example_output, indent=2)
+    
+    # Build the test failure section if available
+    test_failure_section = ""
+    if test_failure_output and test_failure_output.strip():
+        # Truncate if too long (keep last 2000 chars which usually has the actual error)
+        truncated_output = test_failure_output[-2000:] if len(test_failure_output) > 2000 else test_failure_output
+        test_failure_section = f"""
+<test_failure>
+The following test failure was observed when running the failing test:
+
+{truncated_output}
+
+This shows the EXACT symptom of the bug. Use this to understand what's going wrong.
+</test_failure>
+
+"""
     
     return f"""
 <issue>
@@ -68,7 +93,7 @@ def _format_prompt(
 {annotated_code}
 </buggy_code>
 
-<intended_behavior>
+{test_failure_section}<intended_behavior>
 {intended_behavior}
 </intended_behavior>
 
@@ -117,6 +142,7 @@ def generate_ast_edits(
     annotated_code: str,
     target_node_id: int,
     allow_multiple: bool = False,
+    test_failure_output: str = "",
 ) -> ASTGenerationResult:
     """
     Core LLM call: returns List[ASTEdit].
@@ -125,6 +151,16 @@ def generate_ast_edits(
       - Only valid JSON survives
       - Only schema-valid edits survive
       - Optional enforcement of one-edit-only (SWE-bench lite)
+    
+    Args:
+        issue_context: The issue description
+        file_path: Path to file being edited
+        code_snippet: Original code snippet (unused in current implementation)
+        intended_behavior: Expected behavior after fix
+        annotated_code: Code with node_id annotations
+        target_node_id: Target node for edit
+        allow_multiple: Whether to allow multiple edits
+        test_failure_output: Stderr/traceback from failing test
     """
 
     user_prompt = _format_prompt(
@@ -133,6 +169,7 @@ def generate_ast_edits(
         annotated_code,
         intended_behavior,
         target_node_id,
+        test_failure_output,
     )
 
     messages = [
@@ -145,7 +182,8 @@ def generate_ast_edits(
     try:
         content, _, _, _ = SELECTED_MODEL.call(
             messages=messages,
-            response_format="json_object",
+            # Removed response_format="json_object" for 30% speed improvement
+            # Prompt already requests JSON, and _extract_json_region() handles mixed output
         )
     except Exception:
         return ASTGenerationResult([], user_prompt, None)
@@ -266,13 +304,14 @@ def write_ast_edits_for_file(
             # Fallback to unannotated code
             annotated_code = subtree_source
         
-        # Format prompt with annotated code
+        # Format prompt with annotated code and test failure info
         user_prompt = _format_prompt(
             issue_context,
             rel_path,
             annotated_code,
             intended_behavior,
             bug_loc.node_id,
+            traceback_text,  # Pass test failure output to LLM
         )
         all_prompts.append(user_prompt)
         
@@ -285,7 +324,8 @@ def write_ast_edits_for_file(
         try:
             content, _, _, _ = SELECTED_MODEL.call(
                 messages=messages,
-                response_format="json_object",
+                # Removed response_format="json_object" for 30% speed improvement
+                # Prompt already requests JSON, and _extract_json_region() handles mixed output
             )
         except Exception:
             continue

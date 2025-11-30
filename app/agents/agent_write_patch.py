@@ -287,6 +287,7 @@ class PatchAgent:
             annotated_code,
             target_node_id,
             allow_multiple=False,
+            test_failure_output="",  # PatchAgent doesn't have test failure info
         )
 
         if not generation.edits:

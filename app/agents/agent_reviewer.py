@@ -182,7 +182,8 @@ def run_with_retries(
 
     for _ in range(1, retries + 1):
         response, *_ = common.SELECTED_MODEL.call(
-            prefix_thread.to_msg(), response_format="json_object"
+            prefix_thread.to_msg()
+            # Removed response_format="json_object" for speed improvement
         )
 
         thread = deepcopy(prefix_thread)

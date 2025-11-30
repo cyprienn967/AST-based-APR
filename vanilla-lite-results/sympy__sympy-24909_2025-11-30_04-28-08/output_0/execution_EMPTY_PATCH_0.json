@@ -1,6 +1,0 @@
-{
-    "stdout": "Assertion Error, issue reproduced.\n\n",
-    "stderr": "Traceback (most recent call last):\n  File \"/tmp/reproducer-0p3l12sn.py\"\n    25: raise AssertionError(f\"Expected to find '{expected_substr}' in the result '{result_str}', but it is not there.\")\nAssertionError: Expected to find 'mW' in the result '1', but it is not there.\n\nERROR conda.cli.main_run:execute(124): `conda run python /tmp/reproducer-0p3l12sn.py` failed. (See above for error)\n",
-    "returncode": 1,
-    "triggered": true
-}

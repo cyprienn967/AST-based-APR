@@ -1,3 +1,0 @@
-sympy__sympy-24152
-sympy__sympy-24213
-sympy__sympy-24909

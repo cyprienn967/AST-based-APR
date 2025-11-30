@@ -72,7 +72,8 @@ def run(
     responses = []
     for _ in range(3):
         response, *_ = model.call(
-            prefix_thread.to_msg(), response_format="json_object", n=3
+            prefix_thread.to_msg(), n=3
+            # Removed response_format="json_object" for speed improvement
         )
         responses.append(response)
 

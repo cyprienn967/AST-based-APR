@@ -150,7 +150,8 @@ class TestAgent:
         @retry(stop=stop_after_attempt(3))
         def query_and_parse():
             response, *_ = common.SELECTED_MODEL.call(
-                prefix_thread.to_msg(), response_format="json_object"
+                prefix_thread.to_msg()
+                # Removed response_format="json_object" for speed improvement
             )
 
             result = json.loads(response)[key]
