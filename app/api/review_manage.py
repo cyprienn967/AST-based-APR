@@ -297,7 +297,7 @@ class ReviewManager:
         Determine the file to patch from the task.
         Priority:
         1. Explicit file_to_edit attribute
-        2. File with highest SBFL score
+        2. File with highest SBFL score (using improved scoring)
         3. File matching issue statement keywords (semantic selection)
         4. First Python file in repo
         """
@@ -306,15 +306,11 @@ class ReviewManager:
         
         # Use SBFL results to find the most suspicious file
         if self.sbfl_line_scores:
-            # Find file with highest total suspiciousness
-            file_scores = {}
-            for file_path, line_scores in self.sbfl_line_scores.items():
-                total_score = sum(line_scores.values())
-                file_scores[file_path] = total_score
+            file_scores = self._compute_improved_sbfl_scores()
             
             if file_scores:
                 most_suspicious_file = max(file_scores.items(), key=lambda x: x[1])[0]
-                logger.info("Selected file {} based on SBFL (score: {})", 
+                logger.info("Selected file {} based on improved SBFL (score: {:.2f})", 
                           most_suspicious_file, file_scores[most_suspicious_file])
                 return most_suspicious_file
         
@@ -339,6 +335,146 @@ class ReviewManager:
                     return str(all_py_files[0])
         
         return None
+    
+    def _compute_improved_sbfl_scores(self) -> dict[str, float]:
+        """
+        Compute improved SBFL scores that avoid biasing toward large/framework files.
+        
+        Strategy:
+        1. Filter out framework/test files (conftest, __init__, setup, etc.)
+        2. Use max line score + normalized average (not sum) to avoid size bias
+        3. Penalize very large files unless they have extremely high max scores
+        4. Boost files that match keywords from issue statement
+        
+        Returns:
+            dict mapping file_path -> composite score
+        """
+        file_scores = {}
+        
+        # Extract keywords from issue statement for boosting
+        issue_keywords = self._extract_issue_keywords()
+        
+        for file_path, line_scores in self.sbfl_line_scores.items():
+            # Filter out framework and test files
+            if self._is_framework_file(file_path):
+                logger.debug("Skipping framework file: {}", file_path)
+                continue
+            
+            if not line_scores:
+                continue
+            
+            # Get file size (number of lines)
+            try:
+                with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+                    num_lines = sum(1 for _ in f)
+            except Exception:
+                num_lines = len(line_scores)
+            
+            # Penalize very large files (>1000 lines) - they're usually core modules
+            if num_lines > 1000:
+                size_penalty = 0.5  # Reduce score by 50%
+                logger.debug("Applying size penalty to large file: {} ({} lines)", file_path, num_lines)
+            else:
+                size_penalty = 1.0
+            
+            # Compute metrics
+            max_score = max(line_scores.values())
+            avg_score = sum(line_scores.values()) / len(line_scores)
+            num_suspicious_lines = sum(1 for s in line_scores.values() if s > 0.7)
+            
+            # Composite score: prioritize max score (indicates critical line),
+            # but also consider density of suspicious lines
+            # Formula: max_score * 2 + avg_score + (num_suspicious_lines / 100)
+            base_score = (max_score * 2.0) + avg_score + (num_suspicious_lines / 100.0)
+            
+            # Apply size penalty
+            base_score *= size_penalty
+            
+            # Boost if file matches issue keywords
+            issue_boost = self._compute_issue_match_boost(file_path, issue_keywords)
+            final_score = base_score * (1.0 + issue_boost)
+            
+            file_scores[file_path] = final_score
+            logger.debug("File: {} | max={:.2f} avg={:.2f} suspicious_lines={} size_penalty={:.1f} issue_boost={:.2f} final={:.2f}",
+                        file_path, max_score, avg_score, num_suspicious_lines, size_penalty, issue_boost, final_score)
+        
+        return file_scores
+    
+    def _is_framework_file(self, file_path: str) -> bool:
+        """Check if a file is likely a framework/infrastructure file rather than application code."""
+        file_path_lower = file_path.lower()
+        filename = Path(file_path).name.lower()
+        
+        # Exclude common framework patterns
+        framework_patterns = [
+            'conftest.py',
+            '__init__.py',
+            'setup.py',
+            'test_',
+            '_test.py',
+            '/tests/',
+            '/testing/',
+            'fixtures.py',
+            'config.py',
+            'settings.py',
+        ]
+        
+        for pattern in framework_patterns:
+            if pattern in file_path_lower or pattern in filename:
+                return True
+        
+        return False
+    
+    def _extract_issue_keywords(self) -> set[str]:
+        """Extract relevant keywords from the issue statement."""
+        if not hasattr(self, 'issue_stmt') or not self.issue_stmt:
+            return set()
+        
+        # Extract PascalCase identifiers (likely class names)
+        pascal_case = re.findall(r'\b([A-Z][a-zA-Z0-9]{2,})\b', self.issue_stmt)
+        
+        # Extract snake_case identifiers (likely function/module names)
+        snake_case = re.findall(r'\b([a-z_][a-z0-9_]{3,})\b', self.issue_stmt)
+        
+        # Extract words from quotes (often specific identifiers)
+        quoted = re.findall(r'[\'"`]([a-zA-Z_][a-zA-Z0-9_]+)[\'"`]', self.issue_stmt)
+        
+        keywords = set(pascal_case[:10] + snake_case[:15] + quoted[:10])
+        
+        # Remove common English words
+        common_words = {'the', 'this', 'that', 'with', 'from', 'have', 'should', 
+                       'would', 'could', 'when', 'where', 'which', 'their', 'there',
+                       'about', 'error', 'issue', 'problem', 'function', 'method',
+                       'class', 'module', 'file', 'code', 'return', 'value', 'need',
+                       'want', 'expect', 'expected', 'actual', 'result', 'output'}
+        keywords = {kw for kw in keywords if kw.lower() not in common_words}
+        
+        return keywords
+    
+    def _compute_issue_match_boost(self, file_path: str, keywords: set[str]) -> float:
+        """
+        Compute a boost factor based on how well the file matches issue keywords.
+        Returns a value between 0.0 and 1.0 (where 1.0 means double the score).
+        """
+        if not keywords:
+            return 0.0
+        
+        filename = Path(file_path).stem.lower()
+        boost = 0.0
+        
+        for keyword in keywords:
+            kw_lower = keyword.lower()
+            
+            # Strong match: keyword in filename
+            if kw_lower in filename or filename in kw_lower:
+                boost += 0.5
+            
+            # Medium match: keyword in file path
+            elif kw_lower in file_path.lower():
+                boost += 0.2
+        
+        # Cap the boost at 1.0 (would double the score)
+        return min(boost, 1.0)
 
     @classmethod
     def compose_feedback_for_test_generation(cls, review: Review, patch: str) -> str:
