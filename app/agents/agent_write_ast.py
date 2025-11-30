@@ -189,7 +189,7 @@ def generate_ast_edits(
     logger.debug(f"🔍 [AST AGENT DEBUG] SELECTED_MODEL: {model_common.SELECTED_MODEL.name if model_common.SELECTED_MODEL else 'None'}")
 
     try:
-        content, _, _, _ = model_common.SELECTED_MODEL.call(
+        content, *_ = model_common.SELECTED_MODEL.call(
             messages=messages,
             # Removed response_format="json_object" for 30% speed improvement
             # Prompt already requests JSON, and _extract_json_region() handles mixed output
@@ -348,7 +348,7 @@ def write_ast_edits_for_file(
         logger.debug(f"🔍 [AST AGENT DEBUG] Calling LLM for node {bug_loc.node_id} with model: {model_common.SELECTED_MODEL.name}")
         
         try:
-            content, _, _, _ = model_common.SELECTED_MODEL.call(
+            content, *_ = model_common.SELECTED_MODEL.call(
                 messages=messages,
                 # Removed response_format="json_object" for 30% speed improvement
                 # Prompt already requests JSON, and _extract_json_region() handles mixed output
