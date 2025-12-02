@@ -307,6 +307,13 @@ def main():
     # Summary
     successful = [r for r in results if not r.error]
     
+    # Calculate metrics (define before use)
+    file_acc = 0.0
+    avg_recall = 0.0
+    if successful:
+        file_acc = sum(1 for r in successful if r.file_correct) / len(successful)
+        avg_recall = sum(r.line_recall for r in successful) / len(successful)
+    
     print("\n" + "="*60)
     print("SUMMARY")
     print("="*60)
@@ -314,11 +321,10 @@ def main():
     print(f"Successful: {len(successful)}")
     
     if successful:
-        file_acc = sum(1 for r in successful if r.file_correct) / len(successful)
-        avg_recall = sum(r.line_recall for r in successful) / len(successful)
-        
         print(f"\nFILE ACCURACY: {file_acc:.1%}")
         print(f"LINE RECALL@5: {avg_recall:.1%}")
+    else:
+        print("\nNo successful evaluations - cannot compute metrics")
     
     print("="*60)
     
@@ -328,8 +334,8 @@ def main():
         json.dump({
             'total': len(results),
             'successful': len(successful),
-            'file_accuracy': file_acc if successful else 0,
-            'avg_line_recall': avg_recall if successful else 0,
+            'file_accuracy': file_acc,
+            'avg_line_recall': avg_recall,
             'tasks': [
                 {
                     'task_id': r.task_id,

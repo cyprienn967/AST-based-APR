@@ -457,6 +457,7 @@ def main():
         file_accuracy = file_correct_count / len(successful_results)
         avg_line_recall = sum(r.line_recall for r in successful_results) / len(successful_results)
     else:
+        file_correct_count = 0
         file_accuracy = 0.0
         avg_line_recall = 0.0
     
@@ -468,7 +469,10 @@ def main():
     print(f"Successful:         {len(successful_results)}")
     print(f"Failed:             {len(failed_results)}")
     print()
-    print(f"FILE-LEVEL ACCURACY: {file_correct_count}/{len(successful_results)} = {file_accuracy:.1%}")
+    if successful_results:
+        print(f"FILE-LEVEL ACCURACY: {file_correct_count}/{len(successful_results)} = {file_accuracy:.1%}")
+    else:
+        print(f"FILE-LEVEL ACCURACY: N/A (no successful evaluations)")
     print(f"LINE RECALL@5:       {avg_line_recall:.1%}")
     print("="*70)
     
@@ -479,7 +483,9 @@ def main():
         status = "✅" if r.file_correct else "❌"
         if r.error:
             status = "⚠️"
-            print(f"{status} {r.task_id}: ERROR - {r.error}")
+            # Truncate long error messages
+            error_msg = r.error[:80] + "..." if len(r.error) > 80 else r.error
+            print(f"{status} {r.task_id}: ERROR - {error_msg}")
         else:
             print(f"{status} {r.task_id}: file={r.file_correct}, line_recall={r.line_recall:.1%}")
     print("-"*70)
