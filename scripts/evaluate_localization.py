@@ -1,24 +1,25 @@
 #!/usr/bin/env python3
 """
-Evaluate localization accuracy WITHOUT running expensive LLM calls.
+Evaluate FULL localization pipeline accuracy WITHOUT running expensive LLM calls.
 
-This script:
-1. Loads tasks from config file
-2. Runs SBFL to get line-level suspiciousness scores
-3. Runs file-level and node-level localization
-4. Compares against ground truth from developer patches
-5. Outputs comprehensive metrics
+This script runs the COMPLETE localization pipeline including:
+1. SBFL to get line-level suspiciousness scores
+2. File-level selection with keyword boosting
+3. AST parsing of selected file
+4. Node-level localization with issue-based method boosting
+5. Comparison against ground truth
 
 Usage:
     python scripts/evaluate_localization.py conf/vanilla-lite.conf
 
 Metrics computed:
 - File-level accuracy: Did we select the correct file?
-- Method-level recall@K: What % of buggy methods are in top-K?
-- Line-level recall@K: What % of buggy lines are within K lines of predictions?
+- Method-level recall@K: What % of buggy methods are in top-K localized nodes?
+- Line-level recall@K: What % of buggy lines are covered by localized nodes?
 """
 
 import argparse
+import ast
 import json
 import os
 import re
@@ -39,6 +40,11 @@ from app.analysis import sbfl
 from app.raw_tasks import RawSweTask
 from app.task import SweTask
 
+# Import the FULL localization pipeline
+from app.ast_repair.parser import parse_file_to_ast
+from app.ast_repair.localize import localize_fault, BugLocation
+from app.ast_repair.metadata import ASTMetadata
+
 
 @dataclass
 class GroundTruth:
@@ -58,15 +64,21 @@ class LocalizationResult:
     gt_lines: Dict[str, Set[int]] = field(default_factory=dict)
     gt_methods: Set[str] = field(default_factory=set)
     
-    # Predictions
+    # Predictions (file-level)
     predicted_file: Optional[str] = None
     predicted_lines: Dict[str, Set[int]] = field(default_factory=dict)
-    sbfl_files: List[str] = field(default_factory=list)  # All files with SBFL scores
+    sbfl_files: List[str] = field(default_factory=list)
+    
+    # Predictions (node-level from FULL localization)
+    predicted_methods: Set[str] = field(default_factory=set)
+    localized_node_ids: List[int] = field(default_factory=list)
+    localized_lines: Set[int] = field(default_factory=set)
     
     # Metrics
     file_correct: bool = False
     line_recall: float = 0.0
     method_recall: float = 0.0
+    node_line_recall: float = 0.0  # Line recall from node-level localization
     
     # Error info
     error: Optional[str] = None
@@ -304,8 +316,53 @@ def evaluate_line_localization(
     return hits / len(gt_lines)
 
 
+def extract_methods_from_nodes(
+    bug_locations: List[BugLocation],
+    metadata: ASTMetadata
+) -> Tuple[Set[str], Set[int]]:
+    """
+    Extract method names and line numbers from localized nodes.
+    
+    Returns:
+        (method_names, line_numbers)
+    """
+    methods = set()
+    lines = set()
+    
+    for loc in bug_locations:
+        node = loc.subtree
+        
+        # Get method name if this is a function
+        if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
+            methods.add(node.name)
+        
+        # Walk up expansion chain to find parent function
+        for nid in loc.expansion_chain:
+            parent_node = metadata.node_index.get(nid)
+            if parent_node and isinstance(parent_node, (ast.FunctionDef, ast.AsyncFunctionDef)):
+                methods.add(parent_node.name)
+                break
+        
+        # Get line numbers covered by this node
+        start, end = metadata.line_map.get(loc.node_id, (None, None))
+        if start is not None and end is not None:
+            for line in range(start, end + 1):
+                lines.add(line)
+    
+    return methods, lines
+
+
 def evaluate_task(raw_task: RawSweTask, output_dir: str) -> LocalizationResult:
-    """Evaluate localization for a single task."""
+    """
+    Evaluate FULL localization pipeline for a single task.
+    
+    This runs:
+    1. SBFL → line scores
+    2. File selection with keyword boosting
+    3. AST parsing
+    4. FULL node-level localization with issue boosting
+    5. Method/line extraction from localized nodes
+    """
     result = LocalizationResult(task_id=raw_task.task_id)
     
     try:
@@ -342,38 +399,100 @@ def evaluate_task(raw_task: RawSweTask, output_dir: str) -> LocalizationResult:
             f: set(scores.keys()) for f, scores in sbfl_line_scores.items()
         }
         
-        # Compute file-level selection
+        # Get issue statement for boosting
         issue_stmt = raw_task.task_info.get('problem_statement', '')
+        
+        # Compute file-level selection
         file_scores = compute_file_scores(sbfl_line_scores, issue_stmt)
         
-        if file_scores:
-            result.predicted_file = max(file_scores.items(), key=lambda x: x[1])[0]
-            logger.info(f"Predicted file: {result.predicted_file} (score: {file_scores[result.predicted_file]:.2f})")
+        if not file_scores:
+            result.error = "No file scores computed"
+            return result
+        
+        result.predicted_file = max(file_scores.items(), key=lambda x: x[1])[0]
+        logger.info(f"Selected file: {result.predicted_file} (score: {file_scores[result.predicted_file]:.2f})")
         
         # Evaluate file-level accuracy
         result.file_correct = evaluate_file_localization(result.predicted_file, result.gt_files)
         
-        # Evaluate line-level recall (across all files)
+        # =====================================================================
+        # NEW: Run FULL node-level localization with issue boosting
+        # =====================================================================
+        try:
+            # Parse the selected file's AST
+            root_ast, metadata = parse_file_to_ast(result.predicted_file)
+            
+            # Get SBFL scores for this file
+            file_sbfl_scores = sbfl_line_scores.get(result.predicted_file, {})
+            
+            # Run the FULL localization pipeline with issue boosting
+            bug_locations = localize_fault(
+                root=root_ast,
+                md=metadata,
+                sbfl_line_scores=file_sbfl_scores,
+                traceback_text="",  # No traceback in evaluation
+                failing_line=None,
+                project_root=str(task.project_path) if hasattr(task, 'project_path') else "",
+                top_k=config.localization_top_k,
+                issue_text=issue_stmt,  # THIS IS THE KEY - issue boosting!
+            )
+            
+            if bug_locations:
+                # Extract methods and lines from localized nodes
+                result.predicted_methods, result.localized_lines = extract_methods_from_nodes(
+                    bug_locations, metadata
+                )
+                result.localized_node_ids = [loc.node_id for loc in bug_locations]
+                
+                logger.info(f"Localized {len(bug_locations)} nodes")
+                logger.info(f"Predicted methods: {result.predicted_methods}")
+                logger.info(f"Localized lines: {sorted(result.localized_lines)[:10]}...")
+                
+                # Calculate method recall
+                if result.gt_methods:
+                    method_hits = len(result.predicted_methods & result.gt_methods)
+                    result.method_recall = method_hits / len(result.gt_methods)
+                    logger.info(f"Method recall: {result.method_recall:.1%} ({method_hits}/{len(result.gt_methods)})")
+                
+                # Calculate node-level line recall
+                gt_lines_for_file = set()
+                for gt_file, gt_lines in result.gt_lines.items():
+                    if evaluate_file_localization(result.predicted_file, [gt_file]):
+                        gt_lines_for_file.update(gt_lines)
+                
+                if gt_lines_for_file:
+                    result.node_line_recall = evaluate_line_localization(
+                        result.localized_lines, gt_lines_for_file, tolerance=5
+                    )
+                    logger.info(f"Node line recall: {result.node_line_recall:.1%}")
+            else:
+                logger.warning("No nodes localized!")
+                
+        except Exception as e:
+            logger.warning(f"Node-level localization failed: {e}")
+            # Continue with file-level results only
+        
+        # =====================================================================
+        # Calculate overall line recall (SBFL-based, for comparison)
+        # =====================================================================
         all_gt_lines = set()
         all_pred_lines = set()
         
         for gt_file, gt_lines in result.gt_lines.items():
             all_gt_lines.update(gt_lines)
-            # Find matching predicted file
             for pred_file, pred_lines in result.predicted_lines.items():
                 if evaluate_file_localization(pred_file, [gt_file]):
                     all_pred_lines.update(pred_lines)
         
         result.line_recall = evaluate_line_localization(all_pred_lines, all_gt_lines, tolerance=5)
         
-        logger.info(f"Results: file_correct={result.file_correct}, line_recall={result.line_recall:.2%}")
+        logger.info(f"Results: file={result.file_correct}, method_recall={result.method_recall:.1%}, line_recall={result.line_recall:.1%}")
         
-        # Save SBFL results
+        # Save results
         task_output = os.path.join(output_dir, raw_task.task_id)
         os.makedirs(task_output, exist_ok=True)
         
         with open(os.path.join(task_output, 'sbfl_scores.json'), 'w') as f:
-            # Convert sets to lists for JSON serialization
             serializable = {
                 file: {str(line): score for line, score in scores.items()}
                 for file, scores in sbfl_line_scores.items()
@@ -388,6 +507,17 @@ def evaluate_task(raw_task: RawSweTask, output_dir: str) -> LocalizationResult:
                 'files': result.gt_files,
                 'lines': {f: list(lines) for f, lines in result.gt_lines.items()},
                 'methods': list(result.gt_methods),
+            }, f, indent=2)
+        
+        with open(os.path.join(task_output, 'localization.json'), 'w') as f:
+            json.dump({
+                'predicted_file': result.predicted_file,
+                'predicted_methods': list(result.predicted_methods),
+                'localized_node_ids': result.localized_node_ids,
+                'localized_lines': sorted(result.localized_lines),
+                'file_correct': result.file_correct,
+                'method_recall': result.method_recall,
+                'node_line_recall': result.node_line_recall,
             }, f, indent=2)
         
         return result
@@ -445,49 +575,62 @@ def main():
         successful = [r for r in results if not r.error]
         if successful:
             file_acc = sum(1 for r in successful if r.file_correct) / len(successful)
-            avg_recall = sum(r.line_recall for r in successful) / len(successful)
-            logger.info(f"Running stats: file_acc={file_acc:.1%}, line_recall={avg_recall:.1%}")
+            method_recall = sum(r.method_recall for r in successful) / len(successful)
+            logger.info(f"Running stats: file_acc={file_acc:.1%}, method_recall={method_recall:.1%}")
     
     # Compute summary statistics
     successful_results = [r for r in results if not r.error]
     failed_results = [r for r in results if r.error]
     
+    # Initialize metrics
+    file_correct_count = 0
+    file_accuracy = 0.0
+    avg_line_recall = 0.0
+    avg_method_recall = 0.0
+    avg_node_line_recall = 0.0
+    
     if successful_results:
         file_correct_count = sum(1 for r in successful_results if r.file_correct)
         file_accuracy = file_correct_count / len(successful_results)
         avg_line_recall = sum(r.line_recall for r in successful_results) / len(successful_results)
-    else:
-        file_correct_count = 0
-        file_accuracy = 0.0
-        avg_line_recall = 0.0
+        avg_method_recall = sum(r.method_recall for r in successful_results) / len(successful_results)
+        avg_node_line_recall = sum(r.node_line_recall for r in successful_results) / len(successful_results)
     
     # Print summary
     print("\n" + "="*70)
-    print("LOCALIZATION EVALUATION SUMMARY")
+    print("FULL LOCALIZATION EVALUATION SUMMARY")
     print("="*70)
-    print(f"Total tasks:        {len(results)}")
-    print(f"Successful:         {len(successful_results)}")
-    print(f"Failed:             {len(failed_results)}")
+    print(f"Total tasks:          {len(results)}")
+    print(f"Successful:           {len(successful_results)}")
+    print(f"Failed:               {len(failed_results)}")
     print()
+    print("FILE-LEVEL METRICS:")
     if successful_results:
-        print(f"FILE-LEVEL ACCURACY: {file_correct_count}/{len(successful_results)} = {file_accuracy:.1%}")
+        print(f"  File Accuracy:      {file_correct_count}/{len(successful_results)} = {file_accuracy:.1%}")
     else:
-        print(f"FILE-LEVEL ACCURACY: N/A (no successful evaluations)")
-    print(f"LINE RECALL@5:       {avg_line_recall:.1%}")
+        print(f"  File Accuracy:      N/A (no successful evaluations)")
+    print(f"  SBFL Line Recall:   {avg_line_recall:.1%}")
+    print()
+    print("NODE-LEVEL METRICS (with issue boosting):")
+    print(f"  Method Recall:      {avg_method_recall:.1%}  ← Did we find the buggy method?")
+    print(f"  Node Line Recall:   {avg_node_line_recall:.1%}  ← Do localized nodes cover bug lines?")
     print("="*70)
     
     # Per-task breakdown
     print("\nPER-TASK RESULTS:")
     print("-"*70)
+    print(f"{'Task':<30} {'File':^6} {'Method':^8} {'Lines':^8} {'Predicted Methods'}")
+    print("-"*70)
     for r in results:
-        status = "✅" if r.file_correct else "❌"
         if r.error:
-            status = "⚠️"
-            # Truncate long error messages
-            error_msg = r.error[:80] + "..." if len(r.error) > 80 else r.error
-            print(f"{status} {r.task_id}: ERROR - {error_msg}")
+            print(f"⚠️ {r.task_id:<28} ERROR: {r.error[:40]}...")
         else:
-            print(f"{status} {r.task_id}: file={r.file_correct}, line_recall={r.line_recall:.1%}")
+            file_icon = "✅" if r.file_correct else "❌"
+            method_icon = "✅" if r.method_recall > 0 else "❌"
+            methods_str = ", ".join(list(r.predicted_methods)[:3])
+            if len(r.predicted_methods) > 3:
+                methods_str += f"... (+{len(r.predicted_methods)-3})"
+            print(f"{file_icon} {r.task_id:<28} {file_icon:^6} {r.method_recall:>6.0%} {r.node_line_recall:>6.0%}   {methods_str}")
     print("-"*70)
     
     # Save detailed results
@@ -499,12 +642,17 @@ def main():
         "failed_tasks": len(failed_results),
         "file_accuracy": file_accuracy,
         "avg_line_recall": avg_line_recall,
+        "avg_method_recall": avg_method_recall,
+        "avg_node_line_recall": avg_node_line_recall,
         "per_task": [
             {
                 "task_id": r.task_id,
                 "file_correct": r.file_correct,
+                "method_recall": r.method_recall,
+                "node_line_recall": r.node_line_recall,
                 "line_recall": r.line_recall,
                 "predicted_file": r.predicted_file,
+                "predicted_methods": list(r.predicted_methods),
                 "gt_files": r.gt_files,
                 "gt_methods": list(r.gt_methods),
                 "error": r.error,
