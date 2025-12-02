@@ -26,6 +26,7 @@ from app.ast_repair.localization.sbfl_project import sbfl_project
 from app.ast_repair.localization.stacktrace_anchor import stacktrace_anchor
 from app.ast_repair.localization.backward_slice import backward_slice
 from app.ast_repair.localization.score import combine_scores, pick_top_nodes
+from app.ast_repair.localization.issue_boost import boost_nodes_from_issue
 
 
 # -----------------------------------------------------------------------------
@@ -182,10 +183,11 @@ def localize_fault(
     traceback_text: str,
     failing_line: Optional[int],
     project_root: str = "",
-    top_k: int = 3,
+    top_k: int = 5,
+    issue_text: str = "",
 ) -> List[BugLocation]:
     """
-    Combine SBFL, stacktrace, slicing → return top-K BugLocation objects.
+    Combine SBFL, stacktrace, slicing, issue boosting → return top-K BugLocation objects.
 
     Args:
         root             - AST root node
@@ -194,7 +196,8 @@ def localize_fault(
         traceback_text   - stderr from failing test (may be empty)
         failing_line     - deepest failing line number extracted previously
         project_root     - for filtering stacktrace frames
-        top_k            - how many suspicious nodes to return
+        top_k            - how many suspicious nodes to return (increased default to 5)
+        issue_text       - the issue/problem statement for method-level boosting
 
     Returns:
         List[BugLocation]
@@ -220,6 +223,15 @@ def localize_fault(
         trace_scores=trace_scores,
         slice_scores=slice_scores,
     )
+
+    # 4.5 --- Apply issue-based boosting (NEW) --------------------------------
+    # This boosts methods/functions mentioned in the issue text
+    # and penalizes utility methods (like __str__, _sympystr, etc.)
+    from app import config
+    if config.enable_issue_boost and issue_text and combined:
+        import logging
+        logging.info("Applying issue-based method boosting")
+        combined = boost_nodes_from_issue(combined, md, issue_text)
 
     if not combined:
         # Fallback: when we have zero localization signals (no SBFL, no traceback, no failing line),

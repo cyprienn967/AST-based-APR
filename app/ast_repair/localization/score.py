@@ -27,10 +27,12 @@ from typing import cast
 # ============================================================================
 
 DEFAULT_WEIGHTS = {
-    "sbfl":       1.0,   # strongest initial signal
-    "trace":      1.5,   # stacktrace is strongest when available
-    "slice":      0.8,   # helpful, but less precise than trace
+    "sbfl":       1.0,   # base signal from spectrum-based fault localization
+    "trace":      2.5,   # stacktrace is STRONGEST when available (increased from 1.5)
+    "slice":      1.2,   # helpful for data-flow bugs (increased from 0.8)
     "size_pen":   0.3,   # penalize large spans
+    "issue":      5.0,   # issue-mentioned methods get strong boost (NEW)
+    "utility_pen": 0.1,  # utility methods get penalized (NEW)
 }
 
 

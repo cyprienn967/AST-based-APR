@@ -8,6 +8,7 @@ from typing import List, Dict, Optional
 
 from loguru import logger
 
+from app import config
 from app.agents.agent_common import extract_json_from_response
 from app.model import common as model_common
 from app.ast_repair.edit_schema import (
@@ -235,29 +236,32 @@ def write_ast_edits_for_file(
     sbfl_line_scores: Optional[Dict[int, float]] = None,
     traceback_text: str = "",
     failing_line: Optional[int] = None,
-    top_k: int = 3,
+    top_k: Optional[int] = None,
     allow_multiple: bool = False,
 ) -> ASTGenerationResult:
     """
     Main entry point: Localize faults + Generate AST edits.
     
     This is the unified interface that combines:
-      1. localize_fault() - finds suspicious nodes
+      1. localize_fault() - finds suspicious nodes (with issue-based boosting)
       2. LLM generation - produces edits for each suspicious node
     
     Args:
         file_path: absolute path to the file to edit
-        issue_context: the issue description
+        issue_context: the issue description (ALSO used for method-level localization boosting)
         intended_behavior: expected behavior after fix
         sbfl_line_scores: SBFL scores (line_num -> score). If None, starts empty
         traceback_text: stderr from failing test (optional)
         failing_line: deepest failing line number (optional)
-        top_k: how many suspicious nodes to localize
+        top_k: how many suspicious nodes to localize (increased default to 5)
         allow_multiple: whether to allow multiple edits per location
     
     Returns:
         ASTGenerationResult with all edits and prompts
     """
+    # Use config default if not specified
+    if top_k is None:
+        top_k = config.localization_top_k
     
     # Parse the file
     try:
@@ -269,7 +273,7 @@ def write_ast_edits_for_file(
     if sbfl_line_scores is None:
         sbfl_line_scores = {}
     
-    # Localize faults
+    # Localize faults (with issue-based method boosting)
     try:
         bug_locations = localize_fault(
             root_ast,
@@ -278,6 +282,7 @@ def write_ast_edits_for_file(
             traceback_text,
             failing_line,
             top_k=top_k,
+            issue_text=issue_context,  # Pass issue for method-level boosting
         )
     except Exception as exc:
         return ASTGenerationResult([], f"Localization failed: {exc}", None)
@@ -430,7 +435,7 @@ class ASTAgent:
         sbfl_line_scores: Optional[Dict[int, float]] = None,
         traceback_text: str = "",
         failing_line: Optional[int] = None,
-        top_k: int = 3,
+        top_k: Optional[int] = None,
         enable_fast_path: bool = True,
     ) -> tuple[bool, str, str]:
         """
@@ -449,6 +454,10 @@ class ASTAgent:
         """
         from app.ast_repair.apply_edits import apply_edits, ASTEditApplicationError
         from app.ast_repair.diff import unified_diff_str
+        
+        # Use config default if not specified
+        if top_k is None:
+            top_k = config.localization_top_k
         
         self._request_idx += 1
         
@@ -471,7 +480,7 @@ class ASTAgent:
             from app.ast_repair.micro_edits import try_micro_edit_fast_path
             from app.ast_repair.localize import localize_fault, get_ranked_node_ids
             
-            # Run localization to get ranked nodes
+            # Run localization to get ranked nodes (with issue-based boosting)
             try:
                 if sbfl_line_scores is None:
                     sbfl_line_scores = {}
@@ -483,6 +492,7 @@ class ASTAgent:
                     traceback_text,
                     failing_line,
                     top_k=top_k,
+                    issue_text=self.issue_stmt,  # Pass issue for method-level boosting
                 )
                 
                 if bug_locations:

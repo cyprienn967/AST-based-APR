@@ -29,6 +29,13 @@ enable_ast_patch_agent: bool = True
 # whether to enable micro-edit fast path routing (rule-based simple bug fixes)
 enable_micro_edit_fast_path: bool = True
 
+# whether to enable issue-based method boosting in localization (NEW)
+# This boosts methods mentioned in the issue text and penalizes utility methods
+enable_issue_boost: bool = True
+
+# Number of suspicious nodes to try during localization (increased from 3)
+localization_top_k: int = 5
+
 # A special mode to only save SBFL result and exit
 only_save_sbfl_result: bool = False
 
