@@ -45,6 +45,18 @@ from app.ast_repair.parser import parse_file_to_ast
 from app.ast_repair.localize import localize_fault, BugLocation
 from app.ast_repair.metadata import ASTMetadata
 
+# Import individual signal modules for feature extraction
+from app.ast_repair.localization.sbfl_project import sbfl_project
+from app.ast_repair.localization.stacktrace_anchor import stacktrace_anchor
+from app.ast_repair.localization.backward_slice import backward_slice
+from app.ast_repair.localization.semantic_retrieval import semantic_retrieval_scores
+from app.ast_repair.localization.structural_boost import structural_boost_scores
+from app.ast_repair.localization.negative_signals import (
+    compute_negative_signals, negative_signal_scores
+)
+from app.ast_repair.localization.score import combine_scores
+from app.ast_repair.localization.issue_boost import boost_nodes_from_issue
+
 
 @dataclass
 class GroundTruth:
@@ -352,6 +364,179 @@ def extract_methods_from_nodes(
     return methods, lines
 
 
+def extract_all_node_features(
+    md: ASTMetadata,
+    root_ast: ast.AST,
+    source_code: str,
+    sbfl_line_scores: Dict[int, float],
+    issue_text: str,
+    gt_lines: Set[int],
+    gt_methods: Set[str],
+    task_id: str,
+    file_path: str,
+) -> List[Dict]:
+    """
+    Extract ALL features for ALL function/method nodes for LightGBM training.
+    
+    Returns a list of feature dictionaries, one per node.
+    Each dict contains:
+        - Node metadata (id, type, name, lines)
+        - All signal scores (sbfl, trace, slice, semantic, structural)
+        - All negative signal sub-components
+        - Ground truth label (is_buggy)
+    """
+    nodes_data = []
+    
+    # === Compute all signals ===
+    
+    # 1. SBFL projection
+    sbfl_scores = sbfl_project(sbfl_line_scores, root_ast, md)
+    
+    # 2. Stacktrace anchor (empty - no traceback in offline eval)
+    trace_scores = {}
+    
+    # 3. Backward slice (empty - no failing line in offline eval)
+    slice_scores = {}
+    
+    # 4. Semantic retrieval
+    semantic_scores = {}
+    if config.enable_semantic_retrieval and issue_text and source_code:
+        try:
+            semantic_scores = semantic_retrieval_scores(md, source_code, issue_text)
+        except Exception as e:
+            logger.warning(f"Semantic retrieval failed: {e}")
+    
+    # 5. Structural boost
+    structural_scores = {}
+    if config.enable_structural_boost and issue_text:
+        try:
+            structural_scores = structural_boost_scores(md, source_code, issue_text)
+        except Exception as e:
+            logger.warning(f"Structural boost failed: {e}")
+    
+    # 6. Negative signals (detailed)
+    negative_signals_detail = {}
+    negative_scores_total = {}
+    if config.enable_negative_signals and source_code:
+        try:
+            negative_signals_detail = compute_negative_signals(md, source_code)
+            negative_scores_total = {nid: sig.total_penalty() 
+                                     for nid, sig in negative_signals_detail.items()}
+        except Exception as e:
+            logger.warning(f"Negative signals failed: {e}")
+    
+    # 7. Combined score (for reference)
+    combined_scores = combine_scores(
+        md,
+        sbfl_scores=sbfl_scores,
+        trace_scores=trace_scores,
+        slice_scores=slice_scores,
+        semantic_scores=semantic_scores,
+        structural_scores=structural_scores,
+        negative_scores=negative_scores_total,
+    )
+    
+    # 8. Issue-boosted score (final)
+    boosted_scores = combined_scores.copy()
+    if config.enable_issue_boost and issue_text and combined_scores:
+        boosted_scores = boost_nodes_from_issue(combined_scores, md, issue_text)
+    
+    # === Extract features for each function/method node ===
+    
+    for node_id, node in md.node_index.items():
+        # Only extract features for function-level nodes (main localization targets)
+        if not isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)):
+            continue
+        
+        start_line, end_line = md.line_map.get(node_id, (None, None))
+        if start_line is None or end_line is None:
+            continue
+        
+        # Get node name
+        name = getattr(node, 'name', f'node_{node_id}')
+        node_type = type(node).__name__
+        
+        # Determine ground truth: is this node buggy?
+        # A node is "buggy" if ANY of its lines are in the ground truth patch
+        node_lines = set(range(start_line, end_line + 1))
+        lines_in_patch = node_lines & gt_lines
+        is_buggy = len(lines_in_patch) > 0
+        
+        # Also check if method name matches ground truth methods
+        method_match = name in gt_methods if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)) else False
+        
+        # Get negative signal breakdown
+        neg_detail = negative_signals_detail.get(node_id)
+        neg_breakdown = {}
+        if neg_detail:
+            neg_breakdown = {
+                "pass_only_execution": neg_detail.pass_only_execution,
+                "is_boilerplate": neg_detail.is_boilerplate,
+                "too_simple": neg_detail.too_simple,
+                "too_complex": neg_detail.too_complex,
+                "in_except_handler": neg_detail.in_except_handler,
+                "is_test_debug": neg_detail.is_test_debug,
+                "docstring_quality": neg_detail.docstring_quality,
+                "safe_patterns": neg_detail.safe_patterns,
+            }
+        else:
+            neg_breakdown = {
+                "pass_only_execution": 0.0,
+                "is_boilerplate": 0.0,
+                "too_simple": 0.0,
+                "too_complex": 0.0,
+                "in_except_handler": 0.0,
+                "is_test_debug": 0.0,
+                "docstring_quality": 0.0,
+                "safe_patterns": 0.0,
+            }
+        
+        # Build feature dict
+        node_data = {
+            # Metadata
+            "task_id": task_id,
+            "file_path": file_path,
+            "node_id": node_id,
+            "node_type": node_type,
+            "name": name,
+            "start_line": start_line,
+            "end_line": end_line,
+            "line_count": end_line - start_line + 1,
+            
+            # Positive signals
+            "signals": {
+                "sbfl": sbfl_scores.get(node_id, 0.0),
+                "trace": trace_scores.get(node_id, 0.0),
+                "slice": slice_scores.get(node_id, 0.0),
+                "semantic": semantic_scores.get(node_id, 0.0),
+                "structural": structural_scores.get(node_id, 0.0),
+                "combined": combined_scores.get(node_id, 0.0),
+                "boosted": boosted_scores.get(node_id, 0.0),
+            },
+            
+            # Negative signals (breakdown)
+            "negative_signals": {
+                "total": negative_scores_total.get(node_id, 0.0),
+                **neg_breakdown,
+            },
+            
+            # Ground truth
+            "ground_truth": {
+                "is_buggy": is_buggy,
+                "method_match": method_match,
+                "lines_in_patch": sorted(lines_in_patch),
+                "num_buggy_lines": len(lines_in_patch),
+            },
+        }
+        
+        nodes_data.append(node_data)
+    
+    # Sort by combined score (descending) for readability
+    nodes_data.sort(key=lambda x: x["signals"]["boosted"], reverse=True)
+    
+    return nodes_data
+
+
 def evaluate_task(raw_task: RawSweTask, output_dir: str) -> LocalizationResult:
     """
     Evaluate FULL localization pipeline for a single task.
@@ -362,6 +547,7 @@ def evaluate_task(raw_task: RawSweTask, output_dir: str) -> LocalizationResult:
     3. AST parsing
     4. FULL node-level localization with issue boosting
     5. Method/line extraction from localized nodes
+    6. Extract ALL node features for LightGBM training
     """
     result = LocalizationResult(task_id=raw_task.task_id)
     
@@ -526,6 +712,45 @@ def evaluate_task(raw_task: RawSweTask, output_dir: str) -> LocalizationResult:
                 'method_recall': result.method_recall,
                 'node_line_recall': result.node_line_recall,
             }, f, indent=2)
+        
+        # =====================================================================
+        # NEW: Extract ALL node features for LightGBM training
+        # =====================================================================
+        try:
+            # Get ground truth lines for the predicted file
+            gt_lines_for_file = set()
+            for gt_file, gt_lines in result.gt_lines.items():
+                if evaluate_file_localization(result.predicted_file, [gt_file]):
+                    gt_lines_for_file.update(gt_lines)
+            
+            # Extract features for all nodes
+            node_features = extract_all_node_features(
+                md=metadata,
+                root_ast=root_ast,
+                source_code=source_code,
+                sbfl_line_scores=file_sbfl_scores,
+                issue_text=issue_stmt,
+                gt_lines=gt_lines_for_file,
+                gt_methods=result.gt_methods,
+                task_id=raw_task.task_id,
+                file_path=result.predicted_file,
+            )
+            
+            # Save node features
+            with open(os.path.join(task_output, 'node_features.json'), 'w') as f:
+                json.dump({
+                    'task_id': raw_task.task_id,
+                    'file_path': result.predicted_file,
+                    'num_nodes': len(node_features),
+                    'num_buggy_nodes': sum(1 for n in node_features if n['ground_truth']['is_buggy']),
+                    'nodes': node_features,
+                }, f, indent=2)
+            
+            logger.info(f"Saved features for {len(node_features)} nodes "
+                       f"({sum(1 for n in node_features if n['ground_truth']['is_buggy'])} buggy)")
+            
+        except Exception as e:
+            logger.warning(f"Feature extraction failed: {e}")
         
         return result
         
