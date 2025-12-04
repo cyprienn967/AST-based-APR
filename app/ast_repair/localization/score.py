@@ -31,6 +31,8 @@ DEFAULT_WEIGHTS = {
     "trace":      2.5,   # stacktrace is STRONGEST when available (increased from 1.5)
     "slice":      1.2,   # helpful for data-flow bugs (increased from 0.8)
     "semantic":   1.8,   # semantic similarity to issue (embedding-based retrieval)
+    "structural": 2.0,   # structural neighbors of issue-mentioned identifiers (KG-lite)
+    "negative":   1.0,   # negative signals penalty (boilerplate, pass-only, etc.)
     "size_pen":   0.3,   # penalize large spans
     "issue":      5.0,   # issue-mentioned methods get strong boost (NEW)
     "utility_pen": 0.1,  # utility methods get penalized (NEW)
@@ -47,6 +49,8 @@ def combine_scores(
     trace_scores: Dict[int, float],
     slice_scores: Dict[int, float],
     semantic_scores: Dict[int, float] = None,
+    structural_scores: Dict[int, float] = None,
+    negative_scores: Dict[int, float] = None,
     weights: Dict[str, float] = DEFAULT_WEIGHTS,
 ) -> Dict[int, float]:
     """
@@ -59,15 +63,29 @@ def combine_scores(
               + w_trace * trace
               + w_slice * slice
               + w_semantic * semantic
+              + w_structural * structural
+              - w_negative * negative
               - w_size  * size_penalty
 
-    Size penalty:
-        size_penalty = (end - start + 1) normalized by file span
+    Penalty signals (subtracted):
+        - negative: boilerplate, pass-only execution, too simple, etc.
+        - size_penalty: (end - start + 1) normalized by file span
     """
     if semantic_scores is None:
         semantic_scores = {}
+    if structural_scores is None:
+        structural_scores = {}
+    if negative_scores is None:
+        negative_scores = {}
 
-    node_ids = set(sbfl_scores.keys()) | set(trace_scores.keys()) | set(slice_scores.keys()) | set(semantic_scores.keys())
+    node_ids = (
+        set(sbfl_scores.keys()) | 
+        set(trace_scores.keys()) | 
+        set(slice_scores.keys()) | 
+        set(semantic_scores.keys()) |
+        set(structural_scores.keys()) |
+        set(negative_scores.keys())
+    )
 
     if not node_ids:
         return {}
@@ -97,6 +115,8 @@ def combine_scores(
         trace_score = trace_scores.get(nid, 0.0)
         slice_score = slice_scores.get(nid, 0.0)
         semantic_score = semantic_scores.get(nid, 0.0)
+        structural_score = structural_scores.get(nid, 0.0)
+        negative_score = negative_scores.get(nid, 0.0)
 
         # --- size penalty ---
         start, end = md.line_map.get(nid, (None, None))
@@ -107,10 +127,12 @@ def combine_scores(
             size_pen = span / global_span
 
         total = (
-            weights["sbfl"]     * sbfl_score
-            + weights["trace"]  * trace_score
-            + weights["slice"]  * slice_score
+            weights["sbfl"]       * sbfl_score
+            + weights["trace"]    * trace_score
+            + weights["slice"]    * slice_score
             + weights["semantic"] * semantic_score
+            + weights["structural"] * structural_score
+            - weights["negative"] * negative_score
             - weights["size_pen"] * size_pen
         )
 

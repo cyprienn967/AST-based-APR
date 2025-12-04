@@ -28,6 +28,8 @@ from app.ast_repair.localization.backward_slice import backward_slice
 from app.ast_repair.localization.score import combine_scores, pick_top_nodes
 from app.ast_repair.localization.issue_boost import boost_nodes_from_issue
 from app.ast_repair.localization.semantic_retrieval import semantic_retrieval_scores
+from app.ast_repair.localization.structural_boost import structural_boost_scores
+from app.ast_repair.localization.negative_signals import negative_signal_scores
 
 
 # -----------------------------------------------------------------------------
@@ -189,7 +191,20 @@ def localize_fault(
     source_code: str = "",
 ) -> List[BugLocation]:
     """
-    Combine SBFL, stacktrace, slicing, semantic retrieval, issue boosting → return top-K BugLocation objects.
+    Combine multiple localization signals → return top-K BugLocation objects.
+    
+    Positive signals (boost suspicious nodes):
+        1. SBFL projection (execution-based)
+        2. Stacktrace anchoring (crash location)
+        3. Backward slicing (data-flow)
+        4. Semantic retrieval (embedding similarity to issue)
+        5. Structural boost (call graph neighbors of mentioned identifiers)
+        6. Issue boost (direct name matches)
+    
+    Negative signals (penalize unlikely nodes):
+        7. Negative signals (boilerplate, pass-only execution, too simple, etc.)
+        8. Utility penalty (from issue boost)
+        9. Size penalty (prefer smaller, more specific nodes)
 
     Args:
         root             - AST root node
@@ -199,7 +214,7 @@ def localize_fault(
         failing_line     - deepest failing line number extracted previously
         project_root     - for filtering stacktrace frames
         top_k            - how many suspicious nodes to return (increased default to 5)
-        issue_text       - the issue/problem statement for method-level boosting
+        issue_text       - the issue/problem statement for all NL-based signals
         source_code      - the source code of the file (for semantic retrieval)
 
     Returns:
@@ -232,6 +247,30 @@ def localize_fault(
         except Exception as e:
             logging.warning(f"Semantic retrieval failed: {e}")
 
+    # 3.6 --- Structural neighbor boost (KG-lite) -----------------------------
+    structural_scores = {}
+    if config.enable_structural_boost and issue_text:
+        import logging
+        logging.info("Computing structural neighbor boost scores")
+        try:
+            structural_scores = structural_boost_scores(md, source_code, issue_text)
+            if structural_scores:
+                logging.info(f"Structural boost found {len(structural_scores)} boosted nodes")
+        except Exception as e:
+            logging.warning(f"Structural boost failed: {e}")
+
+    # 3.7 --- Negative signals (anti-localization features) -------------------
+    negative_scores = {}
+    if config.enable_negative_signals and source_code:
+        import logging
+        logging.info("Computing negative signal scores")
+        try:
+            negative_scores = negative_signal_scores(md, source_code)
+            if negative_scores:
+                logging.info(f"Negative signals computed for {len(negative_scores)} nodes")
+        except Exception as e:
+            logging.warning(f"Negative signals failed: {e}")
+
     # 4. --- Combine into final scores ---------------------------------------
     combined = combine_scores(
         md,
@@ -239,6 +278,8 @@ def localize_fault(
         trace_scores=trace_scores,
         slice_scores=slice_scores,
         semantic_scores=semantic_scores,
+        structural_scores=structural_scores,
+        negative_scores=negative_scores,
     )
 
     # 4.5 --- Apply issue-based boosting (NEW) --------------------------------

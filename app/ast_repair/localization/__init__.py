@@ -25,6 +25,23 @@ from app.ast_repair.localization.semantic_retrieval import (
     semantic_retrieval_scores,
     compute_semantic_scores,
 )
+from app.ast_repair.localization.structural_boost import (
+    structural_boost_scores,
+    compute_structural_boost,
+    extract_identifiers_from_issue,
+    build_symbol_table,
+    build_call_graph,
+)
+from app.ast_repair.localization.negative_signals import (
+    negative_signal_scores,
+    compute_negative_signals,
+    NegativeSignals,
+    is_boilerplate_method,
+    is_test_or_debug_code,
+    compute_complexity_signals,
+    is_in_except_handler,
+    compute_docstring_quality,
+)
 
 __all__ = [
     # SBFL
@@ -45,5 +62,20 @@ __all__ = [
     # Semantic retrieval
     "semantic_retrieval_scores",
     "compute_semantic_scores",
+    # Structural boost (KG-lite)
+    "structural_boost_scores",
+    "compute_structural_boost",
+    "extract_identifiers_from_issue",
+    "build_symbol_table",
+    "build_call_graph",
+    # Negative signals
+    "negative_signal_scores",
+    "compute_negative_signals",
+    "NegativeSignals",
+    "is_boilerplate_method",
+    "is_test_or_debug_code",
+    "compute_complexity_signals",
+    "is_in_except_handler",
+    "compute_docstring_quality",
 ]
 

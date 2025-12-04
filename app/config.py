@@ -43,6 +43,14 @@ enable_semantic_retrieval: bool = True
 #   "sentence-transformers/all-MiniLM-L6-v2" (fast, general purpose)
 semantic_model_name: str = "microsoft/unixcoder-base"
 
+# whether to enable structural neighbor boosting (KG-lite)
+# This boosts functions structurally adjacent to identifiers in the issue
+enable_structural_boost: bool = True
+
+# whether to enable negative signals (anti-localization features)
+# These penalize nodes unlikely to be buggy (boilerplate, pass-only execution, etc.)
+enable_negative_signals: bool = True
+
 # Number of suspicious nodes to try during localization (increased from 3)
 localization_top_k: int = 5
 
