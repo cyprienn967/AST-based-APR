@@ -76,6 +76,11 @@ def load_node_features(eval_dir: str) -> List[Dict[str, Any]]:
                     'end_line': node['end_line'],
                     'line_count': node['line_count'],
                     
+                    # File-level metadata (new)
+                    'file_rank': node.get('file_rank'),  # 1-5 if in top-5, None if GT-only
+                    'is_gt_file': node.get('is_gt_file', False),
+                    'file_score': node.get('file_score', 0.0),
+                    
                     # Positive signals
                     'sbfl': node['signals']['sbfl'],
                     'trace': node['signals']['trace'],
@@ -105,7 +110,8 @@ def load_node_features(eval_dir: str) -> List[Dict[str, Any]]:
                 all_features.append(flat)
             
             buggy_count = sum(1 for n in nodes if n['ground_truth']['is_buggy'])
-            print(f"  {task_dir}: {len(nodes)} nodes, {buggy_count} buggy")
+            num_files = data.get('num_files_processed', 1)
+            print(f"  {task_dir}: {num_files} files, {len(nodes)} nodes, {buggy_count} buggy")
             
         except Exception as e:
             print(f"  Error loading {task_dir}: {e}")
@@ -155,14 +161,28 @@ def compute_statistics(features: List[Dict]) -> Dict:
         'non_buggy_nodes': total - buggy,
         'buggy_ratio': buggy / total if total > 0 else 0,
         'unique_tasks': len(set(f['task_id'] for f in features)),
+        'unique_files': len(set(f['file_path'] for f in features)),
     }
+    
+    # File-level statistics
+    gt_file_nodes = [f for f in features if f.get('is_gt_file')]
+    stats['nodes_in_gt_files'] = len(gt_file_nodes)
+    stats['buggy_in_gt_files'] = sum(1 for f in gt_file_nodes if f['is_buggy'])
+    
+    # File rank distribution
+    rank_counts = {}
+    for f in features:
+        rank = f.get('file_rank')
+        if rank is not None:
+            rank_counts[rank] = rank_counts.get(rank, 0) + 1
+    stats['nodes_by_file_rank'] = rank_counts
     
     # Signal statistics
     signal_cols = ['sbfl', 'trace', 'slice', 'semantic', 'structural', 
-                   'negative_total', 'combined', 'boosted']
+                   'negative_total', 'combined', 'boosted', 'file_score']
     
     for col in signal_cols:
-        values = [f[col] for f in features]
+        values = [f[col] for f in features if f.get(col) is not None]
         non_zero = [v for v in values if v != 0]
         
         stats[f'{col}_mean'] = sum(values) / len(values) if values else 0
@@ -205,9 +225,17 @@ def main():
     print(f"Buggy nodes: {stats['buggy_nodes']} ({stats['buggy_ratio']*100:.1f}%)")
     print(f"Non-buggy nodes: {stats['non_buggy_nodes']}")
     print(f"Unique tasks: {stats['unique_tasks']}")
+    print(f"Unique files: {stats.get('unique_files', 'N/A')}")
+    
+    print(f"\nFile coverage:")
+    print(f"  Nodes in GT files: {stats.get('nodes_in_gt_files', 0)}")
+    print(f"  Buggy nodes in GT files: {stats.get('buggy_in_gt_files', 0)}")
+    rank_counts = stats.get('nodes_by_file_rank', {})
+    for rank in sorted(rank_counts.keys()):
+        print(f"  File rank {rank}: {rank_counts[rank]} nodes")
     
     print(f"\nSignal coverage:")
-    for signal in ['sbfl', 'semantic', 'structural', 'negative_total']:
+    for signal in ['sbfl', 'semantic', 'structural', 'negative_total', 'file_score']:
         pct = stats.get(f'{signal}_nonzero_pct', 0)
         count = stats.get(f'{signal}_nonzero_count', 0)
         mean = stats.get(f'{signal}_mean', 0)

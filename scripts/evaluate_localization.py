@@ -602,7 +602,29 @@ def evaluate_task(raw_task: RawSweTask, output_dir: str) -> LocalizationResult:
         result.file_correct = evaluate_file_localization(result.predicted_file, result.gt_files)
         
         # =====================================================================
-        # NEW: Run FULL node-level localization with issue boosting
+        # Select TOP-5 files + ground truth files for feature extraction
+        # =====================================================================
+        TOP_K_FILES = 5
+        
+        # Get top-K files by score
+        sorted_files = sorted(file_scores.items(), key=lambda x: x[1], reverse=True)
+        top_k_files = [f for f, _ in sorted_files[:TOP_K_FILES]]
+        
+        # Add ground truth files if not already in top-K
+        files_to_process = set(top_k_files)
+        for gt_file in result.gt_files:
+            # Find matching file in SBFL results (paths may differ slightly)
+            for sbfl_file in sbfl_line_scores.keys():
+                if evaluate_file_localization(sbfl_file, [gt_file]):
+                    files_to_process.add(sbfl_file)
+                    if sbfl_file not in top_k_files:
+                        logger.info(f"Added ground truth file not in top-{TOP_K_FILES}: {sbfl_file}")
+        
+        files_to_process = list(files_to_process)
+        logger.info(f"Processing {len(files_to_process)} files for feature extraction (top-{TOP_K_FILES} + GT)")
+        
+        # =====================================================================
+        # Run localization on TOP-1 file (for metrics)
         # =====================================================================
         try:
             # Parse the selected file's AST
@@ -714,43 +736,88 @@ def evaluate_task(raw_task: RawSweTask, output_dir: str) -> LocalizationResult:
             }, f, indent=2)
         
         # =====================================================================
-        # NEW: Extract ALL node features for LightGBM training
+        # NEW: Extract node features for TOP-5 + GT files (for LightGBM training)
         # =====================================================================
-        try:
-            # Get ground truth lines for the predicted file
-            gt_lines_for_file = set()
-            for gt_file, gt_lines in result.gt_lines.items():
-                if evaluate_file_localization(result.predicted_file, [gt_file]):
-                    gt_lines_for_file.update(gt_lines)
-            
-            # Extract features for all nodes
-            node_features = extract_all_node_features(
-                md=metadata,
-                root_ast=root_ast,
-                source_code=source_code,
-                sbfl_line_scores=file_sbfl_scores,
-                issue_text=issue_stmt,
-                gt_lines=gt_lines_for_file,
-                gt_methods=result.gt_methods,
-                task_id=raw_task.task_id,
-                file_path=result.predicted_file,
-            )
-            
-            # Save node features
-            with open(os.path.join(task_output, 'node_features.json'), 'w') as f:
-                json.dump({
-                    'task_id': raw_task.task_id,
-                    'file_path': result.predicted_file,
-                    'num_nodes': len(node_features),
-                    'num_buggy_nodes': sum(1 for n in node_features if n['ground_truth']['is_buggy']),
-                    'nodes': node_features,
-                }, f, indent=2)
-            
-            logger.info(f"Saved features for {len(node_features)} nodes "
-                       f"({sum(1 for n in node_features if n['ground_truth']['is_buggy'])} buggy)")
-            
-        except Exception as e:
-            logger.warning(f"Feature extraction failed: {e}")
+        all_node_features = []
+        files_processed = []
+        
+        for file_path in files_to_process:
+            try:
+                # Parse this file's AST
+                file_root_ast, file_metadata = parse_file_to_ast(file_path)
+                
+                # Read source code
+                try:
+                    file_source_code = Path(file_path).read_text()
+                except Exception:
+                    file_source_code = ""
+                
+                # Get SBFL scores for this file
+                file_sbfl = sbfl_line_scores.get(file_path, {})
+                
+                # Get ground truth lines for this specific file
+                gt_lines_for_this_file = set()
+                for gt_file, gt_lines in result.gt_lines.items():
+                    if evaluate_file_localization(file_path, [gt_file]):
+                        gt_lines_for_this_file.update(gt_lines)
+                
+                # Determine if this file is in top-K or added as GT
+                file_rank = None
+                for i, (f, _) in enumerate(sorted_files):
+                    if f == file_path:
+                        file_rank = i + 1
+                        break
+                is_gt_file = any(evaluate_file_localization(file_path, [gt]) for gt in result.gt_files)
+                
+                # Extract features for all nodes in this file
+                file_node_features = extract_all_node_features(
+                    md=file_metadata,
+                    root_ast=file_root_ast,
+                    source_code=file_source_code,
+                    sbfl_line_scores=file_sbfl,
+                    issue_text=issue_stmt,
+                    gt_lines=gt_lines_for_this_file,
+                    gt_methods=result.gt_methods,
+                    task_id=raw_task.task_id,
+                    file_path=file_path,
+                )
+                
+                # Add file-level metadata to each node
+                for node in file_node_features:
+                    node['file_rank'] = file_rank  # 1-5 if in top-5, None if GT-only
+                    node['is_gt_file'] = is_gt_file
+                    node['file_score'] = file_scores.get(file_path, 0.0)
+                
+                all_node_features.extend(file_node_features)
+                files_processed.append({
+                    'file_path': file_path,
+                    'file_rank': file_rank,
+                    'is_gt_file': is_gt_file,
+                    'file_score': file_scores.get(file_path, 0.0),
+                    'num_nodes': len(file_node_features),
+                    'num_buggy_nodes': sum(1 for n in file_node_features if n['ground_truth']['is_buggy']),
+                })
+                
+            except Exception as e:
+                logger.warning(f"Feature extraction failed for {file_path}: {e}")
+                continue
+        
+        # Save combined node features for all files
+        total_nodes = len(all_node_features)
+        total_buggy = sum(1 for n in all_node_features if n['ground_truth']['is_buggy'])
+        
+        with open(os.path.join(task_output, 'node_features.json'), 'w') as f:
+            json.dump({
+                'task_id': raw_task.task_id,
+                'num_files_processed': len(files_processed),
+                'files': files_processed,
+                'num_nodes': total_nodes,
+                'num_buggy_nodes': total_buggy,
+                'nodes': all_node_features,
+            }, f, indent=2)
+        
+        logger.info(f"Saved features for {total_nodes} nodes across {len(files_processed)} files "
+                   f"({total_buggy} buggy)")
         
         return result
         
