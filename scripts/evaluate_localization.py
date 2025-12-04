@@ -422,10 +422,16 @@ def evaluate_task(raw_task: RawSweTask, output_dir: str) -> LocalizationResult:
             # Parse the selected file's AST
             root_ast, metadata = parse_file_to_ast(result.predicted_file)
             
+            # Read source code for semantic retrieval
+            try:
+                source_code = Path(result.predicted_file).read_text()
+            except Exception:
+                source_code = ""
+            
             # Get SBFL scores for this file
             file_sbfl_scores = sbfl_line_scores.get(result.predicted_file, {})
             
-            # Run the FULL localization pipeline with issue boosting
+            # Run the FULL localization pipeline with issue boosting + semantic retrieval
             bug_locations = localize_fault(
                 root=root_ast,
                 md=metadata,
@@ -435,6 +441,7 @@ def evaluate_task(raw_task: RawSweTask, output_dir: str) -> LocalizationResult:
                 project_root=str(task.project_path) if hasattr(task, 'project_path') else "",
                 top_k=config.localization_top_k,
                 issue_text=issue_stmt,  # THIS IS THE KEY - issue boosting!
+                source_code=source_code,  # Pass source for semantic retrieval
             )
             
             if bug_locations:

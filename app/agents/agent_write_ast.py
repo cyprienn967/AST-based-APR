@@ -263,6 +263,12 @@ def write_ast_edits_for_file(
     if top_k is None:
         top_k = config.localization_top_k
     
+    # Read source code for semantic retrieval
+    try:
+        source_code = Path(file_path).read_text()
+    except Exception as exc:
+        return ASTGenerationResult([], f"Failed to read {file_path}: {exc}", None)
+    
     # Parse the file
     try:
         root_ast, metadata = parse_file_to_ast(file_path)
@@ -273,7 +279,7 @@ def write_ast_edits_for_file(
     if sbfl_line_scores is None:
         sbfl_line_scores = {}
     
-    # Localize faults (with issue-based method boosting)
+    # Localize faults (with issue-based method boosting + semantic retrieval)
     try:
         bug_locations = localize_fault(
             root_ast,
@@ -283,6 +289,7 @@ def write_ast_edits_for_file(
             failing_line,
             top_k=top_k,
             issue_text=issue_context,  # Pass issue for method-level boosting
+            source_code=source_code,   # Pass source for semantic retrieval
         )
     except Exception as exc:
         return ASTGenerationResult([], f"Localization failed: {exc}", None)
@@ -480,7 +487,7 @@ class ASTAgent:
             from app.ast_repair.micro_edits import try_micro_edit_fast_path
             from app.ast_repair.localize import localize_fault, get_ranked_node_ids
             
-            # Run localization to get ranked nodes (with issue-based boosting)
+            # Run localization to get ranked nodes (with issue-based boosting + semantic retrieval)
             try:
                 if sbfl_line_scores is None:
                     sbfl_line_scores = {}
@@ -493,6 +500,7 @@ class ASTAgent:
                     failing_line,
                     top_k=top_k,
                     issue_text=self.issue_stmt,  # Pass issue for method-level boosting
+                    source_code=original_source,  # Pass source for semantic retrieval
                 )
                 
                 if bug_locations:

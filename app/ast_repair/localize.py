@@ -27,6 +27,7 @@ from app.ast_repair.localization.stacktrace_anchor import stacktrace_anchor
 from app.ast_repair.localization.backward_slice import backward_slice
 from app.ast_repair.localization.score import combine_scores, pick_top_nodes
 from app.ast_repair.localization.issue_boost import boost_nodes_from_issue
+from app.ast_repair.localization.semantic_retrieval import semantic_retrieval_scores
 
 
 # -----------------------------------------------------------------------------
@@ -185,9 +186,10 @@ def localize_fault(
     project_root: str = "",
     top_k: int = 5,
     issue_text: str = "",
+    source_code: str = "",
 ) -> List[BugLocation]:
     """
-    Combine SBFL, stacktrace, slicing, issue boosting → return top-K BugLocation objects.
+    Combine SBFL, stacktrace, slicing, semantic retrieval, issue boosting → return top-K BugLocation objects.
 
     Args:
         root             - AST root node
@@ -198,6 +200,7 @@ def localize_fault(
         project_root     - for filtering stacktrace frames
         top_k            - how many suspicious nodes to return (increased default to 5)
         issue_text       - the issue/problem statement for method-level boosting
+        source_code      - the source code of the file (for semantic retrieval)
 
     Returns:
         List[BugLocation]
@@ -216,12 +219,26 @@ def localize_fault(
     if failing_line is not None:
         slice_scores = backward_slice(md, failing_line)
 
+    # 3.5 --- Semantic retrieval (embedding-based) ----------------------------
+    semantic_scores = {}
+    from app import config
+    if config.enable_semantic_retrieval and issue_text and source_code:
+        import logging
+        logging.info("Computing semantic retrieval scores")
+        try:
+            semantic_scores = semantic_retrieval_scores(md, source_code, issue_text)
+            if semantic_scores:
+                logging.info(f"Semantic retrieval found {len(semantic_scores)} function scores")
+        except Exception as e:
+            logging.warning(f"Semantic retrieval failed: {e}")
+
     # 4. --- Combine into final scores ---------------------------------------
     combined = combine_scores(
         md,
         sbfl_scores=sbfl_scores,
         trace_scores=trace_scores,
         slice_scores=slice_scores,
+        semantic_scores=semantic_scores,
     )
 
     # 4.5 --- Apply issue-based boosting (NEW) --------------------------------

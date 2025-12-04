@@ -33,6 +33,16 @@ enable_micro_edit_fast_path: bool = True
 # This boosts methods mentioned in the issue text and penalizes utility methods
 enable_issue_boost: bool = True
 
+# whether to enable semantic retrieval for localization (embedding-based)
+# This uses code embeddings to find semantically similar functions to the issue
+enable_semantic_retrieval: bool = True
+
+# Semantic retrieval model - options:
+#   "microsoft/unixcoder-base" (best for code-NL matching)
+#   "microsoft/codebert-base" (good fallback)
+#   "sentence-transformers/all-MiniLM-L6-v2" (fast, general purpose)
+semantic_model_name: str = "microsoft/unixcoder-base"
+
 # Number of suspicious nodes to try during localization (increased from 3)
 localization_top_k: int = 5
 

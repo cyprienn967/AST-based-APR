@@ -30,6 +30,7 @@ DEFAULT_WEIGHTS = {
     "sbfl":       1.0,   # base signal from spectrum-based fault localization
     "trace":      2.5,   # stacktrace is STRONGEST when available (increased from 1.5)
     "slice":      1.2,   # helpful for data-flow bugs (increased from 0.8)
+    "semantic":   1.8,   # semantic similarity to issue (embedding-based retrieval)
     "size_pen":   0.3,   # penalize large spans
     "issue":      5.0,   # issue-mentioned methods get strong boost (NEW)
     "utility_pen": 0.1,  # utility methods get penalized (NEW)
@@ -45,10 +46,11 @@ def combine_scores(
     sbfl_scores: Dict[int, float],
     trace_scores: Dict[int, float],
     slice_scores: Dict[int, float],
+    semantic_scores: Dict[int, float] = None,
     weights: Dict[str, float] = DEFAULT_WEIGHTS,
 ) -> Dict[int, float]:
     """
-    Merge the three signals into one {node_id → total_score} dictionary.
+    Merge the localization signals into one {node_id → total_score} dictionary.
 
     Missing signals cause no issue – empty dicts just contribute nothing.
 
@@ -56,13 +58,16 @@ def combine_scores(
         total = w_sbfl * sbfl
               + w_trace * trace
               + w_slice * slice
+              + w_semantic * semantic
               - w_size  * size_penalty
 
     Size penalty:
         size_penalty = (end - start + 1) normalized by file span
     """
+    if semantic_scores is None:
+        semantic_scores = {}
 
-    node_ids = set(sbfl_scores.keys()) | set(trace_scores.keys()) | set(slice_scores.keys())
+    node_ids = set(sbfl_scores.keys()) | set(trace_scores.keys()) | set(slice_scores.keys()) | set(semantic_scores.keys())
 
     if not node_ids:
         return {}
@@ -91,6 +96,7 @@ def combine_scores(
         sbfl_score  = sbfl_scores.get(nid, 0.0)
         trace_score = trace_scores.get(nid, 0.0)
         slice_score = slice_scores.get(nid, 0.0)
+        semantic_score = semantic_scores.get(nid, 0.0)
 
         # --- size penalty ---
         start, end = md.line_map.get(nid, (None, None))
@@ -104,6 +110,7 @@ def combine_scores(
             weights["sbfl"]     * sbfl_score
             + weights["trace"]  * trace_score
             + weights["slice"]  * slice_score
+            + weights["semantic"] * semantic_score
             - weights["size_pen"] * size_pen
         )
 
