@@ -23,6 +23,7 @@ import ast
 import json
 import os
 import re
+import signal
 import sys
 from collections import defaultdict
 from dataclasses import dataclass, field
@@ -362,6 +363,15 @@ def extract_methods_from_nodes(
                 lines.add(line)
     
     return methods, lines
+
+
+def count_functions_in_ast(root_ast: ast.AST) -> int:
+    """Count the number of function/method definitions in an AST."""
+    count = 0
+    for node in ast.walk(root_ast):
+        if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
+            count += 1
+    return count
 
 
 def extract_all_node_features(
@@ -746,6 +756,13 @@ def evaluate_task(raw_task: RawSweTask, output_dir: str) -> LocalizationResult:
                 # Parse this file's AST
                 file_root_ast, file_metadata = parse_file_to_ast(file_path)
                 
+                # Check function count - skip files with too many functions (causes timeout)
+                MAX_FUNCTIONS_PER_FILE = 80
+                function_count = count_functions_in_ast(file_root_ast)
+                if function_count > MAX_FUNCTIONS_PER_FILE:
+                    logger.warning(f"Skipping {file_path}: too many functions ({function_count} > {MAX_FUNCTIONS_PER_FILE})")
+                    continue
+                
                 # Read source code
                 try:
                     file_source_code = Path(file_path).read_text()
@@ -827,6 +844,55 @@ def evaluate_task(raw_task: RawSweTask, output_dir: str) -> LocalizationResult:
         return result
 
 
+class TaskTimeoutError(Exception):
+    """Raised when a task evaluation times out."""
+    pass
+
+
+def timeout_handler(signum, frame):
+    """Signal handler for timeout."""
+    raise TaskTimeoutError("Task evaluation timeout")
+
+
+def evaluate_task_with_timeout(raw_task: RawSweTask, output_dir: str, timeout_seconds: int = 1800) -> LocalizationResult:
+    """
+    Evaluate a task with a timeout to prevent hanging.
+    
+    Args:
+        raw_task: The task to evaluate
+        output_dir: Output directory
+        timeout_seconds: Maximum time per task (default: 30 minutes)
+    
+    Returns:
+        LocalizationResult with error set if timeout occurred
+    """
+    # Set up timeout (only works on Unix systems)
+    if hasattr(signal, 'SIGALRM'):
+        old_handler = signal.signal(signal.SIGALRM, timeout_handler)
+        signal.alarm(timeout_seconds)
+        try:
+            result = evaluate_task(raw_task, output_dir)
+        except TaskTimeoutError as e:
+            logger.error(f"Task {raw_task.task_id} timed out after {timeout_seconds}s")
+            result = LocalizationResult(
+                task_id=raw_task.task_id,
+                file_correct=False,
+                method_recall=0.0,
+                line_recall=0.0,
+                node_line_recall=0.0,
+                error=f"Timeout after {timeout_seconds}s"
+            )
+        finally:
+            signal.alarm(0)  # Cancel alarm
+            signal.signal(signal.SIGALRM, old_handler)  # Restore old handler
+    else:
+        # Windows doesn't support SIGALRM, just run without timeout
+        logger.warning("SIGALRM not available (Windows?), running without timeout")
+        result = evaluate_task(raw_task, output_dir)
+    
+    return result
+
+
 def main():
     parser = argparse.ArgumentParser(description='Evaluate localization accuracy')
     parser.add_argument('config_file', help='Path to configuration file')
@@ -834,6 +900,8 @@ def main():
                        help='Output directory for results')
     parser.add_argument('--max-tasks', type=int, default=None,
                        help='Maximum number of tasks to evaluate')
+    parser.add_argument('--timeout', type=int, default=1800,
+                       help='Timeout per task in seconds (default: 1800 = 30 minutes)')
     args = parser.parse_args()
     
     # Parse config
@@ -867,7 +935,7 @@ def main():
         logger.info(f"[{i+1}/{len(tasks)}] Evaluating {raw_task.task_id}")
         logger.info(f"{'='*60}")
         
-        result = evaluate_task(raw_task, output_dir)
+        result = evaluate_task_with_timeout(raw_task, output_dir, timeout_seconds=args.timeout)
         results.append(result)
         
         # Log progress
