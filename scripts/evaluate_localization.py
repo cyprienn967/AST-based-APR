@@ -907,6 +907,26 @@ def main():
     # Parse config
     conf = parse_config(args.config_file)
     
+    # =========================================================================
+    # Apply config values to the config module (CRITICAL for SBFL to work!)
+    # Without this, config.enable_sbfl stays False and _do_install() is skipped,
+    # meaning coverage/pytest-cov are never installed in task environments.
+    # =========================================================================
+    
+    # Force enable SBFL for localization evaluation (this is the whole point!)
+    config.enable_sbfl = True
+    config.enable_validation = conf.get('enable_validation', 'false').lower() == 'true'
+    
+    # Apply feature extraction config values
+    if 'enable_semantic_retrieval' in conf:
+        config.enable_semantic_retrieval = conf['enable_semantic_retrieval'].lower() == 'true'
+    if 'enable_structural_boost' in conf:
+        config.enable_structural_boost = conf['enable_structural_boost'].lower() == 'true'
+    if 'enable_negative_signals' in conf:
+        config.enable_negative_signals = conf['enable_negative_signals'].lower() == 'true'
+    if 'enable_issue_boost' in conf:
+        config.enable_issue_boost = conf['enable_issue_boost'].lower() == 'true'
+    
     # Set up output directory
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
     output_dir = os.path.join(args.output_dir, timestamp)
@@ -919,6 +939,11 @@ def main():
     logger.info(f"Starting localization evaluation")
     logger.info(f"Config: {args.config_file}")
     logger.info(f"Output: {output_dir}")
+    logger.info(f"Config values: enable_sbfl={config.enable_sbfl}, "
+                f"enable_semantic_retrieval={config.enable_semantic_retrieval}, "
+                f"enable_structural_boost={config.enable_structural_boost}, "
+                f"enable_negative_signals={config.enable_negative_signals}, "
+                f"enable_issue_boost={config.enable_issue_boost}")
     
     # Load tasks
     tasks = load_tasks(conf)
