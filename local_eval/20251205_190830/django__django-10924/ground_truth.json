@@ -1,0 +1,19 @@
+{
+  "files": [
+    "models/fields/__init__.py"
+  ],
+  "lines": {
+    "models/fields/__init__.py": [
+      1709,
+      1710,
+      1711,
+      1712,
+      1713,
+      1714,
+      1715
+    ]
+  },
+  "methods": [
+    "get_prep_value"
+  ]
+}

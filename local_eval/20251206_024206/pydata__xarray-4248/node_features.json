@@ -1,0 +1,4021 @@
+{
+  "task_id": "pydata__xarray-4248",
+  "num_files_processed": 3,
+  "files": [
+    {
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305,
+      "num_nodes": 41,
+      "num_buggy_nodes": 1
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/alignment.py",
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.0,
+      "num_nodes": 13,
+      "num_buggy_nodes": 0
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0,
+      "num_nodes": 48,
+      "num_buggy_nodes": 0
+    }
+  ],
+  "num_nodes": 102,
+  "num_buggy_nodes": 1,
+  "nodes": [
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 2654,
+      "node_type": "FunctionDef",
+      "name": "dataset_repr",
+      "start_line": 495,
+      "end_line": 515,
+      "line_count": 21,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3300733268260956,
+        "structural": 1.5,
+        "combined": 3.4753161433649327,
+        "boosted": 8.688290358412331
+      },
+      "negative_signals": {
+        "total": 0.10952380952380952,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.023809523809523808
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 3584,
+      "node_type": "FunctionDef",
+      "name": "diff_dataset_repr",
+      "start_line": 658,
+      "end_line": 678,
+      "line_count": 21,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2663363814353943,
+        "structural": 1.5,
+        "combined": 3.46058964166167,
+        "boosted": 8.651474104154175
+      },
+      "negative_signals": {
+        "total": 0.009523809523809525,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.023809523809523808
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 1356,
+      "node_type": "FunctionDef",
+      "name": "inline_variable_array_repr",
+      "start_line": 256,
+      "end_line": 268,
+      "line_count": 13,
+      "signals": {
+        "sbfl": 5.34024198072123,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2542112469673157,
+        "structural": 0.0,
+        "combined": 5.669762320565325,
+        "boosted": 5.669762320565325
+      },
+      "negative_signals": {
+        "total": 0.12230769230769231,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.23076923076923075
+      },
+      "ground_truth": {
+        "is_buggy": true,
+        "method_match": true,
+        "lines_in_patch": [
+          261,
+          262,
+          263,
+          264,
+          265,
+          266,
+          267,
+          268
+        ],
+        "num_buggy_lines": 8
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 68,
+      "node_type": "FunctionDef",
+      "name": "maybe_truncate",
+      "start_line": 27,
+      "end_line": 31,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 1.925149149244471,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.15514230728149414,
+        "structural": 0.0,
+        "combined": 2.0221929129706293,
+        "boosted": 2.0221929129706293
+      },
+      "negative_signals": {
+        "total": 0.18,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15000000000000002
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 2343,
+      "node_type": "FunctionDef",
+      "name": "short_numpy_repr",
+      "start_line": 436,
+      "end_line": 450,
+      "line_count": 15,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.36135804653167725,
+        "structural": 0.0,
+        "combined": 0.6438073156154261,
+        "boosted": 0.6438073156154261
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 2518,
+      "node_type": "FunctionDef",
+      "name": "array_repr",
+      "start_line": 469,
+      "end_line": 492,
+      "line_count": 24,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3306921720504761,
+        "structural": 0.0,
+        "combined": 0.5846264406643084,
+        "boosted": 0.5846264406643084
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 1685,
+      "node_type": "FunctionDef",
+      "name": "summarize_coord",
+      "start_line": 312,
+      "end_line": 324,
+      "line_count": 13,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.29947179555892944,
+        "structural": 0.0,
+        "combined": 0.5332970196166925,
+        "boosted": 0.5332970196166925
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 1440,
+      "node_type": "FunctionDef",
+      "name": "summarize_variable",
+      "start_line": 271,
+      "end_line": 291,
+      "line_count": 21,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3907166123390198,
+        "structural": 0.0,
+        "combined": 0.5204264382405769,
+        "boosted": 0.5204264382405769
+      },
+      "negative_signals": {
+        "total": 0.1735714285714286,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.07142857142857144
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 306,
+      "node_type": "FunctionDef",
+      "name": "first_n_items",
+      "start_line": 54,
+      "end_line": 70,
+      "line_count": 17,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3183366656303406,
+        "structural": 0.0,
+        "combined": 0.5119544624761018,
+        "boosted": 0.5119544624761018
+      },
+      "negative_signals": {
+        "total": 0.05352941176470588,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.05882352941176471
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 2420,
+      "node_type": "FunctionDef",
+      "name": "short_data_repr",
+      "start_line": 453,
+      "end_line": 466,
+      "line_count": 14,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.31975311040878296,
+        "structural": 0.0,
+        "combined": 0.4965037656131797,
+        "boosted": 0.4965037656131797
+      },
+      "negative_signals": {
+        "total": 0.07285714285714287,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.10714285714285715
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 1219,
+      "node_type": "FunctionDef",
+      "name": "inline_dask_repr",
+      "start_line": 226,
+      "end_line": 245,
+      "line_count": 20,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.32135096192359924,
+        "structural": 0.0,
+        "combined": 0.4595821739403547,
+        "boosted": 0.4595821739403547
+      },
+      "negative_signals": {
+        "total": 0.11,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.125
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 381,
+      "node_type": "FunctionDef",
+      "name": "last_n_items",
+      "start_line": 73,
+      "end_line": 85,
+      "line_count": 13,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.23250016570091248,
+        "structural": 0.0,
+        "combined": 0.38274808587226195,
+        "boosted": 0.38274808587226195
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 2831,
+      "node_type": "FunctionDef",
+      "name": "_diff_mapping_repr",
+      "start_line": 527,
+      "end_line": 594,
+      "line_count": 68,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2742583453655243,
+        "structural": 0.0,
+        "combined": 0.3647529966709578,
+        "boosted": 0.3647529966709578
+      },
+      "negative_signals": {
+        "total": 0.0988235294117647,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.02205882352941177
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 3369,
+      "node_type": "FunctionDef",
+      "name": "diff_array_repr",
+      "start_line": 624,
+      "end_line": 655,
+      "line_count": 32,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.22304922342300415,
+        "structural": 0.0,
+        "combined": 0.35107931012600924,
+        "boosted": 0.35107931012600924
+      },
+      "negative_signals": {
+        "total": 0.03625,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.015625
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 1964,
+      "node_type": "FunctionDef",
+      "name": "_mapping_repr",
+      "start_line": 365,
+      "end_line": 373,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.21363979578018188,
+        "structural": 0.0,
+        "combined": 0.34056933151937163,
+        "boosted": 0.34056933151937163
+      },
+      "negative_signals": {
+        "total": 0.04000000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 2799,
+      "node_type": "FunctionDef",
+      "name": "diff_dim_summary",
+      "start_line": 518,
+      "end_line": 524,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.20937515795230865,
+        "structural": 0.0,
+        "combined": 0.2537779391814122,
+        "boosted": 0.2537779391814122
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 454,
+      "node_type": "FunctionDef",
+      "name": "last_item",
+      "start_line": 88,
+      "end_line": 95,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.16789411008358002,
+        "structural": 0.0,
+        "combined": 0.2536695751415945,
+        "boosted": 0.2536695751415945
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 1771,
+      "node_type": "FunctionDef",
+      "name": "summarize_attr",
+      "start_line": 327,
+      "end_line": 336,
+      "line_count": 10,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2762823700904846,
+        "structural": 0.0,
+        "combined": 0.22788348740181036,
+        "boosted": 0.22788348740181036
+      },
+      "negative_signals": {
+        "total": 0.265,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.3
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 2277,
+      "node_type": "FunctionDef",
+      "name": "limit_lines",
+      "start_line": 425,
+      "end_line": 433,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1716916859149933,
+        "structural": 0.0,
+        "combined": 0.22006273376203214,
+        "boosted": 0.22006273376203214
+      },
+      "negative_signals": {
+        "total": 0.08500000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 2069,
+      "node_type": "FunctionDef",
+      "name": "coords_repr",
+      "start_line": 386,
+      "end_line": 391,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.19429275393486023,
+        "structural": 0.0,
+        "combined": 0.18707208982611126,
+        "boosted": 0.18707208982611126
+      },
+      "negative_signals": {
+        "total": 0.16,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 2187,
+      "node_type": "FunctionDef",
+      "name": "unindexed_dims_repr",
+      "start_line": 406,
+      "end_line": 412,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1647116243839264,
+        "structural": 0.0,
+        "combined": 0.17338357875832414,
+        "boosted": 0.17338357875832414
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 110,
+      "node_type": "FunctionDef",
+      "name": "wrap_indent",
+      "start_line": 34,
+      "end_line": 38,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1772814691066742,
+        "structural": 0.0,
+        "combined": 0.1568942550114826,
+        "boosted": 0.1568942550114826
+      },
+      "negative_signals": {
+        "total": 0.16,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 2105,
+      "node_type": "FunctionDef",
+      "name": "indexes_repr",
+      "start_line": 394,
+      "end_line": 398,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.12195291370153427,
+        "structural": 0.0,
+        "combined": 0.09730285528223073,
+        "boosted": 0.09730285528223073
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 2864,
+      "node_type": "FunctionDef",
+      "name": "extra_items_repr",
+      "start_line": 535,
+      "end_line": 541,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.11033309251070023,
+        "structural": 0.0,
+        "combined": 0.07550222138651706,
+        "boosted": 0.07550222138651706
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 741,
+      "node_type": "FunctionDef",
+      "name": "format_items",
+      "start_line": 149,
+      "end_line": 164,
+      "line_count": 16,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4307657480239868,
+        "structural": 0.0,
+        "combined": 0.7232987004254772,
+        "boosted": 0.07232987004254772
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 1321,
+      "node_type": "FunctionDef",
+      "name": "inline_sparse_repr",
+      "start_line": 248,
+      "end_line": 253,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1585472822189331,
+        "structural": 0.0,
+        "combined": 0.05773024073744245,
+        "boosted": 0.05773024073744245
+      },
+      "negative_signals": {
+        "total": 0.225,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 893,
+      "node_type": "FunctionDef",
+      "name": "format_array_flat",
+      "start_line": 167,
+      "end_line": 216,
+      "line_count": 50,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3882913887500763,
+        "structural": 0.0,
+        "combined": 0.5748006059448276,
+        "boosted": 0.05748006059448277
+      },
+      "negative_signals": {
+        "total": 0.10200000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.030000000000000006
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 508,
+      "node_type": "FunctionDef",
+      "name": "format_timestamp",
+      "start_line": 98,
+      "end_line": 115,
+      "line_count": 18,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.32301899790763855,
+        "structural": 0.0,
+        "combined": 0.48402515001939345,
+        "boosted": 0.048402515001939345
+      },
+      "negative_signals": {
+        "total": 0.08944444444444447,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.11111111111111112
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 575,
+      "node_type": "FunctionDef",
+      "name": "format_timedelta",
+      "start_line": 118,
+      "end_line": 132,
+      "line_count": 15,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2103545367717743,
+        "structural": 0.0,
+        "combined": 0.28700099804760076,
+        "boosted": 0.028700099804760078
+      },
+      "negative_signals": {
+        "total": 0.08500000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.10000000000000002
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 639,
+      "node_type": "FunctionDef",
+      "name": "format_item",
+      "start_line": 135,
+      "end_line": 146,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.25775256752967834,
+        "structural": 0.0,
+        "combined": 0.19697822037348,
+        "boosted": 0.019697822037348003
+      },
+      "negative_signals": {
+        "total": 0.2616666666666667,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.5416666666666667
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 3334,
+      "node_type": "FunctionDef",
+      "name": "_compat_to_str",
+      "start_line": 612,
+      "end_line": 621,
+      "line_count": 10,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.055607788264751434,
+        "structural": 0.0,
+        "combined": -0.5643307598845095,
+        "boosted": -0.05643307598845096
+      },
+      "negative_signals": {
+        "total": 0.6600000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 1922,
+      "node_type": "FunctionDef",
+      "name": "_calculate_col_width",
+      "start_line": 359,
+      "end_line": 362,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0977952852845192,
+        "structural": 0.0,
+        "combined": -0.08573839799229023,
+        "boosted": -0.08573839799229023
+      },
+      "negative_signals": {
+        "total": 0.26,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 29,
+      "node_type": "FunctionDef",
+      "name": "pretty_print",
+      "start_line": 18,
+      "end_line": 24,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1303793489933014,
+        "structural": 0.0,
+        "combined": -0.11841451694480083,
+        "boosted": -0.11841451694480083
+      },
+      "negative_signals": {
+        "total": 0.35,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.30000000000000004,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 163,
+      "node_type": "FunctionDef",
+      "name": "_get_indexer_at_least_n_items",
+      "start_line": 41,
+      "end_line": 51,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.33416640758514404,
+        "structural": 0.0,
+        "combined": -0.13427681389299995,
+        "boosted": -0.13427681389299995
+      },
+      "negative_signals": {
+        "total": 0.7309090909090911,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.22727272727272727
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 1668,
+      "node_type": "FunctionDef",
+      "name": "summarize_datavar",
+      "start_line": 308,
+      "end_line": 309,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.21095578372478485,
+        "structural": 0.0,
+        "combined": -0.16116454504759967,
+        "boosted": -0.16116454504759967
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 1590,
+      "node_type": "FunctionDef",
+      "name": "_summarize_coord_multiindex",
+      "start_line": 294,
+      "end_line": 296,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.22197791934013367,
+        "structural": 0.0,
+        "combined": -0.16176717881607802,
+        "boosted": -0.16176717881607802
+      },
+      "negative_signals": {
+        "total": 0.56,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 1632,
+      "node_type": "FunctionDef",
+      "name": "_summarize_coord_levels",
+      "start_line": 299,
+      "end_line": 305,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.17409585416316986,
+        "structural": 0.0,
+        "combined": -0.22972480763903766,
+        "boosted": -0.22972480763903766
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 2236,
+      "node_type": "FunctionDef",
+      "name": "set_numpy_options",
+      "start_line": 416,
+      "end_line": 422,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.26086968183517456,
+        "structural": 0.0,
+        "combined": -0.2935319178294292,
+        "boosted": -0.2935319178294292
+      },
+      "negative_signals": {
+        "total": 0.7600000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 2151,
+      "node_type": "FunctionDef",
+      "name": "dim_summary",
+      "start_line": 401,
+      "end_line": 403,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.06133243069052696,
+        "structural": 0.0,
+        "combined": -0.31092905838537005,
+        "boosted": -0.31092905838537005
+      },
+      "negative_signals": {
+        "total": 0.42,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 1843,
+      "node_type": "FunctionDef",
+      "name": "_get_col_items",
+      "start_line": 342,
+      "end_line": 356,
+      "line_count": 15,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1141241118311882,
+        "structural": 0.0,
+        "combined": -0.5528804335121209,
+        "boosted": -0.5528804335121209
+      },
+      "negative_signals": {
+        "total": 0.7516666666666668,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.16666666666666666
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/formatting.py",
+      "node_id": 2840,
+      "node_type": "FunctionDef",
+      "name": "is_array_like",
+      "start_line": 528,
+      "end_line": 533,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.24273793399333954,
+        "structural": 0.0,
+        "combined": -0.7457265860686262,
+        "boosted": -0.7457265860686262
+      },
+      "negative_signals": {
+        "total": 1.1800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.4444869504501305
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/alignment.py",
+      "node_id": 2039,
+      "node_type": "FunctionDef",
+      "name": "_broadcast_dataset",
+      "start_line": 641,
+      "end_line": 645,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.24123084545135498,
+        "structural": 1.5,
+        "combined": 3.192180243657758,
+        "boosted": 7.980450609144395
+      },
+      "negative_signals": {
+        "total": 0.24,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/alignment.py",
+      "node_id": 2129,
+      "node_type": "FunctionDef",
+      "name": "broadcast",
+      "start_line": 655,
+      "end_line": 737,
+      "line_count": 83,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.560958981513977,
+        "structural": 0.0,
+        "combined": 0.6561212722490182,
+        "boosted": 0.6561212722490182
+      },
+      "negative_signals": {
+        "total": 0.31981927710843366,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.75,
+        "safe_patterns": 0.012048192771084336
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/alignment.py",
+      "node_id": 1133,
+      "node_type": "FunctionDef",
+      "name": "reindex_like_indexers",
+      "start_line": 427,
+      "end_line": 463,
+      "line_count": 37,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.45209312438964844,
+        "structural": 0.0,
+        "combined": 0.6487065655567268,
+        "boosted": 0.6487065655567268
+      },
+      "negative_signals": {
+        "total": 0.15,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.4,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/alignment.py",
+      "node_id": 1254,
+      "node_type": "FunctionDef",
+      "name": "reindex_variables",
+      "start_line": 466,
+      "end_line": 603,
+      "line_count": 138,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.38453710079193115,
+        "structural": 0.0,
+        "combined": 0.31229745218236354,
+        "boosted": 0.31229745218236354
+      },
+      "negative_signals": {
+        "total": 0.32369565217391305,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.5,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.55,
+        "safe_patterns": 0.02173913043478261
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/alignment.py",
+      "node_id": 142,
+      "node_type": "FunctionDef",
+      "name": "_override_indexes",
+      "start_line": 40,
+      "end_line": 58,
+      "line_count": 19,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1777208298444748,
+        "structural": 0.0,
+        "combined": 0.29111080515331894,
+        "boosted": 0.29111080515331894
+      },
+      "negative_signals": {
+        "total": 0.02105263157894737,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.052631578947368425
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/alignment.py",
+      "node_id": 1986,
+      "node_type": "FunctionDef",
+      "name": "_broadcast_array",
+      "start_line": 635,
+      "end_line": 639,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.27158069610595703,
+        "structural": 0.0,
+        "combined": 0.24680997483604156,
+        "boosted": 0.24680997483604156
+      },
+      "negative_signals": {
+        "total": 0.24,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/alignment.py",
+      "node_id": 275,
+      "node_type": "FunctionDef",
+      "name": "align",
+      "start_line": 61,
+      "end_line": 341,
+      "line_count": 281,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.40232208371162415,
+        "structural": 0.0,
+        "combined": 0.16839142443766553,
+        "boosted": 0.16839142443766553
+      },
+      "negative_signals": {
+        "total": 0.44140569395017787,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.7,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.75,
+        "safe_patterns": 0.01601423487544484
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/alignment.py",
+      "node_id": 781,
+      "node_type": "FunctionDef",
+      "name": "deep_align",
+      "start_line": 344,
+      "end_line": 424,
+      "line_count": 81,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.20207613706588745,
+        "structural": 0.0,
+        "combined": 0.07601245419300987,
+        "boosted": 0.07601245419300987
+      },
+      "negative_signals": {
+        "total": 0.2547530864197531,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.04938271604938272
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/alignment.py",
+      "node_id": 1923,
+      "node_type": "FunctionDef",
+      "name": "_broadcast_helper",
+      "start_line": 620,
+      "end_line": 652,
+      "line_count": 33,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2849280834197998,
+        "structural": 0.0,
+        "combined": 0.0330740779711077,
+        "boosted": 0.0330740779711077
+      },
+      "negative_signals": {
+        "total": 0.4663636363636364,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.5,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.09090909090909091
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/alignment.py",
+      "node_id": 1836,
+      "node_type": "FunctionDef",
+      "name": "_get_broadcast_dims_map_common_coords",
+      "start_line": 606,
+      "end_line": 617,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.15642967820167542,
+        "structural": 0.0,
+        "combined": -0.3633112468082191,
+        "boosted": -0.3633112468082191
+      },
+      "negative_signals": {
+        "total": 0.6400000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/alignment.py",
+      "node_id": 41,
+      "node_type": "FunctionDef",
+      "name": "_get_joiner",
+      "start_line": 20,
+      "end_line": 37,
+      "line_count": 18,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1484893411397934,
+        "structural": 0.0,
+        "combined": -0.3800461873052241,
+        "boosted": -0.3800461873052241
+      },
+      "negative_signals": {
+        "total": 0.6400000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/alignment.py",
+      "node_id": 1933,
+      "node_type": "FunctionDef",
+      "name": "_set_dims",
+      "start_line": 625,
+      "end_line": 633,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1382676512002945,
+        "structural": 0.0,
+        "combined": -0.39478172851789606,
+        "boosted": -0.39478172851789606
+      },
+      "negative_signals": {
+        "total": 0.6400000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/alignment.py",
+      "node_id": 817,
+      "node_type": "FunctionDef",
+      "name": "is_alignable",
+      "start_line": 363,
+      "end_line": 364,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.16093233227729797,
+        "structural": 0.0,
+        "combined": -0.8911359131627363,
+        "boosted": -0.8911359131627363
+      },
+      "negative_signals": {
+        "total": 1.1800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 2617,
+      "node_type": "FunctionDef",
+      "name": "strftime",
+      "start_line": 629,
+      "end_line": 657,
+      "line_count": 29,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.6490689516067505,
+        "structural": 0.0,
+        "combined": 0.9628799352210824,
+        "boosted": 0.9628799352210824
+      },
+      "negative_signals": {
+        "total": 0.19500000000000003,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.6500000000000001,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 368,
+      "node_type": "FunctionDef",
+      "name": "_parsed_string_to_bounds",
+      "start_line": 128,
+      "end_line": 169,
+      "line_count": 42,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5095421671867371,
+        "structural": 0.0,
+        "combined": 0.8120498505159588,
+        "boosted": 0.8120498505159588
+      },
+      "negative_signals": {
+        "total": 0.09,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 2275,
+      "node_type": "FunctionDef",
+      "name": "shift",
+      "start_line": 498,
+      "end_line": 539,
+      "line_count": 42,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.548958420753479,
+        "structural": 0.0,
+        "combined": 0.7194276783646656,
+        "boosted": 0.7194276783646656
+      },
+      "negative_signals": {
+        "total": 0.2535714285714286,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.6500000000000001,
+        "safe_patterns": 0.07142857142857142
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 2917,
+      "node_type": "FunctionDef",
+      "name": "_cftimeindex_from_i8",
+      "start_line": 778,
+      "end_line": 796,
+      "line_count": 19,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4415218234062195,
+        "structural": 0.0,
+        "combined": 0.6573702292468834,
+        "boosted": 0.6573702292468834
+      },
+      "negative_signals": {
+        "total": 0.13052631578947368,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.4,
+        "safe_patterns": 0.026315789473684213
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 2856,
+      "node_type": "FunctionDef",
+      "name": "_parse_array_of_cftime_strings",
+      "start_line": 750,
+      "end_line": 769,
+      "line_count": 20,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.418275386095047,
+        "structural": 0.0,
+        "combined": 0.6256928138186236,
+        "boosted": 0.6256928138186236
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.4,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 2708,
+      "node_type": "FunctionDef",
+      "name": "_round_via_method",
+      "start_line": 680,
+      "end_line": 691,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3324231207370758,
+        "structural": 0.0,
+        "combined": 0.5640398886352598,
+        "boosted": 0.5640398886352598
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 814,
+      "node_type": "FunctionDef",
+      "name": "assert_all_valid_date_type",
+      "start_line": 206,
+      "end_line": 221,
+      "line_count": 16,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.30891478061676025,
+        "structural": 0.0,
+        "combined": 0.5252843001881996,
+        "boosted": 0.5252843001881996
+      },
+      "negative_signals": {
+        "total": 0.025,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0625
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 2819,
+      "node_type": "FunctionDef",
+      "name": "round",
+      "start_line": 727,
+      "end_line": 742,
+      "line_count": 16,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3508702516555786,
+        "structural": 0.0,
+        "combined": 0.47580414805807275,
+        "boosted": 0.47580414805807275
+      },
+      "negative_signals": {
+        "total": 0.15,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.5,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 2644,
+      "node_type": "FunctionDef",
+      "name": "asi8",
+      "start_line": 660,
+      "end_line": 671,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2792291045188904,
+        "structural": 0.0,
+        "combined": 0.4532906594425261,
+        "boosted": 0.4532906594425261
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 2429,
+      "node_type": "FunctionDef",
+      "name": "__sub__",
+      "start_line": 551,
+      "end_line": 565,
+      "line_count": 15,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2815099358558655,
+        "structural": 0.0,
+        "combined": 0.4346490570095455,
+        "boosted": 0.4346490570095455
+      },
+      "negative_signals": {
+        "total": 0.06666666666666667,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.16666666666666666
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 2969,
+      "node_type": "FunctionDef",
+      "name": "_total_microseconds",
+      "start_line": 799,
+      "end_line": 811,
+      "line_count": 13,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.29727625846862793,
+        "structural": 0.0,
+        "combined": 0.42541539249443067,
+        "boosted": 0.42541539249443067
+      },
+      "negative_signals": {
+        "total": 0.105,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.35,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 2527,
+      "node_type": "FunctionDef",
+      "name": "__rsub__",
+      "start_line": 567,
+      "end_line": 574,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.25185611844062805,
+        "structural": 0.0,
+        "combined": 0.41045986073214613,
+        "boosted": 0.41045986073214613
+      },
+      "negative_signals": {
+        "total": 0.04000000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 1551,
+      "node_type": "FunctionDef",
+      "name": "_partial_date_slice",
+      "start_line": 350,
+      "end_line": 414,
+      "line_count": 65,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.36553362011909485,
+        "structural": 0.0,
+        "combined": 0.3583973063150264,
+        "boosted": 0.3583973063150264
+      },
+      "negative_signals": {
+        "total": 0.2761538461538462,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.6000000000000001,
+        "safe_patterns": 0.015384615384615385
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 2803,
+      "node_type": "FunctionDef",
+      "name": "ceil",
+      "start_line": 710,
+      "end_line": 725,
+      "line_count": 16,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2820075750350952,
+        "structural": 0.0,
+        "combined": 0.35185133014120257,
+        "boosted": 0.35185133014120257
+      },
+      "negative_signals": {
+        "total": 0.15,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.5,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 260,
+      "node_type": "FunctionDef",
+      "name": "_parse_iso8601_with_reso",
+      "start_line": 105,
+      "end_line": 125,
+      "line_count": 21,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2813394069671631,
+        "structural": 0.0,
+        "combined": 0.3512288597117619,
+        "boosted": 0.3512288597117619
+      },
+      "negative_signals": {
+        "total": 0.14761904761904762,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.11904761904761904
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 2787,
+      "node_type": "FunctionDef",
+      "name": "floor",
+      "start_line": 693,
+      "end_line": 708,
+      "line_count": 16,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2776840031147003,
+        "structural": 0.0,
+        "combined": 0.34406890068449186,
+        "boosted": 0.34406890068449186
+      },
+      "negative_signals": {
+        "total": 0.15,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.5,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 719,
+      "node_type": "FunctionDef",
+      "name": "f",
+      "start_line": 180,
+      "end_line": 192,
+      "line_count": 13,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.19202680885791779,
+        "structural": 0.0,
+        "combined": 0.3409663831951524,
+        "boosted": 0.3409663831951524
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 2392,
+      "node_type": "FunctionDef",
+      "name": "__radd__",
+      "start_line": 546,
+      "end_line": 549,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.24892200529575348,
+        "structural": 0.0,
+        "combined": 0.2666190333018641,
+        "boosted": 0.2666190333018641
+      },
+      "negative_signals": {
+        "total": 0.18,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 710,
+      "node_type": "FunctionDef",
+      "name": "_field_accessor",
+      "start_line": 177,
+      "end_line": 196,
+      "line_count": 20,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.16114847362041473,
+        "structural": 0.0,
+        "combined": 0.2528643713642856,
+        "boosted": 0.2528643713642856
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 2030,
+      "node_type": "FunctionDef",
+      "name": "_maybe_cast_slice_bound",
+      "start_line": 458,
+      "end_line": 468,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.19428026676177979,
+        "structural": 0.0,
+        "combined": 0.24619744099189556,
+        "boosted": 0.24619744099189556
+      },
+      "negative_signals": {
+        "total": 0.09954545454545455,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.13636363636363635
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 3026,
+      "node_type": "FunctionDef",
+      "name": "_round_to_nearest_half_even",
+      "start_line": 824,
+      "end_line": 833,
+      "line_count": 10,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.16363297402858734,
+        "structural": 0.0,
+        "combined": 0.24093791267522677,
+        "boosted": 0.24093791267522677
+      },
+      "negative_signals": {
+        "total": 0.05,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 1908,
+      "node_type": "FunctionDef",
+      "name": "_filter_indexer_tolerance",
+      "start_line": 442,
+      "end_line": 449,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1934603601694107,
+        "structural": 0.0,
+        "combined": 0.24034749584395487,
+        "boosted": 0.24034749584395487
+      },
+      "negative_signals": {
+        "total": 0.10500000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 2355,
+      "node_type": "FunctionDef",
+      "name": "__add__",
+      "start_line": 541,
+      "end_line": 544,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.23212575912475586,
+        "structural": 0.0,
+        "combined": 0.23638579019406836,
+        "boosted": 0.23638579019406836
+      },
+      "negative_signals": {
+        "total": 0.18,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 222,
+      "node_type": "FunctionDef",
+      "name": "parse_iso8601",
+      "start_line": 97,
+      "end_line": 102,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.10974696278572083,
+        "structural": 0.0,
+        "combined": 0.19538366866855922,
+        "boosted": 0.19538366866855922
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 2693,
+      "node_type": "FunctionDef",
+      "name": "calendar",
+      "start_line": 674,
+      "end_line": 678,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.208579882979393,
+        "structural": 0.0,
+        "combined": 0.10364306907479214,
+        "boosted": 0.10364306907479214
+      },
+      "negative_signals": {
+        "total": 0.27,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 2557,
+      "node_type": "FunctionDef",
+      "name": "to_datetimeindex",
+      "start_line": 576,
+      "end_line": 627,
+      "line_count": 52,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5807904005050659,
+        "structural": 0.0,
+        "combined": 0.10169522991271998,
+        "boosted": 0.10169522991271998
+      },
+      "negative_signals": {
+        "total": 0.9250000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.6500000000000001,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 930,
+      "node_type": "FunctionDef",
+      "name": "format_times",
+      "start_line": 229,
+      "end_line": 251,
+      "line_count": 23,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.43710795044898987,
+        "structural": 0.0,
+        "combined": 0.7398153453089386,
+        "boosted": 0.07398153453089386
+      },
+      "negative_signals": {
+        "total": 0.03869565217391305,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.02173913043478261
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 2891,
+      "node_type": "FunctionDef",
+      "name": "_contains_datetime_timedeltas",
+      "start_line": 772,
+      "end_line": 775,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.18001292645931244,
+        "structural": 0.0,
+        "combined": 0.037582691396270254,
+        "boosted": 0.037582691396270254
+      },
+      "negative_signals": {
+        "total": 0.285,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 1074,
+      "node_type": "FunctionDef",
+      "name": "format_attrs",
+      "start_line": 254,
+      "end_line": 263,
+      "line_count": 10,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.17582568526268005,
+        "structural": 0.0,
+        "combined": 0.2828847928965936,
+        "boosted": 0.028288479289659357
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 2201,
+      "node_type": "FunctionDef",
+      "name": "__contains__",
+      "start_line": 481,
+      "end_line": 492,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.18207770586013794,
+        "structural": 0.0,
+        "combined": 0.2784181418567718,
+        "boosted": 0.027841814185677178
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 1321,
+      "node_type": "FunctionDef",
+      "name": "__repr__",
+      "start_line": 310,
+      "end_line": 348,
+      "line_count": 39,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.20661775767803192,
+        "structural": 0.0,
+        "combined": 0.2670971148039278,
+        "boosted": 0.026709711480392778
+      },
+      "negative_signals": {
+        "total": 0.09076923076923077,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.07692307692307694
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 70,
+      "node_type": "FunctionDef",
+      "name": "trailing_optional",
+      "start_line": 70,
+      "end_line": 73,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.08418136835098267,
+        "structural": 0.0,
+        "combined": 0.0100858868012766,
+        "boosted": 0.0100858868012766
+      },
+      "negative_signals": {
+        "total": 0.14,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 895,
+      "node_type": "FunctionDef",
+      "name": "format_row",
+      "start_line": 224,
+      "end_line": 226,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.18809382617473602,
+        "structural": 0.0,
+        "combined": -0.11251154505834422,
+        "boosted": -0.011251154505834422
+      },
+      "negative_signals": {
+        "total": 0.44999999999999996,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 1754,
+      "node_type": "FunctionDef",
+      "name": "_get_nearest_indexer",
+      "start_line": 425,
+      "end_line": 440,
+      "line_count": 16,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.37736383080482483,
+        "structural": 0.0,
+        "combined": -0.021507409473284292,
+        "boosted": -0.021507409473284292
+      },
+      "negative_signals": {
+        "total": 0.6950000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0625
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 3004,
+      "node_type": "FunctionDef",
+      "name": "_ceil_int",
+      "start_line": 819,
+      "end_line": 821,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.18468376994132996,
+        "structural": 0.0,
+        "combined": -0.13864964627847517,
+        "boosted": -0.13864964627847517
+      },
+      "negative_signals": {
+        "total": 0.47,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 2984,
+      "node_type": "FunctionDef",
+      "name": "_floor_int",
+      "start_line": 814,
+      "end_line": 816,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.16568869352340698,
+        "structural": 0.0,
+        "combined": -0.17284078383073656,
+        "boosted": -0.17284078383073656
+      },
+      "negative_signals": {
+        "total": 0.47,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 100,
+      "node_type": "FunctionDef",
+      "name": "build_pattern",
+      "start_line": 76,
+      "end_line": 89,
+      "line_count": 14,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2709031105041504,
+        "structural": 0.0,
+        "combined": -0.25741641789925207,
+        "boosted": -0.25741641789925207
+      },
+      "negative_signals": {
+        "total": 0.7400000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 58,
+      "node_type": "FunctionDef",
+      "name": "optional",
+      "start_line": 66,
+      "end_line": 67,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.15389272570610046,
+        "structural": 0.0,
+        "combined": -0.2637133818442653,
+        "boosted": -0.2637133818442653
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 1248,
+      "node_type": "FunctionDef",
+      "name": "__new__",
+      "start_line": 299,
+      "end_line": 308,
+      "line_count": 10,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2314329892396927,
+        "structural": 0.0,
+        "combined": -0.26702205994478384,
+        "boosted": -0.26702205994478384
+      },
+      "negative_signals": {
+        "total": 0.6800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 2835,
+      "node_type": "FunctionDef",
+      "name": "_parse_iso8601_without_reso",
+      "start_line": 745,
+      "end_line": 747,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.07485076785087585,
+        "structural": 0.0,
+        "combined": -0.2863490500412926,
+        "boosted": -0.2863490500412926
+      },
+      "negative_signals": {
+        "total": 0.42,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 1150,
+      "node_type": "ClassDef",
+      "name": "CFTimeIndex",
+      "start_line": 266,
+      "end_line": 742,
+      "line_count": 477,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.29178871548619445,
+        "boosted": -0.29178871548619445
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.4,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 38,
+      "node_type": "FunctionDef",
+      "name": "named",
+      "start_line": 62,
+      "end_line": 63,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.13418065011501312,
+        "structural": 0.0,
+        "combined": -0.2991951179082225,
+        "boosted": -0.2991951179082225
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 2261,
+      "node_type": "FunctionDef",
+      "name": "contains",
+      "start_line": 494,
+      "end_line": 496,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.06701971590518951,
+        "structural": 0.0,
+        "combined": -0.33044494354352794,
+        "boosted": -0.33044494354352794
+      },
+      "negative_signals": {
+        "total": 0.44999999999999996,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 2120,
+      "node_type": "FunctionDef",
+      "name": "get_value",
+      "start_line": 472,
+      "end_line": 479,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.18944193422794342,
+        "structural": 0.0,
+        "combined": -0.40688567085068633,
+        "boosted": -0.40688567085068633
+      },
+      "negative_signals": {
+        "total": 0.7450000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 791,
+      "node_type": "FunctionDef",
+      "name": "get_date_type",
+      "start_line": 199,
+      "end_line": 203,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1370401382446289,
+        "structural": 0.0,
+        "combined": -0.5151284714477834,
+        "boosted": -0.5151284714477834
+      },
+      "negative_signals": {
+        "total": 0.7600000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 1986,
+      "node_type": "FunctionDef",
+      "name": "get_loc",
+      "start_line": 451,
+      "end_line": 456,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1622847318649292,
+        "structural": 0.0,
+        "combined": -0.5750483469888659,
+        "boosted": -0.5750483469888659
+      },
+      "negative_signals": {
+        "total": 0.8650000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 1707,
+      "node_type": "FunctionDef",
+      "name": "_get_string_slice",
+      "start_line": 416,
+      "end_line": 423,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.06245613843202591,
+        "structural": 0.0,
+        "combined": -0.615460103283338,
+        "boosted": -0.615460103283338
+      },
+      "negative_signals": {
+        "total": 0.7250000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "pydata__xarray-4248",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py",
+      "node_id": 685,
+      "node_type": "FunctionDef",
+      "name": "get_date_field",
+      "start_line": 172,
+      "end_line": 174,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.13763201236724854,
+        "structural": 0.0,
+        "combined": -0.8433428099118219,
+        "boosted": -0.8433428099118219
+      },
+      "negative_signals": {
+        "total": 1.09,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    }
+  ]
+}

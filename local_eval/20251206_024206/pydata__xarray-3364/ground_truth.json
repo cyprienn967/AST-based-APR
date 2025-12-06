@@ -1,0 +1,21 @@
+{
+  "files": [
+    "xarray/core/concat.py"
+  ],
+  "lines": {
+    "xarray/core/concat.py": [
+      320,
+      312,
+      313,
+      314,
+      315,
+      316,
+      317,
+      318,
+      319
+    ]
+  },
+  "methods": [
+    "_dataset_concat"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "files": [
+    "sympy/solvers/diophantine.py"
+  ],
+  "lines": {
+    "sympy/solvers/diophantine.py": [
+      182,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188
+    ]
+  },
+  "methods": [
+    "diophantine"
+  ]
+}

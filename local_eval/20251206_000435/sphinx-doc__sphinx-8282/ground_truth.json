@@ -1,0 +1,39 @@
+{
+  "files": [
+    "sphinx/ext/autodoc/__init__.py"
+  ],
+  "lines": {
+    "sphinx/ext/autodoc/__init__.py": [
+      1476,
+      1477,
+      1478,
+      1479,
+      1480,
+      1481,
+      1482,
+      1240,
+      1241,
+      1242,
+      1243,
+      1884,
+      1885,
+      1886,
+      1244,
+      1248,
+      1245,
+      1246,
+      1247,
+      1887,
+      1888,
+      1889,
+      1890,
+      1891,
+      1892
+    ]
+  },
+  "methods": [
+    "add_directive_header",
+    "format_signature",
+    "document_members"
+  ]
+}

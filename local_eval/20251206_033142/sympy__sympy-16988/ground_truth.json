@@ -1,0 +1,19 @@
+{
+  "files": [
+    "sympy/sets/sets.py"
+  ],
+  "lines": {
+    "sympy/sets/sets.py": [
+      1260,
+      1261,
+      1262,
+      1263,
+      1264,
+      1265,
+      1266
+    ]
+  },
+  "methods": [
+    "__new__"
+  ]
+}

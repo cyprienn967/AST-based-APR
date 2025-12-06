@@ -1,0 +1,19 @@
+{
+  "files": [
+    "migrations/serializer.py"
+  ],
+  "lines": {
+    "migrations/serializer.py": [
+      269,
+      270,
+      271,
+      272,
+      273,
+      274,
+      275
+    ]
+  },
+  "methods": [
+    "serialize"
+  ]
+}

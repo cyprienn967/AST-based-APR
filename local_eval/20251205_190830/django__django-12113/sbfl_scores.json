@@ -1,0 +1,21 @@
+{
+  "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/__init__.py": {
+    "28": 1.0,
+    "31": 1.0
+  },
+  "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/backends/sqlite3/creation.py": {
+    "13": 1.0,
+    "14": 1.0,
+    "18": 1.0,
+    "19": 1.0,
+    "21": 1.0,
+    "97": 1.0,
+    "98": 1.0,
+    "99": 1.0,
+    "101": 1.0
+  },
+  "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/utils.py": {
+    "208": 1.0,
+    "209": 1.0
+  }
+}

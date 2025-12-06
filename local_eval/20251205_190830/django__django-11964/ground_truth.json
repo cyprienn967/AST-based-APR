@@ -1,0 +1,26 @@
+{
+  "files": [
+    "models/enums.py"
+  ],
+  "lines": {
+    "models/enums.py": [
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      60,
+      61,
+      62,
+      63
+    ]
+  },
+  "methods": [
+    "__str__",
+    "values"
+  ]
+}

@@ -1,0 +1,5322 @@
+{
+  "task_id": "django__django-12286",
+  "num_files_processed": 5,
+  "files": [
+    {
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855,
+      "num_nodes": 67,
+      "num_buggy_nodes": 0
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/test/signals.py",
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 1.3626795594174432,
+      "num_nodes": 15,
+      "num_buggy_nodes": 0
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/core/checks/translation.py",
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.783003472766206,
+      "num_nodes": 4,
+      "num_buggy_nodes": 1
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/core/checks/messages.py",
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.6239999999999997,
+      "num_nodes": 17,
+      "num_buggy_nodes": 0
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185,
+      "num_nodes": 32,
+      "num_buggy_nodes": 0
+    }
+  ],
+  "num_nodes": 135,
+  "num_buggy_nodes": 1,
+  "nodes": [
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 60,
+      "node_type": "FunctionDef",
+      "name": "check_password",
+      "start_line": 30,
+      "end_line": 61,
+      "line_count": 32,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.36837148666381836,
+        "structural": 0.0,
+        "combined": 0.5267243363722316,
+        "boosted": 0.5267243363722316
+      },
+      "negative_signals": {
+        "total": 0.12125,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.078125
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 1633,
+      "node_type": "FunctionDef",
+      "name": "encode",
+      "start_line": 406,
+      "end_line": 416,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.28487592935562134,
+        "structural": 0.0,
+        "combined": 0.5075879935948354,
+        "boosted": 0.5075879935948354
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 685,
+      "node_type": "FunctionDef",
+      "name": "harden_runtime",
+      "start_line": 215,
+      "end_line": 226,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3150871694087982,
+        "structural": 0.0,
+        "combined": 0.48649652757734624,
+        "boosted": 0.48649652757734624
+      },
+      "negative_signals": {
+        "total": 0.075,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 656,
+      "node_type": "FunctionDef",
+      "name": "encode",
+      "start_line": 194,
+      "end_line": 201,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.27602675557136536,
+        "structural": 0.0,
+        "combined": 0.4330745751227973,
+        "boosted": 0.4330745751227973
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 860,
+      "node_type": "FunctionDef",
+      "name": "safe_summary",
+      "start_line": 255,
+      "end_line": 263,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.24542474746704102,
+        "structural": 0.0,
+        "combined": 0.3775192624218059,
+        "boosted": 0.3775192624218059
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 327,
+      "node_type": "FunctionDef",
+      "name": "reset_hashers",
+      "start_line": 99,
+      "end_line": 102,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.4124789556921527,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.038526710122823715,
+        "structural": 0.0,
+        "combined": 0.3599402414604052,
+        "boosted": 0.3599402414604052
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 1205,
+      "node_type": "FunctionDef",
+      "name": "safe_summary",
+      "start_line": 328,
+      "end_line": 341,
+      "line_count": 14,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.22318974137306213,
+        "structural": 0.0,
+        "combined": 0.3522806180294633,
+        "boosted": 0.3522806180294633
+      },
+      "negative_signals": {
+        "total": 0.042857142857142864,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.10714285714285715
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 411,
+      "node_type": "FunctionDef",
+      "name": "identify_hasher",
+      "start_line": 128,
+      "end_line": 146,
+      "line_count": 19,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2471085488796234,
+        "structural": 0.0,
+        "combined": 0.3397804922534314,
+        "boosted": 0.3397804922534314
+      },
+      "negative_signals": {
+        "total": 0.09605263157894736,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.052631578947368425
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 2405,
+      "node_type": "FunctionDef",
+      "name": "safe_summary",
+      "start_line": 552,
+      "end_line": 558,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2824722230434418,
+        "structural": 0.0,
+        "combined": 0.32514811468574234,
+        "boosted": 0.32514811468574234
+      },
+      "negative_signals": {
+        "total": 0.18,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 2094,
+      "node_type": "FunctionDef",
+      "name": "safe_summary",
+      "start_line": 485,
+      "end_line": 492,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2160380482673645,
+        "structural": 0.0,
+        "combined": 0.32509490197559576,
+        "boosted": 0.32509490197559576
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 2271,
+      "node_type": "FunctionDef",
+      "name": "safe_summary",
+      "start_line": 516,
+      "end_line": 523,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2160380482673645,
+        "structural": 0.0,
+        "combined": 0.32509490197559576,
+        "boosted": 0.32509490197559576
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 2697,
+      "node_type": "FunctionDef",
+      "name": "safe_summary",
+      "start_line": 626,
+      "end_line": 633,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.20436996221542358,
+        "structural": 0.0,
+        "combined": 0.3040923470821021,
+        "boosted": 0.3040923470821021
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 1053,
+      "node_type": "FunctionDef",
+      "name": "encode",
+      "start_line": 302,
+      "end_line": 313,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.16418692469596863,
+        "structural": 0.0,
+        "combined": 0.289876087094253,
+        "boosted": 0.289876087094253
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 1300,
+      "node_type": "FunctionDef",
+      "name": "must_update",
+      "start_line": 343,
+      "end_line": 353,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.18336975574493408,
+        "structural": 0.0,
+        "combined": 0.27033142655014375,
+        "boosted": 0.27033142655014375
+      },
+      "negative_signals": {
+        "total": 0.05454545454545454,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.13636363636363635
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 545,
+      "node_type": "FunctionDef",
+      "name": "_load_library",
+      "start_line": 171,
+      "end_line": 184,
+      "line_count": 14,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1825932264328003,
+        "structural": 0.0,
+        "combined": 0.2506354625655634,
+        "boosted": 0.2506354625655634
+      },
+      "negative_signals": {
+        "total": 0.07142857142857144,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.17857142857142858
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 1390,
+      "node_type": "FunctionDef",
+      "name": "_decode",
+      "start_line": 360,
+      "end_line": 385,
+      "line_count": 26,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2223828136920929,
+        "structural": 0.0,
+        "combined": 0.2126402983177556,
+        "boosted": 0.2126402983177556
+      },
+      "negative_signals": {
+        "total": 0.17538461538461542,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.2884615384615385
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 1882,
+      "node_type": "FunctionDef",
+      "name": "harden_runtime",
+      "start_line": 439,
+      "end_line": 447,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1313382387161255,
+        "structural": 0.0,
+        "combined": 0.21216354667015794,
+        "boosted": 0.21216354667015794
+      },
+      "negative_signals": {
+        "total": 0.020000000000000004,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 668,
+      "node_type": "FunctionDef",
+      "name": "safe_summary",
+      "start_line": 203,
+      "end_line": 210,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.14234119653701782,
+        "structural": 0.0,
+        "combined": 0.19244056886097172,
+        "boosted": 0.19244056886097172
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 1128,
+      "node_type": "FunctionDef",
+      "name": "verify",
+      "start_line": 315,
+      "end_line": 326,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.13640978932380676,
+        "structural": 0.0,
+        "combined": 0.18987724342436163,
+        "boosted": 0.18987724342436163
+      },
+      "negative_signals": {
+        "total": 0.05,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.125
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 1760,
+      "node_type": "FunctionDef",
+      "name": "safe_summary",
+      "start_line": 424,
+      "end_line": 433,
+      "line_count": 10,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.14105038344860077,
+        "structural": 0.0,
+        "combined": 0.18917370907540593,
+        "boosted": 0.18917370907540593
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 719,
+      "node_type": "FunctionDef",
+      "name": "encode",
+      "start_line": 241,
+      "end_line": 247,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.250743567943573,
+        "structural": 0.0,
+        "combined": 0.18803653550597857,
+        "boosted": 0.18803653550597857
+      },
+      "negative_signals": {
+        "total": 0.26,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.35
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 957,
+      "node_type": "FunctionDef",
+      "name": "harden_runtime",
+      "start_line": 269,
+      "end_line": 273,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.20411524176597595,
+        "structural": 0.0,
+        "combined": 0.185048944612719,
+        "boosted": 0.185048944612719
+      },
+      "negative_signals": {
+        "total": 0.18,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15000000000000002
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 494,
+      "node_type": "FunctionDef",
+      "name": "mask_hash",
+      "start_line": 149,
+      "end_line": 156,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.10040222108364105,
+        "structural": 0.0,
+        "combined": 0.11695041304489354,
+        "boosted": 0.11695041304489354
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 2044,
+      "node_type": "FunctionDef",
+      "name": "verify",
+      "start_line": 479,
+      "end_line": 483,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2175542712211609,
+        "structural": 0.0,
+        "combined": 0.08923919763205188,
+        "boosted": 0.08923919763205188
+      },
+      "negative_signals": {
+        "total": 0.3,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 2221,
+      "node_type": "FunctionDef",
+      "name": "verify",
+      "start_line": 510,
+      "end_line": 514,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2175542712211609,
+        "structural": 0.0,
+        "combined": 0.08923919763205188,
+        "boosted": 0.08923919763205188
+      },
+      "negative_signals": {
+        "total": 0.3,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 2591,
+      "node_type": "FunctionDef",
+      "name": "encode",
+      "start_line": 612,
+      "end_line": 618,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.18181325495243073,
+        "structural": 0.0,
+        "combined": 0.0839619721219225,
+        "boosted": 0.0839619721219225
+      },
+      "negative_signals": {
+        "total": 0.24,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.3
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 2489,
+      "node_type": "FunctionDef",
+      "name": "verify",
+      "start_line": 584,
+      "end_line": 588,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.13089357316493988,
+        "structural": 0.0,
+        "combined": 0.07324994113085406,
+        "boosted": 0.07324994113085406
+      },
+      "negative_signals": {
+        "total": 0.16,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 803,
+      "node_type": "FunctionDef",
+      "name": "verify",
+      "start_line": 249,
+      "end_line": 253,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.18709570169448853,
+        "structural": 0.0,
+        "combined": 0.014413772484041604,
+        "boosted": 0.014413772484041604
+      },
+      "negative_signals": {
+        "total": 0.32,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.2
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 2644,
+      "node_type": "FunctionDef",
+      "name": "verify",
+      "start_line": 620,
+      "end_line": 624,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1744629144668579,
+        "structural": 0.0,
+        "combined": 0.011674755474306547,
+        "boosted": 0.011674755474306547
+      },
+      "negative_signals": {
+        "total": 0.3,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 1708,
+      "node_type": "FunctionDef",
+      "name": "verify",
+      "start_line": 418,
+      "end_line": 422,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1723085641860962,
+        "structural": 0.0,
+        "combined": 0.0077969249689354425,
+        "boosted": 0.0077969249689354425
+      },
+      "negative_signals": {
+        "total": 0.3,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 1989,
+      "node_type": "FunctionDef",
+      "name": "encode",
+      "start_line": 473,
+      "end_line": 477,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.18601664900779724,
+        "structural": 0.0,
+        "combined": -0.027528522352002677,
+        "boosted": -0.027528522352002677
+      },
+      "negative_signals": {
+        "total": 0.36,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.3
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 2166,
+      "node_type": "FunctionDef",
+      "name": "encode",
+      "start_line": 504,
+      "end_line": 508,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.16991358995437622,
+        "structural": 0.0,
+        "combined": -0.05651402864816049,
+        "boosted": -0.05651402864816049
+      },
+      "negative_signals": {
+        "total": 0.36,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.3
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 1980,
+      "node_type": "ClassDef",
+      "name": "SHA1PasswordHasher",
+      "start_line": 467,
+      "end_line": 495,
+      "line_count": 29,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.05867924528301887,
+        "boosted": -0.05867924528301887
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 2157,
+      "node_type": "ClassDef",
+      "name": "MD5PasswordHasher",
+      "start_line": 498,
+      "end_line": 526,
+      "line_count": 29,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.05867924528301887,
+        "boosted": -0.05867924528301887
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 1012,
+      "node_type": "ClassDef",
+      "name": "PBKDF2SHA1PasswordHasher",
+      "start_line": 276,
+      "end_line": 284,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.06424528301886792,
+        "boosted": -0.06424528301886792
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 2570,
+      "node_type": "ClassDef",
+      "name": "CryptPasswordHasher",
+      "start_line": 600,
+      "end_line": 636,
+      "line_count": 37,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.07745283018867924,
+        "boosted": -0.07745283018867924
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 1967,
+      "node_type": "ClassDef",
+      "name": "BCryptPasswordHasher",
+      "start_line": 450,
+      "end_line": 464,
+      "line_count": 15,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.0820754716981132,
+        "boosted": -0.0820754716981132
+      },
+      "negative_signals": {
+        "total": 0.075,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 2334,
+      "node_type": "ClassDef",
+      "name": "UnsaltedSHA1PasswordHasher",
+      "start_line": 529,
+      "end_line": 561,
+      "line_count": 33,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.09056603773584905,
+        "boosted": -0.09056603773584905
+      },
+      "negative_signals": {
+        "total": 0.075,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 2450,
+      "node_type": "ClassDef",
+      "name": "UnsaltedMD5PasswordHasher",
+      "start_line": 564,
+      "end_line": 597,
+      "line_count": 34,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.0910377358490566,
+        "boosted": -0.0910377358490566
+      },
+      "negative_signals": {
+        "total": 0.075,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 534,
+      "node_type": "ClassDef",
+      "name": "BasePasswordHasher",
+      "start_line": 159,
+      "end_line": 226,
+      "line_count": 68,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.0920754716981132,
+        "boosted": -0.0920754716981132
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 635,
+      "node_type": "FunctionDef",
+      "name": "salt",
+      "start_line": 186,
+      "end_line": 188,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.19504964351654053,
+        "structural": 0.0,
+        "combined": -0.11532573600984966,
+        "boosted": -0.11532573600984966
+      },
+      "negative_signals": {
+        "total": 0.46499999999999997,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 1028,
+      "node_type": "ClassDef",
+      "name": "Argon2PasswordHasher",
+      "start_line": 287,
+      "end_line": 385,
+      "line_count": 99,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.12169811320754717,
+        "boosted": -0.12169811320754717
+      },
+      "negative_signals": {
+        "total": 0.075,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 699,
+      "node_type": "ClassDef",
+      "name": "PBKDF2PasswordHasher",
+      "start_line": 229,
+      "end_line": 273,
+      "line_count": 45,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.12622641509433963,
+        "boosted": -0.12622641509433963
+      },
+      "negative_signals": {
+        "total": 0.105,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.35,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 1585,
+      "node_type": "ClassDef",
+      "name": "BCryptSHA256PasswordHasher",
+      "start_line": 388,
+      "end_line": 447,
+      "line_count": 60,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.13330188679245283,
+        "boosted": -0.13330188679245283
+      },
+      "negative_signals": {
+        "total": 0.105,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.35,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 2343,
+      "node_type": "FunctionDef",
+      "name": "salt",
+      "start_line": 540,
+      "end_line": 541,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.22497546672821045,
+        "structural": 0.0,
+        "combined": -0.1359875561156363,
+        "boosted": -0.1359875561156363
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 2459,
+      "node_type": "FunctionDef",
+      "name": "salt",
+      "start_line": 577,
+      "end_line": 578,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.22497546672821045,
+        "structural": 0.0,
+        "combined": -0.1359875561156363,
+        "boosted": -0.1359875561156363
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 644,
+      "node_type": "FunctionDef",
+      "name": "verify",
+      "start_line": 190,
+      "end_line": 192,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1734405905008316,
+        "structural": 0.0,
+        "combined": -0.1392220314381257,
+        "boosted": -0.1392220314381257
+      },
+      "negative_signals": {
+        "total": 0.44999999999999996,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 2381,
+      "node_type": "FunctionDef",
+      "name": "verify",
+      "start_line": 548,
+      "end_line": 550,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1261531561613083,
+        "structural": 0.0,
+        "combined": -0.1943394132492677,
+        "boosted": -0.1943394132492677
+      },
+      "negative_signals": {
+        "total": 0.42,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 356,
+      "node_type": "FunctionDef",
+      "name": "get_hasher",
+      "start_line": 105,
+      "end_line": 125,
+      "line_count": 21,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2757143974304199,
+        "structural": 0.0,
+        "combined": -0.2326673640502219,
+        "boosted": -0.2326673640502219
+      },
+      "negative_signals": {
+        "total": 0.7190476190476193,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.047619047619047616
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 923,
+      "node_type": "FunctionDef",
+      "name": "must_update",
+      "start_line": 265,
+      "end_line": 267,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.11312642693519592,
+        "structural": 0.0,
+        "combined": -0.23778752585626997,
+        "boosted": -0.23778752585626997
+      },
+      "negative_signals": {
+        "total": 0.44,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 2539,
+      "node_type": "FunctionDef",
+      "name": "safe_summary",
+      "start_line": 590,
+      "end_line": 594,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.16083982586860657,
+        "structural": 0.0,
+        "combined": -0.25284680400254594,
+        "boosted": -0.25284680400254594
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 2348,
+      "node_type": "FunctionDef",
+      "name": "encode",
+      "start_line": 543,
+      "end_line": 546,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.021418200805783272,
+        "structural": 0.0,
+        "combined": -0.2633340310024203,
+        "boosted": -0.2633340310024203
+      },
+      "negative_signals": {
+        "total": 0.3,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 1846,
+      "node_type": "FunctionDef",
+      "name": "must_update",
+      "start_line": 435,
+      "end_line": 437,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.09741076081991196,
+        "structural": 0.0,
+        "combined": -0.2660757248637811,
+        "boosted": -0.2660757248637811
+      },
+      "negative_signals": {
+        "total": 0.44,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 1612,
+      "node_type": "FunctionDef",
+      "name": "salt",
+      "start_line": 402,
+      "end_line": 404,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.08449195325374603,
+        "structural": 0.0,
+        "combined": -0.2693295784828798,
+        "boosted": -0.2693295784828798
+      },
+      "negative_signals": {
+        "total": 0.42,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 2583,
+      "node_type": "FunctionDef",
+      "name": "salt",
+      "start_line": 609,
+      "end_line": 610,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.12304839491844177,
+        "structural": 0.0,
+        "combined": -0.31945628537321996,
+        "boosted": -0.31945628537321996
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 189,
+      "node_type": "FunctionDef",
+      "name": "make_password",
+      "start_line": 64,
+      "end_line": 77,
+      "line_count": 14,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.23828577995300293,
+        "structural": 0.0,
+        "combined": -0.33554651252664336,
+        "boosted": -0.33554651252664336
+      },
+      "negative_signals": {
+        "total": 0.757857142857143,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.10714285714285716
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 2464,
+      "node_type": "FunctionDef",
+      "name": "encode",
+      "start_line": 580,
+      "end_line": 582,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.05242399498820305,
+        "structural": 0.0,
+        "combined": -0.38705190336085715,
+        "boosted": -0.38705190336085715
+      },
+      "negative_signals": {
+        "total": 0.48,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 679,
+      "node_type": "FunctionDef",
+      "name": "must_update",
+      "start_line": 212,
+      "end_line": 213,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.08409597724676132,
+        "structural": 0.0,
+        "combined": -0.38957063718224477,
+        "boosted": -0.38957063718224477
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 2151,
+      "node_type": "FunctionDef",
+      "name": "harden_runtime",
+      "start_line": 494,
+      "end_line": 495,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.10856252908706665,
+        "structural": 0.0,
+        "combined": -0.4055308438696951,
+        "boosted": -0.4055308438696951
+      },
+      "negative_signals": {
+        "total": 0.6,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 1.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 2328,
+      "node_type": "FunctionDef",
+      "name": "harden_runtime",
+      "start_line": 525,
+      "end_line": 526,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.10856252908706665,
+        "structural": 0.0,
+        "combined": -0.4055308438696951,
+        "boosted": -0.4055308438696951
+      },
+      "negative_signals": {
+        "total": 0.6,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 1.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 2444,
+      "node_type": "FunctionDef",
+      "name": "harden_runtime",
+      "start_line": 560,
+      "end_line": 561,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.10856252908706665,
+        "structural": 0.0,
+        "combined": -0.4055308438696951,
+        "boosted": -0.4055308438696951
+      },
+      "negative_signals": {
+        "total": 0.6,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 1.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 2564,
+      "node_type": "FunctionDef",
+      "name": "harden_runtime",
+      "start_line": 596,
+      "end_line": 597,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.10856252908706665,
+        "structural": 0.0,
+        "combined": -0.4055308438696951,
+        "boosted": -0.4055308438696951
+      },
+      "negative_signals": {
+        "total": 0.6,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 1.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 2751,
+      "node_type": "FunctionDef",
+      "name": "harden_runtime",
+      "start_line": 635,
+      "end_line": 636,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.10856252908706665,
+        "structural": 0.0,
+        "combined": -0.4055308438696951,
+        "boosted": -0.4055308438696951
+      },
+      "negative_signals": {
+        "total": 0.6,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 1.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 1384,
+      "node_type": "FunctionDef",
+      "name": "harden_runtime",
+      "start_line": 355,
+      "end_line": 358,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.10856252908706665,
+        "structural": 0.0,
+        "combined": -0.4064742400961102,
+        "boosted": -0.4064742400961102
+      },
+      "negative_signals": {
+        "total": 0.6,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 1.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 244,
+      "node_type": "FunctionDef",
+      "name": "get_hashers",
+      "start_line": 81,
+      "end_line": 90,
+      "line_count": 10,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.11247235536575317,
+        "structural": 0.0,
+        "combined": -0.44226674147371986,
+        "boosted": -0.44226674147371986
+      },
+      "negative_signals": {
+        "total": 0.6400000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 38,
+      "node_type": "FunctionDef",
+      "name": "is_password_usable",
+      "start_line": 22,
+      "end_line": 27,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.18945416808128357,
+        "structural": 0.0,
+        "combined": -0.511812686132935,
+        "boosted": -0.511812686132935
+      },
+      "negative_signals": {
+        "total": 0.8500000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.30000000000000004,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py",
+      "node_id": 306,
+      "node_type": "FunctionDef",
+      "name": "get_hashers_by_algorithm",
+      "start_line": 94,
+      "end_line": 95,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -1.1809433962264153,
+        "boosted": -1.1809433962264153
+      },
+      "negative_signals": {
+        "total": 1.1800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.2727922061357855
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/test/signals.py",
+      "node_id": 349,
+      "node_type": "FunctionDef",
+      "name": "language_changed",
+      "start_line": 112,
+      "end_line": 120,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 2.173333109150404,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.40815865993499756,
+        "structural": 0.0,
+        "combined": 2.894847965326082,
+        "boosted": 2.894847965326082
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 1.3626795594174432
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/test/signals.py",
+      "node_id": 123,
+      "node_type": "FunctionDef",
+      "name": "update_connections_time_zone",
+      "start_line": 51,
+      "end_line": 75,
+      "line_count": 25,
+      "signals": {
+        "sbfl": 0.795495128834866,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3265267610549927,
+        "structural": 0.0,
+        "combined": 1.3146579328801942,
+        "boosted": 1.3146579328801942
+      },
+      "negative_signals": {
+        "total": 0.032,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.08
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 1.3626795594174432
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/test/signals.py",
+      "node_id": 262,
+      "node_type": "FunctionDef",
+      "name": "reset_template_engines",
+      "start_line": 85,
+      "end_line": 101,
+      "line_count": 17,
+      "signals": {
+        "sbfl": 0.8249579113843054,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.218862384557724,
+        "structural": 0.0,
+        "combined": 1.170502743043015,
+        "boosted": 1.170502743043015
+      },
+      "negative_signals": {
+        "total": 0.023529411764705885,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.05882352941176471
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 1.3626795594174432
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/test/signals.py",
+      "node_id": 621,
+      "node_type": "FunctionDef",
+      "name": "user_model_swapped",
+      "start_line": 182,
+      "end_line": 205,
+      "line_count": 24,
+      "signals": {
+        "sbfl": 0.4124789556921527,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3712930679321289,
+        "structural": 0.0,
+        "combined": 1.0456845267504726,
+        "boosted": 1.0456845267504726
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 1.3626795594174432
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/test/signals.py",
+      "node_id": 540,
+      "node_type": "FunctionDef",
+      "name": "static_storage_changed",
+      "start_line": 154,
+      "end_line": 161,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.8249579113843054,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.09850162267684937,
+        "structural": 0.0,
+        "combined": 0.9905535151294635,
+        "boosted": 0.9905535151294635
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 1.3626795594174432
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/test/signals.py",
+      "node_id": 569,
+      "node_type": "FunctionDef",
+      "name": "static_finders_changed",
+      "start_line": 165,
+      "end_line": 171,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.8249579113843054,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1324179470539093,
+        "structural": 0.0,
+        "combined": 0.9330663136423177,
+        "boosted": 0.9330663136423177
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 1.3626795594174432
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/test/signals.py",
+      "node_id": 74,
+      "node_type": "FunctionDef",
+      "name": "update_installed_apps",
+      "start_line": 34,
+      "end_line": 47,
+      "line_count": 14,
+      "signals": {
+        "sbfl": 0.4124789556921527,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2310815453529358,
+        "structural": 0.0,
+        "combined": 0.8079379324493883,
+        "boosted": 0.8079379324493883
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 1.3626795594174432
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/test/signals.py",
+      "node_id": 511,
+      "node_type": "FunctionDef",
+      "name": "root_urlconf_changed",
+      "start_line": 146,
+      "end_line": 150,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.4124789556921527,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1715453714132309,
+        "structural": 0.0,
+        "combined": 0.5939435510652366,
+        "boosted": 0.5939435510652366
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 1.3626795594174432
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/test/signals.py",
+      "node_id": 470,
+      "node_type": "FunctionDef",
+      "name": "complex_setting_changed",
+      "start_line": 137,
+      "end_line": 142,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.4124789556921527,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1583016812801361,
+        "structural": 0.0,
+        "combined": 0.5686414941915197,
+        "boosted": 0.5686414941915197
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 1.3626795594174432
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/test/signals.py",
+      "node_id": 324,
+      "node_type": "FunctionDef",
+      "name": "clear_serializers_cache",
+      "start_line": 105,
+      "end_line": 108,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.4124789556921527,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.14619384706020355,
+        "structural": 0.0,
+        "combined": 0.5497742218639338,
+        "boosted": 0.5497742218639338
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 1.3626795594174432
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/test/signals.py",
+      "node_id": 444,
+      "node_type": "FunctionDef",
+      "name": "file_storage_changed",
+      "start_line": 130,
+      "end_line": 133,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.4124789556921527,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.14098669588565826,
+        "structural": 0.0,
+        "combined": 0.5404013497497523,
+        "boosted": 0.5404013497497523
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 1.3626795594174432
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/test/signals.py",
+      "node_id": 412,
+      "node_type": "FunctionDef",
+      "name": "localize_settings_changed",
+      "start_line": 124,
+      "end_line": 126,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.4124789556921527,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1301305592060089,
+        "structural": 0.0,
+        "combined": 0.5223237183605297,
+        "boosted": 0.5223237183605297
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 1.3626795594174432
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/test/signals.py",
+      "node_id": 596,
+      "node_type": "FunctionDef",
+      "name": "auth_password_validators_changed",
+      "start_line": 175,
+      "end_line": 178,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.4124789556921527,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.10850034654140472,
+        "structural": 0.0,
+        "combined": 0.4819259209300958,
+        "boosted": 0.4819259209300958
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 1.3626795594174432
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/test/signals.py",
+      "node_id": 47,
+      "node_type": "FunctionDef",
+      "name": "clear_cache_handlers",
+      "start_line": 27,
+      "end_line": 30,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.4124789556921527,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2181408405303955,
+        "structural": 0.0,
+        "combined": 0.43927881011027925,
+        "boosted": 0.43927881011027925
+      },
+      "negative_signals": {
+        "total": 0.36,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.3,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 1.3626795594174432
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/test/signals.py",
+      "node_id": 235,
+      "node_type": "FunctionDef",
+      "name": "clear_routers_cache",
+      "start_line": 79,
+      "end_line": 81,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.4124789556921527,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.08361876755952835,
+        "structural": 0.0,
+        "combined": 0.43860249339686475,
+        "boosted": 0.43860249339686475
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 1.3626795594174432
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/core/checks/translation.py",
+      "node_id": 232,
+      "node_type": "FunctionDef",
+      "name": "check_language_settings_consistent",
+      "start_line": 56,
+      "end_line": 61,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 2.2980970388562794,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.44105586409568787,
+        "structural": 0.0,
+        "combined": 2.897489397507206,
+        "boosted": 2.897489397507206
+      },
+      "negative_signals": {
+        "total": 0.165,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": true,
+        "method_match": false,
+        "lines_in_patch": [
+          56,
+          57,
+          58,
+          59,
+          60,
+          61
+        ],
+        "num_buggy_lines": 6
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.783003472766206
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/core/checks/translation.py",
+      "node_id": 110,
+      "node_type": "FunctionDef",
+      "name": "check_setting_languages",
+      "start_line": 38,
+      "end_line": 43,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4213084280490875,
+        "structural": 0.0,
+        "combined": 0.5788469737670461,
+        "boosted": 0.5788469737670461
+      },
+      "negative_signals": {
+        "total": 0.15,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.783003472766206
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/core/checks/translation.py",
+      "node_id": 173,
+      "node_type": "FunctionDef",
+      "name": "check_setting_languages_bidi",
+      "start_line": 47,
+      "end_line": 52,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.41475751996040344,
+        "structural": 0.0,
+        "combined": 0.5670553392074148,
+        "boosted": 0.5670553392074148
+      },
+      "negative_signals": {
+        "total": 0.15,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": true,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.783003472766206
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/core/checks/translation.py",
+      "node_id": 46,
+      "node_type": "FunctionDef",
+      "name": "check_setting_language_code",
+      "start_line": 29,
+      "end_line": 34,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3719671666622162,
+        "structural": 0.0,
+        "combined": 0.49003270327067766,
+        "boosted": 0.49003270327067766
+      },
+      "negative_signals": {
+        "total": 0.15,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.783003472766206
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/core/checks/messages.py",
+      "node_id": 22,
+      "node_type": "ClassDef",
+      "name": "CheckMessage",
+      "start_line": 9,
+      "end_line": 50,
+      "line_count": 42,
+      "signals": {
+        "sbfl": 2.1666666666666665,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 1.9963963963963962,
+        "boosted": 1.9963963963963962
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.6239999999999997
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/core/checks/messages.py",
+      "node_id": 224,
+      "node_type": "FunctionDef",
+      "name": "__repr__",
+      "start_line": 41,
+      "end_line": 43,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 3.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.09439609199762344,
+        "structural": 0.0,
+        "combined": 2.6177508034335597,
+        "boosted": 0.261775080343356
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.6239999999999997
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/core/checks/messages.py",
+      "node_id": 124,
+      "node_type": "FunctionDef",
+      "name": "__str__",
+      "start_line": 26,
+      "end_line": 39,
+      "line_count": 14,
+      "signals": {
+        "sbfl": 0.5,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.42745447158813477,
+        "structural": 0.0,
+        "combined": 1.1555184349590286,
+        "boosted": 0.11555184349590286
+      },
+      "negative_signals": {
+        "total": 0.057142857142857155,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.14285714285714288
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.6239999999999997
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/core/checks/messages.py",
+      "node_id": 78,
+      "node_type": "FunctionDef",
+      "name": "__eq__",
+      "start_line": 19,
+      "end_line": 24,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.5,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1387558877468109,
+        "structural": 0.0,
+        "combined": 0.18543627361993528,
+        "boosted": 0.01854362736199353
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.6239999999999997
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/core/checks/messages.py",
+      "node_id": 290,
+      "node_type": "ClassDef",
+      "name": "Debug",
+      "start_line": 53,
+      "end_line": 55,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.012162162162162163,
+        "boosted": -0.012162162162162163
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.6239999999999997
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/core/checks/messages.py",
+      "node_id": 314,
+      "node_type": "ClassDef",
+      "name": "Info",
+      "start_line": 58,
+      "end_line": 60,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.012162162162162163,
+        "boosted": -0.012162162162162163
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.6239999999999997
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/core/checks/messages.py",
+      "node_id": 338,
+      "node_type": "ClassDef",
+      "name": "Warning",
+      "start_line": 63,
+      "end_line": 65,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.012162162162162163,
+        "boosted": -0.012162162162162163
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.6239999999999997
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/core/checks/messages.py",
+      "node_id": 362,
+      "node_type": "ClassDef",
+      "name": "Error",
+      "start_line": 68,
+      "end_line": 70,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.012162162162162163,
+        "boosted": -0.012162162162162163
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.6239999999999997
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/core/checks/messages.py",
+      "node_id": 386,
+      "node_type": "ClassDef",
+      "name": "Critical",
+      "start_line": 73,
+      "end_line": 75,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.012162162162162163,
+        "boosted": -0.012162162162162163
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.6239999999999997
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/core/checks/messages.py",
+      "node_id": 23,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 11,
+      "end_line": 17,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.5,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.08275063335895538,
+        "structural": 0.0,
+        "combined": -0.19942723833225878,
+        "boosted": -0.19942723833225878
+      },
+      "negative_signals": {
+        "total": 0.8200000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.6239999999999997
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/core/checks/messages.py",
+      "node_id": 274,
+      "node_type": "FunctionDef",
+      "name": "is_silenced",
+      "start_line": 48,
+      "end_line": 50,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.5,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.17995069921016693,
+        "structural": 0.0,
+        "combined": -0.2482509035838617,
+        "boosted": -0.2482509035838617
+      },
+      "negative_signals": {
+        "total": 1.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.6239999999999997
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/core/checks/messages.py",
+      "node_id": 259,
+      "node_type": "FunctionDef",
+      "name": "is_serious",
+      "start_line": 45,
+      "end_line": 46,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.5,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.14358574151992798,
+        "structural": 0.0,
+        "combined": -0.429653773372238,
+        "boosted": -0.429653773372238
+      },
+      "negative_signals": {
+        "total": 1.1800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.6239999999999997
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/core/checks/messages.py",
+      "node_id": 365,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 69,
+      "end_line": 70,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2729743421077728,
+        "structural": 0.0,
+        "combined": -0.6967542923141171,
+        "boosted": -0.6967542923141171
+      },
+      "negative_signals": {
+        "total": 1.1800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.6239999999999997
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/core/checks/messages.py",
+      "node_id": 389,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 74,
+      "end_line": 75,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.16046667098999023,
+        "structural": 0.0,
+        "combined": -0.8992681003261259,
+        "boosted": -0.8992681003261259
+      },
+      "negative_signals": {
+        "total": 1.1800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.6239999999999997
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/core/checks/messages.py",
+      "node_id": 341,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 64,
+      "end_line": 65,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.13891395926475525,
+        "structural": 0.0,
+        "combined": -0.9380629814315488,
+        "boosted": -0.9380629814315488
+      },
+      "negative_signals": {
+        "total": 1.1800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.6239999999999997
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/core/checks/messages.py",
+      "node_id": 293,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 54,
+      "end_line": 55,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.12826600670814514,
+        "structural": 0.0,
+        "combined": -0.9572292960334471,
+        "boosted": -0.9572292960334471
+      },
+      "negative_signals": {
+        "total": 1.1800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.6239999999999997
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/core/checks/messages.py",
+      "node_id": 317,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 59,
+      "end_line": 60,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.08614038676023483,
+        "structural": 0.0,
+        "combined": -1.0330554119396855,
+        "boosted": -1.0330554119396855
+      },
+      "negative_signals": {
+        "total": 1.1800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.6239999999999997
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 85,
+      "node_type": "FunctionDef",
+      "name": "reset_cache",
+      "start_line": 50,
+      "end_line": 58,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 1.7755855447329707,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.39827027916908264,
+        "structural": 0.0,
+        "combined": 2.427188289898768,
+        "boosted": 2.427188289898768
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 1350,
+      "node_type": "FunctionDef",
+      "name": "check_for_language",
+      "start_line": 367,
+      "end_line": 383,
+      "line_count": 17,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5642505884170532,
+        "structural": 0.0,
+        "combined": 0.9071412168576142,
+        "boosted": 0.9071412168576142
+      },
+      "negative_signals": {
+        "total": 0.09852941176470588,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.05882352941176471
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 559,
+      "node_type": "FunctionDef",
+      "name": "_add_fallback",
+      "start_line": 155,
+      "end_line": 168,
+      "line_count": 14,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5129550099372864,
+        "structural": 0.0,
+        "combined": 0.8700998398049237,
+        "boosted": 0.8700998398049237
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 737,
+      "node_type": "FunctionDef",
+      "name": "translation",
+      "start_line": 193,
+      "end_line": 200,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4603673219680786,
+        "structural": 0.0,
+        "combined": 0.7789645063527175,
+        "boosted": 0.7789645063527175
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 950,
+      "node_type": "FunctionDef",
+      "name": "gettext",
+      "start_line": 275,
+      "end_line": 298,
+      "line_count": 24,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4425208866596222,
+        "structural": 0.0,
+        "combined": 0.674114243084515,
+        "boosted": 0.674114243084515
+      },
+      "negative_signals": {
+        "total": 0.10833333333333334,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.08333333333333334
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 1744,
+      "node_type": "FunctionDef",
+      "name": "parse_accept_lang_header",
+      "start_line": 490,
+      "end_line": 511,
+      "line_count": 22,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4264475703239441,
+        "structural": 0.0,
+        "combined": 0.6705988662201746,
+        "boosted": 0.6705988662201746
+      },
+      "negative_signals": {
+        "total": 0.08409090909090909,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.022727272727272728
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 632,
+      "node_type": "FunctionDef",
+      "name": "merge",
+      "start_line": 170,
+      "end_line": 182,
+      "line_count": 13,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.31163036823272705,
+        "structural": 0.0,
+        "combined": 0.5233025688854449,
+        "boosted": 0.5233025688854449
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 769,
+      "node_type": "FunctionDef",
+      "name": "activate",
+      "start_line": 203,
+      "end_line": 210,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3283041715621948,
+        "structural": 0.0,
+        "combined": 0.5062508356221268,
+        "boosted": 0.5062508356221268
+      },
+      "negative_signals": {
+        "total": 0.08,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 360,
+      "node_type": "FunctionDef",
+      "name": "_new_gnu_trans",
+      "start_line": 112,
+      "end_line": 125,
+      "line_count": 14,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.32019877433776855,
+        "structural": 0.0,
+        "combined": 0.4931386157257917,
+        "boosted": 0.4931386157257917
+      },
+      "negative_signals": {
+        "total": 0.075,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 1093,
+      "node_type": "FunctionDef",
+      "name": "gettext_noop",
+      "start_line": 312,
+      "end_line": 319,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3058342933654785,
+        "structural": 0.0,
+        "combined": 0.4708050548680375,
+        "boosted": 0.4708050548680375
+      },
+      "negative_signals": {
+        "total": 0.075,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 450,
+      "node_type": "FunctionDef",
+      "name": "_add_installed_apps_translations",
+      "start_line": 134,
+      "end_line": 147,
+      "line_count": 14,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2589876055717468,
+        "structural": 0.0,
+        "combined": 0.4279585119469525,
+        "boosted": 0.4279585119469525
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 1255,
+      "node_type": "FunctionDef",
+      "name": "all_locale_paths",
+      "start_line": 352,
+      "end_line": 363,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.265949547290802,
+        "structural": 0.0,
+        "combined": 0.4266641753387078,
+        "boosted": 0.4266641753387078
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 806,
+      "node_type": "FunctionDef",
+      "name": "deactivate_all",
+      "start_line": 222,
+      "end_line": 229,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.26588085293769836,
+        "structural": 0.0,
+        "combined": 0.4138888620980332,
+        "boosted": 0.4138888620980332
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 1101,
+      "node_type": "FunctionDef",
+      "name": "do_ntranslate",
+      "start_line": 322,
+      "end_line": 330,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2622000575065613,
+        "structural": 0.0,
+        "combined": 0.38667634617325847,
+        "boosted": 0.38667634617325847
+      },
+      "negative_signals": {
+        "total": 0.08000000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.2
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 392,
+      "node_type": "FunctionDef",
+      "name": "_init_translation_catalog",
+      "start_line": 127,
+      "end_line": 132,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.30056506395339966,
+        "structural": 0.0,
+        "combined": 0.37249461022375147,
+        "boosted": 0.37249461022375147
+      },
+      "negative_signals": {
+        "total": 0.165,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 526,
+      "node_type": "FunctionDef",
+      "name": "_add_local_translations",
+      "start_line": 149,
+      "end_line": 153,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2727320194244385,
+        "structural": 0.0,
+        "combined": 0.33798221422034935,
+        "boosted": 0.33798221422034935
+      },
+      "negative_signals": {
+        "total": 0.15,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 136,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 72,
+      "end_line": 107,
+      "line_count": 36,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5977751016616821,
+        "structural": 0.0,
+        "combined": 0.3120823758590425,
+        "boosted": 0.3120823758590425
+      },
+      "negative_signals": {
+        "total": 0.742777777777778,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.06944444444444445
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 1188,
+      "node_type": "FunctionDef",
+      "name": "npgettext",
+      "start_line": 341,
+      "end_line": 349,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.17613275349140167,
+        "structural": 0.0,
+        "combined": 0.31175519894597115,
+        "boosted": 0.31175519894597115
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 907,
+      "node_type": "FunctionDef",
+      "name": "catalog",
+      "start_line": 259,
+      "end_line": 272,
+      "line_count": 14,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.23693004250526428,
+        "structural": 0.0,
+        "combined": 0.30111204128442676,
+        "boosted": 0.30111204128442676
+      },
+      "negative_signals": {
+        "total": 0.11714285714285716,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.14285714285714288
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 1170,
+      "node_type": "FunctionDef",
+      "name": "ngettext",
+      "start_line": 333,
+      "end_line": 338,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2333068996667862,
+        "structural": 0.0,
+        "combined": 0.2514299145078473,
+        "boosted": 0.2514299145078473
+      },
+      "negative_signals": {
+        "total": 0.165,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 1036,
+      "node_type": "FunctionDef",
+      "name": "pgettext",
+      "start_line": 301,
+      "end_line": 309,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.15805071592330933,
+        "structural": 0.0,
+        "combined": 0.21920753132340492,
+        "boosted": 0.21920753132340492
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 1597,
+      "node_type": "FunctionDef",
+      "name": "get_language_from_request",
+      "start_line": 446,
+      "end_line": 486,
+      "line_count": 41,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.6112828254699707,
+        "structural": 0.0,
+        "combined": 0.2127020503822461,
+        "boosted": 0.2127020503822461
+      },
+      "negative_signals": {
+        "total": 0.8635365853658538,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.14634146341463417
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 1427,
+      "node_type": "FunctionDef",
+      "name": "get_supported_language_variant",
+      "start_line": 395,
+      "end_line": 426,
+      "line_count": 32,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5335899591445923,
+        "structural": 0.0,
+        "combined": 0.17792523370097052,
+        "boosted": 0.17792523370097052
+      },
+      "negative_signals": {
+        "total": 0.7637500000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.04687500000000001
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 717,
+      "node_type": "FunctionDef",
+      "name": "language",
+      "start_line": 184,
+      "end_line": 186,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.33340582251548767,
+        "structural": 0.0,
+        "combined": 0.14836922808169398,
+        "boosted": 0.14836922808169398
+      },
+      "negative_signals": {
+        "total": 0.44999999999999996,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 790,
+      "node_type": "FunctionDef",
+      "name": "deactivate",
+      "start_line": 213,
+      "end_line": 219,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1549970507621765,
+        "structural": 0.0,
+        "combined": 0.09488510233082185,
+        "boosted": 0.09488510233082185
+      },
+      "negative_signals": {
+        "total": 0.18,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 349,
+      "node_type": "FunctionDef",
+      "name": "__repr__",
+      "start_line": 109,
+      "end_line": 110,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2302337884902954,
+        "structural": 0.0,
+        "combined": -0.12675334901492424,
+        "boosted": -0.012675334901492426
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 831,
+      "node_type": "FunctionDef",
+      "name": "get_language",
+      "start_line": 232,
+      "end_line": 241,
+      "line_count": 10,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.34111106395721436,
+        "structural": 0.0,
+        "combined": -0.14187092636429416,
+        "boosted": -0.14187092636429416
+      },
+      "negative_signals": {
+        "total": 0.7500000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.2
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 125,
+      "node_type": "ClassDef",
+      "name": "DjangoTranslation",
+      "start_line": 61,
+      "end_line": 190,
+      "line_count": 130,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.15132093933463797,
+        "boosted": -0.15132093933463797
+      },
+      "negative_signals": {
+        "total": 0.075,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 1549,
+      "node_type": "FunctionDef",
+      "name": "get_language_from_path",
+      "start_line": 429,
+      "end_line": 443,
+      "line_count": 15,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.32050225138664246,
+        "structural": 0.0,
+        "combined": -0.18690220973496344,
+        "boosted": -0.18690220973496344
+      },
+      "negative_signals": {
+        "total": 0.7550000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.10000000000000002
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 1410,
+      "node_type": "FunctionDef",
+      "name": "get_languages",
+      "start_line": 387,
+      "end_line": 391,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.316071480512619,
+        "structural": 0.0,
+        "combined": -0.3590067558209259,
+        "boosted": -0.3590067558209259
+      },
+      "negative_signals": {
+        "total": 0.9250000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 867,
+      "node_type": "FunctionDef",
+      "name": "get_language_bidi",
+      "start_line": 244,
+      "end_line": 256,
+      "line_count": 13,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.20222745835781097,
+        "structural": 0.0,
+        "combined": -0.374391899658635,
+        "boosted": -0.374391899658635
+      },
+      "negative_signals": {
+        "total": 0.730769230769231,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.07692307692307693
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    },
+    {
+      "task_id": "django__django-12286",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py",
+      "node_id": 727,
+      "node_type": "FunctionDef",
+      "name": "to_language",
+      "start_line": 188,
+      "end_line": 190,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.251071035861969,
+        "structural": 0.0,
+        "combined": -0.6398333878946398,
+        "boosted": -0.6398333878946398
+      },
+      "negative_signals": {
+        "total": 1.09,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 1.6954996049935185
+    }
+  ]
+}

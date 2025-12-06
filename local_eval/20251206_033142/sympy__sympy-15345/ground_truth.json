@@ -1,0 +1,28 @@
+{
+  "files": [
+    "sympy/printing/mathematica.py"
+  ],
+  "lines": {
+    "sympy/printing/mathematica.py": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      31
+    ]
+  },
+  "methods": [
+    "_print_Function"
+  ]
+}

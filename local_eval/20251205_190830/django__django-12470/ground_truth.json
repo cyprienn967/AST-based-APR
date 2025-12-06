@@ -1,0 +1,21 @@
+{
+  "files": [
+    "models/sql/compiler.py"
+  ],
+  "lines": {
+    "models/sql/compiler.py": [
+      709,
+      710,
+      711,
+      712,
+      713,
+      714,
+      715,
+      716,
+      717
+    ]
+  },
+  "methods": [
+    "find_ordering_name"
+  ]
+}

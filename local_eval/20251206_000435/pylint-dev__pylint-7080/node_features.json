@@ -1,0 +1,3646 @@
+{
+  "task_id": "pylint-dev__pylint-7080",
+  "num_files_processed": 5,
+  "files": [
+    {
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/checkers/base/docstring_checker.py",
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.8362551346557602,
+      "num_nodes": 7,
+      "num_buggy_nodes": 0
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/expand_modules.py",
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.1518635922053542,
+      "num_nodes": 6,
+      "num_buggy_nodes": 1
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/utils.py",
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7724841683051079,
+      "num_nodes": 5,
+      "num_buggy_nodes": 0
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/config/argument.py",
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 1.4713207447617542,
+      "num_nodes": 26,
+      "num_buggy_nodes": 0
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662,
+      "num_nodes": 48,
+      "num_buggy_nodes": 0
+    }
+  ],
+  "num_nodes": 92,
+  "num_buggy_nodes": 1,
+  "nodes": [
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/checkers/base/docstring_checker.py",
+      "node_id": 522,
+      "node_type": "FunctionDef",
+      "name": "_check_docstring",
+      "start_line": 157,
+      "end_line": 213,
+      "line_count": 57,
+      "signals": {
+        "sbfl": 3.7822791641032714,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.426645427942276,
+        "structural": 0.0,
+        "combined": 4.3203525771425895,
+        "boosted": 4.3203525771425895
+      },
+      "negative_signals": {
+        "total": 0.1480701754385965,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.07017543859649122
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.8362551346557602
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/checkers/base/docstring_checker.py",
+      "node_id": 125,
+      "node_type": "ClassDef",
+      "name": "DocStringChecker",
+      "start_line": 50,
+      "end_line": 213,
+      "line_count": 164,
+      "signals": {
+        "sbfl": 3.1938243706891134,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 2.9584176721245203,
+        "boosted": 2.9584176721245203
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.8362551346557602
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/checkers/base/docstring_checker.py",
+      "node_id": 259,
+      "node_type": "FunctionDef",
+      "name": "visit_classdef",
+      "start_line": 116,
+      "end_line": 118,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.75643208779479,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2933688759803772,
+        "structural": 0.0,
+        "combined": 1.1601898444637753,
+        "boosted": 1.1601898444637753
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.8362551346557602
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/checkers/base/docstring_checker.py",
+      "node_id": 303,
+      "node_type": "FunctionDef",
+      "name": "visit_functiondef",
+      "start_line": 121,
+      "end_line": 153,
+      "line_count": 33,
+      "signals": {
+        "sbfl": 0.75643208779479,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.19121147692203522,
+        "structural": 0.0,
+        "combined": 0.9868806888381852,
+        "boosted": 0.9868806888381852
+      },
+      "negative_signals": {
+        "total": 0.06636363636363637,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.09090909090909091
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.8362551346557602
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/checkers/base/docstring_checker.py",
+      "node_id": 48,
+      "node_type": "FunctionDef",
+      "name": "_infer_dunder_doc_attribute",
+      "start_line": 33,
+      "end_line": 47,
+      "line_count": 15,
+      "signals": {
+        "sbfl": 0.5778855963970647,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.15440356731414795,
+        "structural": 0.0,
+        "combined": 0.7809475837507288,
+        "boosted": 0.7809475837507288
+      },
+      "negative_signals": {
+        "total": 0.05333333333333334,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.13333333333333333
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.8362551346557602
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/checkers/base/docstring_checker.py",
+      "node_id": 234,
+      "node_type": "FunctionDef",
+      "name": "visit_module",
+      "start_line": 112,
+      "end_line": 113,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.8899450243415985,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.21351487934589386,
+        "structural": 0.0,
+        "combined": 0.7314009937670782,
+        "boosted": 0.7314009937670782
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.8362551346557602
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/checkers/base/docstring_checker.py",
+      "node_id": 220,
+      "node_type": "FunctionDef",
+      "name": "open",
+      "start_line": 108,
+      "end_line": 109,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.8893860936643676,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.15029123425483704,
+        "structural": 0.0,
+        "combined": 0.6170395019259451,
+        "boosted": 0.6170395019259451
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.8362551346557602
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/expand_modules.py",
+      "node_id": 295,
+      "node_type": "FunctionDef",
+      "name": "expand_modules",
+      "start_line": 63,
+      "end_line": 161,
+      "line_count": 99,
+      "signals": {
+        "sbfl": 11.054289139929322,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.37536096572875977,
+        "structural": 0.0,
+        "combined": 11.376625489577384,
+        "boosted": 11.376625489577384
+      },
+      "negative_signals": {
+        "total": 0.16414141414141414,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.03535353535353535
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.1518635922053542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/expand_modules.py",
+      "node_id": 80,
+      "node_type": "FunctionDef",
+      "name": "get_python_path",
+      "start_line": 26,
+      "end_line": 41,
+      "line_count": 16,
+      "signals": {
+        "sbfl": 1.4699878869600513,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.14873169362545013,
+        "structural": 1.5,
+        "combined": 3.9771316870782183,
+        "boosted": 3.9771316870782183
+      },
+      "negative_signals": {
+        "total": 0.7300000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.30000000000000004,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.1518635922053542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/expand_modules.py",
+      "node_id": 17,
+      "node_type": "FunctionDef",
+      "name": "_modpath_from_file",
+      "start_line": 17,
+      "end_line": 23,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 1.7008401285415224,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.20445719361305237,
+        "structural": 0.0,
+        "combined": 1.9354872808666728,
+        "boosted": 1.9354872808666728
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.1518635922053542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/expand_modules.py",
+      "node_id": 224,
+      "node_type": "FunctionDef",
+      "name": "_is_ignored_file",
+      "start_line": 49,
+      "end_line": 60,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 0.5962488075035776,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.27490663528442383,
+        "structural": 0.0,
+        "combined": 1.068150814709808,
+        "boosted": 1.068150814709808
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": true,
+        "method_match": true,
+        "lines_in_patch": [
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58
+        ],
+        "num_buggy_lines": 7
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.1518635922053542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/expand_modules.py",
+      "node_id": 32,
+      "node_type": "FunctionDef",
+      "name": "_is_package_cb",
+      "start_line": 18,
+      "end_line": 19,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 1.259881576697424,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1781284660100937,
+        "structural": 0.0,
+        "combined": 1.0366911594646373,
+        "boosted": 1.0366911594646373
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.1518635922053542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/expand_modules.py",
+      "node_id": 187,
+      "node_type": "FunctionDef",
+      "name": "_is_in_ignore_list_re",
+      "start_line": 44,
+      "end_line": 46,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.1192497615007155,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.138853058218956,
+        "structural": 0.0,
+        "combined": -0.10154721778159681,
+        "boosted": -0.10154721778159681
+      },
+      "negative_signals": {
+        "total": 0.46499999999999997,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 1.1518635922053542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/utils.py",
+      "node_id": 197,
+      "node_type": "FunctionDef",
+      "name": "_patch_sys_path",
+      "start_line": 74,
+      "end_line": 85,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 1.1077328246782097,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.15499284863471985,
+        "structural": 0.0,
+        "combined": 1.3539926794934327,
+        "boosted": 1.3539926794934327
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7724841683051079
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/utils.py",
+      "node_id": 329,
+      "node_type": "FunctionDef",
+      "name": "_is_relative_to",
+      "start_line": 104,
+      "end_line": 114,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 0.8866898773509575,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.11874489486217499,
+        "structural": 0.0,
+        "combined": 0.974067051739236,
+        "boosted": 0.974067051739236
+      },
+      "negative_signals": {
+        "total": 0.09636363636363637,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.09090909090909091
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7724841683051079
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/utils.py",
+      "node_id": 288,
+      "node_type": "FunctionDef",
+      "name": "fix_import_path",
+      "start_line": 89,
+      "end_line": 101,
+      "line_count": 13,
+      "signals": {
+        "sbfl": 0.4619348854371559,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1770239770412445,
+        "structural": 0.0,
+        "combined": 0.6701234986568507,
+        "boosted": 0.6701234986568507
+      },
+      "negative_signals": {
+        "total": 0.075,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7724841683051079
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/utils.py",
+      "node_id": 21,
+      "node_type": "FunctionDef",
+      "name": "prepare_crash_report",
+      "start_line": 18,
+      "end_line": 63,
+      "line_count": 46,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.41985753178596497,
+        "structural": 0.0,
+        "combined": 0.49159335958627853,
+        "boosted": 0.49159335958627853
+      },
+      "negative_signals": {
+        "total": 0.13869565217391305,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.02173913043478261
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7724841683051079
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/utils.py",
+      "node_id": 176,
+      "node_type": "FunctionDef",
+      "name": "get_fatal_error_message",
+      "start_line": 66,
+      "end_line": 71,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.13846300542354584,
+        "structural": 0.0,
+        "combined": -0.947130226601254,
+        "boosted": -0.947130226601254
+      },
+      "negative_signals": {
+        "total": 1.1800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7724841683051079
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/config/argument.py",
+      "node_id": 1255,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 424,
+      "end_line": 450,
+      "line_count": 27,
+      "signals": {
+        "sbfl": 1.580958118176624,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4296723008155823,
+        "structural": 3.0,
+        "combined": 7.69763272245459,
+        "boosted": 7.69763272245459
+      },
+      "negative_signals": {
+        "total": 0.6400000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 1.4713207447617542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/config/argument.py",
+      "node_id": 1154,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 387,
+      "end_line": 413,
+      "line_count": 27,
+      "signals": {
+        "sbfl": 1.573483097018768,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.43042096495628357,
+        "structural": 3.0,
+        "combined": 7.6915052967499955,
+        "boosted": 7.6915052967499955
+      },
+      "negative_signals": {
+        "total": 0.6400000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 1.4713207447617542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/config/argument.py",
+      "node_id": 745,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 218,
+      "end_line": 254,
+      "line_count": 37,
+      "signals": {
+        "sbfl": 1.3948744189964044,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3177105784416199,
+        "structural": 3.0,
+        "combined": 7.2738195758938,
+        "boosted": 7.2738195758938
+      },
+      "negative_signals": {
+        "total": 0.6700000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 1.4713207447617542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/config/argument.py",
+      "node_id": 593,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 156,
+      "end_line": 178,
+      "line_count": 23,
+      "signals": {
+        "sbfl": 0.8807796797285191,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4583435654640198,
+        "structural": 3.0,
+        "combined": 7.051541899216648,
+        "boosted": 7.051541899216648
+      },
+      "negative_signals": {
+        "total": 0.6400000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 1.4713207447617542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/config/argument.py",
+      "node_id": 913,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 295,
+      "end_line": 332,
+      "line_count": 38,
+      "signals": {
+        "sbfl": 1.001171581199026,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2135676145553589,
+        "structural": 3.0,
+        "combined": 6.692039568390408,
+        "boosted": 6.692039568390408
+      },
+      "negative_signals": {
+        "total": 0.6700000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 1.4713207447617542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/config/argument.py",
+      "node_id": 674,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 189,
+      "end_line": 207,
+      "line_count": 19,
+      "signals": {
+        "sbfl": 0.6417424447717638,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.38511306047439575,
+        "structural": 3.0,
+        "combined": 6.683169094121543,
+        "boosted": 6.683169094121543
+      },
+      "negative_signals": {
+        "total": 0.6400000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 1.4713207447617542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/config/argument.py",
+      "node_id": 1356,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 462,
+      "end_line": 488,
+      "line_count": 27,
+      "signals": {
+        "sbfl": 0.760840592179857,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.24232695996761322,
+        "structural": 3.0,
+        "combined": 6.540293582931478,
+        "boosted": 6.540293582931478
+      },
+      "negative_signals": {
+        "total": 0.6400000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 1.4713207447617542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/config/argument.py",
+      "node_id": 851,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 267,
+      "end_line": 284,
+      "line_count": 18,
+      "signals": {
+        "sbfl": 0.963191813504287,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.36113423109054565,
+        "structural": 3.0,
+        "combined": 6.42207640467388,
+        "boosted": 6.42207640467388
+      },
+      "negative_signals": {
+        "total": 1.1800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 1.4713207447617542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/config/argument.py",
+      "node_id": 1037,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 343,
+      "end_line": 376,
+      "line_count": 34,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.26726704835891724,
+        "structural": 3.0,
+        "combined": 5.790006306880762,
+        "boosted": 5.790006306880762
+      },
+      "negative_signals": {
+        "total": 0.6700000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 1.4713207447617542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/config/argument.py",
+      "node_id": 437,
+      "node_type": "FunctionDef",
+      "name": "_regexp_paths_csv_transfomer",
+      "start_line": 110,
+      "end_line": 121,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 4.752313958110474,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.09457296133041382,
+        "structural": 0.0,
+        "combined": 4.853440605309626,
+        "boosted": 4.853440605309626
+      },
+      "negative_signals": {
+        "total": 0.061666666666666675,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.04166666666666667
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 1.4713207447617542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/config/argument.py",
+      "node_id": 320,
+      "node_type": "FunctionDef",
+      "name": "_py_version_transformer",
+      "start_line": 91,
+      "end_line": 99,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.12227082252502441,
+        "structural": 1.5,
+        "combined": 3.12450896814835,
+        "boosted": 3.12450896814835
+      },
+      "negative_signals": {
+        "total": 0.09000000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.15000000000000002
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 1.4713207447617542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/config/argument.py",
+      "node_id": 1250,
+      "node_type": "ClassDef",
+      "name": "_StoreNewNamesArgument",
+      "start_line": 416,
+      "end_line": 450,
+      "line_count": 35,
+      "signals": {
+        "sbfl": 1.3662601021279466,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 1.2695658872519135,
+        "boosted": 1.2695658872519135
+      },
+      "negative_signals": {
+        "total": 0.075,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 1.4713207447617542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/config/argument.py",
+      "node_id": 1149,
+      "node_type": "ClassDef",
+      "name": "_StoreOldNamesArgument",
+      "start_line": 379,
+      "end_line": 413,
+      "line_count": 35,
+      "signals": {
+        "sbfl": 1.3598002073001698,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 1.2631059924241368,
+        "boosted": 1.2631059924241368
+      },
+      "negative_signals": {
+        "total": 0.075,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 1.4713207447617542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/config/argument.py",
+      "node_id": 740,
+      "node_type": "ClassDef",
+      "name": "_StoreArgument",
+      "start_line": 210,
+      "end_line": 254,
+      "line_count": 45,
+      "signals": {
+        "sbfl": 1.246483523358489,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 1.143590961375018,
+        "boosted": 1.143590961375018
+      },
+      "negative_signals": {
+        "total": 0.075,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 1.4713207447617542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/config/argument.py",
+      "node_id": 206,
+      "node_type": "FunctionDef",
+      "name": "_yn_transformer",
+      "start_line": 67,
+      "end_line": 76,
+      "line_count": 10,
+      "signals": {
+        "sbfl": 0.7970500926135933,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0535425990819931,
+        "structural": 0.0,
+        "combined": 0.8422284238537427,
+        "boosted": 0.8422284238537427
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 1.4713207447617542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/config/argument.py",
+      "node_id": 908,
+      "node_type": "ClassDef",
+      "name": "_DeprecationArgument",
+      "start_line": 287,
+      "end_line": 332,
+      "line_count": 46,
+      "signals": {
+        "sbfl": 0.9065334715334465,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 0.8030210748392317,
+        "boosted": 0.8030210748392317
+      },
+      "negative_signals": {
+        "total": 0.075,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 1.4713207447617542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/config/argument.py",
+      "node_id": 590,
+      "node_type": "ClassDef",
+      "name": "_Argument",
+      "start_line": 148,
+      "end_line": 178,
+      "line_count": 31,
+      "signals": {
+        "sbfl": 0.8498751295626061,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 0.7556602535295484,
+        "boosted": 0.7556602535295484
+      },
+      "negative_signals": {
+        "total": 0.075,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 1.4713207447617542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/config/argument.py",
+      "node_id": 846,
+      "node_type": "ClassDef",
+      "name": "_StoreTrueArgument",
+      "start_line": 257,
+      "end_line": 284,
+      "line_count": 28,
+      "signals": {
+        "sbfl": 0.7932167875917657,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 0.7008614156909393,
+        "boosted": 0.7008614156909393
+      },
+      "negative_signals": {
+        "total": 0.075,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 1.4713207447617542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/config/argument.py",
+      "node_id": 1351,
+      "node_type": "ClassDef",
+      "name": "_CallableArgument",
+      "start_line": 453,
+      "end_line": 488,
+      "line_count": 36,
+      "signals": {
+        "sbfl": 0.6799001036500849,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 0.5825860540633081,
+        "boosted": 0.5825860540633081
+      },
+      "negative_signals": {
+        "total": 0.075,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 1.4713207447617542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/config/argument.py",
+      "node_id": 669,
+      "node_type": "ClassDef",
+      "name": "_BaseStoreArgument",
+      "start_line": 181,
+      "end_line": 207,
+      "line_count": 27,
+      "signals": {
+        "sbfl": 0.5665834197084041,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 0.47484788251832144,
+        "boosted": 0.47484788251832144
+      },
+      "negative_signals": {
+        "total": 0.075,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 1.4713207447617542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/config/argument.py",
+      "node_id": 265,
+      "node_type": "FunctionDef",
+      "name": "_non_empty_string_transformer",
+      "start_line": 79,
+      "end_line": 83,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.21469801604867733,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.13774576783180237,
+        "structural": 0.0,
+        "combined": 0.2745412245922026,
+        "boosted": 0.2745412245922026
+      },
+      "negative_signals": {
+        "total": 0.185,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 1.4713207447617542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/config/argument.py",
+      "node_id": 381,
+      "node_type": "FunctionDef",
+      "name": "_regexp_csv_transfomer",
+      "start_line": 102,
+      "end_line": 107,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.3171675237082733,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.06953167915344238,
+        "structural": 0.0,
+        "combined": 0.27360553792000675,
+        "boosted": 0.27360553792000675
+      },
+      "negative_signals": {
+        "total": 0.165,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 1.4713207447617542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/config/argument.py",
+      "node_id": 101,
+      "node_type": "FunctionDef",
+      "name": "_confidence_transformer",
+      "start_line": 45,
+      "end_line": 55,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0492209829390049,
+        "structural": 0.0,
+        "combined": 0.01859776929020882,
+        "boosted": 0.01859776929020882
+      },
+      "negative_signals": {
+        "total": 0.06318181818181819,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.045454545454545456
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 1.4713207447617542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/config/argument.py",
+      "node_id": 1032,
+      "node_type": "ClassDef",
+      "name": "_ExtendArgument",
+      "start_line": 335,
+      "end_line": 376,
+      "line_count": 42,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.10103305785123967,
+        "boosted": -0.10103305785123967
+      },
+      "negative_signals": {
+        "total": 0.075,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 1.4713207447617542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/config/argument.py",
+      "node_id": 171,
+      "node_type": "FunctionDef",
+      "name": "_csv_transformer",
+      "start_line": 58,
+      "end_line": 60,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.10926965951519221,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.10976161062717438,
+        "structural": 0.0,
+        "combined": -0.14501894548812527,
+        "boosted": -0.14501894548812527
+      },
+      "negative_signals": {
+        "total": 0.44999999999999996,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 1.4713207447617542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/config/argument.py",
+      "node_id": 294,
+      "node_type": "FunctionDef",
+      "name": "_path_transformer",
+      "start_line": 86,
+      "end_line": 88,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.10978875820671,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.07156135141849518,
+        "structural": 0.0,
+        "combined": -0.21326031337223003,
+        "boosted": -0.21326031337223003
+      },
+      "negative_signals": {
+        "total": 0.44999999999999996,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 1.4713207447617542
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 517,
+      "node_type": "ClassDef",
+      "name": "PyLinter",
+      "start_line": 237,
+      "end_line": 1253,
+      "line_count": 1017,
+      "signals": {
+        "sbfl": 38.53885186193079,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 38.20457644159451,
+        "boosted": 38.20457644159451
+      },
+      "negative_signals": {
+        "total": 0.09000000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.30000000000000004,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 2130,
+      "node_type": "FunctionDef",
+      "name": "_discover_files",
+      "start_line": 585,
+      "end_line": 619,
+      "line_count": 35,
+      "signals": {
+        "sbfl": 18.578923022732397,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.20169322192668915,
+        "structural": 0.0,
+        "combined": 18.843564096820135,
+        "boosted": 18.843564096820135
+      },
+      "negative_signals": {
+        "total": 0.09,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 556,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 269,
+      "end_line": 338,
+      "line_count": 70,
+      "signals": {
+        "sbfl": 12.802086974001595,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4548018276691437,
+        "structural": 3.0,
+        "combined": 18.773916813045446,
+        "boosted": 18.773916813045446
+      },
+      "negative_signals": {
+        "total": 0.8300000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 4446,
+      "node_type": "FunctionDef",
+      "name": "_add_one_message",
+      "start_line": 1087,
+      "end_line": 1181,
+      "line_count": 95,
+      "signals": {
+        "sbfl": 15.691945386806388,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3624153733253479,
+        "structural": 0.0,
+        "combined": 16.15279059366202,
+        "boosted": 16.15279059366202
+      },
+      "negative_signals": {
+        "total": 0.1686842105263158,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.08421052631578947
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 1533,
+      "node_type": "FunctionDef",
+      "name": "register_checker",
+      "start_line": 457,
+      "end_line": 466,
+      "line_count": 10,
+      "signals": {
+        "sbfl": 10.16735184875539,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.35376647114753723,
+        "structural": 1.5,
+        "combined": 13.131729575283726,
+        "boosted": 13.131729575283726
+      },
+      "negative_signals": {
+        "total": 0.6700000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 1346,
+      "node_type": "FunctionDef",
+      "name": "_load_reporter_by_name",
+      "start_line": 420,
+      "end_line": 430,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 9.542953794382862,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.13932804763317108,
+        "structural": 1.5,
+        "combined": 12.791102166431617,
+        "boosted": 12.791102166431617
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 3305,
+      "node_type": "FunctionDef",
+      "name": "_astroid_module_checker",
+      "start_line": 833,
+      "end_line": 896,
+      "line_count": 64,
+      "signals": {
+        "sbfl": 12.696664233008605,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.226894348859787,
+        "structural": 0.0,
+        "combined": 12.72095176311795,
+        "boosted": 12.72095176311795
+      },
+      "negative_signals": {
+        "total": 0.36875,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.2,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.04687499999999999
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 4224,
+      "node_type": "FunctionDef",
+      "name": "_report_evaluation",
+      "start_line": 1048,
+      "end_line": 1085,
+      "line_count": 38,
+      "signals": {
+        "sbfl": 12.190953054397495,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2708483338356018,
+        "structural": 0.0,
+        "combined": 12.483036963986422,
+        "boosted": 12.483036963986422
+      },
+      "negative_signals": {
+        "total": 0.1863157894736842,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.06578947368421052
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 1415,
+      "node_type": "FunctionDef",
+      "name": "set_reporter",
+      "start_line": 432,
+      "end_line": 437,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 9.75663668410146,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.22937993705272675,
+        "structural": 1.5,
+        "combined": 12.363079417874031,
+        "boosted": 12.363079417874031
+      },
+      "negative_signals": {
+        "total": 0.8050000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 3239,
+      "node_type": "FunctionDef",
+      "name": "_get_namespace_for_file",
+      "start_line": 820,
+      "end_line": 830,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 9.898710031151806,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.03624936193227768,
+        "structural": 1.5,
+        "combined": 12.284953132575316,
+        "boosted": 12.284953132575316
+      },
+      "negative_signals": {
+        "total": 0.6763636363636365,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.09090909090909091
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 1921,
+      "node_type": "FunctionDef",
+      "name": "get_checker_names",
+      "start_line": 528,
+      "end_line": 536,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 9.542953794382862,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.20984886586666107,
+        "structural": 1.5,
+        "combined": 12.233520023559345,
+        "boosted": 12.233520023559345
+      },
+      "negative_signals": {
+        "total": 0.6850000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 4907,
+      "node_type": "FunctionDef",
+      "name": "add_message",
+      "start_line": 1183,
+      "end_line": 1215,
+      "line_count": 33,
+      "signals": {
+        "sbfl": 11.11293459582751,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3946167826652527,
+        "structural": 0.0,
+        "combined": 11.698197251430894,
+        "boosted": 11.698197251430894
+      },
+      "negative_signals": {
+        "total": 0.11712121212121213,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.030303030303030307
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 4058,
+      "node_type": "FunctionDef",
+      "name": "generate_reports",
+      "start_line": 1016,
+      "end_line": 1046,
+      "line_count": 31,
+      "signals": {
+        "sbfl": 10.935464367946759,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4159911870956421,
+        "structural": 0.0,
+        "combined": 11.486802547953502,
+        "boosted": 11.486802547953502
+      },
+      "negative_signals": {
+        "total": 0.19,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 3816,
+      "node_type": "FunctionDef",
+      "name": "_check_astroid_module",
+      "start_line": 963,
+      "end_line": 1001,
+      "line_count": 39,
+      "signals": {
+        "sbfl": 10.836965738736355,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4291501045227051,
+        "structural": 0.0,
+        "combined": 11.465068432882028,
+        "boosted": 11.465068432882028
+      },
+      "negative_signals": {
+        "total": 0.135,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.35,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 2309,
+      "node_type": "FunctionDef",
+      "name": "check",
+      "start_line": 621,
+      "end_line": 659,
+      "line_count": 39,
+      "signals": {
+        "sbfl": 10.889388715782825,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.36823275685310364,
+        "structural": 0.0,
+        "combined": 11.342583773866806,
+        "boosted": 11.342583773866806
+      },
+      "negative_signals": {
+        "total": 0.20025641025641025,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.025641025641025644
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 2690,
+      "node_type": "FunctionDef",
+      "name": "_check_file",
+      "start_line": 701,
+      "end_line": 739,
+      "line_count": 39,
+      "signals": {
+        "sbfl": 10.781598926633704,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.37391066551208496,
+        "structural": 0.0,
+        "combined": 11.30001422030385,
+        "boosted": 11.30001422030385
+      },
+      "negative_signals": {
+        "total": 0.14525641025641026,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.35,
+        "safe_patterns": 0.025641025641025644
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 3725,
+      "node_type": "FunctionDef",
+      "name": "check_astroid_module",
+      "start_line": 937,
+      "end_line": 961,
+      "line_count": 25,
+      "signals": {
+        "sbfl": 10.35445157369796,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.37966546416282654,
+        "structural": 0.0,
+        "combined": 10.862844605347972,
+        "boosted": 10.862844605347972
+      },
+      "negative_signals": {
+        "total": 0.169,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.06
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 1957,
+      "node_type": "FunctionDef",
+      "name": "prepare_checkers",
+      "start_line": 538,
+      "end_line": 548,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 10.442728165144693,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.22772732377052307,
+        "structural": 0.0,
+        "combined": 10.804995234240682,
+        "boosted": 10.804995234240682
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 3966,
+      "node_type": "FunctionDef",
+      "name": "open",
+      "start_line": 1003,
+      "end_line": 1014,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 10.309244266042612,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.23382773995399475,
+        "structural": 0.0,
+        "combined": 10.697251892115128,
+        "boosted": 10.697251892115128
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 2987,
+      "node_type": "FunctionDef",
+      "name": "_expand_files",
+      "start_line": 772,
+      "end_line": 787,
+      "line_count": 16,
+      "signals": {
+        "sbfl": 10.346785520054352,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.22612833976745605,
+        "structural": 0.0,
+        "combined": 10.692473457176206,
+        "boosted": 10.692473457176206
+      },
+      "negative_signals": {
+        "total": 0.05750000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.03125
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 2065,
+      "node_type": "FunctionDef",
+      "name": "should_analyze_file",
+      "start_line": 552,
+      "end_line": 570,
+      "line_count": 19,
+      "signals": {
+        "sbfl": 10.185379669054011,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3493771553039551,
+        "structural": 0.0,
+        "combined": 10.689694897680395,
+        "boosted": 10.689694897680395
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.4,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 2572,
+      "node_type": "FunctionDef",
+      "name": "_check_files",
+      "start_line": 679,
+      "end_line": 699,
+      "line_count": 21,
+      "signals": {
+        "sbfl": 10.024029920621429,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.33815476298332214,
+        "structural": 0.0,
+        "combined": 10.569093030191798,
+        "boosted": 10.569093030191798
+      },
+      "negative_signals": {
+        "total": 0.058571428571428566,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.07142857142857142
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 1624,
+      "node_type": "FunctionDef",
+      "name": "enable_fail_on_messages",
+      "start_line": 468,
+      "end_line": 497,
+      "line_count": 30,
+      "signals": {
+        "sbfl": 9.892479856710441,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.34870174527168274,
+        "structural": 0.0,
+        "combined": 10.446270566921115,
+        "boosted": 10.446270566921115
+      },
+      "negative_signals": {
+        "total": 0.06666666666666667,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.016666666666666666
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 2906,
+      "node_type": "FunctionDef",
+      "name": "_iterate_file_descrs",
+      "start_line": 759,
+      "end_line": 770,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 10.024041536391334,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1855868101119995,
+        "structural": 0.0,
+        "combined": 10.295215488748257,
+        "boosted": 10.295215488748257
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 1802,
+      "node_type": "FunctionDef",
+      "name": "disable_reporters",
+      "start_line": 502,
+      "end_line": 506,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 9.898710031151806,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.20698630809783936,
+        "structural": 0.0,
+        "combined": 10.240084424959301,
+        "boosted": 10.240084424959301
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 3110,
+      "node_type": "FunctionDef",
+      "name": "set_current_module",
+      "start_line": 789,
+      "end_line": 818,
+      "line_count": 30,
+      "signals": {
+        "sbfl": 10.59571974533337,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.245191752910614,
+        "structural": 0.0,
+        "combined": 10.218192469294118,
+        "boosted": 10.218192469294118
+      },
+      "negative_signals": {
+        "total": 0.8116666666666668,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.06666666666666667
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 1121,
+      "node_type": "FunctionDef",
+      "name": "load_plugin_configuration",
+      "start_line": 373,
+      "end_line": 386,
+      "line_count": 14,
+      "signals": {
+        "sbfl": 9.656595955644987,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.35502129793167114,
+        "structural": 0.0,
+        "combined": 10.203700173198444,
+        "boosted": 10.203700173198444
+      },
+      "negative_signals": {
+        "total": 0.08857142857142858,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.07142857142857144
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 5108,
+      "node_type": "FunctionDef",
+      "name": "_emit_stashed_messages",
+      "start_line": 1242,
+      "end_line": 1253,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 9.77023811690711,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.21747153997421265,
+        "structural": 0.0,
+        "combined": 10.158804583016018,
+        "boosted": 10.158804583016018
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 1837,
+      "node_type": "FunctionDef",
+      "name": "_parse_error_mode",
+      "start_line": 508,
+      "end_line": 520,
+      "line_count": 13,
+      "signals": {
+        "sbfl": 9.75845325007958,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2513246536254883,
+        "structural": 0.0,
+        "combined": 10.147715128607059,
+        "boosted": 10.147715128607059
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 5021,
+      "node_type": "FunctionDef",
+      "name": "add_ignored_message",
+      "start_line": 1217,
+      "end_line": 1240,
+      "line_count": 24,
+      "signals": {
+        "sbfl": 9.542953794382862,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2986313998699188,
+        "structural": 0.0,
+        "combined": 9.999725702459367,
+        "boosted": 9.999725702459367
+      },
+      "negative_signals": {
+        "total": 0.075,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 1058,
+      "node_type": "FunctionDef",
+      "name": "load_plugin_modules",
+      "start_line": 361,
+      "end_line": 371,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 9.652742552589572,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.20018956065177917,
+        "structural": 0.0,
+        "combined": 9.929078011708185,
+        "boosted": 9.929078011708185
+      },
+      "negative_signals": {
+        "total": 0.08136363636363637,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.09090909090909091
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 2503,
+      "node_type": "FunctionDef",
+      "name": "check_single_file",
+      "start_line": 661,
+      "end_line": 667,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 9.542953794382862,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.217789888381958,
+        "structural": 0.0,
+        "combined": 9.813294248394326,
+        "boosted": 9.813294248394326
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 2540,
+      "node_type": "FunctionDef",
+      "name": "check_single_file_item",
+      "start_line": 669,
+      "end_line": 677,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 9.542953794382862,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.17738303542137146,
+        "structural": 0.0,
+        "combined": 9.800081528757824,
+        "boosted": 9.800081528757824
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 1181,
+      "node_type": "FunctionDef",
+      "name": "_load_reporters",
+      "start_line": 388,
+      "end_line": 418,
+      "line_count": 31,
+      "signals": {
+        "sbfl": 9.542953794382862,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.15646719932556152,
+        "structural": 0.0,
+        "combined": 9.729245570597008,
+        "boosted": 9.729245570597008
+      },
+      "negative_signals": {
+        "total": 0.08790322580645163,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.03225806451612903
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 1038,
+      "node_type": "FunctionDef",
+      "name": "load_default_plugins",
+      "start_line": 357,
+      "end_line": 359,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 9.762531310796282,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.21060025691986084,
+        "structural": 0.0,
+        "combined": 9.720891196790863,
+        "boosted": 9.720891196790863
+      },
+      "negative_signals": {
+        "total": 0.42,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 3587,
+      "node_type": "FunctionDef",
+      "name": "get_ast",
+      "start_line": 898,
+      "end_line": 935,
+      "line_count": 38,
+      "signals": {
+        "sbfl": 9.8927865349607,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.33293765783309937,
+        "structural": 0.0,
+        "combined": 9.632157543534595,
+        "boosted": 9.632157543534595
+      },
+      "negative_signals": {
+        "total": 0.8507894736842108,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.5499999999999999,
+        "safe_patterns": 0.03947368421052632
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 1474,
+      "node_type": "FunctionDef",
+      "name": "report_order",
+      "start_line": 443,
+      "end_line": 453,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 9.542953794382862,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.07014105468988419,
+        "structural": 0.0,
+        "combined": 9.630201942770064,
+        "boosted": 9.630201942770064
+      },
+      "negative_signals": {
+        "total": 0.03636363636363637,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.09090909090909091
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 996,
+      "node_type": "FunctionDef",
+      "name": "option_groups",
+      "start_line": 350,
+      "end_line": 355,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 9.542953794382862,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0836515724658966,
+        "structural": 0.0,
+        "combined": 9.57208547189914,
+        "boosted": 9.57208547189914
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 960,
+      "node_type": "FunctionDef",
+      "name": "option_groups",
+      "start_line": 341,
+      "end_line": 347,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 9.542953794382862,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1151466891169548,
+        "structural": 0.0,
+        "combined": 9.528536489717318,
+        "boosted": 9.528536489717318
+      },
+      "negative_signals": {
+        "total": 0.22,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 2095,
+      "node_type": "FunctionDef",
+      "name": "initialize",
+      "start_line": 574,
+      "end_line": 583,
+      "line_count": 10,
+      "signals": {
+        "sbfl": 9.894821868104176,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.16639083623886108,
+        "structural": 0.0,
+        "combined": 9.506923451796895,
+        "boosted": 9.506923451796895
+      },
+      "negative_signals": {
+        "total": 0.6850000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 1772,
+      "node_type": "FunctionDef",
+      "name": "any_fail_on_issues",
+      "start_line": 499,
+      "end_line": 500,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 9.667320878923634,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.15574395656585693,
+        "structural": 0.0,
+        "combined": 9.40717961643473,
+        "boosted": 9.40717961643473
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 2843,
+      "node_type": "FunctionDef",
+      "name": "_get_file_descr_from_stdin",
+      "start_line": 742,
+      "end_line": 757,
+      "line_count": 16,
+      "signals": {
+        "sbfl": 9.542953794382862,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.27469658851623535,
+        "structural": 0.0,
+        "combined": 9.293564579252518,
+        "boosted": 9.293564579252518
+      },
+      "negative_signals": {
+        "total": 0.7400000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0625
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 1446,
+      "node_type": "FunctionDef",
+      "name": "register_reporter",
+      "start_line": 439,
+      "end_line": 441,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 9.652742552589572,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.16748081147670746,
+        "structural": 0.0,
+        "combined": 8.848487436786476,
+        "boosted": 8.848487436786476
+      },
+      "negative_signals": {
+        "total": 1.105,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 1888,
+      "node_type": "FunctionDef",
+      "name": "get_checkers",
+      "start_line": 524,
+      "end_line": 526,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 9.659610860040035,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.12331877648830414,
+        "structural": 0.0,
+        "combined": 8.790864081257812,
+        "boosted": 8.790864081257812
+      },
+      "negative_signals": {
+        "total": 1.09,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 186,
+      "node_type": "FunctionDef",
+      "name": "_load_reporter_by_class",
+      "start_line": 89,
+      "end_line": 96,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.19584044814109802,
+        "structural": 0.0,
+        "combined": 0.2905912694241926,
+        "boosted": 0.2905912694241926
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 147,
+      "node_type": "FunctionDef",
+      "name": "_read_stdin",
+      "start_line": 82,
+      "end_line": 86,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.17629565298557281,
+        "structural": 0.0,
+        "combined": 0.016131214605416198,
+        "boosted": 0.016131214605416198
+      },
+      "negative_signals": {
+        "total": 0.3,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 122,
+      "node_type": "ClassDef",
+      "name": "GetAstProtocol",
+      "start_line": 75,
+      "end_line": 79,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.0012009607686148918,
+        "boosted": -0.0012009607686148918
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    },
+    {
+      "task_id": "pylint-dev__pylint-7080",
+      "file_path": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.15/pylint/lint/pylinter.py",
+      "node_id": 125,
+      "node_type": "FunctionDef",
+      "name": "__call__",
+      "start_line": 76,
+      "end_line": 79,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.06720447540283203,
+        "structural": 0.0,
+        "combined": -0.4499927128897942,
+        "boosted": -0.4499927128897942
+      },
+      "negative_signals": {
+        "total": 0.57,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.95,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.7962501799404662
+    }
+  ]
+}

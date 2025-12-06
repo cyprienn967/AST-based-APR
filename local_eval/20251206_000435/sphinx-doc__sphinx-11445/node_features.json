@@ -1,0 +1,5552 @@
+{
+  "task_id": "sphinx-doc__sphinx-11445",
+  "num_files_processed": 6,
+  "files": [
+    {
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/fixtures.py",
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.4227254001046528,
+      "num_nodes": 18,
+      "num_buggy_nodes": 0
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/util.py",
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 3.068523548681985,
+      "num_nodes": 20,
+      "num_buggy_nodes": 0
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/comparer.py",
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.6359999999999997,
+      "num_nodes": 10,
+      "num_buggy_nodes": 0
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/rst.py",
+      "file_rank": 6,
+      "is_gt_file": true,
+      "file_score": 2.2163127378103487,
+      "num_nodes": 27,
+      "num_buggy_nodes": 3
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365,
+      "num_nodes": 58,
+      "num_buggy_nodes": 0
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/util/rst.py",
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 3.360522141924659,
+      "num_nodes": 7,
+      "num_buggy_nodes": 2
+    }
+  ],
+  "num_nodes": 140,
+  "num_buggy_nodes": 5,
+  "nodes": [
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/fixtures.py",
+      "node_id": 726,
+      "node_type": "FunctionDef",
+      "name": "make_app",
+      "start_line": 163,
+      "end_line": 187,
+      "line_count": 25,
+      "signals": {
+        "sbfl": 8.613754797728442,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.26916858553886414,
+        "structural": 0.0,
+        "combined": 8.368258251698398,
+        "boosted": 8.368258251698398
+      },
+      "negative_signals": {
+        "total": 0.7000000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.4227254001046528
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/fixtures.py",
+      "node_id": 763,
+      "node_type": "FunctionDef",
+      "name": "make",
+      "start_line": 174,
+      "end_line": 182,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 6.569844387163744,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.11210755258798599,
+        "structural": 0.0,
+        "combined": 6.760837981822119,
+        "boosted": 6.760837981822119
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.4227254001046528
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/fixtures.py",
+      "node_id": 527,
+      "node_type": "FunctionDef",
+      "name": "app",
+      "start_line": 126,
+      "end_line": 143,
+      "line_count": 18,
+      "signals": {
+        "sbfl": 5.765439561172167,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.436493456363678,
+        "structural": 0.0,
+        "combined": 5.810638893737898,
+        "boosted": 5.810638893737898
+      },
+      "negative_signals": {
+        "total": 0.7188888888888889,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.6,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.2222222222222222
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.4227254001046528
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/fixtures.py",
+      "node_id": 200,
+      "node_type": "FunctionDef",
+      "name": "app_params",
+      "start_line": 59,
+      "end_line": 98,
+      "line_count": 40,
+      "signals": {
+        "sbfl": 4.995729368055317,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.38624560832977295,
+        "structural": 0.0,
+        "combined": 5.557971463048908,
+        "boosted": 5.557971463048908
+      },
+      "negative_signals": {
+        "total": 0.08500000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.025
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.4227254001046528
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/fixtures.py",
+      "node_id": 447,
+      "node_type": "FunctionDef",
+      "name": "test_params",
+      "start_line": 102,
+      "end_line": 122,
+      "line_count": 21,
+      "signals": {
+        "sbfl": 3.928740256112638,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.29096323251724243,
+        "structural": 0.0,
+        "combined": 3.752274074643675,
+        "boosted": 3.752274074643675
+      },
+      "negative_signals": {
+        "total": 0.6749999999999999,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.6,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.4227254001046528
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/fixtures.py",
+      "node_id": 32,
+      "node_type": "FunctionDef",
+      "name": "pytest_configure",
+      "start_line": 25,
+      "end_line": 28,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.05412998050451279,
+        "structural": 1.5,
+        "combined": 2.942633964908123,
+        "boosted": 2.942633964908123
+      },
+      "negative_signals": {
+        "total": 0.15,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.4227254001046528
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/fixtures.py",
+      "node_id": 916,
+      "node_type": "FunctionDef",
+      "name": "if_graphviz_found",
+      "start_line": 201,
+      "end_line": 214,
+      "line_count": 14,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4307129383087158,
+        "structural": 0.0,
+        "combined": 0.6699118603842599,
+        "boosted": 0.6699118603842599
+      },
+      "negative_signals": {
+        "total": 0.08857142857142858,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.07142857142857144
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.4227254001046528
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/fixtures.py",
+      "node_id": 142,
+      "node_type": "FunctionDef",
+      "name": "restore",
+      "start_line": 48,
+      "end_line": 55,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.20100264251232147,
+        "structural": 0.0,
+        "combined": 0.35220475652217864,
+        "boosted": 0.35220475652217864
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.4227254001046528
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/fixtures.py",
+      "node_id": 1031,
+      "node_type": "FunctionDef",
+      "name": "rollback_sysmodules",
+      "start_line": 236,
+      "end_line": 250,
+      "line_count": 15,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.22648543119430542,
+        "structural": 0.0,
+        "combined": 0.32967377614974974,
+        "boosted": 0.32967377614974974
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.4227254001046528
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/fixtures.py",
+      "node_id": 90,
+      "node_type": "FunctionDef",
+      "name": "store",
+      "start_line": 39,
+      "end_line": 46,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.186147540807724,
+        "structural": 0.0,
+        "combined": 0.3254655734539032,
+        "boosted": 0.3254655734539032
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.4227254001046528
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/fixtures.py",
+      "node_id": 883,
+      "node_type": "FunctionDef",
+      "name": "shared_result",
+      "start_line": 191,
+      "end_line": 192,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.6013377943029549,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.053280316293239594,
+        "structural": 0.0,
+        "combined": 0.15484236363078613,
+        "boosted": 0.15484236363078613
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.4227254001046528
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/fixtures.py",
+      "node_id": 970,
+      "node_type": "FunctionDef",
+      "name": "sphinx_test_tempdir",
+      "start_line": 218,
+      "end_line": 223,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.16041728854179382,
+        "structural": 0.0,
+        "combined": 0.1315511193752289,
+        "boosted": 0.1315511193752289
+      },
+      "negative_signals": {
+        "total": 0.15,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.4227254001046528
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/fixtures.py",
+      "node_id": 684,
+      "node_type": "FunctionDef",
+      "name": "status",
+      "start_line": 147,
+      "end_line": 151,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.15504524111747742,
+        "structural": 0.0,
+        "combined": -0.011918565988540625,
+        "boosted": -0.011918565988540625
+      },
+      "negative_signals": {
+        "total": 0.285,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.4227254001046528
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/fixtures.py",
+      "node_id": 67,
+      "node_type": "ClassDef",
+      "name": "SharedResult",
+      "start_line": 36,
+      "end_line": 55,
+      "line_count": 20,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.024,
+        "boosted": -0.024
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.4227254001046528
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/fixtures.py",
+      "node_id": 705,
+      "node_type": "FunctionDef",
+      "name": "warning",
+      "start_line": 155,
+      "end_line": 159,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.14553669095039368,
+        "structural": 0.0,
+        "combined": -0.029033956289291334,
+        "boosted": -0.029033956289291334
+      },
+      "negative_signals": {
+        "total": 0.285,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.4227254001046528
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/fixtures.py",
+      "node_id": 1007,
+      "node_type": "FunctionDef",
+      "name": "tempdir",
+      "start_line": 227,
+      "end_line": 232,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.048788972198963165,
+        "structural": 0.0,
+        "combined": -0.0993798500418663,
+        "boosted": -0.0993798500418663
+      },
+      "negative_signals": {
+        "total": 0.18,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.4227254001046528
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/fixtures.py",
+      "node_id": 51,
+      "node_type": "FunctionDef",
+      "name": "rootdir",
+      "start_line": 32,
+      "end_line": 33,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.10825236141681671,
+        "structural": 0.0,
+        "combined": -0.34754574944973,
+        "boosted": -0.34754574944973
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.4227254001046528
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/fixtures.py",
+      "node_id": 896,
+      "node_type": "FunctionDef",
+      "name": "_shared_result_cache",
+      "start_line": 196,
+      "end_line": 197,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.06701412051916122,
+        "structural": 0.0,
+        "combined": -0.42177458306550986,
+        "boosted": -0.42177458306550986
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.4227254001046528
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/util.py",
+      "node_id": 585,
+      "node_type": "ClassDef",
+      "name": "SphinxTestApp",
+      "start_line": 93,
+      "end_line": 168,
+      "line_count": 76,
+      "signals": {
+        "sbfl": 21.507985006300466,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 21.34094275277934,
+        "boosted": 21.34094275277934
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 3.068523548681985
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/util.py",
+      "node_id": 1032,
+      "node_type": "FunctionDef",
+      "name": "build",
+      "start_line": 166,
+      "end_line": 168,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 5.060702354423639,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3024129271507263,
+        "structural": 1.5,
+        "combined": 8.180820271182268,
+        "boosted": 20.452050677955672
+      },
+      "negative_signals": {
+        "total": 0.42,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 3.068523548681985
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/util.py",
+      "node_id": 602,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 101,
+      "end_line": 144,
+      "line_count": 44,
+      "signals": {
+        "sbfl": 16.61582075475493,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5061056613922119,
+        "structural": 0.0,
+        "combined": 16.76756638700227,
+        "boosted": 16.76756638700227
+      },
+      "negative_signals": {
+        "total": 0.6972727272727274,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.06818181818181819
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 3.068523548681985
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/util.py",
+      "node_id": 868,
+      "node_type": "FunctionDef",
+      "name": "cleanup",
+      "start_line": 146,
+      "end_line": 161,
+      "line_count": 16,
+      "signals": {
+        "sbfl": 13.479431474665006,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2494707554578781,
+        "structural": 0.0,
+        "combined": 13.880943623221581,
+        "boosted": 13.880943623221581
+      },
+      "negative_signals": {
+        "total": 0.025,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0625
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 3.068523548681985
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/util.py",
+      "node_id": 1107,
+      "node_type": "FunctionDef",
+      "name": "build",
+      "start_line": 184,
+      "end_line": 187,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3135182857513428,
+        "structural": 1.5,
+        "combined": 3.4386991115355157,
+        "boosted": 8.59674777883879
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 3.068523548681985
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/util.py",
+      "node_id": 1008,
+      "node_type": "FunctionDef",
+      "name": "__repr__",
+      "start_line": 163,
+      "end_line": 164,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 6.227369021090306,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.08294899016618729,
+        "structural": 0.0,
+        "combined": 5.833860301980992,
+        "boosted": 0.5833860301980992
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 3.068523548681985
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/util.py",
+      "node_id": 1260,
+      "node_type": "FunctionDef",
+      "name": "simple_decorator",
+      "start_line": 206,
+      "end_line": 213,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.23429881036281586,
+        "structural": 0.0,
+        "combined": 0.3654702530192658,
+        "boosted": 0.3654702530192658
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 3.068523548681985
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/util.py",
+      "node_id": 163,
+      "node_type": "FunctionDef",
+      "name": "assert_node",
+      "start_line": 44,
+      "end_line": 79,
+      "line_count": 36,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3157714903354645,
+        "structural": 0.0,
+        "combined": 0.2710177905850569,
+        "boosted": 0.2710177905850569
+      },
+      "negative_signals": {
+        "total": 0.24666666666666662,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.5416666666666665
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 3.068523548681985
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/util.py",
+      "node_id": 132,
+      "node_type": "FunctionDef",
+      "name": "assert_startswith",
+      "start_line": 39,
+      "end_line": 41,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.149638369679451,
+        "structural": 0.0,
+        "combined": 0.14512371331033574,
+        "boosted": 0.14512371331033574
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 3.068523548681985
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/util.py",
+      "node_id": 533,
+      "node_type": "FunctionDef",
+      "name": "etree_parse",
+      "start_line": 82,
+      "end_line": 85,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.13689006865024567,
+        "structural": 0.0,
+        "combined": 0.12076832075354078,
+        "boosted": 0.12076832075354078
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 3.068523548681985
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/util.py",
+      "node_id": 93,
+      "node_type": "FunctionDef",
+      "name": "assert_not_re_search",
+      "start_line": 34,
+      "end_line": 36,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1314963549375534,
+        "structural": 0.0,
+        "combined": 0.1124680867749201,
+        "boosted": 0.1124680867749201
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 3.068523548681985
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/util.py",
+      "node_id": 52,
+      "node_type": "FunctionDef",
+      "name": "assert_re_search",
+      "start_line": 29,
+      "end_line": 31,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.11065788567066193,
+        "structural": 0.0,
+        "combined": 0.07495884209451542,
+        "boosted": 0.07495884209451542
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 3.068523548681985
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/util.py",
+      "node_id": 1153,
+      "node_type": "FunctionDef",
+      "name": "find_files",
+      "start_line": 194,
+      "end_line": 199,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.04622345417737961,
+        "structural": 0.0,
+        "combined": 0.07475151329393118,
+        "boosted": 0.07475151329393118
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 3.068523548681985
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/util.py",
+      "node_id": 567,
+      "node_type": "ClassDef",
+      "name": "Struct",
+      "start_line": 88,
+      "end_line": 90,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.004225352112676056,
+        "boosted": -0.004225352112676056
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 3.068523548681985
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/util.py",
+      "node_id": 1089,
+      "node_type": "FunctionDef",
+      "name": "__getattr__",
+      "start_line": 181,
+      "end_line": 182,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.15648823976516724,
+        "structural": 0.0,
+        "combined": -0.2611380698311497,
+        "boosted": -0.026113806983114968
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 3.068523548681985
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/util.py",
+      "node_id": 1072,
+      "node_type": "ClassDef",
+      "name": "SphinxTestAppWrapperForSkipBuilding",
+      "start_line": 171,
+      "end_line": 187,
+      "line_count": 17,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.08394366197183098,
+        "boosted": -0.08394366197183098
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 3.068523548681985
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/util.py",
+      "node_id": 1243,
+      "node_type": "FunctionDef",
+      "name": "strip_escseq",
+      "start_line": 202,
+      "end_line": 203,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.12297403812408447,
+        "structural": 0.0,
+        "combined": -0.3214636327850987,
+        "boosted": -0.3214636327850987
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 3.068523548681985
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/util.py",
+      "node_id": 1265,
+      "node_type": "FunctionDef",
+      "name": "wrapper",
+      "start_line": 211,
+      "end_line": 212,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.06522643566131592,
+        "structural": 0.0,
+        "combined": -0.42540931721808206,
+        "boosted": -0.42540931721808206
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 3.068523548681985
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/util.py",
+      "node_id": 1075,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 178,
+      "end_line": 179,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.22217875719070435,
+        "structural": 0.0,
+        "combined": -0.782895138465183,
+        "boosted": -0.782895138465183
+      },
+      "negative_signals": {
+        "total": 1.1800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 3.068523548681985
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/util.py",
+      "node_id": 568,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 89,
+      "end_line": 90,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.047114573419094086,
+        "structural": 0.0,
+        "combined": -1.0980106692540814,
+        "boosted": -1.0980106692540814
+      },
+      "negative_signals": {
+        "total": 1.1800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 3.068523548681985
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/comparer.py",
+      "node_id": 319,
+      "node_type": "FunctionDef",
+      "name": "pytest_assertrepr_compare",
+      "start_line": 91,
+      "end_line": 97,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 3.5,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.12808021903038025,
+        "structural": 1.5,
+        "combined": 6.588894909718602,
+        "boosted": 6.588894909718602
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.3
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.6359999999999997
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/comparer.py",
+      "node_id": 101,
+      "node_type": "FunctionDef",
+      "name": "diff",
+      "start_line": 44,
+      "end_line": 61,
+      "line_count": 18,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.38146960735321045,
+        "structural": 0.0,
+        "combined": 0.4959751901429953,
+        "boosted": 0.4959751901429953
+      },
+      "negative_signals": {
+        "total": 0.135,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.45,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.6359999999999997
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/comparer.py",
+      "node_id": 199,
+      "node_type": "FunctionDef",
+      "name": "_diff",
+      "start_line": 75,
+      "end_line": 88,
+      "line_count": 14,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.23653684556484222,
+        "structural": 0.0,
+        "combined": 0.38246735294455103,
+        "boosted": 0.38246735294455103
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.6359999999999997
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/comparer.py",
+      "node_id": 54,
+      "node_type": "FunctionDef",
+      "name": "__repr__",
+      "start_line": 38,
+      "end_line": 39,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.06258285045623779,
+        "structural": 0.0,
+        "combined": -0.4335364361890813,
+        "boosted": -0.04335364361890813
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.6359999999999997
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/comparer.py",
+      "node_id": 74,
+      "node_type": "FunctionDef",
+      "name": "__eq__",
+      "start_line": 41,
+      "end_line": 42,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.05510702729225159,
+        "structural": 0.0,
+        "combined": -0.46699291788425645,
+        "boosted": -0.04669929178842565
+      },
+      "negative_signals": {
+        "total": 0.56,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.6359999999999997
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/comparer.py",
+      "node_id": 41,
+      "node_type": "FunctionDef",
+      "name": "__str__",
+      "start_line": 35,
+      "end_line": 36,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.5461855670103093,
+        "boosted": -0.05461855670103093
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.6359999999999997
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/comparer.py",
+      "node_id": 164,
+      "node_type": "FunctionDef",
+      "name": "rdiff",
+      "start_line": 69,
+      "end_line": 73,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.13655449450016022,
+        "structural": 0.0,
+        "combined": -0.3096658274254848,
+        "boosted": -0.3096658274254848
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.6359999999999997
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/comparer.py",
+      "node_id": 129,
+      "node_type": "FunctionDef",
+      "name": "ldiff",
+      "start_line": 63,
+      "end_line": 67,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.13394123315811157,
+        "structural": 0.0,
+        "combined": -0.31436969784117236,
+        "boosted": -0.31436969784117236
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.6359999999999997
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/comparer.py",
+      "node_id": 12,
+      "node_type": "ClassDef",
+      "name": "PathComparer",
+      "start_line": 9,
+      "end_line": 88,
+      "line_count": 80,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.38242268041237115,
+        "boosted": -0.38242268041237115
+      },
+      "negative_signals": {
+        "total": 0.135,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.45,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.6359999999999997
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/testing/comparer.py",
+      "node_id": 15,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 29,
+      "end_line": 33,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.03848494961857796,
+        "structural": 0.0,
+        "combined": -0.871191008212333,
+        "boosted": -0.871191008212333
+      },
+      "negative_signals": {
+        "total": 0.9250000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.6359999999999997
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/rst.py",
+      "node_id": 436,
+      "node_type": "FunctionDef",
+      "name": "parse_directive",
+      "start_line": 82,
+      "end_line": 99,
+      "line_count": 18,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.24365586042404175,
+        "structural": 1.5,
+        "combined": 3.3486541066417113,
+        "boosted": 8.371635266604278
+      },
+      "negative_signals": {
+        "total": 0.07111111111111111,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.02777777777777778
+      },
+      "ground_truth": {
+        "is_buggy": true,
+        "method_match": false,
+        "lines_in_patch": [
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92
+        ],
+        "num_buggy_lines": 7
+      },
+      "file_rank": 6,
+      "is_gt_file": true,
+      "file_score": 2.2163127378103487
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/rst.py",
+      "node_id": 1121,
+      "node_type": "FunctionDef",
+      "name": "current_directive",
+      "start_line": 181,
+      "end_line": 186,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.13318882882595062,
+        "structural": 1.5,
+        "combined": 3.113468114883227,
+        "boosted": 7.783670287208068
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 6,
+      "is_gt_file": true,
+      "file_score": 2.2163127378103487
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/rst.py",
+      "node_id": 1880,
+      "node_type": "FunctionDef",
+      "name": "setup",
+      "start_line": 279,
+      "end_line": 287,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 3.608026765817729,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3216027617454529,
+        "structural": 0.0,
+        "combined": 3.5375040714543178,
+        "boosted": 3.5375040714543178
+      },
+      "negative_signals": {
+        "total": 0.6400000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 6,
+      "is_gt_file": true,
+      "file_score": 2.2163127378103487
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/rst.py",
+      "node_id": 879,
+      "node_type": "FunctionDef",
+      "name": "add_target_and_index",
+      "start_line": 154,
+      "end_line": 178,
+      "line_count": 25,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3981562852859497,
+        "structural": 0.0,
+        "combined": 0.6905489093335249,
+        "boosted": 0.6905489093335249
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 6,
+      "is_gt_file": true,
+      "file_score": 2.2163127378103487
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/rst.py",
+      "node_id": 93,
+      "node_type": "FunctionDef",
+      "name": "add_target_and_index",
+      "start_line": 39,
+      "end_line": 50,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.35717588663101196,
+        "structural": 0.0,
+        "combined": 0.6303730419288529,
+        "boosted": 0.6303730419288529
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 6,
+      "is_gt_file": true,
+      "file_score": 2.2163127378103487
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/rst.py",
+      "node_id": 1368,
+      "node_type": "FunctionDef",
+      "name": "note_object",
+      "start_line": 230,
+      "end_line": 236,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.29659295082092285,
+        "structural": 0.0,
+        "combined": 0.4065502383069295,
+        "boosted": 0.4065502383069295
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 6,
+      "is_gt_file": true,
+      "file_score": 2.2163127378103487
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/rst.py",
+      "node_id": 740,
+      "node_type": "FunctionDef",
+      "name": "handle_signature",
+      "start_line": 138,
+      "end_line": 152,
+      "line_count": 15,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2460506409406662,
+        "structural": 0.0,
+        "combined": 0.4005450445178217,
+        "boosted": 0.4005450445178217
+      },
+      "negative_signals": {
+        "total": 0.02666666666666667,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.06666666666666667
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 6,
+      "is_gt_file": true,
+      "file_score": 2.2163127378103487
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/rst.py",
+      "node_id": 545,
+      "node_type": "FunctionDef",
+      "name": "handle_signature",
+      "start_line": 106,
+      "end_line": 113,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2385561168193817,
+        "structural": 0.0,
+        "combined": 0.381038640936908,
+        "boosted": 0.381038640936908
+      },
+      "negative_signals": {
+        "total": 0.04000000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 6,
+      "is_gt_file": true,
+      "file_score": 2.2163127378103487
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/rst.py",
+      "node_id": 318,
+      "node_type": "FunctionDef",
+      "name": "_toc_entry_name",
+      "start_line": 64,
+      "end_line": 79,
+      "line_count": 16,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.20238345861434937,
+        "structural": 0.0,
+        "combined": 0.34756548682987065,
+        "boosted": 0.34756548682987065
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": true,
+        "method_match": false,
+        "lines_in_patch": [
+          75,
+          76,
+          77,
+          78,
+          79
+        ],
+        "num_buggy_lines": 5
+      },
+      "file_rank": 6,
+      "is_gt_file": true,
+      "file_score": 2.2163127378103487
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/rst.py",
+      "node_id": 1683,
+      "node_type": "FunctionDef",
+      "name": "resolve_any_xref",
+      "start_line": 261,
+      "end_line": 272,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.20900380611419678,
+        "structural": 0.0,
+        "combined": 0.33032996366525225,
+        "boosted": 0.33032996366525225
+      },
+      "negative_signals": {
+        "total": 0.03333333333333334,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.08333333333333334
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 6,
+      "is_gt_file": true,
+      "file_score": 2.2163127378103487
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/rst.py",
+      "node_id": 1586,
+      "node_type": "FunctionDef",
+      "name": "resolve_xref",
+      "start_line": 249,
+      "end_line": 259,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.19925034046173096,
+        "structural": 0.0,
+        "combined": 0.3107887186277581,
+        "boosted": 0.3107887186277581
+      },
+      "negative_signals": {
+        "total": 0.03636363636363637,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.09090909090909091
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 6,
+      "is_gt_file": true,
+      "file_score": 2.2163127378103487
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/rst.py",
+      "node_id": 242,
+      "node_type": "FunctionDef",
+      "name": "_object_hierarchy_parts",
+      "start_line": 55,
+      "end_line": 62,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.18212495744228363,
+        "structural": 0.0,
+        "combined": 0.2794625540581315,
+        "boosted": 0.2794625540581315
+      },
+      "negative_signals": {
+        "total": 0.04000000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 6,
+      "is_gt_file": true,
+      "file_score": 2.2163127378103487
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/rst.py",
+      "node_id": 1463,
+      "node_type": "FunctionDef",
+      "name": "clear_doc",
+      "start_line": 238,
+      "end_line": 241,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.15593725442886353,
+        "structural": 0.0,
+        "combined": 0.27650587330296483,
+        "boosted": 0.27650587330296483
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 6,
+      "is_gt_file": true,
+      "file_score": 2.2163127378103487
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/rst.py",
+      "node_id": 646,
+      "node_type": "FunctionDef",
+      "name": "before_content",
+      "start_line": 118,
+      "end_line": 121,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.19042372703552246,
+        "structural": 0.0,
+        "combined": 0.2185815239949509,
+        "boosted": 0.2185815239949509
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 6,
+      "is_gt_file": true,
+      "file_score": 2.2163127378103487
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/rst.py",
+      "node_id": 683,
+      "node_type": "FunctionDef",
+      "name": "after_content",
+      "start_line": 123,
+      "end_line": 126,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.15767493844032288,
+        "structural": 0.0,
+        "combined": 0.15963370452359166,
+        "boosted": 0.15963370452359166
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 6,
+      "is_gt_file": true,
+      "file_score": 2.2163127378103487
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/rst.py",
+      "node_id": 1515,
+      "node_type": "FunctionDef",
+      "name": "merge_domaindata",
+      "start_line": 243,
+      "end_line": 247,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1440722495317459,
+        "structural": 0.0,
+        "combined": 0.1541035683209057,
+        "boosted": 0.1541035683209057
+      },
+      "negative_signals": {
+        "total": 0.1,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 6,
+      "is_gt_file": true,
+      "file_score": 2.2163127378103487
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/rst.py",
+      "node_id": 1159,
+      "node_type": "FunctionDef",
+      "name": "handle_signature",
+      "start_line": 193,
+      "end_line": 197,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.21053609251976013,
+        "structural": 0.0,
+        "combined": 0.13373848569933133,
+        "boosted": 0.13373848569933133
+      },
+      "negative_signals": {
+        "total": 0.24,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 6,
+      "is_gt_file": true,
+      "file_score": 2.2163127378103487
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/rst.py",
+      "node_id": 1154,
+      "node_type": "ClassDef",
+      "name": "ReSTRole",
+      "start_line": 189,
+      "end_line": 200,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.04254355400696864,
+        "boosted": -0.04254355400696864
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 6,
+      "is_gt_file": true,
+      "file_score": 2.2163127378103487
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/rst.py",
+      "node_id": 540,
+      "node_type": "ClassDef",
+      "name": "ReSTDirective",
+      "start_line": 102,
+      "end_line": 126,
+      "line_count": 25,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.05613240418118467,
+        "boosted": -0.05613240418118467
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 6,
+      "is_gt_file": true,
+      "file_score": 2.2163127378103487
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/rst.py",
+      "node_id": 63,
+      "node_type": "ClassDef",
+      "name": "ReSTMarkup",
+      "start_line": 29,
+      "end_line": 79,
+      "line_count": 51,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.08331010452961674,
+        "boosted": -0.08331010452961674
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": true,
+        "method_match": false,
+        "lines_in_patch": [
+          75,
+          76,
+          77,
+          78,
+          79
+        ],
+        "num_buggy_lines": 5
+      },
+      "file_rank": 6,
+      "is_gt_file": true,
+      "file_score": 2.2163127378103487
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/rst.py",
+      "node_id": 711,
+      "node_type": "ClassDef",
+      "name": "ReSTDirectiveOption",
+      "start_line": 129,
+      "end_line": 186,
+      "line_count": 58,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.09062717770034842,
+        "boosted": -0.09062717770034842
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 6,
+      "is_gt_file": true,
+      "file_score": 2.2163127378103487
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/rst.py",
+      "node_id": 1226,
+      "node_type": "ClassDef",
+      "name": "ReSTDomain",
+      "start_line": 203,
+      "end_line": 276,
+      "line_count": 74,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.10735191637630662,
+        "boosted": -0.10735191637630662
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 6,
+      "is_gt_file": true,
+      "file_score": 2.2163127378103487
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/rst.py",
+      "node_id": 1327,
+      "node_type": "FunctionDef",
+      "name": "objects",
+      "start_line": 227,
+      "end_line": 228,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.06365229934453964,
+        "structural": 0.0,
+        "combined": -0.42751645351432344,
+        "boosted": -0.42751645351432344
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 6,
+      "is_gt_file": true,
+      "file_score": 2.2163127378103487
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/rst.py",
+      "node_id": 1815,
+      "node_type": "FunctionDef",
+      "name": "get_objects",
+      "start_line": 274,
+      "end_line": 276,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.12899672985076904,
+        "structural": 0.0,
+        "combined": -0.530941774770358,
+        "boosted": -0.530941774770358
+      },
+      "negative_signals": {
+        "total": 0.7600000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 6,
+      "is_gt_file": true,
+      "file_score": 2.2163127378103487
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/rst.py",
+      "node_id": 626,
+      "node_type": "FunctionDef",
+      "name": "get_index_text",
+      "start_line": 115,
+      "end_line": 116,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.08336406946182251,
+        "structural": 0.0,
+        "combined": -1.0320352673032143,
+        "boosted": -1.0320352673032143
+      },
+      "negative_signals": {
+        "total": 1.1800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 6,
+      "is_gt_file": true,
+      "file_score": 2.2163127378103487
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/rst.py",
+      "node_id": 229,
+      "node_type": "FunctionDef",
+      "name": "get_index_text",
+      "start_line": 52,
+      "end_line": 53,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.06380811333656311,
+        "structural": 0.0,
+        "combined": -1.0672359883286813,
+        "boosted": -1.0672359883286813
+      },
+      "negative_signals": {
+        "total": 1.1800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 6,
+      "is_gt_file": true,
+      "file_score": 2.2163127378103487
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/rst.py",
+      "node_id": 1206,
+      "node_type": "FunctionDef",
+      "name": "get_index_text",
+      "start_line": 199,
+      "end_line": 200,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.009537415578961372,
+        "structural": 0.0,
+        "combined": -1.1649232442923645,
+        "boosted": -1.1649232442923645
+      },
+      "negative_signals": {
+        "total": 1.1800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 6,
+      "is_gt_file": true,
+      "file_score": 2.2163127378103487
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 3252,
+      "node_type": "ClassDef",
+      "name": "StandardDomain",
+      "start_line": 502,
+      "end_line": 1090,
+      "line_count": 589,
+      "signals": {
+        "sbfl": 4.8693694563068535,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 4.651177871705243,
+        "boosted": 4.651177871705243
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 3693,
+      "node_type": "FunctionDef",
+      "name": "note_hyperlink_target",
+      "start_line": 593,
+      "end_line": 615,
+      "line_count": 23,
+      "signals": {
+        "sbfl": 3.5189396851802544,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.6093118190765381,
+        "structural": 0.0,
+        "combined": 4.519523698998775,
+        "boosted": 4.519523698998775
+      },
+      "negative_signals": {
+        "total": 0.09000000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.30000000000000004,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 7499,
+      "node_type": "FunctionDef",
+      "name": "setup",
+      "start_line": 1108,
+      "end_line": 1117,
+      "line_count": 10,
+      "signals": {
+        "sbfl": 4.115823125451335,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.350788950920105,
+        "structural": 0.0,
+        "combined": 4.104557471664372,
+        "boosted": 4.104557471664372
+      },
+      "negative_signals": {
+        "total": 0.6400000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 3636,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 585,
+      "end_line": 591,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 2.9665997852279107,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.18976543843746185,
+        "structural": 0.0,
+        "combined": 2.546297538605136,
+        "boosted": 2.546297538605136
+      },
+      "negative_signals": {
+        "total": 0.7600000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 5303,
+      "node_type": "FunctionDef",
+      "name": "_resolve_ref_xref",
+      "start_line": 797,
+      "end_line": 813,
+      "line_count": 17,
+      "signals": {
+        "sbfl": 1.2026755886059095,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.45242589712142944,
+        "structural": 0.0,
+        "combined": 1.9536528727593607,
+        "boosted": 1.9536528727593607
+      },
+      "negative_signals": {
+        "total": 0.05882352941176471,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.14705882352941177
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 6010,
+      "node_type": "FunctionDef",
+      "name": "_resolve_option_xref",
+      "start_line": 905,
+      "end_line": 936,
+      "line_count": 32,
+      "signals": {
+        "sbfl": 1.2026755886059095,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.41826188564300537,
+        "structural": 0.0,
+        "combined": 1.866952533345235,
+        "boosted": 1.866952533345235
+      },
+      "negative_signals": {
+        "total": 0.08,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.125
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 3845,
+      "node_type": "FunctionDef",
+      "name": "note_object",
+      "start_line": 621,
+      "end_line": 631,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 1.2026755886059095,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.37220656871795654,
+        "structural": 0.0,
+        "combined": 1.8246930703107649,
+        "boosted": 1.8246930703107649
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 6453,
+      "node_type": "FunctionDef",
+      "name": "resolve_any_xref",
+      "start_line": 968,
+      "end_line": 989,
+      "line_count": 22,
+      "signals": {
+        "sbfl": 1.2026755886059095,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3413338363170624,
+        "structural": 0.0,
+        "combined": 1.811167810001689,
+        "boosted": 1.811167810001689
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 5889,
+      "node_type": "FunctionDef",
+      "name": "_resolve_doc_xref",
+      "start_line": 888,
+      "end_line": 903,
+      "line_count": 16,
+      "signals": {
+        "sbfl": 1.2026755886059095,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3437286615371704,
+        "structural": 0.0,
+        "combined": 1.7920899546637743,
+        "boosted": 1.7920899546637743
+      },
+      "negative_signals": {
+        "total": 0.025,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0625
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 6340,
+      "node_type": "FunctionDef",
+      "name": "_resolve_obj_xref",
+      "start_line": 953,
+      "end_line": 966,
+      "line_count": 14,
+      "signals": {
+        "sbfl": 1.2026755886059095,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2374047338962555,
+        "structural": 0.0,
+        "combined": 1.6119583237130433,
+        "boosted": 1.6119583237130433
+      },
+      "negative_signals": {
+        "total": 0.014285714285714289,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.03571428571428572
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 5816,
+      "node_type": "FunctionDef",
+      "name": "_resolve_keyword_xref",
+      "start_line": 878,
+      "end_line": 886,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 1.2026755886059095,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2377411425113678,
+        "structural": 0.0,
+        "combined": 1.5681924562275353,
+        "boosted": 1.5681924562275353
+      },
+      "negative_signals": {
+        "total": 0.06000000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15000000000000002
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 6237,
+      "node_type": "FunctionDef",
+      "name": "_resolve_term_xref",
+      "start_line": 938,
+      "end_line": 951,
+      "line_count": 14,
+      "signals": {
+        "sbfl": 1.2026755886059095,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1946479231119156,
+        "structural": 0.0,
+        "combined": 1.5492817785869457,
+        "boosted": 1.5492817785869457
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 5413,
+      "node_type": "FunctionDef",
+      "name": "_resolve_numref_xref",
+      "start_line": 815,
+      "end_line": 876,
+      "line_count": 62,
+      "signals": {
+        "sbfl": 1.2026755886059095,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.27501994371414185,
+        "structural": 0.0,
+        "combined": 1.5297694189631814,
+        "boosted": 1.5297694189631814
+      },
+      "negative_signals": {
+        "total": 0.15129032258064515,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15322580645161288
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 4332,
+      "node_type": "FunctionDef",
+      "name": "merge_domaindata",
+      "start_line": 677,
+      "end_line": 693,
+      "line_count": 17,
+      "signals": {
+        "sbfl": 1.2026755886059095,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.23278911411762238,
+        "structural": 0.0,
+        "combined": 1.5171301927642726,
+        "boosted": 1.5171301927642726
+      },
+      "negative_signals": {
+        "total": 0.1,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 4534,
+      "node_type": "FunctionDef",
+      "name": "process_doc",
+      "start_line": 695,
+      "end_line": 745,
+      "line_count": 51,
+      "signals": {
+        "sbfl": 1.2026755886059095,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2600143849849701,
+        "structural": 0.0,
+        "combined": 1.5160236856619211,
+        "boosted": 1.5160236856619211
+      },
+      "negative_signals": {
+        "total": 0.14098039215686275,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.12745098039215688
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 5171,
+      "node_type": "FunctionDef",
+      "name": "resolve_xref",
+      "start_line": 777,
+      "end_line": 795,
+      "line_count": 19,
+      "signals": {
+        "sbfl": 1.2026755886059095,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.17402029037475586,
+        "structural": 0.0,
+        "combined": 1.5108091569384827,
+        "boosted": 1.5108091569384827
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 4132,
+      "node_type": "FunctionDef",
+      "name": "clear_doc",
+      "start_line": 659,
+      "end_line": 675,
+      "line_count": 17,
+      "signals": {
+        "sbfl": 1.2026755886059095,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.16692525148391724,
+        "structural": 0.0,
+        "combined": 1.4985752400236034,
+        "boosted": 1.4985752400236034
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 4064,
+      "node_type": "FunctionDef",
+      "name": "labels",
+      "start_line": 652,
+      "end_line": 653,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 1.8040133829088645,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.10881181806325912,
+        "structural": 0.0,
+        "combined": 1.4593375023341006,
+        "boosted": 1.4593375023341006
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 3972,
+      "node_type": "FunctionDef",
+      "name": "_note_term",
+      "start_line": 638,
+      "end_line": 645,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 1.2026755886059095,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1680273413658142,
+        "structural": 0.0,
+        "combined": 1.457976190709854,
+        "boosted": 1.457976190709854
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 4946,
+      "node_type": "FunctionDef",
+      "name": "add_program_option",
+      "start_line": 747,
+      "end_line": 750,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 1.2026755886059095,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.16390077769756317,
+        "structural": 0.0,
+        "combined": 1.3766226822842627,
+        "boosted": 1.3766226822842627
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 4099,
+      "node_type": "FunctionDef",
+      "name": "anonlabels",
+      "start_line": 656,
+      "end_line": 657,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 1.8040133829088645,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.04447934404015541,
+        "structural": 0.0,
+        "combined": 1.3435390490925139,
+        "boosted": 1.3435390490925139
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 6659,
+      "node_type": "FunctionDef",
+      "name": "get_objects",
+      "start_line": 991,
+      "end_line": 1010,
+      "line_count": 20,
+      "signals": {
+        "sbfl": 1.2026755886059095,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.38914188742637634,
+        "structural": 0.0,
+        "combined": 1.2577594550870843,
+        "boosted": 1.2577594550870843
+      },
+      "negative_signals": {
+        "total": 0.6400000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 4994,
+      "node_type": "FunctionDef",
+      "name": "build_reference_node",
+      "start_line": 752,
+      "end_line": 775,
+      "line_count": 24,
+      "signals": {
+        "sbfl": 1.2026755886059095,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.35813331604003906,
+        "structural": 0.0,
+        "combined": 1.2008697204144165,
+        "boosted": 1.2008697204144165
+      },
+      "negative_signals": {
+        "total": 0.6400000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 3937,
+      "node_type": "FunctionDef",
+      "name": "_terms",
+      "start_line": 634,
+      "end_line": 636,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 1.2026755886059095,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.20079857110977173,
+        "structural": 0.0,
+        "combined": 1.1133072869705534,
+        "boosted": 1.1133072869705534
+      },
+      "negative_signals": {
+        "total": 0.44999999999999996,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 7163,
+      "node_type": "FunctionDef",
+      "name": "get_fignumber",
+      "start_line": 1049,
+      "end_line": 1076,
+      "line_count": 28,
+      "signals": {
+        "sbfl": 1.2026755886059095,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2765546441078186,
+        "structural": 0.0,
+        "combined": 1.0529538047591593,
+        "boosted": 1.0529538047591593
+      },
+      "negative_signals": {
+        "total": 0.6400000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 4023,
+      "node_type": "FunctionDef",
+      "name": "progoptions",
+      "start_line": 648,
+      "end_line": 649,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 1.2026755886059095,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1140231117606163,
+        "structural": 0.0,
+        "combined": 0.8673800366863886,
+        "boosted": 0.8673800366863886
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 3804,
+      "node_type": "FunctionDef",
+      "name": "objects",
+      "start_line": 618,
+      "end_line": 619,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 1.2026755886059095,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.06760776787996292,
+        "structural": 0.0,
+        "combined": 0.7838324177012126,
+        "boosted": 0.7838324177012126
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 7317,
+      "node_type": "FunctionDef",
+      "name": "get_full_qualified_name",
+      "start_line": 1078,
+      "end_line": 1090,
+      "line_count": 13,
+      "signals": {
+        "sbfl": 1.2026755886059095,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.11228055506944656,
+        "structural": 0.0,
+        "combined": 0.7612890926548166,
+        "boosted": 0.7612890926548166
+      },
+      "negative_signals": {
+        "total": 0.6400000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 7058,
+      "node_type": "FunctionDef",
+      "name": "get_enumerable_node_type",
+      "start_line": 1033,
+      "end_line": 1047,
+      "line_count": 15,
+      "signals": {
+        "sbfl": 1.2026755886059095,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.15332038700580597,
+        "structural": 0.0,
+        "combined": 0.7379569703849664,
+        "boosted": 0.7379569703849664
+      },
+      "negative_signals": {
+        "total": 0.7366666666666668,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.16666666666666666
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 209,
+      "node_type": "FunctionDef",
+      "name": "add_target_and_index",
+      "start_line": 57,
+      "end_line": 73,
+      "line_count": 17,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4026747941970825,
+        "structural": 0.0,
+        "combined": 0.7202488283013913,
+        "boosted": 0.7202488283013913
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 6967,
+      "node_type": "FunctionDef",
+      "name": "get_numfig_title",
+      "start_line": 1019,
+      "end_line": 1031,
+      "line_count": 13,
+      "signals": {
+        "sbfl": 1.2026755886059095,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1513727456331253,
+        "structural": 0.0,
+        "combined": 0.7097319587463613,
+        "boosted": 0.7097319587463613
+      },
+      "negative_signals": {
+        "total": 0.7619230769230771,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.1923076923076923
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 592,
+      "node_type": "FunctionDef",
+      "name": "run",
+      "start_line": 113,
+      "end_line": 137,
+      "line_count": 25,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.38897615671157837,
+        "structural": 0.0,
+        "combined": 0.6934426684729628,
+        "boosted": 0.6934426684729628
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 416,
+      "node_type": "FunctionDef",
+      "name": "result_nodes",
+      "start_line": 85,
+      "end_line": 98,
+      "line_count": 14,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.37586498260498047,
+        "structural": 0.0,
+        "combined": 0.6585111827828388,
+        "boosted": 0.6585111827828388
+      },
+      "negative_signals": {
+        "total": 0.014285714285714289,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.03571428571428572
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 7403,
+      "node_type": "FunctionDef",
+      "name": "warn_missing_reference",
+      "start_line": 1093,
+      "end_line": 1105,
+      "line_count": 13,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3327615261077881,
+        "structural": 0.0,
+        "combined": 0.5954792519179218,
+        "boosted": 0.5954792519179218
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 1938,
+      "node_type": "FunctionDef",
+      "name": "run",
+      "start_line": 309,
+      "end_line": 405,
+      "line_count": 97,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.33663660287857056,
+        "structural": 0.0,
+        "combined": 0.48370839337255006,
+        "boosted": 0.48370839337255006
+      },
+      "negative_signals": {
+        "total": 0.09618556701030928,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0154639175257732
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 1274,
+      "node_type": "FunctionDef",
+      "name": "add_target_and_index",
+      "start_line": 203,
+      "end_line": 229,
+      "line_count": 27,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.27246636152267456,
+        "structural": 0.0,
+        "combined": 0.4387434395998613,
+        "boosted": 0.4387434395998613
+      },
+      "negative_signals": {
+        "total": 0.04444444444444445,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.11111111111111112
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 3163,
+      "node_type": "FunctionDef",
+      "name": "process_link",
+      "start_line": 491,
+      "end_line": 499,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.23371440172195435,
+        "structural": 0.0,
+        "combined": 0.41826873420068167,
+        "boosted": 0.41826873420068167
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 2881,
+      "node_type": "FunctionDef",
+      "name": "run",
+      "start_line": 452,
+      "end_line": 487,
+      "line_count": 36,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2658247947692871,
+        "structural": 0.0,
+        "combined": 0.4165936527671499,
+        "boosted": 0.4165936527671499
+      },
+      "negative_signals": {
+        "total": 0.052222222222222225,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.05555555555555556
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 144,
+      "node_type": "FunctionDef",
+      "name": "handle_signature",
+      "start_line": 47,
+      "end_line": 55,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.20360302925109863,
+        "structural": 0.0,
+        "combined": 0.3640682637531414,
+        "boosted": 0.3640682637531414
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 2590,
+      "node_type": "FunctionDef",
+      "name": "token_xrefs",
+      "start_line": 408,
+      "end_line": 438,
+      "line_count": 31,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.216572105884552,
+        "structural": 0.0,
+        "combined": 0.338600691911973,
+        "boosted": 0.338600691911973
+      },
+      "negative_signals": {
+        "total": 0.04290322580645161,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.03225806451612903
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 6948,
+      "node_type": "FunctionDef",
+      "name": "is_enumerable_node",
+      "start_line": 1016,
+      "end_line": 1017,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 1.2026755886059095,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1295480728149414,
+        "structural": 0.0,
+        "combined": 0.25532496658417364,
+        "boosted": 0.25532496658417364
+      },
+      "negative_signals": {
+        "total": 1.1800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 862,
+      "node_type": "FunctionDef",
+      "name": "handle_signature",
+      "start_line": 145,
+      "end_line": 201,
+      "line_count": 57,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.19041520357131958,
+        "structural": 0.0,
+        "combined": 0.1863858718234655,
+        "boosted": 0.1863858718234655
+      },
+      "negative_signals": {
+        "total": 0.14105263157894737,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.05263157894736842
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 1548,
+      "node_type": "FunctionDef",
+      "name": "run",
+      "start_line": 243,
+      "end_line": 249,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1604001224040985,
+        "structural": 0.0,
+        "combined": 0.16684018451717142,
+        "boosted": 0.16684018451717142
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 1703,
+      "node_type": "FunctionDef",
+      "name": "make_glossary_term",
+      "start_line": 265,
+      "end_line": 292,
+      "line_count": 28,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.43229013681411743,
+        "structural": 0.0,
+        "combined": 0.1306021030245876,
+        "boosted": 0.1306021030245876
+      },
+      "negative_signals": {
+        "total": 0.6400000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 1612,
+      "node_type": "FunctionDef",
+      "name": "process_link",
+      "start_line": 253,
+      "end_line": 256,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.18547950685024261,
+        "structural": 0.0,
+        "combined": 0.09278880615317618,
+        "boosted": 0.09278880615317618
+      },
+      "negative_signals": {
+        "total": 0.24,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 6931,
+      "node_type": "FunctionDef",
+      "name": "get_type_name",
+      "start_line": 1012,
+      "end_line": 1014,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 1.2026755886059095,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.02173144370317459,
+        "structural": 0.0,
+        "combined": 0.06098645763867822,
+        "boosted": 0.06098645763867822
+      },
+      "negative_signals": {
+        "total": 1.1800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 401,
+      "node_type": "ClassDef",
+      "name": "EnvVar",
+      "start_line": 76,
+      "end_line": 77,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.0005371530886302596,
+        "boosted": -0.0005371530886302596
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 1609,
+      "node_type": "ClassDef",
+      "name": "OptionXRefRole",
+      "start_line": 252,
+      "end_line": 256,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.001342882721575649,
+        "boosted": -0.001342882721575649
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 3160,
+      "node_type": "ClassDef",
+      "name": "TokenXRefRole",
+      "start_line": 490,
+      "end_line": 499,
+      "line_count": 10,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.002685765443151298,
+        "boosted": -0.002685765443151298
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 2854,
+      "node_type": "ClassDef",
+      "name": "ProductionList",
+      "start_line": 441,
+      "end_line": 487,
+      "line_count": 47,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.042623097582811104,
+        "boosted": -0.042623097582811104
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 1521,
+      "node_type": "ClassDef",
+      "name": "Program",
+      "start_line": 232,
+      "end_line": 249,
+      "line_count": 18,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.049834377797672344,
+        "boosted": -0.049834377797672344
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 411,
+      "node_type": "ClassDef",
+      "name": "EnvVarXRefRole",
+      "start_line": 80,
+      "end_line": 98,
+      "line_count": 19,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.05010295434198747,
+        "boosted": -0.05010295434198747
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 106,
+      "node_type": "ClassDef",
+      "name": "GenericObject",
+      "start_line": 40,
+      "end_line": 73,
+      "line_count": 34,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.05413160250671442,
+        "boosted": -0.05413160250671442
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 853,
+      "node_type": "ClassDef",
+      "name": "Cmdoption",
+      "start_line": 140,
+      "end_line": 229,
+      "line_count": 90,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.054171888988361686,
+        "boosted": -0.054171888988361686
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 561,
+      "node_type": "ClassDef",
+      "name": "Target",
+      "start_line": 101,
+      "end_line": 137,
+      "line_count": 37,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.05493733213965981,
+        "boosted": -0.05493733213965981
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 1906,
+      "node_type": "ClassDef",
+      "name": "Glossary",
+      "start_line": 295,
+      "end_line": 405,
+      "line_count": 111,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.07481199641897941,
+        "boosted": -0.07481199641897941
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 1661,
+      "node_type": "FunctionDef",
+      "name": "split_term_classifiers",
+      "start_line": 259,
+      "end_line": 262,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.06661798804998398,
+        "structural": 0.0,
+        "combined": -0.12116192768728935,
+        "boosted": -0.12116192768728935
+      },
+      "negative_signals": {
+        "total": 0.24,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/domains/std.py",
+      "node_id": 7066,
+      "node_type": "FunctionDef",
+      "name": "has_child",
+      "start_line": 1035,
+      "end_line": 1036,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.027764322236180305,
+        "structural": 0.0,
+        "combined": -1.1305613730635058,
+        "boosted": -1.1305613730635058
+      },
+      "negative_signals": {
+        "total": 1.1800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.244994432064365
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/util/rst.py",
+      "node_id": 339,
+      "node_type": "FunctionDef",
+      "name": "prepend_prolog",
+      "start_line": 78,
+      "end_line": 97,
+      "line_count": 20,
+      "signals": {
+        "sbfl": 8.23215686204956,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.43062928318977356,
+        "structural": 0.0,
+        "combined": 8.902744117245698,
+        "boosted": 8.902744117245698
+      },
+      "negative_signals": {
+        "total": 0.05,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": true,
+        "method_match": true,
+        "lines_in_patch": [
+          78,
+          79,
+          80,
+          81,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92
+        ],
+        "num_buggy_lines": 11
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 3.360522141924659
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/util/rst.py",
+      "node_id": 253,
+      "node_type": "FunctionDef",
+      "name": "default_role",
+      "start_line": 64,
+      "end_line": 75,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.40526288747787476,
+        "structural": 0.0,
+        "combined": 0.6967459247329019,
+        "boosted": 0.6967459247329019
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": true,
+        "method_match": false,
+        "lines_in_patch": [
+          75
+        ],
+        "num_buggy_lines": 1
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 3.360522141924659
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/util/rst.py",
+      "node_id": 448,
+      "node_type": "FunctionDef",
+      "name": "append_epilog",
+      "start_line": 100,
+      "end_line": 110,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.31568294763565063,
+        "structural": 0.0,
+        "combined": 0.47186566938053476,
+        "boosted": 0.47186566938053476
+      },
+      "negative_signals": {
+        "total": 0.06636363636363637,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.09090909090909091
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 3.360522141924659
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/util/rst.py",
+      "node_id": 188,
+      "node_type": "FunctionDef",
+      "name": "heading",
+      "start_line": 55,
+      "end_line": 60,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.18028990924358368,
+        "structural": 0.0,
+        "combined": 0.09815820027481428,
+        "boosted": 0.09815820027481428
+      },
+      "negative_signals": {
+        "total": 0.21,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 3.360522141924659
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/util/rst.py",
+      "node_id": 134,
+      "node_type": "FunctionDef",
+      "name": "textwidth",
+      "start_line": 43,
+      "end_line": 51,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.08101796358823776,
+        "structural": 0.0,
+        "combined": 0.09128687991337345,
+        "boosted": 0.09128687991337345
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 3.360522141924659
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/util/rst.py",
+      "node_id": 101,
+      "node_type": "FunctionDef",
+      "name": "escape",
+      "start_line": 37,
+      "end_line": 40,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.15976756811141968,
+        "structural": 0.0,
+        "combined": 0.03667253169146452,
+        "boosted": 0.03667253169146452
+      },
+      "negative_signals": {
+        "total": 0.24,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 3.360522141924659
+    },
+    {
+      "task_id": "sphinx-doc__sphinx-11445",
+      "file_path": "/opt/SWE-bench/testbed/sphinx-doc__sphinx/setup_sphinx-doc__sphinx__7.1/sphinx/util/rst.py",
+      "node_id": 145,
+      "node_type": "FunctionDef",
+      "name": "charwidth",
+      "start_line": 45,
+      "end_line": 49,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.08304504305124283,
+        "structural": 0.0,
+        "combined": 0.015844713855873473,
+        "boosted": 0.015844713855873473
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": true,
+      "file_score": 3.360522141924659
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.13/pylint/config/options_provider_mixin.py": 2.7441829869215275,
+  "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.13/pylint/testutils/decorator.py": 2.078460969082653,
+  "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.13/pylint/checkers/base_checker.py": 1.5812370232600774,
+  "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.13/pylint/checkers/misc.py": 1.6182223848847885,
+  "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.13/pylint/config/option.py": 2.7260646675067286,
+  "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.13/pylint/utils/utils.py": 1.9242809417694555,
+  "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.13/pylint/testutils/tokenize_str.py": 1.085440840479949,
+  "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.13/pylint/utils/linterstats.py": 1.085440840479949
+}

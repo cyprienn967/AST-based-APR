@@ -1,0 +1,3592 @@
+{
+  "task_id": "sympy__sympy-15346",
+  "num_files_processed": 3,
+  "files": [
+    {
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/printing/precedence.py",
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.7321021244319,
+      "num_nodes": 9,
+      "num_buggy_nodes": 0
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/simplify/trigsimp.py",
+      "file_rank": 59,
+      "is_gt_file": true,
+      "file_score": 0.37981783735349905,
+      "num_nodes": 24,
+      "num_buggy_nodes": 1
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115,
+      "num_nodes": 58,
+      "num_buggy_nodes": 0
+    }
+  ],
+  "num_nodes": 91,
+  "num_buggy_nodes": 1,
+  "nodes": [
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/printing/precedence.py",
+      "node_id": 190,
+      "node_type": "FunctionDef",
+      "name": "precedence_Rational",
+      "start_line": 65,
+      "end_line": 68,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 2.3333333333333335,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.14635774493217468,
+        "structural": 0.0,
+        "combined": 2.468934136956346,
+        "boosted": 2.468934136956346
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.7321021244319
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/printing/precedence.py",
+      "node_id": 367,
+      "node_type": "FunctionDef",
+      "name": "precedence",
+      "start_line": 116,
+      "end_line": 132,
+      "line_count": 17,
+      "signals": {
+        "sbfl": 2.239067642774378,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1255292296409607,
+        "structural": 0.0,
+        "combined": 2.378157511030068,
+        "boosted": 2.378157511030068
+      },
+      "negative_signals": {
+        "total": 0.05352941176470588,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.05882352941176471
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.7321021244319
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/printing/precedence.py",
+      "node_id": 169,
+      "node_type": "FunctionDef",
+      "name": "precedence_Mul",
+      "start_line": 59,
+      "end_line": 62,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.647150228929434,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.09668569266796112,
+        "structural": 0.0,
+        "combined": 0.6933413384768621,
+        "boosted": 0.6933413384768621
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.7321021244319
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/printing/precedence.py",
+      "node_id": 452,
+      "node_type": "FunctionDef",
+      "name": "precedence_traditional",
+      "start_line": 135,
+      "end_line": 153,
+      "line_count": 19,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.28139472007751465,
+        "structural": 0.0,
+        "combined": 0.34609769944189994,
+        "boosted": 0.34609769944189994
+      },
+      "negative_signals": {
+        "total": 0.1231578947368421,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.15789473684210525
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.7321021244319
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/printing/precedence.py",
+      "node_id": 257,
+      "node_type": "FunctionDef",
+      "name": "precedence_PolyElement",
+      "start_line": 83,
+      "end_line": 91,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.12512969970703125,
+        "structural": 0.0,
+        "combined": 0.20758640064912684,
+        "boosted": 0.20758640064912684
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.7321021244319
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/printing/precedence.py",
+      "node_id": 303,
+      "node_type": "FunctionDef",
+      "name": "precedence_FracElement",
+      "start_line": 94,
+      "end_line": 98,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.10437816381454468,
+        "structural": 0.0,
+        "combined": 0.058076773297552974,
+        "boosted": 0.058076773297552974
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.7321021244319
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/printing/precedence.py",
+      "node_id": 213,
+      "node_type": "FunctionDef",
+      "name": "precedence_Integer",
+      "start_line": 71,
+      "end_line": 74,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0714297965168953,
+        "structural": 0.0,
+        "combined": 0.0007304964755095733,
+        "boosted": 0.0007304964755095733
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.7321021244319
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/printing/precedence.py",
+      "node_id": 236,
+      "node_type": "FunctionDef",
+      "name": "precedence_Float",
+      "start_line": 77,
+      "end_line": 80,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.07148868590593338,
+        "structural": 0.0,
+        "combined": -0.039163502624221885,
+        "boosted": -0.039163502624221885
+      },
+      "negative_signals": {
+        "total": 0.16,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.7321021244319
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/printing/precedence.py",
+      "node_id": 328,
+      "node_type": "FunctionDef",
+      "name": "precedence_UnevaluatedExpr",
+      "start_line": 101,
+      "end_line": 102,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.040086809545755386,
+        "structural": 0.0,
+        "combined": -0.4717653114450913,
+        "boosted": -0.4717653114450913
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.7321021244319
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/simplify/trigsimp.py",
+      "node_id": 7187,
+      "node_type": "FunctionDef",
+      "name": "_futrig",
+      "start_line": 1110,
+      "end_line": 1167,
+      "line_count": 58,
+      "signals": {
+        "sbfl": 11.039383479324018,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3744129538536072,
+        "structural": 0.0,
+        "combined": 11.578704947521015,
+        "boosted": 11.578704947521015
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": true,
+        "method_match": true,
+        "lines_in_patch": [
+          1143,
+          1144,
+          1145,
+          1146,
+          1147,
+          1148,
+          1149,
+          1150
+        ],
+        "num_buggy_lines": 8
+      },
+      "file_rank": 59,
+      "is_gt_file": true,
+      "file_score": 0.37981783735349905
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/simplify/trigsimp.py",
+      "node_id": 2156,
+      "node_type": "FunctionDef",
+      "name": "f",
+      "start_line": 544,
+      "end_line": 589,
+      "line_count": 46,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3959904611110687,
+        "structural": 1.5,
+        "combined": 3.593794886996635,
+        "boosted": 8.984487217491587
+      },
+      "negative_signals": {
+        "total": 0.1073913043478261,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.04347826086956522
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 59,
+      "is_gt_file": true,
+      "file_score": 0.37981783735349905
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/simplify/trigsimp.py",
+      "node_id": 3195,
+      "node_type": "FunctionDef",
+      "name": "_dotrig",
+      "start_line": 741,
+      "end_line": 747,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.16898119449615479,
+        "structural": 1.5,
+        "combined": 3.1224014442107255,
+        "boosted": 7.806003610526814
+      },
+      "negative_signals": {
+        "total": 0.18,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 59,
+      "is_gt_file": true,
+      "file_score": 0.37981783735349905
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/simplify/trigsimp.py",
+      "node_id": 1824,
+      "node_type": "FunctionDef",
+      "name": "trigsimp",
+      "start_line": 428,
+      "end_line": 513,
+      "line_count": 86,
+      "signals": {
+        "sbfl": 4.5825756949558425,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.47065669298171997,
+        "structural": 0.0,
+        "combined": 5.131100325867985,
+        "boosted": 5.131100325867985
+      },
+      "negative_signals": {
+        "total": 0.2769767441860465,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.6000000000000001,
+        "safe_patterns": 0.017441860465116282
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 59,
+      "is_gt_file": true,
+      "file_score": 0.37981783735349905
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/simplify/trigsimp.py",
+      "node_id": 7044,
+      "node_type": "FunctionDef",
+      "name": "futrig",
+      "start_line": 1066,
+      "end_line": 1107,
+      "line_count": 42,
+      "signals": {
+        "sbfl": 2.3594923521903164,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.6152798533439636,
+        "structural": 0.0,
+        "combined": 3.2614078529153336,
+        "boosted": 3.2614078529153336
+      },
+      "negative_signals": {
+        "total": 0.195,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.55,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 59,
+      "is_gt_file": true,
+      "file_score": 0.37981783735349905
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/simplify/trigsimp.py",
+      "node_id": 1901,
+      "node_type": "FunctionDef",
+      "name": "groebnersimp",
+      "start_line": 491,
+      "end_line": 502,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 1.3093073414159548,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.132902592420578,
+        "structural": 0.0,
+        "combined": 1.5455067976889616,
+        "boosted": 1.5455067976889616
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 59,
+      "is_gt_file": true,
+      "file_score": 0.37981783735349905
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/simplify/trigsimp.py",
+      "node_id": 7570,
+      "node_type": "FunctionDef",
+      "name": "_is_Expr",
+      "start_line": 1170,
+      "end_line": 1178,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 0.9941348467724342,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.16514477133750916,
+        "structural": 0.0,
+        "combined": 1.1841265276169257,
+        "boosted": 1.1841265276169257
+      },
+      "negative_signals": {
+        "total": 0.10500000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 59,
+      "is_gt_file": true,
+      "file_score": 0.37981783735349905
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/simplify/trigsimp.py",
+      "node_id": 7622,
+      "node_type": "FunctionDef",
+      "name": "_eapply",
+      "start_line": 1181,
+      "end_line": 1190,
+      "line_count": 10,
+      "signals": {
+        "sbfl": 0.7570719217728537,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1507227122783661,
+        "structural": 0.0,
+        "combined": 0.9808517954705512,
+        "boosted": 0.9808517954705512
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 59,
+      "is_gt_file": true,
+      "file_score": 0.37981783735349905
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/simplify/trigsimp.py",
+      "node_id": 3252,
+      "node_type": "FunctionDef",
+      "name": "_trigpats",
+      "start_line": 751,
+      "end_line": 832,
+      "line_count": 82,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5381940603256226,
+        "structural": 0.0,
+        "combined": 0.8580770396785576,
+        "boosted": 0.8580770396785576
+      },
+      "negative_signals": {
+        "total": 0.09,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 59,
+      "is_gt_file": true,
+      "file_score": 0.37981783735349905
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/simplify/trigsimp.py",
+      "node_id": 5806,
+      "node_type": "FunctionDef",
+      "name": "_match_div_rewrite",
+      "start_line": 883,
+      "end_line": 924,
+      "line_count": 42,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5112677216529846,
+        "structural": 0.0,
+        "combined": 0.7896936636812547,
+        "boosted": 0.7896936636812547
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 59,
+      "is_gt_file": true,
+      "file_score": 0.37981783735349905
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/simplify/trigsimp.py",
+      "node_id": 2079,
+      "node_type": "FunctionDef",
+      "name": "exptrigsimp",
+      "start_line": 516,
+      "end_line": 602,
+      "line_count": 87,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.46919673681259155,
+        "structural": 0.0,
+        "combined": 0.5584259508545705,
+        "boosted": 0.5584259508545705
+      },
+      "negative_signals": {
+        "total": 0.2641954022988506,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.55,
+        "safe_patterns": 0.02298850574712644
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 59,
+      "is_gt_file": true,
+      "file_score": 0.37981783735349905
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/simplify/trigsimp.py",
+      "node_id": 2185,
+      "node_type": "FunctionDef",
+      "name": "signlog",
+      "start_line": 550,
+      "end_line": 558,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3444432318210602,
+        "structural": 0.0,
+        "combined": 0.5577289097148831,
+        "boosted": 0.5577289097148831
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 59,
+      "is_gt_file": true,
+      "file_score": 0.37981783735349905
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/simplify/trigsimp.py",
+      "node_id": 5464,
+      "node_type": "FunctionDef",
+      "name": "_replace_mul_fpowxgpow",
+      "start_line": 835,
+      "end_line": 876,
+      "line_count": 42,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3428736925125122,
+        "structural": 0.0,
+        "combined": 0.48182250646649966,
+        "boosted": 0.48182250646649966
+      },
+      "negative_signals": {
+        "total": 0.12476190476190477,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.30000000000000004,
+        "safe_patterns": 0.011904761904761904
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 59,
+      "is_gt_file": true,
+      "file_score": 0.37981783735349905
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/simplify/trigsimp.py",
+      "node_id": 477,
+      "node_type": "FunctionDef",
+      "name": "analyse_gens",
+      "start_line": 249,
+      "end_line": 350,
+      "line_count": 102,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.37262365221977234,
+        "structural": 0.0,
+        "combined": 0.43500828828130456,
+        "boosted": 0.43500828828130456
+      },
+      "negative_signals": {
+        "total": 0.21,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.5,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 59,
+      "is_gt_file": true,
+      "file_score": 0.37981783735349905
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/simplify/trigsimp.py",
+      "node_id": 2089,
+      "node_type": "FunctionDef",
+      "name": "exp_trig",
+      "start_line": 534,
+      "end_line": 541,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2344546765089035,
+        "structural": 0.0,
+        "combined": 0.42000161099333727,
+        "boosted": 0.42000161099333727
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 59,
+      "is_gt_file": true,
+      "file_score": 0.37981783735349905
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/simplify/trigsimp.py",
+      "node_id": 6131,
+      "node_type": "FunctionDef",
+      "name": "__trigsimp",
+      "start_line": 936,
+      "end_line": 1062,
+      "line_count": 127,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3030649721622467,
+        "structural": 0.0,
+        "combined": 0.31460250537407947,
+        "boosted": 0.31460250537407947
+      },
+      "negative_signals": {
+        "total": 0.19889763779527558,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.5,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.047244094488188976
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 59,
+      "is_gt_file": true,
+      "file_score": 0.37981783735349905
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/simplify/trigsimp.py",
+      "node_id": 1905,
+      "node_type": "FunctionDef",
+      "name": "traverse",
+      "start_line": 492,
+      "end_line": 498,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.0545544725589981,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.11696793138980865,
+        "structural": 0.0,
+        "combined": 0.2633320431783007,
+        "boosted": 0.2633320431783007
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 59,
+      "is_gt_file": true,
+      "file_score": 0.37981783735349905
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/simplify/trigsimp.py",
+      "node_id": 2933,
+      "node_type": "FunctionDef",
+      "name": "groebnersimp",
+      "start_line": 702,
+      "end_line": 712,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1391933411359787,
+        "structural": 0.0,
+        "combined": 0.2477749048010642,
+        "boosted": 0.2477749048010642
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 59,
+      "is_gt_file": true,
+      "file_score": 0.37981783735349905
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/simplify/trigsimp.py",
+      "node_id": 2938,
+      "node_type": "FunctionDef",
+      "name": "traverse",
+      "start_line": 703,
+      "end_line": 709,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.11696793138980865,
+        "structural": 0.0,
+        "combined": 0.20877757061930263,
+        "boosted": 0.20877757061930263
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 59,
+      "is_gt_file": true,
+      "file_score": 0.37981783735349905
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/simplify/trigsimp.py",
+      "node_id": 6105,
+      "node_type": "FunctionDef",
+      "name": "_trigsimp",
+      "start_line": 927,
+      "end_line": 932,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.16619689762592316,
+        "structural": 0.0,
+        "combined": 0.17764181068464488,
+        "boosted": 0.17764181068464488
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 59,
+      "is_gt_file": true,
+      "file_score": 0.37981783735349905
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/simplify/trigsimp.py",
+      "node_id": 80,
+      "node_type": "FunctionDef",
+      "name": "parse_hints",
+      "start_line": 204,
+      "end_line": 222,
+      "line_count": 19,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.20202285051345825,
+        "structural": 0.0,
+        "combined": 0.16569332022099617,
+        "boosted": 0.16569332022099617
+      },
+      "negative_signals": {
+        "total": 0.1931578947368421,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.15789473684210525
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 59,
+      "is_gt_file": true,
+      "file_score": 0.37981783735349905
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/simplify/trigsimp.py",
+      "node_id": 2660,
+      "node_type": "FunctionDef",
+      "name": "trigsimp_old",
+      "start_line": 606,
+      "end_line": 738,
+      "line_count": 133,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3558206558227539,
+        "structural": 0.0,
+        "combined": 0.16491769352828115,
+        "boosted": 0.16491769352828115
+      },
+      "negative_signals": {
+        "total": 0.44203007518797,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.5,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.6000000000000001,
+        "safe_patterns": 0.030075187969924807
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 59,
+      "is_gt_file": true,
+      "file_score": 0.37981783735349905
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/simplify/trigsimp.py",
+      "node_id": 241,
+      "node_type": "FunctionDef",
+      "name": "build_ideal",
+      "start_line": 224,
+      "end_line": 247,
+      "line_count": 24,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4171445071697235,
+        "structural": 0.0,
+        "combined": -0.00019030726256496957,
+        "boosted": -0.00019030726256496957
+      },
+      "negative_signals": {
+        "total": 0.7450000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.35,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 59,
+      "is_gt_file": true,
+      "file_score": 0.37981783735349905
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/simplify/trigsimp.py",
+      "node_id": 66,
+      "node_type": "FunctionDef",
+      "name": "trigsimp_groebner",
+      "start_line": 28,
+      "end_line": 422,
+      "line_count": 395,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3160710632801056,
+        "structural": 0.0,
+        "combined": -0.22419622182605148,
+        "boosted": -0.22419622182605148
+      },
+      "negative_signals": {
+        "total": 0.6935443037974685,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.7,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.30000000000000004,
+        "docstring_quality": 0.6000000000000001,
+        "safe_patterns": 0.008860759493670885
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 59,
+      "is_gt_file": true,
+      "file_score": 0.37981783735349905
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 3136,
+      "node_type": "FunctionDef",
+      "name": "simplify",
+      "start_line": 742,
+      "end_line": 754,
+      "line_count": 13,
+      "signals": {
+        "sbfl": 1.4785533905932737,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5045937299728394,
+        "structural": 3.0,
+        "combined": 8.324190525597015,
+        "boosted": 41.620952627985076
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 857,
+      "node_type": "FunctionDef",
+      "name": "_eval_matrix_mul",
+      "start_line": 169,
+      "end_line": 202,
+      "line_count": 34,
+      "signals": {
+        "sbfl": 16.979311381657435,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4435272216796875,
+        "structural": 0.0,
+        "combined": 17.740777789587757,
+        "boosted": 17.740777789587757
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 97,
+      "node_type": "ClassDef",
+      "name": "DenseMatrix",
+      "start_line": 40,
+      "end_line": 401,
+      "line_count": 362,
+      "signals": {
+        "sbfl": 14.761222303696044,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 14.687942951469324,
+        "boosted": 14.687942951469324
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 2323,
+      "node_type": "FunctionDef",
+      "name": "_new",
+      "start_line": 423,
+      "end_line": 438,
+      "line_count": 16,
+      "signals": {
+        "sbfl": 7.231155300614687,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2186628133058548,
+        "structural": 0.0,
+        "combined": 7.5715094981684645,
+        "boosted": 7.5715094981684645
+      },
+      "negative_signals": {
+        "total": 0.05,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.125
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 2300,
+      "node_type": "ClassDef",
+      "name": "MutableDenseMatrix",
+      "start_line": 418,
+      "end_line": 784,
+      "line_count": 367,
+      "signals": {
+        "sbfl": 6.0881610200899505,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 6.013869522114242,
+        "boosted": 6.013869522114242
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 2121,
+      "node_type": "FunctionDef",
+      "name": "equals",
+      "start_line": 359,
+      "end_line": 401,
+      "line_count": 43,
+      "signals": {
+        "sbfl": 3.6149932172316843,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.562102198600769,
+        "structural": 0.0,
+        "combined": 4.398770395690377,
+        "boosted": 4.398770395690377
+      },
+      "negative_signals": {
+        "total": 0.21930232558139537,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.6000000000000001,
+        "safe_patterns": 0.023255813953488375
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 1533,
+      "node_type": "FunctionDef",
+      "name": "_LDLdecomposition",
+      "start_line": 290,
+      "end_line": 306,
+      "line_count": 17,
+      "signals": {
+        "sbfl": 3.6149932172316843,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3694688081741333,
+        "structural": 0.0,
+        "combined": 4.231595776398566,
+        "boosted": 4.231595776398566
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 1919,
+      "node_type": "FunctionDef",
+      "name": "_upper_triangular_solve",
+      "start_line": 322,
+      "end_line": 332,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 3.6149932172316843,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.364435613155365,
+        "structural": 0.0,
+        "combined": 4.2237506002635685,
+        "boosted": 4.2237506002635685
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 2110,
+      "node_type": "FunctionDef",
+      "name": "as_mutable",
+      "start_line": 342,
+      "end_line": 357,
+      "line_count": 16,
+      "signals": {
+        "sbfl": 3.6149932172316843,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.41477251052856445,
+        "structural": 0.0,
+        "combined": 4.22334486978634,
+        "boosted": 4.22334486978634
+      },
+      "negative_signals": {
+        "total": 0.135,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.45,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 1783,
+      "node_type": "FunctionDef",
+      "name": "_lower_triangular_solve",
+      "start_line": 308,
+      "end_line": 320,
+      "line_count": 13,
+      "signals": {
+        "sbfl": 3.6149932172316843,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3555126190185547,
+        "structural": 0.0,
+        "combined": 4.207284352517714,
+        "boosted": 4.207284352517714
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 473,
+      "node_type": "FunctionDef",
+      "name": "_cholesky",
+      "start_line": 132,
+      "end_line": 148,
+      "line_count": 17,
+      "signals": {
+        "sbfl": 3.6149932172316843,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3424842953681946,
+        "structural": 0.0,
+        "combined": 4.168023653347877,
+        "boosted": 4.168023653347877
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 1251,
+      "node_type": "FunctionDef",
+      "name": "_eval_inverse",
+      "start_line": 214,
+      "end_line": 275,
+      "line_count": 62,
+      "signals": {
+        "sbfl": 3.6149932172316843,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3379478454589844,
+        "structural": 0.0,
+        "combined": 4.011393893060729,
+        "boosted": 4.011393893060729
+      },
+      "negative_signals": {
+        "total": 0.1993548387096774,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.30000000000000004,
+        "safe_patterns": 0.048387096774193554
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 680,
+      "node_type": "FunctionDef",
+      "name": "_diagonal_solve",
+      "start_line": 150,
+      "end_line": 154,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 3.6149932172316843,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.36420613527297974,
+        "structural": 0.0,
+        "combined": 3.98455211497406,
+        "boosted": 3.98455211497406
+      },
+      "negative_signals": {
+        "total": 0.285,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 726,
+      "node_type": "FunctionDef",
+      "name": "_eval_add",
+      "start_line": 156,
+      "end_line": 160,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 3.6149932172316843,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.33835166692733765,
+        "structural": 0.0,
+        "combined": 3.9830140719519043,
+        "boosted": 3.9830140719519043
+      },
+      "negative_signals": {
+        "total": 0.24,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 2065,
+      "node_type": "FunctionDef",
+      "name": "as_immutable",
+      "start_line": 334,
+      "end_line": 340,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 3.6149932172316843,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.23296383023262024,
+        "structural": 0.0,
+        "combined": 3.8679111076018176,
+        "boosted": 3.8679111076018176
+      },
+      "negative_signals": {
+        "total": 0.165,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 1403,
+      "node_type": "FunctionDef",
+      "name": "_eval_scalar_mul",
+      "start_line": 277,
+      "end_line": 279,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 3.6149932172316843,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.36349600553512573,
+        "structural": 0.0,
+        "combined": 3.8486787397455178,
+        "boosted": 3.8486787397455178
+      },
+      "negative_signals": {
+        "total": 0.42,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 1481,
+      "node_type": "FunctionDef",
+      "name": "_eval_tolist",
+      "start_line": 285,
+      "end_line": 288,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 3.6149932172316843,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.26253557205200195,
+        "structural": 0.0,
+        "combined": 3.846747530326097,
+        "boosted": 3.846747530326097
+      },
+      "negative_signals": {
+        "total": 0.24,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 1442,
+      "node_type": "FunctionDef",
+      "name": "_eval_scalar_rmul",
+      "start_line": 281,
+      "end_line": 283,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 3.6149932172316843,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.34779277443885803,
+        "structural": 0.0,
+        "combined": 3.8204129237722357,
+        "boosted": 3.8204129237722357
+      },
+      "negative_signals": {
+        "total": 0.42,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 1215,
+      "node_type": "FunctionDef",
+      "name": "_eval_diff",
+      "start_line": 208,
+      "end_line": 212,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 3.6149932172316843,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.16863730549812317,
+        "structural": 0.0,
+        "combined": 3.7975282213793182,
+        "boosted": 3.7975282213793182
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 1160,
+      "node_type": "FunctionDef",
+      "name": "_eval_matrix_mul_elementwise",
+      "start_line": 204,
+      "end_line": 206,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 3.6149932172316843,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.32197606563568115,
+        "structural": 0.0,
+        "combined": 3.7739428479265174,
+        "boosted": 3.7739428479265174
+      },
+      "negative_signals": {
+        "total": 0.42,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 781,
+      "node_type": "FunctionDef",
+      "name": "_eval_extract",
+      "start_line": 162,
+      "end_line": 167,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 3.6149932172316843,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.14945346117019653,
+        "structural": 0.0,
+        "combined": 3.7627948724392524,
+        "boosted": 3.7627948724392524
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 3195,
+      "node_type": "FunctionDef",
+      "name": "zip_row_op",
+      "start_line": 756,
+      "end_line": 784,
+      "line_count": 29,
+      "signals": {
+        "sbfl": 1.4785533905932737,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.6437355279922485,
+        "structural": 0.0,
+        "combined": 2.466406895635192,
+        "boosted": 2.466406895635192
+      },
+      "negative_signals": {
+        "total": 0.165,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.55,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 2586,
+      "node_type": "FunctionDef",
+      "name": "col_op",
+      "start_line": 516,
+      "end_line": 536,
+      "line_count": 21,
+      "signals": {
+        "sbfl": 1.4785533905932737,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.6375524997711182,
+        "structural": 0.0,
+        "combined": 2.4568968780355376,
+        "boosted": 2.4568968780355376
+      },
+      "negative_signals": {
+        "total": 0.165,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.55,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 2987,
+      "node_type": "FunctionDef",
+      "name": "row_op",
+      "start_line": 689,
+      "end_line": 713,
+      "line_count": 25,
+      "signals": {
+        "sbfl": 1.4785533905932737,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5553654432296753,
+        "structural": 0.0,
+        "combined": 2.30815045966175,
+        "boosted": 2.30815045966175
+      },
+      "negative_signals": {
+        "total": 0.165,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.55,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 2647,
+      "node_type": "FunctionDef",
+      "name": "col_swap",
+      "start_line": 538,
+      "end_line": 563,
+      "line_count": 26,
+      "signals": {
+        "sbfl": 1.4785533905932737,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5153844356536865,
+        "structural": 0.0,
+        "combined": 2.265982216875173,
+        "boosted": 2.265982216875173
+      },
+      "negative_signals": {
+        "total": 0.135,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.45,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 3073,
+      "node_type": "FunctionDef",
+      "name": "row_swap",
+      "start_line": 715,
+      "end_line": 740,
+      "line_count": 26,
+      "signals": {
+        "sbfl": 1.4785533905932737,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.50584477186203,
+        "structural": 0.0,
+        "combined": 2.2488108220501912,
+        "boosted": 2.2488108220501912
+      },
+      "negative_signals": {
+        "total": 0.135,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.45,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 2710,
+      "node_type": "FunctionDef",
+      "name": "copyin_list",
+      "start_line": 565,
+      "end_line": 601,
+      "line_count": 37,
+      "signals": {
+        "sbfl": 1.4785533905932737,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.535610556602478,
+        "structural": 0.0,
+        "combined": 2.1951625139352244,
+        "boosted": 2.1951625139352244
+      },
+      "negative_signals": {
+        "total": 0.24,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.7,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 2893,
+      "node_type": "FunctionDef",
+      "name": "row_del",
+      "start_line": 661,
+      "end_line": 687,
+      "line_count": 27,
+      "signals": {
+        "sbfl": 1.4785533905932737,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4742850661277771,
+        "structural": 0.0,
+        "combined": 2.1619861077639233,
+        "boosted": 2.1619861077639233
+      },
+      "negative_signals": {
+        "total": 0.1648148148148148,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.5,
+        "safe_patterns": 0.037037037037037035
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 2750,
+      "node_type": "FunctionDef",
+      "name": "copyin_matrix",
+      "start_line": 603,
+      "end_line": 648,
+      "line_count": 46,
+      "signals": {
+        "sbfl": 1.4785533905932737,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5036051273345947,
+        "structural": 0.0,
+        "combined": 2.1357308789048557,
+        "boosted": 2.1357308789048557
+      },
+      "negative_signals": {
+        "total": 0.24,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.7,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 2495,
+      "node_type": "FunctionDef",
+      "name": "col_del",
+      "start_line": 488,
+      "end_line": 514,
+      "line_count": 27,
+      "signals": {
+        "sbfl": 1.4785533905932737,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4121268391609192,
+        "structural": 0.0,
+        "combined": 2.064916114038394,
+        "boosted": 2.064916114038394
+      },
+      "negative_signals": {
+        "total": 0.15,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.5,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 2871,
+      "node_type": "FunctionDef",
+      "name": "fill",
+      "start_line": 650,
+      "end_line": 659,
+      "line_count": 10,
+      "signals": {
+        "sbfl": 1.4785533905932737,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.32396388053894043,
+        "structural": 0.0,
+        "combined": 2.014664084065391,
+        "boosted": 2.014664084065391
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 2486,
+      "node_type": "FunctionDef",
+      "name": "as_mutable",
+      "start_line": 485,
+      "end_line": 486,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 1.4785533905932737,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1579393744468689,
+        "structural": 0.0,
+        "combined": 1.2224394062980426,
+        "boosted": 1.2224394062980426
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 2305,
+      "node_type": "FunctionDef",
+      "name": "__new__",
+      "start_line": 419,
+      "end_line": 420,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 2.103553390593274,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.15181535482406616,
+        "structural": 0.0,
+        "combined": 1.1964161709769978,
+        "boosted": 1.1964161709769978
+      },
+      "negative_signals": {
+        "total": 1.1800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 3425,
+      "node_type": "FunctionDef",
+      "name": "rot_axis3",
+      "start_line": 827,
+      "end_line": 867,
+      "line_count": 41,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.6756573915481567,
+        "structural": 0.0,
+        "combined": 0.9978837096449817,
+        "boosted": 0.9978837096449817
+      },
+      "negative_signals": {
+        "total": 0.21000000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.6000000000000001,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 3531,
+      "node_type": "FunctionDef",
+      "name": "rot_axis1",
+      "start_line": 913,
+      "end_line": 953,
+      "line_count": 41,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.6586952209472656,
+        "structural": 0.0,
+        "combined": 0.9673518025633778,
+        "boosted": 0.9673518025633778
+      },
+      "negative_signals": {
+        "total": 0.21000000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.6000000000000001,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 3478,
+      "node_type": "FunctionDef",
+      "name": "rot_axis2",
+      "start_line": 870,
+      "end_line": 910,
+      "line_count": 41,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.6479456424713135,
+        "structural": 0.0,
+        "combined": 0.9480025613066638,
+        "boosted": 0.9480025613066638
+      },
+      "negative_signals": {
+        "total": 0.21000000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.6000000000000001,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 4264,
+      "node_type": "FunctionDef",
+      "name": "matrix_multiply_elementwise",
+      "start_line": 1312,
+      "end_line": 1333,
+      "line_count": 22,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5646059513092041,
+        "structural": 0.0,
+        "combined": 0.8768372710610208,
+        "boosted": 0.8768372710610208
+      },
+      "negative_signals": {
+        "total": 0.135,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.45,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 4244,
+      "node_type": "FunctionDef",
+      "name": "jordan_cell",
+      "start_line": 1291,
+      "end_line": 1309,
+      "line_count": 19,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5328296422958374,
+        "structural": 0.0,
+        "combined": 0.8202472022863535,
+        "boosted": 0.8202472022863535
+      },
+      "negative_signals": {
+        "total": 0.135,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.45,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 3654,
+      "node_type": "FunctionDef",
+      "name": "casoratian",
+      "start_line": 1033,
+      "end_line": 1074,
+      "line_count": 42,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5550165176391602,
+        "structural": 0.0,
+        "combined": 0.7757658026970855,
+        "boosted": 0.7757658026970855
+      },
+      "negative_signals": {
+        "total": 0.2147619047619048,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.6000000000000001,
+        "safe_patterns": 0.011904761904761904
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 4650,
+      "node_type": "FunctionDef",
+      "name": "wronskian",
+      "start_line": 1432,
+      "end_line": 1462,
+      "line_count": 31,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5006853342056274,
+        "structural": 0.0,
+        "combined": 0.7449582979264047,
+        "boosted": 0.7449582979264047
+      },
+      "negative_signals": {
+        "total": 0.15,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.4,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 3768,
+      "node_type": "FunctionDef",
+      "name": "diag",
+      "start_line": 1092,
+      "end_line": 1189,
+      "line_count": 98,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5691936016082764,
+        "structural": 0.0,
+        "combined": 0.7347104262147355,
+        "boosted": 0.7347104262147355
+      },
+      "negative_signals": {
+        "total": 0.27,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.6000000000000001,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 3747,
+      "node_type": "FunctionDef",
+      "name": "eye",
+      "start_line": 1077,
+      "end_line": 1089,
+      "line_count": 13,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.37630385160446167,
+        "structural": 0.0,
+        "combined": 0.6297153539406626,
+        "boosted": 0.6297153539406626
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 186,
+      "node_type": "FunctionDef",
+      "name": "__getitem__",
+      "start_line": 59,
+      "end_line": 127,
+      "line_count": 69,
+      "signals": {
+        "sbfl": 5.635719159395375,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.47621801495552063,
+        "structural": 0.0,
+        "combined": 6.004161366283627,
+        "boosted": 0.6004161366283628
+      },
+      "negative_signals": {
+        "total": 0.47478260869565225,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.2,
+        "docstring_quality": 0.5,
+        "safe_patterns": 0.08695652173913043
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 3832,
+      "node_type": "FunctionDef",
+      "name": "GramSchmidt",
+      "start_line": 1192,
+      "end_line": 1211,
+      "line_count": 20,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3604413866996765,
+        "structural": 0.0,
+        "combined": 0.5847459130634663,
+        "boosted": 0.5847459130634663
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 3950,
+      "node_type": "FunctionDef",
+      "name": "hessian",
+      "start_line": 1214,
+      "end_line": 1288,
+      "line_count": 75,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4923068583011627,
+        "structural": 0.0,
+        "combined": 0.5176368253739418,
+        "boosted": 0.5176368253739418
+      },
+      "negative_signals": {
+        "total": 0.3533333333333333,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.5,
+        "safe_patterns": 0.03333333333333333
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 4739,
+      "node_type": "FunctionDef",
+      "name": "zeros",
+      "start_line": 1465,
+      "end_line": 1482,
+      "line_count": 18,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.31288963556289673,
+        "structural": 0.0,
+        "combined": 0.4995576193168579,
+        "boosted": 0.4995576193168579
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 4339,
+      "node_type": "FunctionDef",
+      "name": "ones",
+      "start_line": 1336,
+      "end_line": 1352,
+      "line_count": 17,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2997216284275055,
+        "structural": 0.0,
+        "combined": 0.47605763562295117,
+        "boosted": 0.47605763562295117
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 3312,
+      "node_type": "FunctionDef",
+      "name": "list2numpy",
+      "start_line": 796,
+      "end_line": 808,
+      "line_count": 13,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2877328395843506,
+        "structural": 0.0,
+        "combined": 0.4702875323044627,
+        "boosted": 0.4702875323044627
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 112,
+      "node_type": "FunctionDef",
+      "name": "__eq__",
+      "start_line": 47,
+      "end_line": 57,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 3.6149932172316843,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.23415116965770721,
+        "structural": 0.0,
+        "combined": 3.8887840565132383,
+        "boosted": 0.38887840565132387
+      },
+      "negative_signals": {
+        "total": 0.14545454545454548,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.36363636363636365
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 3584,
+      "node_type": "FunctionDef",
+      "name": "symarray",
+      "start_line": 957,
+      "end_line": 1026,
+      "line_count": 70,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.35986095666885376,
+        "structural": 0.0,
+        "combined": 0.34857968151810675,
+        "boosted": 0.34857968151810675
+      },
+      "negative_signals": {
+        "total": 0.28500000000000003,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.6500000000000001,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 58,
+      "node_type": "FunctionDef",
+      "name": "_compare_sequence",
+      "start_line": 29,
+      "end_line": 38,
+      "line_count": 10,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2469174563884735,
+        "structural": 0.0,
+        "combined": 0.3424271300012766,
+        "boosted": 0.3424271300012766
+      },
+      "negative_signals": {
+        "total": 0.1,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 2229,
+      "node_type": "FunctionDef",
+      "name": "_force_mutable",
+      "start_line": 404,
+      "end_line": 415,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.24862490594387054,
+        "structural": 0.0,
+        "combined": 0.3317623475680628,
+        "boosted": 0.3317623475680628
+      },
+      "negative_signals": {
+        "total": 0.11333333333333334,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.20833333333333334
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 464,
+      "node_type": "FunctionDef",
+      "name": "__setitem__",
+      "start_line": 129,
+      "end_line": 130,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 3.6149932172316843,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.12569977343082428,
+        "structural": 0.0,
+        "combined": 3.300847951107573,
+        "boosted": 0.3300847951107573
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 3359,
+      "node_type": "FunctionDef",
+      "name": "matrix2numpy",
+      "start_line": 811,
+      "end_line": 824,
+      "line_count": 14,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.20170541107654572,
+        "structural": 0.0,
+        "combined": 0.3152357318406163,
+        "boosted": 0.3152357318406163
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 4378,
+      "node_type": "FunctionDef",
+      "name": "randMatrix",
+      "start_line": 1355,
+      "end_line": 1429,
+      "line_count": 75,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.31761905550956726,
+        "structural": 0.0,
+        "combined": 0.26519878034906996,
+        "boosted": 0.26519878034906996
+      },
+      "negative_signals": {
+        "total": 0.29133333333333333,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.6000000000000001,
+        "safe_patterns": 0.05333333333333333
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 2429,
+      "node_type": "FunctionDef",
+      "name": "__setitem__",
+      "start_line": 440,
+      "end_line": 483,
+      "line_count": 44,
+      "signals": {
+        "sbfl": 1.4785533905932737,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.6299664974212646,
+        "structural": 0.0,
+        "combined": 2.3844952942695476,
+        "boosted": 0.23844952942695477
+      },
+      "negative_signals": {
+        "total": 0.21909090909090911,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.6000000000000001,
+        "safe_patterns": 0.022727272727272728
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 3776,
+      "node_type": "FunctionDef",
+      "name": "normalize",
+      "start_line": 1183,
+      "end_line": 1186,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.14423754811286926,
+        "structural": 0.0,
+        "combined": 0.13881787000397441,
+        "boosted": 0.13881787000397441
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    },
+    {
+      "task_id": "sympy__sympy-15346",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.4/sympy/matrices/dense.py",
+      "node_id": 48,
+      "node_type": "FunctionDef",
+      "name": "_iszero",
+      "start_line": 24,
+      "end_line": 26,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.27576887607574463,
+        "structural": 0.0,
+        "combined": 0.04577668948694767,
+        "boosted": 0.04577668948694767
+      },
+      "negative_signals": {
+        "total": 0.44999999999999996,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.2087120939317115
+    }
+  ]
+}

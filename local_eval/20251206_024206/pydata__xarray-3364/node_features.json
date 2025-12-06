@@ -1,0 +1,4412 @@
+{
+  "task_id": "pydata__xarray-3364",
+  "num_files_processed": 3,
+  "files": [
+    {
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/merge.py",
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8900267082891076,
+      "num_nodes": 22,
+      "num_buggy_nodes": 0
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232,
+      "num_nodes": 82,
+      "num_buggy_nodes": 0
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/concat.py",
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 4.2671086410668995,
+      "num_nodes": 8,
+      "num_buggy_nodes": 1
+    }
+  ],
+  "num_nodes": 112,
+  "num_buggy_nodes": 1,
+  "nodes": [
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/merge.py",
+      "node_id": 914,
+      "node_type": "FunctionDef",
+      "name": "collect_variables_and_indexes",
+      "start_line": 227,
+      "end_line": 274,
+      "line_count": 48,
+      "signals": {
+        "sbfl": 4.524244991985832,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.41052407026290894,
+        "structural": 0.0,
+        "combined": 5.116306724086265,
+        "boosted": 5.116306724086265
+      },
+      "negative_signals": {
+        "total": 0.13,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0625
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8900267082891076
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/merge.py",
+      "node_id": 553,
+      "node_type": "FunctionDef",
+      "name": "merge_collected",
+      "start_line": 153,
+      "end_line": 224,
+      "line_count": 72,
+      "signals": {
+        "sbfl": 4.644299858785455,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4044932425022125,
+        "structural": 0.0,
+        "combined": 5.014843081508013,
+        "boosted": 5.014843081508013
+      },
+      "negative_signals": {
+        "total": 0.3322222222222222,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.4,
+        "safe_patterns": 0.05555555555555556
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8900267082891076
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/merge.py",
+      "node_id": 2165,
+      "node_type": "FunctionDef",
+      "name": "merge_core",
+      "start_line": 490,
+      "end_line": 563,
+      "line_count": 74,
+      "signals": {
+        "sbfl": 4.529483390868611,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.40867868065834045,
+        "structural": 0.0,
+        "combined": 5.008673819323483,
+        "boosted": 5.008673819323483
+      },
+      "negative_signals": {
+        "total": 0.2304054054054054,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.45000000000000007,
+        "safe_patterns": 0.013513513513513514
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8900267082891076
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/merge.py",
+      "node_id": 1572,
+      "node_type": "FunctionDef",
+      "name": "coerce_pandas_values",
+      "start_line": 358,
+      "end_line": 388,
+      "line_count": 31,
+      "signals": {
+        "sbfl": 3.060255600158626,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3890237808227539,
+        "structural": 0.0,
+        "combined": 3.5415311931447833,
+        "boosted": 3.5415311931447833
+      },
+      "negative_signals": {
+        "total": 0.20806451612903226,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.4,
+        "safe_patterns": 0.14516129032258063
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8900267082891076
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/merge.py",
+      "node_id": 1430,
+      "node_type": "FunctionDef",
+      "name": "determine_coords",
+      "start_line": 320,
+      "end_line": 355,
+      "line_count": 36,
+      "signals": {
+        "sbfl": 2.4114012104379468,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3792790174484253,
+        "structural": 0.0,
+        "combined": 2.8981089127321775,
+        "boosted": 2.8981089127321775
+      },
+      "negative_signals": {
+        "total": 0.18333333333333332,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.4,
+        "safe_patterns": 0.08333333333333333
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8900267082891076
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/merge.py",
+      "node_id": 981,
+      "node_type": "FunctionDef",
+      "name": "append_all",
+      "start_line": 248,
+      "end_line": 250,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 1.5586562135111928,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2087598294019699,
+        "structural": 0.0,
+        "combined": 1.8133688067864384,
+        "boosted": 1.8133688067864384
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8900267082891076
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/merge.py",
+      "node_id": 1964,
+      "node_type": "FunctionDef",
+      "name": "merge_data_and_coords",
+      "start_line": 450,
+      "end_line": 457,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 1.2537147184419966,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.32851535081863403,
+        "structural": 0.0,
+        "combined": 1.812228750853404,
+        "boosted": 1.812228750853404
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8900267082891076
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/merge.py",
+      "node_id": 952,
+      "node_type": "FunctionDef",
+      "name": "append",
+      "start_line": 244,
+      "end_line": 246,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 1.8519615815056258,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2063102126121521,
+        "structural": 0.0,
+        "combined": 1.8022648645591997,
+        "boosted": 1.8022648645591997
+      },
+      "negative_signals": {
+        "total": 0.42,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8900267082891076
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/merge.py",
+      "node_id": 2741,
+      "node_type": "FunctionDef",
+      "name": "dataset_update_method",
+      "start_line": 828,
+      "end_line": 853,
+      "line_count": 26,
+      "signals": {
+        "sbfl": 0.8603090020146066,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5065787434577942,
+        "structural": 0.0,
+        "combined": 1.6799296202097787,
+        "boosted": 1.6799296202097787
+      },
+      "negative_signals": {
+        "total": 0.08307692307692308,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.05769230769230769
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8900267082891076
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/merge.py",
+      "node_id": 1801,
+      "node_type": "FunctionDef",
+      "name": "merge_coords",
+      "start_line": 424,
+      "end_line": 447,
+      "line_count": 24,
+      "signals": {
+        "sbfl": 1.1246014642373612,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3277510106563568,
+        "structural": 0.0,
+        "combined": 1.6461124862324026,
+        "boosted": 1.6461124862324026
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8900267082891076
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/merge.py",
+      "node_id": 2018,
+      "node_type": "FunctionDef",
+      "name": "_extract_indexes_from_coords",
+      "start_line": 460,
+      "end_line": 465,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 1.1519479661218577,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.21394507586956024,
+        "structural": 0.0,
+        "combined": 1.489938903390466,
+        "boosted": 1.489938903390466
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8900267082891076
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/merge.py",
+      "node_id": 324,
+      "node_type": "FunctionDef",
+      "name": "unique_variable",
+      "start_line": 80,
+      "end_line": 142,
+      "line_count": 63,
+      "signals": {
+        "sbfl": 0.8197119180446466,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4637768864631653,
+        "structural": 0.0,
+        "combined": 1.3883056020164226,
+        "boosted": 1.3883056020164226
+      },
+      "negative_signals": {
+        "total": 0.24404761904761907,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.45000000000000007,
+        "safe_patterns": 0.047619047619047616
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8900267082891076
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/merge.py",
+      "node_id": 2068,
+      "node_type": "FunctionDef",
+      "name": "assert_valid_explicit_coords",
+      "start_line": 468,
+      "end_line": 480,
+      "line_count": 13,
+      "signals": {
+        "sbfl": 0.7109894142777592,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3991727828979492,
+        "structural": 0.0,
+        "combined": 1.3649283250181006,
+        "boosted": 1.3649283250181006
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8900267082891076
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/merge.py",
+      "node_id": 1686,
+      "node_type": "FunctionDef",
+      "name": "_get_priority_vars_and_indexes",
+      "start_line": 391,
+      "end_line": 421,
+      "line_count": 31,
+      "signals": {
+        "sbfl": 1.2057360631715348,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4189136326313019,
+        "structural": 0.0,
+        "combined": 1.1309746797356584,
+        "boosted": 1.1309746797356584
+      },
+      "negative_signals": {
+        "total": 0.8179032258064518,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.45000000000000007,
+        "safe_patterns": 0.03225806451612903
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8900267082891076
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/merge.py",
+      "node_id": 1284,
+      "node_type": "FunctionDef",
+      "name": "merge_coordinates_without_align",
+      "start_line": 292,
+      "end_line": 317,
+      "line_count": 26,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.36653196811676025,
+        "structural": 0.0,
+        "combined": 0.5829210379659264,
+        "boosted": 0.5829210379659264
+      },
+      "negative_signals": {
+        "total": 0.06769230769230769,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.019230769230769232
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8900267082891076
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/merge.py",
+      "node_id": 2537,
+      "node_type": "FunctionDef",
+      "name": "dataset_merge_method",
+      "start_line": 787,
+      "end_line": 825,
+      "line_count": 39,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4074709415435791,
+        "structural": 0.0,
+        "combined": 0.5392185788377204,
+        "boosted": 0.5392185788377204
+      },
+      "negative_signals": {
+        "total": 0.18051282051282053,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.05128205128205129
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8900267082891076
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/merge.py",
+      "node_id": 2410,
+      "node_type": "FunctionDef",
+      "name": "merge",
+      "start_line": 566,
+      "end_line": 784,
+      "line_count": 219,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5763124227523804,
+        "structural": 0.0,
+        "combined": 0.522600360600979,
+        "boosted": 0.522600360600979
+      },
+      "negative_signals": {
+        "total": 0.4377397260273972,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.7,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.75,
+        "safe_patterns": 0.006849315068493151
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8900267082891076
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/merge.py",
+      "node_id": 221,
+      "node_type": "FunctionDef",
+      "name": "broadcast_dimension_size",
+      "start_line": 58,
+      "end_line": 69,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3214506506919861,
+        "structural": 0.0,
+        "combined": 0.5143907726523745,
+        "boosted": 0.5143907726523745
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8900267082891076
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/merge.py",
+      "node_id": 508,
+      "node_type": "FunctionDef",
+      "name": "_assert_compat_valid",
+      "start_line": 145,
+      "end_line": 147,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.2893187811789223,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.16446861624717712,
+        "structural": 0.0,
+        "combined": 0.464307190775541,
+        "boosted": 0.464307190775541
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8900267082891076
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/merge.py",
+      "node_id": 1173,
+      "node_type": "FunctionDef",
+      "name": "collect_from_coordinates",
+      "start_line": 277,
+      "end_line": 289,
+      "line_count": 13,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.28019827604293823,
+        "structural": 0.0,
+        "combined": 0.45478479840132163,
+        "boosted": 0.45478479840132163
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8900267082891076
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/merge.py",
+      "node_id": 2112,
+      "node_type": "ClassDef",
+      "name": "_MergeResult",
+      "start_line": 483,
+      "end_line": 487,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.0017584994138335286,
+        "boosted": -0.0017584994138335286
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8900267082891076
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/merge.py",
+      "node_id": 319,
+      "node_type": "ClassDef",
+      "name": "MergeError",
+      "start_line": 72,
+      "end_line": 74,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.046055099648300124,
+        "boosted": -0.046055099648300124
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8900267082891076
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1102,
+      "node_type": "FunctionDef",
+      "name": "is_scalar",
+      "start_line": 269,
+      "end_line": 285,
+      "line_count": 17,
+      "signals": {
+        "sbfl": 2.457228052895386,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3336564302444458,
+        "structural": 0.0,
+        "combined": 2.3652875034415834,
+        "boosted": 2.3652875034415834
+      },
+      "negative_signals": {
+        "total": 0.6850000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 301,
+      "node_type": "FunctionDef",
+      "name": "safe_cast_to_index",
+      "start_line": 84,
+      "end_line": 102,
+      "line_count": 19,
+      "signals": {
+        "sbfl": 1.482812800586441,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2793448865413666,
+        "structural": 0.0,
+        "combined": 1.8601212535569882,
+        "boosted": 1.8601212535569882
+      },
+      "negative_signals": {
+        "total": 0.11710526315789474,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.10526315789473685
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 211,
+      "node_type": "FunctionDef",
+      "name": "_maybe_cast_to_cftimeindex",
+      "start_line": 66,
+      "end_line": 75,
+      "line_count": 10,
+      "signals": {
+        "sbfl": 1.3486026891772567,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.17987076938152313,
+        "structural": 0.0,
+        "combined": 1.6279452953029365,
+        "boosted": 1.6279452953029365
+      },
+      "negative_signals": {
+        "total": 0.04000000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1007,
+      "node_type": "FunctionDef",
+      "name": "either_dict_or_kwargs",
+      "start_line": 247,
+      "end_line": 266,
+      "line_count": 20,
+      "signals": {
+        "sbfl": 0.7946000512085911,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2650843858718872,
+        "structural": 0.0,
+        "combined": 1.242902388255864,
+        "boosted": 1.242902388255864
+      },
+      "negative_signals": {
+        "total": 0.020000000000000004,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1456,
+      "node_type": "ClassDef",
+      "name": "Frozen",
+      "start_line": 372,
+      "end_line": 396,
+      "line_count": 25,
+      "signals": {
+        "sbfl": 0.989411880578711,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 0.9183499336760562,
+        "boosted": 0.9183499336760562
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1602,
+      "node_type": "ClassDef",
+      "name": "SortedKeysDict",
+      "start_line": 403,
+      "end_line": 433,
+      "line_count": 31,
+      "signals": {
+        "sbfl": 0.9718354018316127,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 0.8981185876723206,
+        "boosted": 0.8981185876723206
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 707,
+      "node_type": "FunctionDef",
+      "name": "peek_at",
+      "start_line": 175,
+      "end_line": 181,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.6500000000000001,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.14064602553844452,
+        "structural": 0.0,
+        "combined": 0.7200655008364569,
+        "boosted": 0.7200655008364569
+      },
+      "negative_signals": {
+        "total": 0.18,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 2314,
+      "node_type": "FunctionDef",
+      "name": "hashable",
+      "start_line": 587,
+      "end_line": 594,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.5659453309702791,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.11321669816970825,
+        "structural": 0.0,
+        "combined": 0.6961955646669044,
+        "boosted": 0.6961955646669044
+      },
+      "negative_signals": {
+        "total": 0.07,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 58,
+      "node_type": "FunctionDef",
+      "name": "_check_inplace",
+      "start_line": 36,
+      "end_line": 41,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.10078464965115869,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.34796586632728577,
+        "structural": 0.0,
+        "combined": 0.5644683417836358,
+        "boosted": 0.5644683417836358
+      },
+      "negative_signals": {
+        "total": 0.16,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 764,
+      "node_type": "FunctionDef",
+      "name": "update_safety_check",
+      "start_line": 184,
+      "end_line": 209,
+      "line_count": 26,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3721533417701721,
+        "structural": 0.0,
+        "combined": 0.5233715904075488,
+        "boosted": 0.5233715904075488
+      },
+      "negative_signals": {
+        "total": 0.135,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.45000000000000007,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1288,
+      "node_type": "FunctionDef",
+      "name": "dict_equiv",
+      "start_line": 314,
+      "end_line": 341,
+      "line_count": 28,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.35522690415382385,
+        "structural": 0.0,
+        "combined": 0.5070190469459095,
+        "boosted": 0.5070190469459095
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.4,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1172,
+      "node_type": "FunctionDef",
+      "name": "is_valid_numpy_dtype",
+      "start_line": 288,
+      "end_line": 294,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.8353351483845166,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1675003468990326,
+        "structural": 0.0,
+        "combined": 0.4937384276700319,
+        "boosted": 0.4937384276700319
+      },
+      "negative_signals": {
+        "total": 0.6400000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1382,
+      "node_type": "FunctionDef",
+      "name": "ordered_dict_intersection",
+      "start_line": 344,
+      "end_line": 369,
+      "line_count": 26,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3269509971141815,
+        "structural": 0.0,
+        "combined": 0.45700737002676567,
+        "boosted": 0.45700737002676567
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.4,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 396,
+      "node_type": "FunctionDef",
+      "name": "multiindex_from_product_levels",
+      "start_line": 105,
+      "end_line": 129,
+      "line_count": 25,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.30929505825042725,
+        "structural": 0.0,
+        "combined": 0.42566915794811416,
+        "boosted": 0.42566915794811416
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.4,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 851,
+      "node_type": "FunctionDef",
+      "name": "remove_incompatible_items",
+      "start_line": 212,
+      "end_line": 232,
+      "line_count": 21,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.29072827100753784,
+        "structural": 0.0,
+        "combined": 0.3940188524153381,
+        "boosted": 0.3940188524153381
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.4,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 552,
+      "node_type": "FunctionDef",
+      "name": "equivalent",
+      "start_line": 145,
+      "end_line": 162,
+      "line_count": 18,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3086438477039337,
+        "structural": 0.0,
+        "combined": 0.3209276574305025,
+        "boosted": 0.3209276574305025
+      },
+      "negative_signals": {
+        "total": 0.22666666666666668,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.16666666666666666
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 513,
+      "node_type": "FunctionDef",
+      "name": "maybe_wrap_array",
+      "start_line": 132,
+      "end_line": 142,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.23343032598495483,
+        "structural": 0.0,
+        "combined": 0.285761875590296,
+        "boosted": 0.285761875590296
+      },
+      "negative_signals": {
+        "total": 0.12954545454545455,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.13636363636363635
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 2186,
+      "node_type": "FunctionDef",
+      "name": "close_on_error",
+      "start_line": 552,
+      "end_line": 560,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.18070676922798157,
+        "structural": 0.0,
+        "combined": 0.26128988372541107,
+        "boosted": 0.26128988372541107
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 2436,
+      "node_type": "FunctionDef",
+      "name": "ensure_us_time_resolution",
+      "start_line": 614,
+      "end_line": 621,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.15944713354110718,
+        "structural": 0.0,
+        "combined": 0.23846501736514336,
+        "boosted": 0.23846501736514336
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 653,
+      "node_type": "FunctionDef",
+      "name": "list_equiv",
+      "start_line": 165,
+      "end_line": 172,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1525830328464508,
+        "structural": 0.0,
+        "combined": 0.23110963611476187,
+        "boosted": 0.23110963611476187
+      },
+      "negative_signals": {
+        "total": 0.04000000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1952,
+      "node_type": "ClassDef",
+      "name": "NdimSizeLenMixin",
+      "start_line": 482,
+      "end_line": 502,
+      "line_count": 21,
+      "signals": {
+        "sbfl": 0.25612967348308985,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 0.18683763808485976,
+        "boosted": 0.18683763808485976
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1235,
+      "node_type": "FunctionDef",
+      "name": "to_0d_array",
+      "start_line": 305,
+      "end_line": 311,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.16288822889328003,
+        "structural": 0.0,
+        "combined": 0.12510146687516066,
+        "boosted": 0.12510146687516066
+      },
+      "negative_signals": {
+        "total": 0.165,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 2344,
+      "node_type": "FunctionDef",
+      "name": "decode_numpy_dict_values",
+      "start_line": 601,
+      "end_line": 611,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.14881105720996857,
+        "structural": 0.0,
+        "combined": 0.10890173724986621,
+        "boosted": 0.10890173724986621
+      },
+      "negative_signals": {
+        "total": 0.15409090909090908,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.2727272727272727
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1199,
+      "node_type": "FunctionDef",
+      "name": "to_0d_object_array",
+      "start_line": 297,
+      "end_line": 302,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.14726227521896362,
+        "structural": 0.0,
+        "combined": 0.09741722813749734,
+        "boosted": 0.09741722813749734
+      },
+      "negative_signals": {
+        "total": 0.165,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 262,
+      "node_type": "FunctionDef",
+      "name": "maybe_cast_to_coords_dtype",
+      "start_line": 78,
+      "end_line": 81,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.12056166678667068,
+        "structural": 0.0,
+        "combined": 0.09524108871158248,
+        "boosted": 0.09524108871158248
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 130,
+      "node_type": "FunctionDef",
+      "name": "alias",
+      "start_line": 54,
+      "end_line": 63,
+      "line_count": 10,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.08741059899330139,
+        "structural": 0.0,
+        "combined": 0.09291429942688056,
+        "boosted": 0.09291429942688056
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1999,
+      "node_type": "FunctionDef",
+      "name": "__len__",
+      "start_line": 498,
+      "end_line": 502,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.05821128942797496,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.12418617308139801,
+        "structural": 0.0,
+        "combined": 0.2395340115939604,
+        "boosted": 0.02395340115939604
+      },
+      "negative_signals": {
+        "total": 0.04000000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 2651,
+      "node_type": "FunctionDef",
+      "name": "__iter__",
+      "start_line": 653,
+      "end_line": 656,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.011372573673725128,
+        "structural": 0.0,
+        "combined": 0.018700721108280454,
+        "boosted": 0.0018700721108280455
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1543,
+      "node_type": "FunctionDef",
+      "name": "__contains__",
+      "start_line": 392,
+      "end_line": 393,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.5043652552023029,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.022334836423397064,
+        "structural": 0.0,
+        "combined": 0.0036830050122051775,
+        "boosted": 0.0003683005012205178
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1650,
+      "node_type": "FunctionDef",
+      "name": "__getitem__",
+      "start_line": 414,
+      "end_line": 415,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.5303352079426868,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.010549747809525577,
+        "boosted": -0.0010549747809525578
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1737,
+      "node_type": "FunctionDef",
+      "name": "__contains__",
+      "start_line": 429,
+      "end_line": 430,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.47566223857704537,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.022334836423397064,
+        "structural": 0.0,
+        "combined": -0.02502001161305236,
+        "boosted": -0.0025020011613052363
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1496,
+      "node_type": "FunctionDef",
+      "name": "__getitem__",
+      "start_line": 383,
+      "end_line": 384,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.5145586619275445,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.02632629382466791,
+        "boosted": -0.0026326293824667914
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1513,
+      "node_type": "FunctionDef",
+      "name": "__iter__",
+      "start_line": 386,
+      "end_line": 387,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.5059870767658585,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.0348978789863539,
+        "boosted": -0.0034897878986353903
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1704,
+      "node_type": "FunctionDef",
+      "name": "__iter__",
+      "start_line": 423,
+      "end_line": 424,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.5040481061743413,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.036836849577871165,
+        "boosted": -0.0036836849577871165
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 2142,
+      "node_type": "FunctionDef",
+      "name": "__eq__",
+      "start_line": 542,
+      "end_line": 545,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0711238905787468,
+        "structural": 0.0,
+        "combined": -0.05374690846268053,
+        "boosted": -0.005374690846268054
+      },
+      "negative_signals": {
+        "total": 0.18,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1530,
+      "node_type": "FunctionDef",
+      "name": "__len__",
+      "start_line": 389,
+      "end_line": 390,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.23433439276864207,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.012189358472824097,
+        "structural": 0.0,
+        "combined": -0.28460971773248694,
+        "boosted": -0.028460971773248696
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1724,
+      "node_type": "FunctionDef",
+      "name": "__len__",
+      "start_line": 426,
+      "end_line": 427,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.23239542217712478,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.012189358472824097,
+        "structural": 0.0,
+        "combined": -0.28654868832400426,
+        "boosted": -0.028654868832400426
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1560,
+      "node_type": "FunctionDef",
+      "name": "__repr__",
+      "start_line": 395,
+      "end_line": 396,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.23433439276864207,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.3065505629835703,
+        "boosted": -0.030655056298357033
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1667,
+      "node_type": "FunctionDef",
+      "name": "__setitem__",
+      "start_line": 417,
+      "end_line": 418,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.23239542217712478,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.3084895335750876,
+        "boosted": -0.030848953357508764
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1688,
+      "node_type": "FunctionDef",
+      "name": "__delitem__",
+      "start_line": 420,
+      "end_line": 421,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.23239542217712478,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.3084895335750876,
+        "boosted": -0.030848953357508764
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1754,
+      "node_type": "FunctionDef",
+      "name": "__repr__",
+      "start_line": 432,
+      "end_line": 433,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.23239542217712478,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.3084895335750876,
+        "boosted": -0.030848953357508764
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1960,
+      "node_type": "FunctionDef",
+      "name": "ndim",
+      "start_line": 490,
+      "end_line": 491,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.32016209185386224,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1051667332649231,
+        "structural": 0.0,
+        "combined": -0.03142274402148861,
+        "boosted": -0.03142274402148861
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 2680,
+      "node_type": "FunctionDef",
+      "name": "__len__",
+      "start_line": 658,
+      "end_line": 660,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.05538996681571007,
+        "structural": 0.0,
+        "combined": -0.3216254933600405,
+        "boosted": -0.03216254933600405
+      },
+      "negative_signals": {
+        "total": 0.42,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 2573,
+      "node_type": "FunctionDef",
+      "name": "__setitem__",
+      "start_line": 641,
+      "end_line": 643,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.022872254252433777,
+        "structural": 0.0,
+        "combined": -0.3801573759739378,
+        "boosted": -0.03801573759739378
+      },
+      "negative_signals": {
+        "total": 0.42,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 2602,
+      "node_type": "FunctionDef",
+      "name": "__getitem__",
+      "start_line": 645,
+      "end_line": 647,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.021004822105169296,
+        "structural": 0.0,
+        "combined": -0.38351875383901385,
+        "boosted": -0.03835187538390139
+      },
+      "negative_signals": {
+        "total": 0.42,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1832,
+      "node_type": "FunctionDef",
+      "name": "__contains__",
+      "start_line": 457,
+      "end_line": 458,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0740291178226471,
+        "structural": 0.0,
+        "combined": -0.40763254367144763,
+        "boosted": -0.040763254367144765
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1866,
+      "node_type": "FunctionDef",
+      "name": "__len__",
+      "start_line": 463,
+      "end_line": 464,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.07138733565807343,
+        "structural": 0.0,
+        "combined": -0.41238775156768026,
+        "boosted": -0.04123877515676803
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 2627,
+      "node_type": "FunctionDef",
+      "name": "__delitem__",
+      "start_line": 649,
+      "end_line": 651,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.4213274336283186,
+        "boosted": -0.04213274336283186
+      },
+      "negative_signals": {
+        "total": 0.42,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 2086,
+      "node_type": "FunctionDef",
+      "name": "__repr__",
+      "start_line": 526,
+      "end_line": 527,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.014370606280863285,
+        "structural": 0.0,
+        "combined": -0.5150178644466585,
+        "boosted": -0.051501786444665854
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1849,
+      "node_type": "FunctionDef",
+      "name": "__iter__",
+      "start_line": 460,
+      "end_line": 461,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.01100520696491003,
+        "structural": 0.0,
+        "combined": -0.5210755832153744,
+        "boosted": -0.05210755832153744
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 2110,
+      "node_type": "ClassDef",
+      "name": "ReprObject",
+      "start_line": 530,
+      "end_line": 548,
+      "line_count": 19,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.05340707964601771,
+        "boosted": -0.05340707964601771
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1929,
+      "node_type": "FunctionDef",
+      "name": "__repr__",
+      "start_line": 478,
+      "end_line": 479,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.5408849557522124,
+        "boosted": -0.054088495575221246
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 2071,
+      "node_type": "FunctionDef",
+      "name": "__getitem__",
+      "start_line": 523,
+      "end_line": 524,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.5408849557522124,
+        "boosted": -0.054088495575221246
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 2132,
+      "node_type": "FunctionDef",
+      "name": "__repr__",
+      "start_line": 539,
+      "end_line": 540,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.5408849557522124,
+        "boosted": -0.054088495575221246
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 2169,
+      "node_type": "FunctionDef",
+      "name": "__hash__",
+      "start_line": 547,
+      "end_line": 548,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.5408849557522124,
+        "boosted": -0.054088495575221246
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 2490,
+      "node_type": "ClassDef",
+      "name": "HiddenKeyDict",
+      "start_line": 624,
+      "end_line": 660,
+      "line_count": 37,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.061371681415929205,
+        "boosted": -0.061371681415929205
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 2548,
+      "node_type": "FunctionDef",
+      "name": "_raise_if_hidden",
+      "start_line": 636,
+      "end_line": 638,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.02605360373854637,
+        "structural": 0.0,
+        "combined": -0.0744309468989351,
+        "boosted": -0.0744309468989351
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1776,
+      "node_type": "ClassDef",
+      "name": "OrderedSet",
+      "start_line": 436,
+      "end_line": 479,
+      "line_count": 44,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.07946902654867256,
+        "boosted": -0.07946902654867256
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 2023,
+      "node_type": "ClassDef",
+      "name": "NDArrayMixin",
+      "start_line": 505,
+      "end_line": 527,
+      "line_count": 23,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.08517699115044247,
+        "boosted": -0.08517699115044247
+      },
+      "negative_signals": {
+        "total": 0.075,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 153,
+      "node_type": "FunctionDef",
+      "name": "wrapper",
+      "start_line": 58,
+      "end_line": 60,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.09602713584899902,
+        "structural": 0.0,
+        "combined": -0.24847858910012033,
+        "boosted": -0.24847858910012033
+      },
+      "negative_signals": {
+        "total": 0.42,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 2261,
+      "node_type": "FunctionDef",
+      "name": "is_uniform_spaced",
+      "start_line": 572,
+      "end_line": 584,
+      "line_count": 13,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2845514416694641,
+        "structural": 0.0,
+        "combined": -0.29894423276896065,
+        "boosted": -0.29894423276896065
+      },
+      "negative_signals": {
+        "total": 0.8053846153846156,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.5,
+        "safe_patterns": 0.038461538461538464
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 2033,
+      "node_type": "FunctionDef",
+      "name": "dtype",
+      "start_line": 516,
+      "end_line": 517,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.12139610946178436,
+        "structural": 0.0,
+        "combined": -0.32237195872100055,
+        "boosted": -0.32237195872100055
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1582,
+      "node_type": "FunctionDef",
+      "name": "FrozenDict",
+      "start_line": 399,
+      "end_line": 400,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.11414739489555359,
+        "structural": 0.0,
+        "combined": -0.3354196449402159,
+        "boosted": -0.3354196449402159
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 99,
+      "node_type": "FunctionDef",
+      "name": "alias_warning",
+      "start_line": 48,
+      "end_line": 51,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.10547791421413422,
+        "structural": 0.0,
+        "combined": -0.35190966591898326,
+        "boosted": -0.35190966591898326
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1912,
+      "node_type": "FunctionDef",
+      "name": "update",
+      "start_line": 474,
+      "end_line": 476,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0955585464835167,
+        "structural": 0.0,
+        "combined": -0.3693220499579886,
+        "boosted": -0.3693220499579886
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1977,
+      "node_type": "FunctionDef",
+      "name": "size",
+      "start_line": 494,
+      "end_line": 496,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.05821128942797496,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.06423453241586685,
+        "structural": 0.0,
+        "combined": -0.38749398585178335,
+        "boosted": -0.38749398585178335
+      },
+      "negative_signals": {
+        "total": 0.56,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 2051,
+      "node_type": "FunctionDef",
+      "name": "shape",
+      "start_line": 520,
+      "end_line": 521,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0820109024643898,
+        "structural": 0.0,
+        "combined": -0.39326533131631075,
+        "boosted": -0.39326533131631075
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 2716,
+      "node_type": "FunctionDef",
+      "name": "get_temp_dimname",
+      "start_line": 663,
+      "end_line": 678,
+      "line_count": 16,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1976955533027649,
+        "structural": 0.0,
+        "combined": -0.4087276500727224,
+        "boosted": -0.4087276500727224
+      },
+      "negative_signals": {
+        "total": 0.7575000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.35,
+        "safe_patterns": 0.03125
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 2337,
+      "node_type": "FunctionDef",
+      "name": "not_implemented",
+      "start_line": 597,
+      "end_line": 598,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.06826458871364594,
+        "structural": 0.0,
+        "combined": -0.41800869606764973,
+        "boosted": -0.41800869606764973
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 79,
+      "node_type": "FunctionDef",
+      "name": "alias_message",
+      "start_line": 44,
+      "end_line": 45,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.06443614512681961,
+        "structural": 0.0,
+        "combined": -0.4248998945239371,
+        "boosted": -0.4248998945239371
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1879,
+      "node_type": "FunctionDef",
+      "name": "add",
+      "start_line": 466,
+      "end_line": 467,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.5408849557522124,
+        "boosted": -0.5408849557522124
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1896,
+      "node_type": "FunctionDef",
+      "name": "discard",
+      "start_line": 469,
+      "end_line": 470,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.5408849557522124,
+        "boosted": -0.5408849557522124
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1803,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 447,
+      "end_line": 453,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1050635278224945,
+        "structural": 0.0,
+        "combined": -0.6139829950522534,
+        "boosted": -0.6139829950522534
+      },
+      "negative_signals": {
+        "total": 0.8000000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1475,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 380,
+      "end_line": 381,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.5253908399085169,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.00992279127240181,
+        "structural": 0.0,
+        "combined": -0.6376330915533724,
+        "boosted": -0.6376330915533724
+      },
+      "negative_signals": {
+        "total": 1.1800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 1621,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 411,
+      "end_line": 412,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.5234518693169996,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.01178189367055893,
+        "structural": 0.0,
+        "combined": -0.6762256778282069,
+        "boosted": -0.6762256778282069
+      },
+      "negative_signals": {
+        "total": 1.2200000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 936,
+      "node_type": "FunctionDef",
+      "name": "is_dict_like",
+      "start_line": 235,
+      "end_line": 236,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.2700308624336608,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.05288383364677429,
+        "structural": 0.0,
+        "combined": -0.8156631927543581,
+        "boosted": -0.8156631927543581
+      },
+      "negative_signals": {
+        "total": 1.1800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 2510,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 632,
+      "end_line": 634,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.04292438179254532,
+        "structural": 0.0,
+        "combined": -0.984063546401737,
+        "boosted": -0.984063546401737
+      },
+      "negative_signals": {
+        "total": 1.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 2227,
+      "node_type": "FunctionDef",
+      "name": "is_grib_path",
+      "start_line": 567,
+      "end_line": 569,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.026128781959414482,
+        "structural": 0.0,
+        "combined": -1.0142956261013727,
+        "boosted": -1.0142956261013727
+      },
+      "negative_signals": {
+        "total": 1.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 983,
+      "node_type": "FunctionDef",
+      "name": "is_list_like",
+      "start_line": 243,
+      "end_line": 244,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.06784762442111969,
+        "structural": 0.0,
+        "combined": -1.0587592317941972,
+        "boosted": -1.0587592317941972
+      },
+      "negative_signals": {
+        "total": 1.1800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 958,
+      "node_type": "FunctionDef",
+      "name": "is_full_slice",
+      "start_line": 239,
+      "end_line": 240,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0556814968585968,
+        "structural": 0.0,
+        "combined": -1.0806582614067384,
+        "boosted": -1.0806582614067384
+      },
+      "negative_signals": {
+        "total": 1.1800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 2119,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 536,
+      "end_line": 537,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.010828407481312752,
+        "structural": 0.0,
+        "combined": -1.1613938222858495,
+        "boosted": -1.1613938222858495
+      },
+      "negative_signals": {
+        "total": 1.1800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py",
+      "node_id": 2208,
+      "node_type": "FunctionDef",
+      "name": "is_remote_uri",
+      "start_line": 563,
+      "end_line": 564,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -1.2008849557522125,
+        "boosted": -1.2008849557522125
+      },
+      "negative_signals": {
+        "total": 1.2000000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.9556990016071232
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/concat.py",
+      "node_id": 18,
+      "node_type": "FunctionDef",
+      "name": "concat",
+      "start_line": 10,
+      "end_line": 131,
+      "line_count": 122,
+      "signals": {
+        "sbfl": 1.9168148314346893,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.6479604244232178,
+        "structural": 3.0,
+        "combined": 8.502392036864967,
+        "boosted": 42.511960184324835
+      },
+      "negative_signals": {
+        "total": 0.49483606557377047,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.5,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.2,
+        "docstring_quality": 0.45000000000000007,
+        "safe_patterns": 0.02459016393442623
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 4.2671086410668995
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/concat.py",
+      "node_id": 836,
+      "node_type": "FunctionDef",
+      "name": "_dataset_concat",
+      "start_line": 263,
+      "end_line": 385,
+      "line_count": 123,
+      "signals": {
+        "sbfl": 8.658815109298228,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4873705804347992,
+        "structural": 1.5,
+        "combined": 12.236576256909219,
+        "boosted": 30.591440642273046
+      },
+      "negative_signals": {
+        "total": 0.21288617886178862,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.5,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.044715447154471545
+      },
+      "ground_truth": {
+        "is_buggy": true,
+        "method_match": true,
+        "lines_in_patch": [
+          312,
+          313,
+          314,
+          315,
+          316,
+          317,
+          318,
+          319,
+          320
+        ],
+        "num_buggy_lines": 9
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 4.2671086410668995
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/concat.py",
+      "node_id": 259,
+      "node_type": "FunctionDef",
+      "name": "_calc_concat_over",
+      "start_line": 158,
+      "end_line": 238,
+      "line_count": 81,
+      "signals": {
+        "sbfl": 5.056450827374969,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5070836544036865,
+        "structural": 1.5,
+        "combined": 8.76481347276813,
+        "boosted": 21.912033681920327
+      },
+      "negative_signals": {
+        "total": 0.1473456790123457,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0308641975308642
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 4.2671086410668995
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/concat.py",
+      "node_id": 709,
+      "node_type": "FunctionDef",
+      "name": "_parse_datasets",
+      "start_line": 242,
+      "end_line": 260,
+      "line_count": 19,
+      "signals": {
+        "sbfl": 2.8265775193023868,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3288140296936035,
+        "structural": 1.5,
+        "combined": 6.4050624910607326,
+        "boosted": 16.01265622765183
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 4.2671086410668995
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/concat.py",
+      "node_id": 140,
+      "node_type": "FunctionDef",
+      "name": "_calc_concat_dim_coord",
+      "start_line": 134,
+      "end_line": 155,
+      "line_count": 22,
+      "signals": {
+        "sbfl": 0.8945207879911714,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4319593608379364,
+        "structural": 1.5,
+        "combined": 4.551100134298433,
+        "boosted": 11.377750335746082
+      },
+      "negative_signals": {
+        "total": 0.10545454545454545,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.11363636363636363
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 4.2671086410668995
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/concat.py",
+      "node_id": 1504,
+      "node_type": "FunctionDef",
+      "name": "_dataarray_concat",
+      "start_line": 388,
+      "end_line": 426,
+      "line_count": 39,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5313435196876526,
+        "structural": 1.5,
+        "combined": 3.8989535467053806,
+        "boosted": 9.747383866763451
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 4.2671086410668995
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/concat.py",
+      "node_id": 388,
+      "node_type": "FunctionDef",
+      "name": "process_subset_opt",
+      "start_line": 181,
+      "end_line": 234,
+      "line_count": 54,
+      "signals": {
+        "sbfl": 3.7060648923465704,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.49210309982299805,
+        "structural": 0.0,
+        "combined": 4.452711191902772,
+        "boosted": 4.452711191902772
+      },
+      "negative_signals": {
+        "total": 0.10111111111111111,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.027777777777777776
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 4.2671086410668995
+    },
+    {
+      "task_id": "pydata__xarray-3364",
+      "file_path": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/concat.py",
+      "node_id": 1232,
+      "node_type": "FunctionDef",
+      "name": "ensure_common_dims",
+      "start_line": 344,
+      "end_line": 355,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 2.1314006422887948,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.361707866191864,
+        "structural": 0.0,
+        "combined": 2.7406907638754645,
+        "boosted": 2.7406907638754645
+      },
+      "negative_signals": {
+        "total": 0.03333333333333334,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.08333333333333334
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 4.2671086410668995
+    }
+  ]
+}

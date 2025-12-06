@@ -1,0 +1,19 @@
+{
+  "files": [
+    "seaborn/_core/scales.py"
+  ],
+  "lines": {
+    "seaborn/_core/scales.py": [
+      352,
+      346,
+      347,
+      348,
+      349,
+      350,
+      351
+    ]
+  },
+  "methods": [
+    "_setup"
+  ]
+}

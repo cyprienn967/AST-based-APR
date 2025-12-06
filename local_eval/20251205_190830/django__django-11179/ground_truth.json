@@ -1,0 +1,19 @@
+{
+  "files": [
+    "models/deletion.py"
+  ],
+  "lines": {
+    "models/deletion.py": [
+      277,
+      278,
+      279,
+      280,
+      281,
+      282,
+      283
+    ]
+  },
+  "methods": [
+    "delete"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/concat.py": 4.2671086410668995,
+  "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/dataset.py": 1.5797361417398335,
+  "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/variable.py": 0.8068164542120783,
+  "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/combine.py": 0.4421777529075902,
+  "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/utils.py": 0.9556990016071232,
+  "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/merge.py": 0.8900267082891076,
+  "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/coordinates.py": 0.6419308808064131,
+  "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/alignment.py": 0.6316954686887222,
+  "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/indexing.py": 0.49885923325433223,
+  "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/common.py": 0.509758161600026,
+  "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/dataarray.py": 0.36004016927911664,
+  "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/indexes.py": 0.38211990218581243,
+  "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/coding/cftimeindex.py": 0.3585685828003181,
+  "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/duck_array_ops.py": 0.2195248314787555,
+  "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/computation.py": 0.0,
+  "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/dtypes.py": 0.0,
+  "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/groupby.py": 0.0,
+  "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/nputils.py": 0.0,
+  "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/ops.py": 0.0,
+  "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/options.py": 0.0,
+  "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/testing.py": 0.0
+}

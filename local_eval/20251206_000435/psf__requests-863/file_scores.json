@@ -1,0 +1,20 @@
+{
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__0.14/requests/models.py": 0.8016206504240097,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__0.14/requests/api.py": 1.4079985501437218,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__0.14/requests/packages/urllib3/_collections.py": 1.5056719015137243,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__0.14/requests/packages/urllib3/poolmanager.py": 1.5080940165841281,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__0.14/requests/packages/urllib3/util.py": 1.4296837692804052,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__0.14/requests/structures.py": 1.5097707767275774,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__0.14/requests/utils.py": 1.3535680552249636,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__0.14/requests/packages/urllib3/response.py": 1.4227191340666179,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__0.14/requests/packages/urllib3/connectionpool.py": 1.3010300136853268,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__0.14/requests/sessions.py": 1.2849012308699608,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__0.14/requests/cookies.py": 1.0369465210715625,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__0.14/requests/hooks.py": 1.5759712963793915,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__0.14/requests/safe_mode.py": 0.9075411476790903,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__0.14/requests/packages/urllib3/filepost.py": 1.013986836249621,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__0.14/requests/packages/chardet2/universaldetector.py": 1.0182337649086284,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__0.14/requests/packages/urllib3/packages/six.py": 0.9295160030897799,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__0.14/requests/auth.py": 0.0,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__0.14/requests/packages/urllib3/exceptions.py": 0.0
+}

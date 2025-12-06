@@ -1,0 +1,23 @@
+{
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.10/requests/models.py": 1.051966325693044,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.10/requests/utils.py": 2.2733333333333334,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.10/requests/cookies.py": 0.4007713352956185,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.10/requests/structures.py": 0.3975631521536492,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.10/requests/adapters.py": 0.0,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.10/requests/api.py": 0.0,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.10/requests/auth.py": 0.0,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.10/requests/exceptions.py": 0.0,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.10/requests/hooks.py": 0.0,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.10/requests/packages/urllib3/_collections.py": 0.0,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.10/requests/packages/urllib3/connection.py": 0.0,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.10/requests/packages/urllib3/connectionpool.py": 0.0,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.10/requests/packages/urllib3/exceptions.py": 0.0,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.10/requests/packages/urllib3/packages/six.py": 0.0,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.10/requests/packages/urllib3/poolmanager.py": 0.0,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.10/requests/packages/urllib3/request.py": 0.0,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.10/requests/packages/urllib3/util/connection.py": 0.0,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.10/requests/packages/urllib3/util/retry.py": 0.0,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.10/requests/packages/urllib3/util/timeout.py": 0.0,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.10/requests/packages/urllib3/util/url.py": 0.0,
+  "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.10/requests/sessions.py": 0.0
+}

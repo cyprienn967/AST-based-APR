@@ -1,0 +1,12 @@
+{
+  "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/core/checks/messages.py": 2.6239999999999997,
+  "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/core/checks/translation.py": 2.783003472766206,
+  "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/test/signals.py": 1.3626795594174432,
+  "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py": 1.6954996049935185,
+  "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/contrib/auth/hashers.py": 1.2727922061357855,
+  "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/core/files/storage.py": 1.2727922061357855,
+  "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/dispatch/dispatcher.py": 1.2727922061357855,
+  "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/test/testcases.py": 1.2727922061357855,
+  "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/test/utils.py": 1.2727922061357855,
+  "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/functional.py": 1.0606601717798212
+}

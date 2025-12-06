@@ -1,0 +1,21 @@
+{
+  "files": [
+    "django/core/management/commands/sqlmigrate.py"
+  ],
+  "lines": {
+    "django/core/management/commands/sqlmigrate.py": [
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63
+    ]
+  },
+  "methods": [
+    "handle"
+  ]
+}

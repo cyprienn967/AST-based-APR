@@ -1,0 +1,22 @@
+{
+  "files": [
+    "django/utils/autoreload.py"
+  ],
+  "lines": {
+    "django/utils/autoreload.py": [
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152
+    ]
+  },
+  "methods": [
+    "iter_modules_and_files"
+  ]
+}

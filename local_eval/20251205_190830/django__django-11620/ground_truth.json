@@ -1,0 +1,29 @@
+{
+  "files": [
+    "django/views/debug.py"
+  ],
+  "lines": {
+    "django/views/debug.py": [
+      483,
+      484,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      485,
+      486,
+      488,
+      489,
+      487
+    ]
+  },
+  "methods": [
+    "technical_404_response"
+  ]
+}

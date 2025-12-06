@@ -1,0 +1,4722 @@
+{
+  "task_id": "django__django-11910",
+  "num_files_processed": 4,
+  "files": [
+    {
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/questioner.py",
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8164878951218448,
+      "num_nodes": 23,
+      "num_buggy_nodes": 0
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474,
+      "num_nodes": 43,
+      "num_buggy_nodes": 0
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514,
+      "num_nodes": 41,
+      "num_buggy_nodes": 0
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/base.py",
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.444529543431115,
+      "num_nodes": 13,
+      "num_buggy_nodes": 0
+    }
+  ],
+  "num_nodes": 120,
+  "num_buggy_nodes": 0,
+  "nodes": [
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/questioner.py",
+      "node_id": 262,
+      "node_type": "FunctionDef",
+      "name": "ask_rename",
+      "start_line": 66,
+      "end_line": 68,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.6226353991542697,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.48562338948249817,
+        "structural": 0.0,
+        "combined": 1.0029918098461974,
+        "boosted": 1.0029918098461974
+      },
+      "negative_signals": {
+        "total": 0.49,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8164878951218448
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/questioner.py",
+      "node_id": 663,
+      "node_type": "FunctionDef",
+      "name": "ask_not_null_alteration",
+      "start_line": 162,
+      "end_line": 185,
+      "line_count": 24,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5365937352180481,
+        "structural": 0.0,
+        "combined": 0.9057432003799343,
+        "boosted": 0.9057432003799343
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8164878951218448
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/questioner.py",
+      "node_id": 59,
+      "node_type": "FunctionDef",
+      "name": "ask_initial",
+      "start_line": 25,
+      "end_line": 54,
+      "line_count": 30,
+      "signals": {
+        "sbfl": 0.18167684731017125,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4065590500831604,
+        "structural": 0.0,
+        "combined": 0.7524929003608363,
+        "boosted": 0.7524929003608363
+      },
+      "negative_signals": {
+        "total": 0.12333333333333332,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.2333333333333333
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8164878951218448
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/questioner.py",
+      "node_id": 823,
+      "node_type": "FunctionDef",
+      "name": "ask_auto_now_add_addition",
+      "start_line": 207,
+      "end_line": 224,
+      "line_count": 18,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.42735281586647034,
+        "structural": 0.0,
+        "combined": 0.7166409263002324,
+        "boosted": 0.7166409263002324
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8164878951218448
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/questioner.py",
+      "node_id": 253,
+      "node_type": "FunctionDef",
+      "name": "ask_not_null_alteration",
+      "start_line": 61,
+      "end_line": 64,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.18167684731017125,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.404060423374176,
+        "structural": 0.0,
+        "combined": 0.6339646888815961,
+        "boosted": 0.6339646888815961
+      },
+      "negative_signals": {
+        "total": 0.27,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8164878951218448
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/questioner.py",
+      "node_id": 18,
+      "node_type": "ClassDef",
+      "name": "MigrationQuestioner",
+      "start_line": 13,
+      "end_line": 81,
+      "line_count": 69,
+      "signals": {
+        "sbfl": 0.7670800219762787,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 0.6204691433151909,
+        "boosted": 0.6204691433151909
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8164878951218448
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/questioner.py",
+      "node_id": 607,
+      "node_type": "FunctionDef",
+      "name": "ask_not_null_addition",
+      "start_line": 143,
+      "end_line": 160,
+      "line_count": 18,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.37334588170051575,
+        "structural": 0.0,
+        "combined": 0.619428444801514,
+        "boosted": 0.619428444801514
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8164878951218448
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/questioner.py",
+      "node_id": 314,
+      "node_type": "FunctionDef",
+      "name": "ask_auto_now_add_addition",
+      "start_line": 78,
+      "end_line": 81,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.18167684731017125,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.39222538471221924,
+        "structural": 0.0,
+        "combined": 0.6126616192900739,
+        "boosted": 0.6126616192900739
+      },
+      "negative_signals": {
+        "total": 0.27,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8164878951218448
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/questioner.py",
+      "node_id": 729,
+      "node_type": "FunctionDef",
+      "name": "ask_rename",
+      "start_line": 187,
+      "end_line": 191,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.485328733921051,
+        "structural": 0.0,
+        "combined": 0.5973155704302767,
+        "boosted": 0.5973155704302767
+      },
+      "negative_signals": {
+        "total": 0.27,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8164878951218448
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/questioner.py",
+      "node_id": 244,
+      "node_type": "FunctionDef",
+      "name": "ask_not_null_addition",
+      "start_line": 56,
+      "end_line": 59,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.18167684731017125,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.35836637020111084,
+        "structural": 0.0,
+        "combined": 0.5517153931700788,
+        "boosted": 0.5517153931700788
+      },
+      "negative_signals": {
+        "total": 0.27,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8164878951218448
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/questioner.py",
+      "node_id": 769,
+      "node_type": "FunctionDef",
+      "name": "ask_rename_model",
+      "start_line": 193,
+      "end_line": 197,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.42454561591148376,
+        "structural": 0.0,
+        "combined": 0.48790595801305575,
+        "boosted": 0.48790595801305575
+      },
+      "negative_signals": {
+        "total": 0.27,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8164878951218448
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/questioner.py",
+      "node_id": 281,
+      "node_type": "FunctionDef",
+      "name": "ask_rename_model",
+      "start_line": 70,
+      "end_line": 72,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.18167684731017125,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4008978009223938,
+        "structural": 0.0,
+        "combined": 0.40952719859391107,
+        "boosted": 0.40952719859391107
+      },
+      "negative_signals": {
+        "total": 0.49,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8164878951218448
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/questioner.py",
+      "node_id": 326,
+      "node_type": "FunctionDef",
+      "name": "_boolean_input",
+      "start_line": 86,
+      "end_line": 92,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1331813633441925,
+        "structural": 0.0,
+        "combined": 0.23093984314088542,
+        "boosted": 0.23093984314088542
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8164878951218448
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/questioner.py",
+      "node_id": 895,
+      "node_type": "FunctionDef",
+      "name": "ask_not_null_alteration",
+      "start_line": 233,
+      "end_line": 235,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3898772597312927,
+        "structural": 0.0,
+        "combined": 0.15801337713975783,
+        "boosted": 0.15801337713975783
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8164878951218448
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/questioner.py",
+      "node_id": 21,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 20,
+      "end_line": 23,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.5740126280705613,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.27439725399017334,
+        "structural": 0.0,
+        "combined": 0.1429067647507812,
+        "boosted": 0.1429067647507812
+      },
+      "negative_signals": {
+        "total": 0.9200000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8164878951218448
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/questioner.py",
+      "node_id": 903,
+      "node_type": "FunctionDef",
+      "name": "ask_auto_now_add_addition",
+      "start_line": 237,
+      "end_line": 239,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.32993727922439575,
+        "structural": 0.0,
+        "combined": 0.05012141222734335,
+        "boosted": 0.05012141222734335
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8164878951218448
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/questioner.py",
+      "node_id": 883,
+      "node_type": "FunctionDef",
+      "name": "ask_not_null_addition",
+      "start_line": 229,
+      "end_line": 231,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.32820218801498413,
+        "structural": 0.0,
+        "combined": 0.04699824805040243,
+        "boosted": 0.04699824805040243
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8164878951218448
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/questioner.py",
+      "node_id": 880,
+      "node_type": "ClassDef",
+      "name": "NonInteractiveMigrationQuestioner",
+      "start_line": 227,
+      "end_line": 239,
+      "line_count": 13,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.016317991631799162,
+        "boosted": -0.016317991631799162
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8164878951218448
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/questioner.py",
+      "node_id": 298,
+      "node_type": "FunctionDef",
+      "name": "ask_merge",
+      "start_line": 74,
+      "end_line": 76,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.18167684731017125,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.15512722730636597,
+        "structural": 0.0,
+        "combined": -0.03285983391493901,
+        "boosted": -0.03285983391493901
+      },
+      "negative_signals": {
+        "total": 0.49,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8164878951218448
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/questioner.py",
+      "node_id": 395,
+      "node_type": "FunctionDef",
+      "name": "_choice_input",
+      "start_line": 94,
+      "end_line": 107,
+      "line_count": 14,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.14059117436408997,
+        "structural": 0.0,
+        "combined": -0.03593767933053171,
+        "boosted": -0.03593767933053171
+      },
+      "negative_signals": {
+        "total": 0.27142857142857146,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.2,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.17857142857142858
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8164878951218448
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/questioner.py",
+      "node_id": 323,
+      "node_type": "ClassDef",
+      "name": "InteractiveMigrationQuestioner",
+      "start_line": 84,
+      "end_line": 224,
+      "line_count": 141,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.17698744769874478,
+        "boosted": -0.17698744769874478
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8164878951218448
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/questioner.py",
+      "node_id": 805,
+      "node_type": "FunctionDef",
+      "name": "ask_merge",
+      "start_line": 199,
+      "end_line": 205,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.16899314522743225,
+        "structural": 0.0,
+        "combined": -0.24459894946928304,
+        "boosted": -0.24459894946928304
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8164878951218448
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/questioner.py",
+      "node_id": 478,
+      "node_type": "FunctionDef",
+      "name": "_ask_default",
+      "start_line": 109,
+      "end_line": 141,
+      "line_count": 33,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.21803076565265656,
+        "structural": 0.0,
+        "combined": -0.39639145839172,
+        "boosted": -0.39639145839172
+      },
+      "negative_signals": {
+        "total": 0.7474242424242424,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.6,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.10606060606060606
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.8164878951218448
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 2370,
+      "node_type": "FunctionDef",
+      "name": "reduce",
+      "start_line": 386,
+      "end_line": 402,
+      "line_count": 17,
+      "signals": {
+        "sbfl": 2.1841311356317417,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.6185897588729858,
+        "structural": 1.2,
+        "combined": 5.684906134438936,
+        "boosted": 11.369812268877872
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 157,
+      "node_type": "FunctionDef",
+      "name": "references_field",
+      "start_line": 39,
+      "end_line": 61,
+      "line_count": 23,
+      "signals": {
+        "sbfl": 7.778326390994207,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.582260012626648,
+        "structural": 0.0,
+        "combined": 8.809230234617695,
+        "boosted": 8.809230234617695
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 1646,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 277,
+      "end_line": 280,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 1.8945136477880307,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5072532892227173,
+        "structural": 1.2,
+        "combined": 4.324584493762056,
+        "boosted": 8.649168987524112
+      },
+      "negative_signals": {
+        "total": 0.8800000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 1641,
+      "node_type": "ClassDef",
+      "name": "RenameField",
+      "start_line": 274,
+      "end_line": 402,
+      "line_count": 129,
+      "signals": {
+        "sbfl": 2.5786814640912037,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 3.0,
+        "combined": 8.437412807374786,
+        "boosted": 8.437412807374786
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 2142,
+      "node_type": "FunctionDef",
+      "name": "database_forwards",
+      "start_line": 357,
+      "end_line": 365,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 0.6188835513818889,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5528593063354492,
+        "structural": 1.2,
+        "combined": 4.007313884875249,
+        "boosted": 8.014627769750499
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 2225,
+      "node_type": "FunctionDef",
+      "name": "database_backwards",
+      "start_line": 367,
+      "end_line": 375,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 0.6188835513818889,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.547196626663208,
+        "structural": 1.2,
+        "combined": 3.9971210614652155,
+        "boosted": 7.994242122930431
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 1703,
+      "node_type": "FunctionDef",
+      "name": "deconstruct",
+      "start_line": 290,
+      "end_line": 300,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 0.6188835513818889,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.43794095516204834,
+        "structural": 1.2,
+        "combined": 3.798968315449695,
+        "boosted": 7.59793663089939
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 1738,
+      "node_type": "FunctionDef",
+      "name": "state_forwards",
+      "start_line": 302,
+      "end_line": 355,
+      "line_count": 54,
+      "signals": {
+        "sbfl": 0.6188835513818889,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5032740831375122,
+        "structural": 1.2,
+        "combined": 3.7907746898630204,
+        "boosted": 7.581549379726041
+      },
+      "negative_signals": {
+        "total": 0.0937037037037037,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.009259259259259259
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 1398,
+      "node_type": "FunctionDef",
+      "name": "database_forwards",
+      "start_line": 241,
+      "end_line": 251,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 0.125,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5468411445617676,
+        "structural": 1.2,
+        "combined": 3.501105104987301,
+        "boosted": 7.002210209974602
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 1561,
+      "node_type": "FunctionDef",
+      "name": "reduce",
+      "start_line": 259,
+      "end_line": 271,
+      "line_count": 13,
+      "signals": {
+        "sbfl": 0.125,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5176177024841309,
+        "structural": 1.2,
+        "combined": 3.35470267962643,
+        "boosted": 6.70940535925286
+      },
+      "negative_signals": {
+        "total": 0.09230769230769231,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.23076923076923075
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 2329,
+      "node_type": "FunctionDef",
+      "name": "references_field",
+      "start_line": 380,
+      "end_line": 384,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.6188835513818889,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.47373074293136597,
+        "structural": 1.2,
+        "combined": 3.3278675453747653,
+        "boosted": 6.6557350907495305
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 2308,
+      "node_type": "FunctionDef",
+      "name": "describe",
+      "start_line": 377,
+      "end_line": 378,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.6188835513818889,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4591921865940094,
+        "structural": 1.2,
+        "combined": 3.303936949937673,
+        "boosted": 6.607873899875346
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 1259,
+      "node_type": "FunctionDef",
+      "name": "state_forwards",
+      "start_line": 220,
+      "end_line": 239,
+      "line_count": 20,
+      "signals": {
+        "sbfl": 0.125,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.48566722869873047,
+        "structural": 1.2,
+        "combined": 3.2842756385233867,
+        "boosted": 6.568551277046773
+      },
+      "negative_signals": {
+        "total": 0.1,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 14,
+      "node_type": "ClassDef",
+      "name": "FieldOperation",
+      "start_line": 11,
+      "end_line": 67,
+      "line_count": 57,
+      "signals": {
+        "sbfl": 6.559332566956878,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 6.516795253524043,
+        "boosted": 6.516795253524043
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 1206,
+      "node_type": "FunctionDef",
+      "name": "deconstruct",
+      "start_line": 206,
+      "end_line": 218,
+      "line_count": 13,
+      "signals": {
+        "sbfl": 0.125,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.41238510608673096,
+        "structural": 1.2,
+        "combined": 3.2575916984188025,
+        "boosted": 6.515183396837605
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 1173,
+      "node_type": "ClassDef",
+      "name": "AlterField",
+      "start_line": 196,
+      "end_line": 271,
+      "line_count": 76,
+      "signals": {
+        "sbfl": 0.5277777777777778,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 3.0,
+        "combined": 6.42606135986733,
+        "boosted": 6.42606135986733
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 1677,
+      "node_type": "FunctionDef",
+      "name": "old_name_lower",
+      "start_line": 283,
+      "end_line": 284,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.6188835513818889,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.28550076484680176,
+        "structural": 1.2,
+        "combined": 2.991292390792699,
+        "boosted": 5.982584781585398
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 1690,
+      "node_type": "FunctionDef",
+      "name": "new_name_lower",
+      "start_line": 287,
+      "end_line": 288,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.6188835513818889,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2713683843612671,
+        "structural": 1.2,
+        "combined": 2.965854105918737,
+        "boosted": 5.931708211837474
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 1178,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 202,
+      "end_line": 204,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.7083333333333334,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4917744994163513,
+        "structural": 1.2,
+        "combined": 2.931288626312616,
+        "boosted": 5.862577252625232
+      },
+      "negative_signals": {
+        "total": 1.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 1544,
+      "node_type": "FunctionDef",
+      "name": "describe",
+      "start_line": 256,
+      "end_line": 257,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.125,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4377005994319916,
+        "structural": 1.2,
+        "combined": 2.771368541664152,
+        "boosted": 5.542737083328304
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 1523,
+      "node_type": "FunctionDef",
+      "name": "database_backwards",
+      "start_line": 253,
+      "end_line": 254,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.125,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.39045193791389465,
+        "structural": 1.2,
+        "combined": 2.6863209509315777,
+        "boosted": 5.3726419018631555
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 110,
+      "node_type": "FunctionDef",
+      "name": "references_model",
+      "start_line": 31,
+      "end_line": 37,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 1.5535261342792606,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4437290132045746,
+        "structural": 0.0,
+        "combined": 2.3470144774504798,
+        "boosted": 2.3470144774504798
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 17,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 12,
+      "end_line": 15,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 2.0045294800064766,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4301929473876953,
+        "structural": 0.0,
+        "combined": 1.8958917106774624,
+        "boosted": 1.8958917106774624
+      },
+      "negative_signals": {
+        "total": 0.8800000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 345,
+      "node_type": "FunctionDef",
+      "name": "reduce",
+      "start_line": 63,
+      "end_line": 67,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 1.5535261342792606,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4358348846435547,
+        "structural": 0.0,
+        "combined": 1.7942975833540769,
+        "boosted": 1.7942975833540769
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 45,
+      "node_type": "FunctionDef",
+      "name": "model_name_lower",
+      "start_line": 18,
+      "end_line": 19,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 1.7335467092350345,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2801417410373688,
+        "structural": 0.0,
+        "combined": 1.6963093057888654,
+        "boosted": 1.6963093057888654
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 58,
+      "node_type": "FunctionDef",
+      "name": "name_lower",
+      "start_line": 22,
+      "end_line": 23,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 1.5535261342792606,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.19474393129348755,
+        "structural": 0.0,
+        "combined": 1.3625726732941053,
+        "boosted": 1.3625726732941053
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 877,
+      "node_type": "FunctionDef",
+      "name": "state_forwards",
+      "start_line": 162,
+      "end_line": 173,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.569817841053009,
+        "structural": 0.0,
+        "combined": 1.0167168900148194,
+        "boosted": 1.0167168900148194
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 86,
+      "node_type": "FunctionDef",
+      "name": "is_same_field_operation",
+      "start_line": 28,
+      "end_line": 29,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 1.5535261342792606,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3266960382461548,
+        "structural": 0.0,
+        "combined": 0.960086465808906,
+        "boosted": 0.960086465808906
+      },
+      "negative_signals": {
+        "total": 1.1800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 71,
+      "node_type": "FunctionDef",
+      "name": "is_same_model_operation",
+      "start_line": 25,
+      "end_line": 26,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 1.5535261342792606,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3103674054145813,
+        "structural": 0.0,
+        "combined": 0.930694926712074,
+        "boosted": 0.930694926712074
+      },
+      "negative_signals": {
+        "total": 1.1800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 468,
+      "node_type": "FunctionDef",
+      "name": "state_forwards",
+      "start_line": 91,
+      "end_line": 101,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.49957674741744995,
+        "structural": 0.0,
+        "combined": 0.8910291901275293,
+        "boosted": 0.8910291901275293
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 556,
+      "node_type": "FunctionDef",
+      "name": "database_forwards",
+      "start_line": 103,
+      "end_line": 115,
+      "line_count": 13,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4910973310470581,
+        "structural": 0.0,
+        "combined": 0.8742737033473912,
+        "boosted": 0.8742737033473912
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 1039,
+      "node_type": "FunctionDef",
+      "name": "database_backwards",
+      "start_line": 180,
+      "end_line": 184,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5479482412338257,
+        "structural": 0.0,
+        "combined": 0.8625754909373042,
+        "boosted": 0.8625754909373042
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 738,
+      "node_type": "FunctionDef",
+      "name": "reduce",
+      "start_line": 125,
+      "end_line": 145,
+      "line_count": 21,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4957485496997833,
+        "structural": 0.0,
+        "combined": 0.7623900333828509,
+        "boosted": 0.7623900333828509
+      },
+      "negative_signals": {
+        "total": 0.11428571428571428,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.2857142857142857
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 847,
+      "node_type": "FunctionDef",
+      "name": "deconstruct",
+      "start_line": 151,
+      "end_line": 160,
+      "line_count": 10,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.42377781867980957,
+        "structural": 0.0,
+        "combined": 0.755337387056493,
+        "boosted": 0.755337387056493
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 415,
+      "node_type": "FunctionDef",
+      "name": "deconstruct",
+      "start_line": 77,
+      "end_line": 89,
+      "line_count": 13,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.41238510608673096,
+        "structural": 0.0,
+        "combined": 0.7325916984188023,
+        "boosted": 0.7325916984188023
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 983,
+      "node_type": "FunctionDef",
+      "name": "database_forwards",
+      "start_line": 175,
+      "end_line": 178,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4477618336677551,
+        "structural": 0.0,
+        "combined": 0.6829862259750935,
+        "boosted": 0.6829862259750935
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 665,
+      "node_type": "FunctionDef",
+      "name": "database_backwards",
+      "start_line": 117,
+      "end_line": 120,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.43499696254730225,
+        "structural": 0.0,
+        "combined": 0.6600094579582784,
+        "boosted": 0.6600094579582784
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 1128,
+      "node_type": "FunctionDef",
+      "name": "reduce",
+      "start_line": 189,
+      "end_line": 193,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.35609209537506104,
+        "structural": 0.0,
+        "combined": 0.45723442839152784,
+        "boosted": 0.45723442839152784
+      },
+      "negative_signals": {
+        "total": 0.18,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 721,
+      "node_type": "FunctionDef",
+      "name": "describe",
+      "start_line": 122,
+      "end_line": 123,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3685135245323181,
+        "structural": 0.0,
+        "combined": 0.12183180684473978,
+        "boosted": 0.12183180684473978
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 1111,
+      "node_type": "FunctionDef",
+      "name": "describe",
+      "start_line": 186,
+      "end_line": 187,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2960647642612457,
+        "structural": 0.0,
+        "combined": -0.008575961643190562,
+        "boosted": -0.008575961643190562
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 842,
+      "node_type": "ClassDef",
+      "name": "RemoveField",
+      "start_line": 148,
+      "end_line": 193,
+      "line_count": 46,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.06432835820895522,
+        "boosted": -0.06432835820895522
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 382,
+      "node_type": "ClassDef",
+      "name": "AddField",
+      "start_line": 70,
+      "end_line": 145,
+      "line_count": 76,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.08671641791044776,
+        "boosted": -0.08671641791044776
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/fields.py",
+      "node_id": 387,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 73,
+      "end_line": 75,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4917744994163513,
+        "structural": 0.0,
+        "combined": -0.17704470702071695,
+        "boosted": -0.17704470702071695
+      },
+      "negative_signals": {
+        "total": 1.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 3.3018325984906474
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 1720,
+      "node_type": "ClassDef",
+      "name": "ModelState",
+      "start_line": 349,
+      "end_line": 611,
+      "line_count": 263,
+      "signals": {
+        "sbfl": 5.343049508139057,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 5.138916938580955,
+        "boosted": 5.138916938580955
+      },
+      "negative_signals": {
+        "total": 0.075,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 1190,
+      "node_type": "ClassDef",
+      "name": "StateApps",
+      "start_line": 245,
+      "end_line": 346,
+      "line_count": 102,
+      "signals": {
+        "sbfl": 4.0759328334551626,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 3.980851000394606,
+        "boosted": 3.980851000394606
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 1723,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 360,
+      "end_line": 395,
+      "line_count": 36,
+      "signals": {
+        "sbfl": 2.977609946967405,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.39165133237838745,
+        "structural": 0.0,
+        "combined": 2.9615730708349726,
+        "boosted": 2.9615730708349726
+      },
+      "negative_signals": {
+        "total": 0.7033333333333335,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.08333333333333334
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 2763,
+      "node_type": "FunctionDef",
+      "name": "clone",
+      "start_line": 543,
+      "end_line": 555,
+      "line_count": 13,
+      "signals": {
+        "sbfl": 2.231687598361231,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3599318861961365,
+        "structural": 0.0,
+        "combined": 2.8431820147908726,
+        "boosted": 2.8431820147908726
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 2954,
+      "node_type": "FunctionDef",
+      "name": "get_field_by_name",
+      "start_line": 580,
+      "end_line": 584,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 2.5197687490298315,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4044424295425415,
+        "structural": 0.0,
+        "combined": 2.605310130389712,
+        "boosted": 2.605310130389712
+      },
+      "negative_signals": {
+        "total": 0.6400000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 1195,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 250,
+      "end_line": 279,
+      "line_count": 30,
+      "signals": {
+        "sbfl": 2.4076674409056418,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.37494921684265137,
+        "structural": 0.0,
+        "combined": 2.427846080322251,
+        "boosted": 2.427846080322251
+      },
+      "negative_signals": {
+        "total": 0.6400000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 2664,
+      "node_type": "FunctionDef",
+      "name": "construct_managers",
+      "start_line": 530,
+      "end_line": 541,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 1.5438890691269669,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.34184157848358154,
+        "structural": 0.0,
+        "combined": 2.123311930037348,
+        "boosted": 2.123311930037348
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 1383,
+      "node_type": "FunctionDef",
+      "name": "bulk_update",
+      "start_line": 282,
+      "end_line": 291,
+      "line_count": 10,
+      "signals": {
+        "sbfl": 1.726277435345716,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1847262978553772,
+        "structural": 0.0,
+        "combined": 2.053874787852007,
+        "boosted": 2.053874787852007
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 1575,
+      "node_type": "FunctionDef",
+      "name": "register_model",
+      "start_line": 331,
+      "end_line": 339,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 1.5887177294988635,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.34503722190856934,
+        "structural": 0.0,
+        "combined": 1.5653657436642392,
+        "boosted": 1.5653657436642392
+      },
+      "negative_signals": {
+        "total": 0.6400000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 1504,
+      "node_type": "FunctionDef",
+      "name": "clone",
+      "start_line": 319,
+      "end_line": 329,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 0.9590430196365088,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3152352571487427,
+        "structural": 0.0,
+        "combined": 1.4910655005075188,
+        "boosted": 1.4910655005075188
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 1682,
+      "node_type": "FunctionDef",
+      "name": "unregister_model",
+      "start_line": 341,
+      "end_line": 346,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.9590430196365088,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.26391860842704773,
+        "structural": 0.0,
+        "combined": 1.3911505246251619,
+        "boosted": 1.3911505246251619
+      },
+      "negative_signals": {
+        "total": 0.04000000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 3035,
+      "node_type": "FunctionDef",
+      "name": "get_constraint_by_name",
+      "start_line": 592,
+      "end_line": 596,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 1.2823318819533736,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.33678165078163147,
+        "structural": 0.0,
+        "combined": 1.2460838615436163,
+        "boosted": 1.2460838615436163
+      },
+      "negative_signals": {
+        "total": 0.6400000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 1930,
+      "node_type": "FunctionDef",
+      "name": "name_lower",
+      "start_line": 398,
+      "end_line": 399,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 1.417954127154496,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.19474393129348755,
+        "structural": 0.0,
+        "combined": 1.227511206756096,
+        "boosted": 1.227511206756096
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 2994,
+      "node_type": "FunctionDef",
+      "name": "get_index_by_name",
+      "start_line": 586,
+      "end_line": 590,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 1.2823318819533736,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3232066035270691,
+        "structural": 0.0,
+        "combined": 1.221648776485404,
+        "boosted": 1.221648776485404
+      },
+      "negative_signals": {
+        "total": 0.6400000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 386,
+      "node_type": "FunctionDef",
+      "name": "add_model",
+      "start_line": 92,
+      "end_line": 96,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.6538929679339835,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3477321267127991,
+        "structural": 0.0,
+        "combined": 1.157355804200328,
+        "boosted": 1.157355804200328
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 1943,
+      "node_type": "FunctionDef",
+      "name": "from_model",
+      "start_line": 402,
+      "end_line": 528,
+      "line_count": 127,
+      "signals": {
+        "sbfl": 1.2823318819533736,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.35119378566741943,
+        "structural": 0.0,
+        "combined": 1.0045254788138518,
+        "boosted": 1.0045254788138518
+      },
+      "negative_signals": {
+        "total": 0.8475984251968506,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.5,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.03149606299212599
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 793,
+      "node_type": "FunctionDef",
+      "name": "_reload",
+      "start_line": 166,
+      "end_line": 190,
+      "line_count": 25,
+      "signals": {
+        "sbfl": 0.2615571871735934,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4143855571746826,
+        "structural": 0.0,
+        "combined": 0.9791762310045523,
+        "boosted": 0.9791762310045523
+      },
+      "negative_signals": {
+        "total": 0.016,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.04
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 349,
+      "node_type": "ClassDef",
+      "name": "ProjectState",
+      "start_line": 79,
+      "end_line": 226,
+      "line_count": 148,
+      "signals": {
+        "sbfl": 1.083594061147744,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 0.9509263033736031,
+        "boosted": 0.9509263033736031
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 486,
+      "node_type": "FunctionDef",
+      "name": "_find_reload_model",
+      "start_line": 106,
+      "end_line": 152,
+      "line_count": 47,
+      "signals": {
+        "sbfl": 0.2615571871735934,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3673113286495209,
+        "structural": 0.0,
+        "combined": 0.7926193790700633,
+        "boosted": 0.7926193790700633
+      },
+      "negative_signals": {
+        "total": 0.10702127659574467,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0425531914893617
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 739,
+      "node_type": "FunctionDef",
+      "name": "reload_models",
+      "start_line": 159,
+      "end_line": 164,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.2615571871735934,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.29550203680992126,
+        "structural": 0.0,
+        "combined": 0.7905148632514191,
+        "boosted": 0.7905148632514191
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 702,
+      "node_type": "FunctionDef",
+      "name": "reload_model",
+      "start_line": 154,
+      "end_line": 157,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.2615571871735934,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3499332070350647,
+        "structural": 0.0,
+        "combined": 0.7694729663833546,
+        "boosted": 0.7694729663833546
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 1024,
+      "node_type": "FunctionDef",
+      "name": "concrete_apps",
+      "start_line": 212,
+      "end_line": 214,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.5231143743471868,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3316904604434967,
+        "structural": 0.0,
+        "combined": 0.6986842080554644,
+        "boosted": 0.6986842080554644
+      },
+      "negative_signals": {
+        "total": 0.42,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 440,
+      "node_type": "FunctionDef",
+      "name": "remove_model",
+      "start_line": 98,
+      "end_line": 104,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.2615571871735934,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.30521899461746216,
+        "structural": 0.0,
+        "combined": 0.6875143889416537,
+        "boosted": 0.6875143889416537
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 911,
+      "node_type": "FunctionDef",
+      "name": "clone",
+      "start_line": 192,
+      "end_line": 201,
+      "line_count": 10,
+      "signals": {
+        "sbfl": 0.2615571871735934,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.20003138482570648,
+        "structural": 0.0,
+        "combined": 0.5867036962264771,
+        "boosted": 0.5867036962264771
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 2813,
+      "node_type": "FunctionDef",
+      "name": "render",
+      "start_line": 557,
+      "end_line": 578,
+      "line_count": 22,
+      "signals": {
+        "sbfl": 2.6249921094444866,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.44824299216270447,
+        "structural": 0.0,
+        "combined": 3.330572985889356,
+        "boosted": 0.3330572985889356
+      },
+      "negative_signals": {
+        "total": 0.09045454545454545,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.11363636363636363
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 1140,
+      "node_type": "ClassDef",
+      "name": "AppConfigStub",
+      "start_line": 229,
+      "end_line": 242,
+      "line_count": 14,
+      "signals": {
+        "sbfl": 0.3836172078546036,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 0.3317432307678606,
+        "boosted": 0.3317432307678606
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 352,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 86,
+      "end_line": 90,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.6538929679339835,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.32308781147003174,
+        "structural": 0.0,
+        "combined": 0.31299603676334675,
+        "boosted": 0.31299603676334675
+      },
+      "negative_signals": {
+        "total": 0.9200000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 1007,
+      "node_type": "FunctionDef",
+      "name": "apps",
+      "start_line": 208,
+      "end_line": 209,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.39717943237471587,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.24924641847610474,
+        "structural": 0.0,
+        "combined": 0.3048409889050267,
+        "boosted": 0.3048409889050267
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 982,
+      "node_type": "FunctionDef",
+      "name": "clear_delayed_apps_cache",
+      "start_line": 203,
+      "end_line": 205,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.2615571871735934,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.08806389570236206,
+        "structural": 0.0,
+        "combined": 0.2985992043478288,
+        "boosted": 0.2985992043478288
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 1417,
+      "node_type": "FunctionDef",
+      "name": "render_multiple",
+      "start_line": 293,
+      "end_line": 317,
+      "line_count": 25,
+      "signals": {
+        "sbfl": 2.315265471647734,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.23840518295764923,
+        "structural": 0.0,
+        "combined": 2.692119841888033,
+        "boosted": 0.2692119841888033
+      },
+      "negative_signals": {
+        "total": 0.04000000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 2337,
+      "node_type": "FunctionDef",
+      "name": "flatten_bases",
+      "start_line": 464,
+      "end_line": 471,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.14522521197795868,
+        "structural": 0.0,
+        "combined": 0.2574773946536153,
+        "boosted": 0.2574773946536153
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 249,
+      "node_type": "FunctionDef",
+      "name": "get_related_models_recursive",
+      "start_line": 57,
+      "end_line": 76,
+      "line_count": 20,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5426720380783081,
+        "structural": 0.0,
+        "combined": 0.2519897012741788,
+        "boosted": 0.2519897012741788
+      },
+      "negative_signals": {
+        "total": 0.7150000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 1170,
+      "node_type": "FunctionDef",
+      "name": "import_models",
+      "start_line": 241,
+      "end_line": 242,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.2324952774876386,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2601030468940735,
+        "structural": 0.0,
+        "combined": 0.15969876517029322,
+        "boosted": 0.15969876517029322
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 3099,
+      "node_type": "FunctionDef",
+      "name": "__eq__",
+      "start_line": 601,
+      "end_line": 611,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 1.2823318819533736,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.37612253427505493,
+        "structural": 0.0,
+        "combined": 1.413951461651746,
+        "boosted": 0.1413951461651746
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 3076,
+      "node_type": "FunctionDef",
+      "name": "__repr__",
+      "start_line": 598,
+      "end_line": 599,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 1.2823318819533736,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.12139865756034851,
+        "structural": 0.0,
+        "combined": 0.9598674688353233,
+        "boosted": 0.09598674688353233
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 1149,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 234,
+      "end_line": 239,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.3584302194601095,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2686086595058441,
+        "structural": 0.0,
+        "combined": 0.07897981639059613,
+        "boosted": 0.07897981639059613
+      },
+      "negative_signals": {
+        "total": 0.7600000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 1107,
+      "node_type": "FunctionDef",
+      "name": "__eq__",
+      "start_line": 225,
+      "end_line": 226,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.2615571871735934,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2751653492450714,
+        "structural": 0.0,
+        "combined": 0.21587281908804432,
+        "boosted": 0.021587281908804434
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 94,
+      "node_type": "FunctionDef",
+      "name": "_get_related_models",
+      "start_line": 27,
+      "end_line": 43,
+      "line_count": 17,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3970363736152649,
+        "structural": 0.0,
+        "combined": 0.021318500330717232,
+        "boosted": 0.021318500330717232
+      },
+      "negative_signals": {
+        "total": 0.6850000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 220,
+      "node_type": "FunctionDef",
+      "name": "get_related_models_tuples",
+      "start_line": 46,
+      "end_line": 54,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3476071357727051,
+        "structural": 0.0,
+        "combined": -0.06372614087918012,
+        "boosted": -0.06372614087918012
+      },
+      "negative_signals": {
+        "total": 0.6850000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 1052,
+      "node_type": "FunctionDef",
+      "name": "from_apps",
+      "start_line": 217,
+      "end_line": 223,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.2615571871735934,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2414214313030243,
+        "structural": 0.0,
+        "combined": -0.11232122502433453,
+        "boosted": -0.11232122502433453
+      },
+      "negative_signals": {
+        "total": 0.8050000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/state.py",
+      "node_id": 32,
+      "node_type": "FunctionDef",
+      "name": "_get_app_label_and_model_name",
+      "start_line": 19,
+      "end_line": 24,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.23884999752044678,
+        "structural": 0.0,
+        "combined": -0.4330159946432286,
+        "boosted": -0.4330159946432286
+      },
+      "negative_signals": {
+        "total": 0.8600000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.25
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.7790544983482514
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/base.py",
+      "node_id": 6,
+      "node_type": "ClassDef",
+      "name": "Operation",
+      "start_line": 5,
+      "end_line": 141,
+      "line_count": 137,
+      "signals": {
+        "sbfl": 4.989197702317085,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 4.607708340614958,
+        "boosted": 4.607708340614958
+      },
+      "negative_signals": {
+        "total": 0.09000000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.30000000000000004,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.444529543431115
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/base.py",
+      "node_id": 208,
+      "node_type": "FunctionDef",
+      "name": "reduce",
+      "start_line": 116,
+      "end_line": 126,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 1.7684352124489258,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.18790464103221893,
+        "structural": 0.0,
+        "combined": 2.0232593109877706,
+        "boosted": 2.0232593109877706
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.444529543431115
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/base.py",
+      "node_id": 59,
+      "node_type": "FunctionDef",
+      "name": "deconstruct",
+      "start_line": 43,
+      "end_line": 53,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 1.213588630293345,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3347987234592438,
+        "structural": 0.0,
+        "combined": 1.732822077200835,
+        "boosted": 1.732822077200835
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.444529543431115
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/base.py",
+      "node_id": 177,
+      "node_type": "FunctionDef",
+      "name": "allow_migrate_model",
+      "start_line": 104,
+      "end_line": 114,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 1.213588630293345,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3320164084434509,
+        "structural": 0.0,
+        "combined": 1.7278139101724077,
+        "boosted": 1.7278139101724077
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.444529543431115
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/base.py",
+      "node_id": 158,
+      "node_type": "FunctionDef",
+      "name": "references_field",
+      "start_line": 95,
+      "end_line": 102,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 1.213588630293345,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.29243525862693787,
+        "structural": 0.0,
+        "combined": 1.6629508192260882,
+        "boosted": 1.6629508192260882
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.444529543431115
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/base.py",
+      "node_id": 113,
+      "node_type": "FunctionDef",
+      "name": "database_backwards",
+      "start_line": 69,
+      "end_line": 75,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 1.213588630293345,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.31473734974861145,
+        "structural": 0.0,
+        "combined": 1.585222242819569,
+        "boosted": 1.585222242819569
+      },
+      "negative_signals": {
+        "total": 0.18,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.444529543431115
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/base.py",
+      "node_id": 87,
+      "node_type": "FunctionDef",
+      "name": "state_forwards",
+      "start_line": 55,
+      "end_line": 60,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 1.213588630293345,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.30867335200309753,
+        "structural": 0.0,
+        "combined": 1.576434706452112,
+        "boosted": 1.576434706452112
+      },
+      "negative_signals": {
+        "total": 0.18,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.444529543431115
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/base.py",
+      "node_id": 99,
+      "node_type": "FunctionDef",
+      "name": "database_forwards",
+      "start_line": 62,
+      "end_line": 67,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 1.213588630293345,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3159683644771576,
+        "structural": 0.0,
+        "combined": 1.57456572890542,
+        "boosted": 1.57456572890542
+      },
+      "negative_signals": {
+        "total": 0.195,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.444529543431115
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/base.py",
+      "node_id": 148,
+      "node_type": "FunctionDef",
+      "name": "references_model",
+      "start_line": 83,
+      "end_line": 93,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 1.213588630293345,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.21216988563537598,
+        "structural": 0.0,
+        "combined": 1.4970901691178728,
+        "boosted": 1.4970901691178728
+      },
+      "negative_signals": {
+        "total": 0.075,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.444529543431115
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/base.py",
+      "node_id": 30,
+      "node_type": "FunctionDef",
+      "name": "__new__",
+      "start_line": 37,
+      "end_line": 41,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 1.619890884457816,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.22608682513237,
+        "structural": 0.0,
+        "combined": 1.1362088718237415,
+        "boosted": 1.1362088718237415
+      },
+      "negative_signals": {
+        "total": 0.8800000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.444529543431115
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/base.py",
+      "node_id": 238,
+      "node_type": "FunctionDef",
+      "name": "_get_model_tuple",
+      "start_line": 128,
+      "end_line": 134,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 1.213588630293345,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.30753546953201294,
+        "structural": 0.0,
+        "combined": 1.1122588584296915,
+        "boosted": 1.1122588584296915
+      },
+      "negative_signals": {
+        "total": 0.6400000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.444529543431115
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/base.py",
+      "node_id": 127,
+      "node_type": "FunctionDef",
+      "name": "describe",
+      "start_line": 77,
+      "end_line": 81,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 1.213588630293345,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.09298457205295563,
+        "structural": 0.0,
+        "combined": 1.1003225621163246,
+        "boosted": 1.1003225621163246
+      },
+      "negative_signals": {
+        "total": 0.27,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.444529543431115
+    },
+    {
+      "task_id": "django__django-11910",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/db/migrations/operations/base.py",
+      "node_id": 290,
+      "node_type": "FunctionDef",
+      "name": "__repr__",
+      "start_line": 136,
+      "end_line": 141,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 6.213588630293345,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1266893744468689,
+        "structural": 0.0,
+        "combined": 5.8888635468509,
+        "boosted": 0.5888863546850901
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.444529543431115
+    }
+  ]
+}

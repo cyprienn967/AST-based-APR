@@ -1,0 +1,3466 @@
+{
+  "task_id": "sympy__sympy-17630",
+  "num_files_processed": 3,
+  "files": [
+    {
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/matrices/expressions/matmul.py",
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.931310496101964,
+      "num_nodes": 25,
+      "num_buggy_nodes": 0
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/utilities/misc.py",
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 2.5575844122715705,
+      "num_nodes": 16,
+      "num_buggy_nodes": 0
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575,
+      "num_nodes": 47,
+      "num_buggy_nodes": 0
+    }
+  ],
+  "num_nodes": 88,
+  "num_buggy_nodes": 0,
+  "nodes": [
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/matrices/expressions/matmul.py",
+      "node_id": 1769,
+      "node_type": "FunctionDef",
+      "name": "combine_powers",
+      "start_line": 318,
+      "end_line": 348,
+      "line_count": 31,
+      "signals": {
+        "sbfl": 4.723058059618518,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2852584719657898,
+        "structural": 0.0,
+        "combined": 5.164205507484299,
+        "boosted": 5.164205507484299
+      },
+      "negative_signals": {
+        "total": 0.04935483870967742,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.04838709677419355
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.931310496101964
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/matrices/expressions/matmul.py",
+      "node_id": 35,
+      "node_type": "ClassDef",
+      "name": "MatMul",
+      "start_line": 16,
+      "end_line": 201,
+      "line_count": 186,
+      "signals": {
+        "sbfl": 4.755640589471293,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 4.482862811693515,
+        "boosted": 4.482862811693515
+      },
+      "negative_signals": {
+        "total": 0.135,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.45,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.931310496101964
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/matrices/expressions/matmul.py",
+      "node_id": 157,
+      "node_type": "FunctionDef",
+      "name": "shape",
+      "start_line": 56,
+      "end_line": 58,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 1.1567774406822064,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1890142560005188,
+        "structural": 1.5,
+        "combined": 4.074780879260918,
+        "boosted": 4.074780879260918
+      },
+      "negative_signals": {
+        "total": 0.42,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.931310496101964
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/matrices/expressions/matmul.py",
+      "node_id": 1445,
+      "node_type": "FunctionDef",
+      "name": "xxinv",
+      "start_line": 268,
+      "end_line": 289,
+      "line_count": 22,
+      "signals": {
+        "sbfl": 2.995693874752461,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3347219228744507,
+        "structural": 0.0,
+        "combined": 3.479169766902903,
+        "boosted": 3.479169766902903
+      },
+      "negative_signals": {
+        "total": 0.10272727272727274,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.18181818181818182
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.931310496101964
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/matrices/expressions/matmul.py",
+      "node_id": 52,
+      "node_type": "FunctionDef",
+      "name": "__new__",
+      "start_line": 34,
+      "end_line": 53,
+      "line_count": 20,
+      "signals": {
+        "sbfl": 3.3000809656174876,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.27200135588645935,
+        "structural": 0.0,
+        "combined": 3.0948685913982996,
+        "boosted": 3.0948685913982996
+      },
+      "negative_signals": {
+        "total": 0.6800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.931310496101964
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/matrices/expressions/matmul.py",
+      "node_id": 541,
+      "node_type": "FunctionDef",
+      "name": "as_coeff_matrices",
+      "start_line": 100,
+      "end_line": 107,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 2.2624498940218354,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2940671443939209,
+        "structural": 0.0,
+        "combined": 2.785844828004967,
+        "boosted": 2.785844828004967
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.931310496101964
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/matrices/expressions/matmul.py",
+      "node_id": 1256,
+      "node_type": "FunctionDef",
+      "name": "any_zeros",
+      "start_line": 219,
+      "end_line": 224,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 2.432539614893537,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.24656234681606293,
+        "structural": 0.0,
+        "combined": 2.751907394718006,
+        "boosted": 2.751907394718006
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.931310496101964
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/matrices/expressions/matmul.py",
+      "node_id": 865,
+      "node_type": "FunctionDef",
+      "name": "doit",
+      "start_line": 162,
+      "end_line": 170,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 2.386614828307091,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2268497347831726,
+        "structural": 0.0,
+        "combined": 2.748277684250135,
+        "boosted": 2.748277684250135
+      },
+      "negative_signals": {
+        "total": 0.04000000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.931310496101964
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/matrices/expressions/matmul.py",
+      "node_id": 637,
+      "node_type": "FunctionDef",
+      "name": "_eval_transpose",
+      "start_line": 113,
+      "end_line": 134,
+      "line_count": 22,
+      "signals": {
+        "sbfl": 1.1567774406822064,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.46462586522102356,
+        "structural": 0.0,
+        "combined": 1.9018077017837527,
+        "boosted": 1.9018077017837527
+      },
+      "negative_signals": {
+        "total": 0.075,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.931310496101964
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/matrices/expressions/matmul.py",
+      "node_id": 198,
+      "node_type": "FunctionDef",
+      "name": "_entry",
+      "start_line": 60,
+      "end_line": 98,
+      "line_count": 39,
+      "signals": {
+        "sbfl": 1.1567774406822064,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3476654887199402,
+        "structural": 0.0,
+        "combined": 1.7031736109763893,
+        "boosted": 1.7031736109763893
+      },
+      "negative_signals": {
+        "total": 0.050512820512820515,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.05128205128205129
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.931310496101964
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/matrices/expressions/matmul.py",
+      "node_id": 610,
+      "node_type": "FunctionDef",
+      "name": "as_coeff_mmul",
+      "start_line": 109,
+      "end_line": 111,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 1.6785266354321573,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.23769709467887878,
+        "structural": 0.0,
+        "combined": 1.684159183631917,
+        "boosted": 1.684159183631917
+      },
+      "negative_signals": {
+        "total": 0.42,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.931310496101964
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/matrices/expressions/matmul.py",
+      "node_id": 971,
+      "node_type": "FunctionDef",
+      "name": "_eval_derivative_matrix_lines",
+      "start_line": 178,
+      "end_line": 201,
+      "line_count": 24,
+      "signals": {
+        "sbfl": 1.1567774406822064,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2970765233039856,
+        "structural": 0.0,
+        "combined": 1.6737374048516027,
+        "boosted": 1.6737374048516027
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.931310496101964
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/matrices/expressions/matmul.py",
+      "node_id": 807,
+      "node_type": "FunctionDef",
+      "name": "_eval_inverse",
+      "start_line": 153,
+      "end_line": 160,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 1.1567774406822064,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3200494050979614,
+        "structural": 0.0,
+        "combined": 1.6269404439326112,
+        "boosted": 1.6269404439326112
+      },
+      "negative_signals": {
+        "total": 0.1,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.25
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.931310496101964
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/matrices/expressions/matmul.py",
+      "node_id": 754,
+      "node_type": "FunctionDef",
+      "name": "_eval_determinant",
+      "start_line": 147,
+      "end_line": 151,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 1.1567774406822064,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3673015534877777,
+        "structural": 0.0,
+        "combined": 1.5742165332565026,
+        "boosted": 1.5742165332565026
+      },
+      "negative_signals": {
+        "total": 0.24,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.931310496101964
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/matrices/expressions/matmul.py",
+      "node_id": 713,
+      "node_type": "FunctionDef",
+      "name": "_eval_trace",
+      "start_line": 139,
+      "end_line": 145,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 1.1567774406822064,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.24362701177597046,
+        "structural": 0.0,
+        "combined": 1.4701208766937681,
+        "boosted": 1.4701208766937681
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.931310496101964
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/matrices/expressions/matmul.py",
+      "node_id": 1677,
+      "node_type": "FunctionDef",
+      "name": "remove_ids",
+      "start_line": 291,
+      "end_line": 310,
+      "line_count": 20,
+      "signals": {
+        "sbfl": 0.9838699100999074,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.27223193645477295,
+        "structural": 0.0,
+        "combined": 1.384072580903684,
+        "boosted": 1.384072580903684
+      },
+      "negative_signals": {
+        "total": 0.075,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.931310496101964
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/matrices/expressions/matmul.py",
+      "node_id": 924,
+      "node_type": "FunctionDef",
+      "name": "args_cnc",
+      "start_line": 173,
+      "end_line": 176,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 1.1567774406822064,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.21458382904529572,
+        "structural": 0.0,
+        "combined": 1.3000653700007758,
+        "boosted": 1.3000653700007758
+      },
+      "negative_signals": {
+        "total": 0.24,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.931310496101964
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/matrices/expressions/matmul.py",
+      "node_id": 1735,
+      "node_type": "FunctionDef",
+      "name": "factor_in_front",
+      "start_line": 312,
+      "end_line": 316,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.8872595264191645,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.24082845449447632,
+        "structural": 0.0,
+        "combined": 1.1970470408055183,
+        "boosted": 1.1970470408055183
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.931310496101964
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/matrices/expressions/matmul.py",
+      "node_id": 1225,
+      "node_type": "FunctionDef",
+      "name": "newmul",
+      "start_line": 214,
+      "end_line": 217,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.920120990360615,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1649779975414276,
+        "structural": 0.0,
+        "combined": 1.0941184229722218,
+        "boosted": 1.0941184229722218
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.931310496101964
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/matrices/expressions/matmul.py",
+      "node_id": 1163,
+      "node_type": "FunctionDef",
+      "name": "validate",
+      "start_line": 204,
+      "end_line": 209,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.8617544005662438,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.13636697828769684,
+        "structural": 0.0,
+        "combined": 1.0727705170396535,
+        "boosted": 1.0727705170396535
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.931310496101964
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/matrices/expressions/matmul.py",
+      "node_id": 1327,
+      "node_type": "FunctionDef",
+      "name": "merge_explicit",
+      "start_line": 226,
+      "end_line": 266,
+      "line_count": 41,
+      "signals": {
+        "sbfl": 0.5160586516702357,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.6564635634422302,
+        "structural": 0.0,
+        "combined": 1.023176354032465,
+        "boosted": 1.023176354032465
+      },
+      "negative_signals": {
+        "total": 0.6441463414634148,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.4,
+        "docstring_quality": 0.6000000000000001,
+        "safe_patterns": 0.08536585365853659
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.931310496101964
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/matrices/expressions/matmul.py",
+      "node_id": 682,
+      "node_type": "FunctionDef",
+      "name": "_eval_adjoint",
+      "start_line": 136,
+      "end_line": 137,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 1.1567774406822064,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.12321394681930542,
+        "structural": 0.0,
+        "combined": 0.7970810634754747,
+        "boosted": 0.7970810634754747
+      },
+      "negative_signals": {
+        "total": 0.5800000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.931310496101964
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/matrices/expressions/matmul.py",
+      "node_id": 1987,
+      "node_type": "FunctionDef",
+      "name": "only_squares",
+      "start_line": 354,
+      "end_line": 364,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2736399471759796,
+        "structural": 0.0,
+        "combined": 0.4544037567686152,
+        "boosted": 0.4544037567686152
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.931310496101964
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/matrices/expressions/matmul.py",
+      "node_id": 2094,
+      "node_type": "FunctionDef",
+      "name": "refine_MatMul",
+      "start_line": 371,
+      "end_line": 402,
+      "line_count": 32,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.46723222732543945,
+        "structural": 0.0,
+        "combined": 0.4248143054820873,
+        "boosted": 0.4248143054820873
+      },
+      "negative_signals": {
+        "total": 0.3925,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.2,
+        "docstring_quality": 0.5,
+        "safe_patterns": 0.03125
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.931310496101964
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/matrices/expressions/matmul.py",
+      "node_id": 301,
+      "node_type": "FunctionDef",
+      "name": "f",
+      "start_line": 73,
+      "end_line": 77,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.09110946953296661,
+        "structural": 0.0,
+        "combined": 0.04029334145563621,
+        "boosted": 0.04029334145563621
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 1.931310496101964
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/utilities/misc.py",
+      "node_id": 27,
+      "node_type": "FunctionDef",
+      "name": "filldedent",
+      "start_line": 21,
+      "end_line": 34,
+      "line_count": 14,
+      "signals": {
+        "sbfl": 0.8249579113843054,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.10726496577262878,
+        "structural": 0.0,
+        "combined": 0.9205138413716758,
+        "boosted": 0.9205138413716758
+      },
+      "negative_signals": {
+        "total": 0.08928571428571429,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.03571428571428572
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 2.5575844122715705
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/utilities/misc.py",
+      "node_id": 1190,
+      "node_type": "FunctionDef",
+      "name": "replace",
+      "start_line": 351,
+      "end_line": 390,
+      "line_count": 40,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5616161823272705,
+        "structural": 0.0,
+        "combined": 0.7873797164243811,
+        "boosted": 0.7873797164243811
+      },
+      "negative_signals": {
+        "total": 0.2,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.5,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 2.5575844122715705
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/utilities/misc.py",
+      "node_id": 1255,
+      "node_type": "FunctionDef",
+      "name": "translate",
+      "start_line": 393,
+      "end_line": 491,
+      "line_count": 99,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5185283422470093,
+        "structural": 0.0,
+        "combined": 0.6027924896037373,
+        "boosted": 0.6027924896037373
+      },
+      "negative_signals": {
+        "total": 0.2723232323232323,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.5,
+        "safe_patterns": 0.08080808080808081
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 2.5575844122715705
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/utilities/misc.py",
+      "node_id": 56,
+      "node_type": "FunctionDef",
+      "name": "strlines",
+      "start_line": 37,
+      "end_line": 86,
+      "line_count": 50,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5086113214492798,
+        "structural": 0.0,
+        "combined": 0.5940886139028212,
+        "boosted": 0.5940886139028212
+      },
+      "negative_signals": {
+        "total": 0.29200000000000004,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.5,
+        "safe_patterns": 0.030000000000000006
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 2.5575844122715705
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/utilities/misc.py",
+      "node_id": 959,
+      "node_type": "FunctionDef",
+      "name": "func_name",
+      "start_line": 285,
+      "end_line": 325,
+      "line_count": 41,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4523097574710846,
+        "structural": 0.0,
+        "combined": 0.5657716237062018,
+        "boosted": 0.5657716237062018
+      },
+      "negative_signals": {
+        "total": 0.22426829268292686,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.55,
+        "safe_patterns": 0.0731707317073171
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 2.5575844122715705
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/utilities/misc.py",
+      "node_id": 1109,
+      "node_type": "FunctionDef",
+      "name": "_replace",
+      "start_line": 328,
+      "end_line": 348,
+      "line_count": 21,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2890404462814331,
+        "structural": 0.0,
+        "combined": 0.3633960526062996,
+        "boosted": 0.3633960526062996
+      },
+      "negative_signals": {
+        "total": 0.14452380952380953,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.45,
+        "safe_patterns": 0.023809523809523808
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 2.5575844122715705
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/utilities/misc.py",
+      "node_id": 761,
+      "node_type": "FunctionDef",
+      "name": "find_executable",
+      "start_line": 251,
+      "end_line": 282,
+      "line_count": 32,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2669317424297333,
+        "structural": 0.0,
+        "combined": 0.33790360696175525,
+        "boosted": 0.33790360696175525
+      },
+      "negative_signals": {
+        "total": 0.12375,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.04687500000000001
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 2.5575844122715705
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/utilities/misc.py",
+      "node_id": 1754,
+      "node_type": "FunctionDef",
+      "name": "ordinal",
+      "start_line": 494,
+      "end_line": 510,
+      "line_count": 17,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.19861586391925812,
+        "structural": 0.0,
+        "combined": 0.2789791432899587,
+        "boosted": 0.2789791432899587
+      },
+      "negative_signals": {
+        "total": 0.0685294117647059,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.05882352941176471
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 2.5575844122715705
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/utilities/misc.py",
+      "node_id": 498,
+      "node_type": "FunctionDef",
+      "name": "tree",
+      "start_line": 196,
+      "end_line": 214,
+      "line_count": 19,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.11494549363851547,
+        "structural": 0.0,
+        "combined": 0.1746727863821452,
+        "boosted": 0.1746727863821452
+      },
+      "negative_signals": {
+        "total": 0.02105263157894737,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.052631578947368425
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 2.5575844122715705
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/utilities/misc.py",
+      "node_id": 501,
+      "node_type": "FunctionDef",
+      "name": "indent",
+      "start_line": 197,
+      "end_line": 207,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.09512369334697723,
+        "structural": 0.0,
+        "combined": 0.1647520597892649,
+        "boosted": 0.1647520597892649
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 2.5575844122715705
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/utilities/misc.py",
+      "node_id": 237,
+      "node_type": "FunctionDef",
+      "name": "rawlines",
+      "start_line": 89,
+      "end_line": 169,
+      "line_count": 81,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5508391261100769,
+        "structural": 0.0,
+        "combined": 0.15411028175485594,
+        "boosted": 0.15411028175485594
+      },
+      "negative_signals": {
+        "total": 0.7897530864197531,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.5,
+        "docstring_quality": 0.6000000000000001,
+        "safe_patterns": 0.04938271604938272
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 2.5575844122715705
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/utilities/misc.py",
+      "node_id": 738,
+      "node_type": "FunctionDef",
+      "name": "debug",
+      "start_line": 242,
+      "end_line": 248,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.20530256628990173,
+        "structural": 0.0,
+        "combined": 0.08042697226299958,
+        "boosted": 0.08042697226299958
+      },
+      "negative_signals": {
+        "total": 0.28500000000000003,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 2.5575844122715705
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/utilities/misc.py",
+      "node_id": 23,
+      "node_type": "ClassDef",
+      "name": "Undecidable",
+      "start_line": 15,
+      "end_line": 18,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.002352941176470588,
+        "boosted": -0.002352941176470588
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 2.5575844122715705
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/utilities/misc.py",
+      "node_id": 476,
+      "node_type": "FunctionDef",
+      "name": "maketree",
+      "start_line": 189,
+      "end_line": 234,
+      "line_count": 46,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.14328792691230774,
+        "structural": 0.0,
+        "combined": -0.01653185943508394,
+        "boosted": -0.01653185943508394
+      },
+      "negative_signals": {
+        "total": 0.2473913043478261,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.2,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.04347826086956522
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 2.5575844122715705
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/utilities/misc.py",
+      "node_id": 718,
+      "node_type": "FunctionDef",
+      "name": "decorated",
+      "start_line": 236,
+      "end_line": 237,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.08187047392129898,
+        "structural": 0.0,
+        "combined": -0.3938096175298971,
+        "boosted": -0.3938096175298971
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 2.5575844122715705
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/utilities/misc.py",
+      "node_id": 461,
+      "node_type": "FunctionDef",
+      "name": "debug_decorator",
+      "start_line": 180,
+      "end_line": 239,
+      "line_count": 60,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.27536025643348694,
+        "structural": 0.0,
+        "combined": -0.5063123227334491,
+        "boosted": -0.5063123227334491
+      },
+      "negative_signals": {
+        "total": 0.9666666666666667,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.7999999999999999,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.041666666666666664
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": false,
+      "file_score": 2.5575844122715705
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 7984,
+      "node_type": "FunctionDef",
+      "name": "evalf",
+      "start_line": 1368,
+      "end_line": 1467,
+      "line_count": 100,
+      "signals": {
+        "sbfl": 6.66839560914018,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.45630672574043274,
+        "structural": 0.0,
+        "combined": 7.172279837471661,
+        "boosted": 7.172279837471661
+      },
+      "negative_signals": {
+        "total": 0.29800000000000004,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.6000000000000001,
+        "safe_patterns": 0.06999999999999999
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 7974,
+      "node_type": "ClassDef",
+      "name": "EvalfMixin",
+      "start_line": 1363,
+      "end_line": 1518,
+      "line_count": 156,
+      "signals": {
+        "sbfl": 5.520911949125798,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 5.460542059443774,
+        "boosted": 5.460542059443774
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 7620,
+      "node_type": "FunctionDef",
+      "name": "evalf",
+      "start_line": 1305,
+      "end_line": 1360,
+      "line_count": 56,
+      "signals": {
+        "sbfl": 2.7604559745628987,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3331165909767151,
+        "structural": 0.0,
+        "combined": 2.809163826640259,
+        "boosted": 2.809163826640259
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.4,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.12500000000000003
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 7272,
+      "node_type": "FunctionDef",
+      "name": "_create_evalf_table",
+      "start_line": 1246,
+      "end_line": 1302,
+      "line_count": 57,
+      "signals": {
+        "sbfl": 0.72790403945674,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5413587689399719,
+        "structural": 0.0,
+        "combined": 1.5977443611581252,
+        "boosted": 1.5977443611581252
+      },
+      "negative_signals": {
+        "total": 0.09350877192982456,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.008771929824561403
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 8334,
+      "node_type": "FunctionDef",
+      "name": "_evalf",
+      "start_line": 1471,
+      "end_line": 1476,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 1.2990381056766584,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2521241307258606,
+        "structural": 0.0,
+        "combined": 1.5466934683031297,
+        "boosted": 1.5466934683031297
+      },
+      "negative_signals": {
+        "total": 0.20500000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 8369,
+      "node_type": "FunctionDef",
+      "name": "_to_mpmath",
+      "start_line": 1481,
+      "end_line": 1518,
+      "line_count": 38,
+      "signals": {
+        "sbfl": 1.2990381056766584,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2011663019657135,
+        "structural": 0.0,
+        "combined": 1.5268975503112916,
+        "boosted": 1.5268975503112916
+      },
+      "negative_signals": {
+        "total": 0.1268421052631579,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.09210526315789473
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 8364,
+      "node_type": "FunctionDef",
+      "name": "_eval_evalf",
+      "start_line": 1478,
+      "end_line": 1479,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 1.2990381056766584,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.16815705597400665,
+        "structural": 0.0,
+        "combined": 1.0613314488698444,
+        "boosted": 1.0613314488698444
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 168,
+      "node_type": "FunctionDef",
+      "name": "pure_complex",
+      "start_line": 114,
+      "end_line": 138,
+      "line_count": 25,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.5853155851364136,
+        "structural": 0.0,
+        "combined": 0.8757010837452199,
+        "boosted": 0.8757010837452199
+      },
+      "negative_signals": {
+        "total": 0.17300000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.55,
+        "safe_patterns": 0.02
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 231,
+      "node_type": "FunctionDef",
+      "name": "scaled_zero",
+      "start_line": 141,
+      "end_line": 176,
+      "line_count": 36,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.577913761138916,
+        "structural": 0.0,
+        "combined": 0.7954585561918037,
+        "boosted": 0.7954585561918037
+      },
+      "negative_signals": {
+        "total": 0.2377777777777778,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.6000000000000001,
+        "safe_patterns": 0.06944444444444445
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 8603,
+      "node_type": "FunctionDef",
+      "name": "N",
+      "start_line": 1521,
+      "end_line": 1541,
+      "line_count": 21,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4595881700515747,
+        "structural": 0.0,
+        "combined": 0.6881704517125619,
+        "boosted": 0.6881704517125619
+      },
+      "negative_signals": {
+        "total": 0.135,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.45,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 854,
+      "node_type": "FunctionDef",
+      "name": "finalize_complex",
+      "start_line": 258,
+      "end_line": 274,
+      "line_count": 17,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.350005567073822,
+        "structural": 0.0,
+        "combined": 0.6267004814726591,
+        "boosted": 0.6267004814726591
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 993,
+      "node_type": "FunctionDef",
+      "name": "chop_parts",
+      "start_line": 277,
+      "end_line": 294,
+      "line_count": 18,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3767397105693817,
+        "structural": 0.0,
+        "combined": 0.6001828165402091,
+        "boosted": 0.6001828165402091
+      },
+      "negative_signals": {
+        "total": 0.07444444444444445,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.11111111111111112
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 6182,
+      "node_type": "FunctionDef",
+      "name": "hypsum",
+      "start_line": 1095,
+      "end_line": 1168,
+      "line_count": 74,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.45438894629478455,
+        "structural": 0.0,
+        "combined": 0.5910614411772195,
+        "boosted": 0.5910614411772195
+      },
+      "negative_signals": {
+        "total": 0.21243243243243243,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.30000000000000004,
+        "safe_patterns": 0.08108108108108107
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 4469,
+      "node_type": "FunctionDef",
+      "name": "evalf_log",
+      "start_line": 829,
+      "end_line": 862,
+      "line_count": 34,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.409648060798645,
+        "structural": 0.0,
+        "combined": 0.5889827250347669,
+        "boosted": 0.5889827250347669
+      },
+      "negative_signals": {
+        "total": 0.14176470588235296,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.029411764705882356
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 1367,
+      "node_type": "FunctionDef",
+      "name": "calc_part",
+      "start_line": 341,
+      "end_line": 395,
+      "line_count": 55,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4085765480995178,
+        "structural": 0.0,
+        "combined": 0.5729122718602364,
+        "boosted": 0.5729122718602364
+      },
+      "negative_signals": {
+        "total": 0.15181818181818182,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15454545454545457
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 5358,
+      "node_type": "FunctionDef",
+      "name": "f",
+      "start_line": 970,
+      "end_line": 981,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.31653058528900146,
+        "structural": 0.0,
+        "combined": 0.5674189081600469,
+        "boosted": 0.5674189081600469
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 6021,
+      "node_type": "FunctionDef",
+      "name": "check_convergence",
+      "start_line": 1057,
+      "end_line": 1092,
+      "line_count": 36,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4010084271430969,
+        "structural": 0.0,
+        "combined": 0.5648067327771072,
+        "boosted": 0.5648067327771072
+      },
+      "negative_signals": {
+        "total": 0.15,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.4,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 2273,
+      "node_type": "FunctionDef",
+      "name": "evalf_add",
+      "start_line": 506,
+      "end_line": 545,
+      "line_count": 40,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4286620020866394,
+        "structural": 0.0,
+        "combined": 0.5138044525554318,
+        "boosted": 0.5138044525554318
+      },
+      "negative_signals": {
+        "total": 0.25,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.2,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 435,
+      "node_type": "FunctionDef",
+      "name": "complex_accuracy",
+      "start_line": 185,
+      "end_line": 209,
+      "line_count": 25,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3364185094833374,
+        "structural": 0.0,
+        "combined": 0.4716863475696829,
+        "boosted": 0.4716863475696829
+      },
+      "negative_signals": {
+        "total": 0.129,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.35,
+        "safe_patterns": 0.06000000000000001
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 1862,
+      "node_type": "FunctionDef",
+      "name": "add_terms",
+      "start_line": 423,
+      "end_line": 503,
+      "line_count": 81,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3593461215496063,
+        "structural": 0.0,
+        "combined": 0.4337700869909562,
+        "boosted": 0.4337700869909562
+      },
+      "negative_signals": {
+        "total": 0.19728395061728393,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.30000000000000004,
+        "safe_patterns": 0.043209876543209874
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 4890,
+      "node_type": "FunctionDef",
+      "name": "evalf_piecewise",
+      "start_line": 886,
+      "end_line": 900,
+      "line_count": 15,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2543608546257019,
+        "structural": 0.0,
+        "combined": 0.4015960232927354,
+        "boosted": 0.4015960232927354
+      },
+      "negative_signals": {
+        "total": 0.05333333333333334,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.13333333333333333
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 5176,
+      "node_type": "FunctionDef",
+      "name": "do_integral",
+      "start_line": 936,
+      "end_line": 1028,
+      "line_count": 93,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3309926390647888,
+        "structural": 0.0,
+        "combined": 0.37907947323777846,
+        "boosted": 0.37907947323777846
+      },
+      "negative_signals": {
+        "total": 0.19860215053763441,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.02150537634408602
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 3413,
+      "node_type": "FunctionDef",
+      "name": "evalf_pow",
+      "start_line": 662,
+      "end_line": 760,
+      "line_count": 99,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3700074851512909,
+        "structural": 0.0,
+        "combined": 0.37855845586922054,
+        "boosted": 0.37855845586922054
+      },
+      "negative_signals": {
+        "total": 0.2681818181818182,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.5,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.04545454545454545
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 6688,
+      "node_type": "FunctionDef",
+      "name": "evalf_prod",
+      "start_line": 1171,
+      "end_line": 1177,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2620880603790283,
+        "structural": 0.0,
+        "combined": 0.35039575722216015,
+        "boosted": 0.35039575722216015
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 5072,
+      "node_type": "FunctionDef",
+      "name": "as_mpmath",
+      "start_line": 920,
+      "end_line": 933,
+      "line_count": 14,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3030465245246887,
+        "structural": 0.0,
+        "combined": 0.31418681265282944,
+        "boosted": 0.31418681265282944
+      },
+      "negative_signals": {
+        "total": 0.22857142857142856,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.3214285714285714
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 5002,
+      "node_type": "FunctionDef",
+      "name": "evalf_bernoulli",
+      "start_line": 903,
+      "end_line": 911,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.168430358171463,
+        "structural": 0.0,
+        "combined": 0.2814225356885166,
+        "boosted": 0.2814225356885166
+      },
+      "negative_signals": {
+        "total": 0.020000000000000004,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 5881,
+      "node_type": "FunctionDef",
+      "name": "evalf_integral",
+      "start_line": 1031,
+      "end_line": 1054,
+      "line_count": 24,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1768897920846939,
+        "structural": 0.0,
+        "combined": 0.28039600169880424,
+        "boosted": 0.28039600169880424
+      },
+      "negative_signals": {
+        "total": 0.03333333333333334,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.08333333333333334
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 4757,
+      "node_type": "FunctionDef",
+      "name": "evalf_atan",
+      "start_line": 865,
+      "end_line": 872,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.14818890392780304,
+        "structural": 0.0,
+        "combined": 0.2651825968299416,
+        "boosted": 0.2651825968299416
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 6784,
+      "node_type": "FunctionDef",
+      "name": "evalf_sum",
+      "start_line": 1180,
+      "end_line": 1217,
+      "line_count": 38,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.22246897220611572,
+        "structural": 0.0,
+        "combined": 0.24515161948840986,
+        "boosted": 0.24515161948840986
+      },
+      "negative_signals": {
+        "total": 0.14789473684210525,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.14473684210526314
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 2626,
+      "node_type": "FunctionDef",
+      "name": "evalf_mul",
+      "start_line": 548,
+      "end_line": 659,
+      "line_count": 112,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3284256160259247,
+        "structural": 0.0,
+        "combined": 0.21221922834235374,
+        "boosted": 0.21221922834235374
+      },
+      "negative_signals": {
+        "total": 0.3571428571428571,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.5,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.2,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.01785714285714286
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 7137,
+      "node_type": "FunctionDef",
+      "name": "evalf_symbol",
+      "start_line": 1226,
+      "end_line": 1241,
+      "line_count": 16,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.15568527579307556,
+        "structural": 0.0,
+        "combined": 0.20211863594732837,
+        "boosted": 0.20211863594732837
+      },
+      "negative_signals": {
+        "total": 0.07500000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.18750000000000003
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 134,
+      "node_type": "FunctionDef",
+      "name": "fastlog",
+      "start_line": 81,
+      "end_line": 111,
+      "line_count": 31,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.22952374815940857,
+        "structural": 0.0,
+        "combined": 0.19710770450653312,
+        "boosted": 0.19710770450653312
+      },
+      "negative_signals": {
+        "total": 0.21000000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.6000000000000001,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 4833,
+      "node_type": "FunctionDef",
+      "name": "evalf_subs",
+      "start_line": 875,
+      "end_line": 883,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.13521288335323334,
+        "structural": 0.0,
+        "combined": 0.1966310810157032,
+        "boosted": 0.1966310810157032
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 6554,
+      "node_type": "FunctionDef",
+      "name": "summand",
+      "start_line": 1153,
+      "end_line": 1158,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1867651343345642,
+        "structural": 0.0,
+        "combined": 0.1950091691221377,
+        "boosted": 0.1950091691221377
+      },
+      "negative_signals": {
+        "total": 0.14,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 1183,
+      "node_type": "FunctionDef",
+      "name": "check_target",
+      "start_line": 297,
+      "end_line": 302,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.12680868804454803,
+        "structural": 0.0,
+        "combined": 0.10708756580010859,
+        "boosted": 0.10708756580010859
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 4113,
+      "node_type": "FunctionDef",
+      "name": "evalf_trig",
+      "start_line": 768,
+      "end_line": 826,
+      "line_count": 59,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.27369797229766846,
+        "structural": 0.0,
+        "combined": 0.05320420042012221,
+        "boosted": 0.05320420042012221
+      },
+      "negative_signals": {
+        "total": 0.4279661016949153,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.2,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.19491525423728814
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 367,
+      "node_type": "FunctionDef",
+      "name": "iszero",
+      "start_line": 179,
+      "end_line": 182,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.09970179200172424,
+        "structural": 0.0,
+        "combined": 0.03868451048305173,
+        "boosted": 0.03868451048305173
+      },
+      "negative_signals": {
+        "total": 0.14,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 128,
+      "node_type": "ClassDef",
+      "name": "PrecisionExhausted",
+      "start_line": 49,
+      "end_line": 50,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.00038935756002595715,
+        "boosted": -0.00038935756002595715
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 89,
+      "node_type": "FunctionDef",
+      "name": "bitcount",
+      "start_line": 34,
+      "end_line": 37,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.12886369228363037,
+        "structural": 0.0,
+        "combined": -0.07382406900951723,
+        "boosted": -0.07382406900951723
+      },
+      "negative_signals": {
+        "total": 0.305,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 833,
+      "node_type": "FunctionDef",
+      "name": "evalf_im",
+      "start_line": 254,
+      "end_line": 255,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2445671707391739,
+        "structural": 0.0,
+        "combined": -0.100168450229513,
+        "boosted": -0.100168450229513
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 812,
+      "node_type": "FunctionDef",
+      "name": "evalf_re",
+      "start_line": 250,
+      "end_line": 251,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.23645547032356262,
+        "structural": 0.0,
+        "combined": -0.11476951097761325,
+        "boosted": -0.11476951097761325
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 530,
+      "node_type": "FunctionDef",
+      "name": "get_abs",
+      "start_line": 212,
+      "end_line": 229,
+      "line_count": 18,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2925075590610504,
+        "structural": 0.0,
+        "combined": -0.12810172284145407,
+        "boosted": -0.12810172284145407
+      },
+      "negative_signals": {
+        "total": 0.6511111111111112,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.02777777777777778
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 792,
+      "node_type": "FunctionDef",
+      "name": "evalf_abs",
+      "start_line": 246,
+      "end_line": 247,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.21354912221431732,
+        "structural": 0.0,
+        "combined": -0.15600093757425482,
+        "boosted": -0.15600093757425482
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 1212,
+      "node_type": "FunctionDef",
+      "name": "get_integer_part",
+      "start_line": 305,
+      "end_line": 406,
+      "line_count": 102,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.39344021677970886,
+        "structural": 0.0,
+        "combined": -0.22695896300490673,
+        "boosted": -0.22695896300490673
+      },
+      "negative_signals": {
+        "total": 0.9152941176470589,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.5,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.30000000000000004,
+        "safe_patterns": 0.08823529411764708
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 1822,
+      "node_type": "FunctionDef",
+      "name": "evalf_ceiling",
+      "start_line": 409,
+      "end_line": 410,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.13415876030921936,
+        "structural": 0.0,
+        "combined": -0.2989035890034311,
+        "boosted": -0.2989035890034311
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 1841,
+      "node_type": "FunctionDef",
+      "name": "evalf_floor",
+      "start_line": 413,
+      "end_line": 414,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.13039140403270721,
+        "structural": 0.0,
+        "combined": -0.30568483030115295,
+        "boosted": -0.30568483030115295
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    },
+    {
+      "task_id": "sympy__sympy-17630",
+      "file_path": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/evalf.py",
+      "node_id": 695,
+      "node_type": "FunctionDef",
+      "name": "get_complex_part",
+      "start_line": 232,
+      "end_line": 243,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2288941740989685,
+        "structural": 0.0,
+        "combined": -0.36032663198201254,
+        "boosted": -0.36032663198201254
+      },
+      "negative_signals": {
+        "total": 0.7700000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.1,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.0278563529194575
+    }
+  ]
+}

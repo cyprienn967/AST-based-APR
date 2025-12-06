@@ -1,0 +1,2726 @@
+{
+  "task_id": "psf__requests-1963",
+  "num_files_processed": 5,
+  "files": [
+    {
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/hooks.py",
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.062735566233744,
+      "num_nodes": 2,
+      "num_buggy_nodes": 0
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/sessions.py",
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.679749919567198,
+      "num_nodes": 24,
+      "num_buggy_nodes": 2
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/auth.py",
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.362456039248283,
+      "num_nodes": 15,
+      "num_buggy_nodes": 0
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/packages/urllib3/request.py",
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.0592194189509327,
+      "num_nodes": 6,
+      "num_buggy_nodes": 0
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/packages/urllib3/response.py",
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.091788104828538,
+      "num_nodes": 21,
+      "num_buggy_nodes": 0
+    }
+  ],
+  "num_nodes": 68,
+  "num_buggy_nodes": 2,
+  "nodes": [
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/hooks.py",
+      "node_id": 33,
+      "node_type": "FunctionDef",
+      "name": "dispatch_hook",
+      "start_line": 29,
+      "end_line": 45,
+      "line_count": 17,
+      "signals": {
+        "sbfl": 4.226392470529302,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.08795298635959625,
+        "structural": 0.0,
+        "combined": 4.185809077166726,
+        "boosted": 4.185809077166726
+      },
+      "negative_signals": {
+        "total": 0.08029411764705884,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.08823529411764708
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.062735566233744
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/hooks.py",
+      "node_id": 10,
+      "node_type": "FunctionDef",
+      "name": "default_hooks",
+      "start_line": 20,
+      "end_line": 24,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 1.590990257669732,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 1.4361065367394992,
+        "boosted": 1.4361065367394992
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 2.062735566233744
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/sessions.py",
+      "node_id": 1465,
+      "node_type": "FunctionDef",
+      "name": "send",
+      "start_line": 466,
+      "end_line": 532,
+      "line_count": 67,
+      "signals": {
+        "sbfl": 20.821397632027086,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.39414340257644653,
+        "structural": 0.0,
+        "combined": 21.375530624854495,
+        "boosted": 42.75106124970899
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.679749919567198
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/sessions.py",
+      "node_id": 1022,
+      "node_type": "FunctionDef",
+      "name": "request",
+      "start_line": 301,
+      "end_line": 395,
+      "line_count": 95,
+      "signals": {
+        "sbfl": 20.48929452241996,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.36494535207748413,
+        "structural": 0.0,
+        "combined": 20.83268723006564,
+        "boosted": 41.66537446013128
+      },
+      "negative_signals": {
+        "total": 0.26342105263157894,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.55,
+        "safe_patterns": 0.021052631578947368
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.679749919567198
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/sessions.py",
+      "node_id": 699,
+      "node_type": "ClassDef",
+      "name": "Session",
+      "start_line": 187,
+      "end_line": 565,
+      "line_count": 379,
+      "signals": {
+        "sbfl": 37.15273263313405,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 36.832908380058484,
+        "boosted": 36.832908380058484
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.4,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.679749919567198
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/sessions.py",
+      "node_id": 844,
+      "node_type": "FunctionDef",
+      "name": "prepare_request",
+      "start_line": 262,
+      "end_line": 299,
+      "line_count": 38,
+      "signals": {
+        "sbfl": 15.622344346612401,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.32818368077278137,
+        "structural": 0.0,
+        "combined": 16.043039822618525,
+        "boosted": 32.08607964523705
+      },
+      "negative_signals": {
+        "total": 0.15,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.4,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.679749919567198
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/sessions.py",
+      "node_id": 723,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 205,
+      "end_line": 254,
+      "line_count": 50,
+      "signals": {
+        "sbfl": 14.037185720036907,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.4143257141113281,
+        "structural": 0.0,
+        "combined": 14.086609966772974,
+        "boosted": 28.173219933545948
+      },
+      "negative_signals": {
+        "total": 0.6700000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.679749919567198
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/sessions.py",
+      "node_id": 1293,
+      "node_type": "FunctionDef",
+      "name": "get",
+      "start_line": 397,
+      "end_line": 405,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 9.709993946991618,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3543134331703186,
+        "structural": 0.0,
+        "combined": 10.238012959738613,
+        "boosted": 20.476025919477227
+      },
+      "negative_signals": {
+        "total": 0.105,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.35,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.679749919567198
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/sessions.py",
+      "node_id": 1837,
+      "node_type": "FunctionDef",
+      "name": "mount",
+      "start_line": 549,
+      "end_line": 558,
+      "line_count": 10,
+      "signals": {
+        "sbfl": 10.20474957921156,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.03585690259933472,
+        "structural": 0.0,
+        "combined": 10.179019596157497,
+        "boosted": 20.358039192314994
+      },
+      "negative_signals": {
+        "total": 0.08500000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.679749919567198
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/sessions.py",
+      "node_id": 1773,
+      "node_type": "FunctionDef",
+      "name": "get_adapter",
+      "start_line": 534,
+      "end_line": 542,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 10.317325727479846,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.08157501369714737,
+        "structural": 0.0,
+        "combined": 9.774415585175133,
+        "boosted": 19.548831170350265
+      },
+      "negative_signals": {
+        "total": 0.6850000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.679749919567198
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/sessions.py",
+      "node_id": 1320,
+      "node_type": "FunctionDef",
+      "name": "options",
+      "start_line": 407,
+      "end_line": 415,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 9.072178898788547,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.34554487466812134,
+        "structural": 0.0,
+        "combined": 9.584414506231587,
+        "boosted": 19.168829012463174
+      },
+      "negative_signals": {
+        "total": 0.105,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.35,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.679749919567198
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/sessions.py",
+      "node_id": 1347,
+      "node_type": "FunctionDef",
+      "name": "head",
+      "start_line": 417,
+      "end_line": 425,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 9.072178898788547,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.31723693013191223,
+        "structural": 0.0,
+        "combined": 9.53346020606641,
+        "boosted": 19.06692041213282
+      },
+      "negative_signals": {
+        "total": 0.105,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.35,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.679749919567198
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/sessions.py",
+      "node_id": 1374,
+      "node_type": "FunctionDef",
+      "name": "post",
+      "start_line": 427,
+      "end_line": 435,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 9.072178898788547,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.23381966352462769,
+        "structural": 0.0,
+        "combined": 9.338309126173298,
+        "boosted": 18.676618252346596
+      },
+      "negative_signals": {
+        "total": 0.15,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.5,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.679749919567198
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/sessions.py",
+      "node_id": 1398,
+      "node_type": "FunctionDef",
+      "name": "put",
+      "start_line": 437,
+      "end_line": 445,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 9.072178898788547,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.22250644862651825,
+        "structural": 0.0,
+        "combined": 9.3179453393567,
+        "boosted": 18.6358906787134
+      },
+      "negative_signals": {
+        "total": 0.15,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.5,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.679749919567198
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/sessions.py",
+      "node_id": 1422,
+      "node_type": "FunctionDef",
+      "name": "patch",
+      "start_line": 447,
+      "end_line": 455,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 9.072178898788547,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.21829727292060852,
+        "structural": 0.0,
+        "combined": 9.310368823086064,
+        "boosted": 18.620737646172127
+      },
+      "negative_signals": {
+        "total": 0.15,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.5,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.679749919567198
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/sessions.py",
+      "node_id": 1446,
+      "node_type": "FunctionDef",
+      "name": "delete",
+      "start_line": 457,
+      "end_line": 464,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 9.072178898788547,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.19016870856285095,
+        "structural": 0.0,
+        "combined": 9.305264648015386,
+        "boosted": 18.610529296030773
+      },
+      "negative_signals": {
+        "total": 0.105,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.35,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.679749919567198
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/sessions.py",
+      "node_id": 1930,
+      "node_type": "FunctionDef",
+      "name": "__setstate__",
+      "start_line": 563,
+      "end_line": 565,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 9.072178898788547,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1547420769929886,
+        "structural": 0.0,
+        "combined": 9.229132915056068,
+        "boosted": 18.458265830112136
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.679749919567198
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/sessions.py",
+      "node_id": 1816,
+      "node_type": "FunctionDef",
+      "name": "close",
+      "start_line": 544,
+      "end_line": 547,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 9.072178898788547,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 8.9200699356954,
+        "boosted": 17.8401398713908
+      },
+      "negative_signals": {
+        "total": 0.15,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.679749919567198
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/sessions.py",
+      "node_id": 1903,
+      "node_type": "FunctionDef",
+      "name": "__getstate__",
+      "start_line": 560,
+      "end_line": 561,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 9.072178898788547,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.07646404951810837,
+        "structural": 0.0,
+        "combined": 8.668759706374567,
+        "boosted": 17.337519412749135
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.679749919567198
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/sessions.py",
+      "node_id": 828,
+      "node_type": "FunctionDef",
+      "name": "__enter__",
+      "start_line": 256,
+      "end_line": 257,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 9.072178898788547,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1491275429725647,
+        "structural": 0.0,
+        "combined": 8.15955399459259,
+        "boosted": 16.31910798918518
+      },
+      "negative_signals": {
+        "total": 1.1800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.679749919567198
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/sessions.py",
+      "node_id": 834,
+      "node_type": "FunctionDef",
+      "name": "__exit__",
+      "start_line": 259,
+      "end_line": 260,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 9.072178898788547,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.034107837826013565,
+        "structural": 0.0,
+        "combined": 7.952518525328799,
+        "boosted": 15.905037050657597
+      },
+      "negative_signals": {
+        "total": 1.1800000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.679749919567198
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/sessions.py",
+      "node_id": 240,
+      "node_type": "FunctionDef",
+      "name": "resolve_redirects",
+      "start_line": 84,
+      "end_line": 184,
+      "line_count": 101,
+      "signals": {
+        "sbfl": 9.304358228985972,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3878590762615204,
+        "structural": 0.0,
+        "combined": 9.746332456075567,
+        "boosted": 9.746332456075567
+      },
+      "negative_signals": {
+        "total": 0.20292079207920793,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.5,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.019801980198019802
+      },
+      "ground_truth": {
+        "is_buggy": true,
+        "method_match": true,
+        "lines_in_patch": [
+          168,
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178
+        ],
+        "num_buggy_lines": 11
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.679749919567198
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/sessions.py",
+      "node_id": 237,
+      "node_type": "ClassDef",
+      "name": "SessionRedirectMixin",
+      "start_line": 83,
+      "end_line": 184,
+      "line_count": 102,
+      "signals": {
+        "sbfl": 8.458507480896339,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 8.40472892202112,
+        "boosted": 8.40472892202112
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": true,
+        "method_match": false,
+        "lines_in_patch": [
+          168,
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178
+        ],
+        "num_buggy_lines": 11
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.679749919567198
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/sessions.py",
+      "node_id": 47,
+      "node_type": "FunctionDef",
+      "name": "merge_setting",
+      "start_line": 34,
+      "end_line": 64,
+      "line_count": 31,
+      "signals": {
+        "sbfl": 4.004041978572651,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2513974905014038,
+        "structural": 0.0,
+        "combined": 4.283600094277491,
+        "boosted": 4.283600094277491
+      },
+      "negative_signals": {
+        "total": 0.15661290322580645,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.12903225806451613
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.679749919567198
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/sessions.py",
+      "node_id": 176,
+      "node_type": "FunctionDef",
+      "name": "merge_hooks",
+      "start_line": 67,
+      "end_line": 80,
+      "line_count": 14,
+      "signals": {
+        "sbfl": 0.7036986941898685,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.24058032035827637,
+        "structural": 0.0,
+        "combined": 1.0122190428658981,
+        "boosted": 1.0122190428658981
+      },
+      "negative_signals": {
+        "total": 0.11714285714285716,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.14285714285714288
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.679749919567198
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/sessions.py",
+      "node_id": 1956,
+      "node_type": "FunctionDef",
+      "name": "session",
+      "start_line": 568,
+      "end_line": 571,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.3572172541558802,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.19423916935920715,
+        "structural": 0.0,
+        "combined": 0.43473879590930725,
+        "boosted": 0.43473879590930725
+      },
+      "negative_signals": {
+        "total": 0.27,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.679749919567198
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/auth.py",
+      "node_id": 157,
+      "node_type": "ClassDef",
+      "name": "HTTPDigestAuth",
+      "start_line": 56,
+      "end_line": 193,
+      "line_count": 138,
+      "signals": {
+        "sbfl": 49.86943107985666,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 49.60767715315509,
+        "boosted": 49.60767715315509
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.362456039248283
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/auth.py",
+      "node_id": 205,
+      "node_type": "FunctionDef",
+      "name": "build_digest_header",
+      "start_line": 66,
+      "end_line": 147,
+      "line_count": 82,
+      "signals": {
+        "sbfl": 39.285013796137434,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.19937530159950256,
+        "structural": 0.0,
+        "combined": 38.453386210425045,
+        "boosted": 38.453386210425045
+      },
+      "negative_signals": {
+        "total": 1.061707317073171,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.30000000000000004,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.07926829268292684
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.362456039248283
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/auth.py",
+      "node_id": 754,
+      "node_type": "FunctionDef",
+      "name": "handle_401",
+      "start_line": 149,
+      "end_line": 182,
+      "line_count": 34,
+      "signals": {
+        "sbfl": 23.081404147449284,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.478137731552124,
+        "structural": 0.0,
+        "combined": 23.801884216999497,
+        "boosted": 23.801884216999497
+      },
+      "negative_signals": {
+        "total": 0.08676470588235295,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.029411764705882356
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.362456039248283
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/auth.py",
+      "node_id": 981,
+      "node_type": "FunctionDef",
+      "name": "__call__",
+      "start_line": 184,
+      "end_line": 193,
+      "line_count": 10,
+      "signals": {
+        "sbfl": 16.22892732195781,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.19819647073745728,
+        "structural": 0.0,
+        "combined": 16.52997416300251,
+        "boosted": 16.52997416300251
+      },
+      "negative_signals": {
+        "total": 0.04000000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.362456039248283
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/auth.py",
+      "node_id": 162,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 58,
+      "end_line": 64,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 15.21986769398814,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.18409693241119385,
+        "structural": 0.0,
+        "combined": 14.780247407930384,
+        "boosted": 14.780247407930384
+      },
+      "negative_signals": {
+        "total": 0.7600000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.362456039248283
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/auth.py",
+      "node_id": 294,
+      "node_type": "FunctionDef",
+      "name": "md5_utf8",
+      "start_line": 80,
+      "end_line": 83,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 3.4641016151377553,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.021059567108750343,
+        "structural": 0.0,
+        "combined": 3.315726113420417,
+        "boosted": 3.315726113420417
+      },
+      "negative_signals": {
+        "total": 0.18,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.362456039248283
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/auth.py",
+      "node_id": 76,
+      "node_type": "ClassDef",
+      "name": "HTTPBasicAuth",
+      "start_line": 38,
+      "end_line": 46,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 0.28575028575042866,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 0.22661416009597837,
+        "boosted": 0.22661416009597837
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.362456039248283
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/auth.py",
+      "node_id": 29,
+      "node_type": "FunctionDef",
+      "name": "_basic_auth_str",
+      "start_line": 25,
+      "end_line": 28,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0740834074167778,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.07927265018224716,
+        "structural": 0.0,
+        "combined": -0.07950854476826635,
+        "boosted": -0.007950854476826636
+      },
+      "negative_signals": {
+        "total": 0.29000000000000004,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.362456039248283
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/auth.py",
+      "node_id": 100,
+      "node_type": "FunctionDef",
+      "name": "__call__",
+      "start_line": 44,
+      "end_line": 46,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.21166687833365083,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.11913412064313889,
+        "structural": 0.0,
+        "combined": -0.018603746393515953,
+        "boosted": -0.018603746393515953
+      },
+      "negative_signals": {
+        "total": 0.44,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.362456039248283
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/auth.py",
+      "node_id": 62,
+      "node_type": "ClassDef",
+      "name": "AuthBase",
+      "start_line": 31,
+      "end_line": 35,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.05285340314136126,
+        "boosted": -0.05285340314136126
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.362456039248283
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/auth.py",
+      "node_id": 126,
+      "node_type": "ClassDef",
+      "name": "HTTPProxyAuth",
+      "start_line": 49,
+      "end_line": 53,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.05285340314136126,
+        "boosted": -0.05285340314136126
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.362456039248283
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/auth.py",
+      "node_id": 336,
+      "node_type": "FunctionDef",
+      "name": "sha_utf8",
+      "start_line": 86,
+      "end_line": 89,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.033435191959142685,
+        "structural": 0.0,
+        "combined": -0.12609937698663215,
+        "boosted": -0.12609937698663215
+      },
+      "negative_signals": {
+        "total": 0.18,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.362456039248283
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/auth.py",
+      "node_id": 131,
+      "node_type": "FunctionDef",
+      "name": "__call__",
+      "start_line": 51,
+      "end_line": 53,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.14126195013523102,
+        "structural": 0.0,
+        "combined": -0.19044053164140093,
+        "boosted": -0.19044053164140093
+      },
+      "negative_signals": {
+        "total": 0.44,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.362456039248283
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/auth.py",
+      "node_id": 67,
+      "node_type": "FunctionDef",
+      "name": "__call__",
+      "start_line": 34,
+      "end_line": 35,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.09369403123855591,
+        "structural": 0.0,
+        "combined": -0.3744921050271439,
+        "boosted": -0.3744921050271439
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.362456039248283
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/auth.py",
+      "node_id": 81,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 40,
+      "end_line": 42,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.21166687833365083,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1092725545167923,
+        "structural": 0.0,
+        "combined": -0.6563545654209398,
+        "boosted": -0.6563545654209398
+      },
+      "negative_signals": {
+        "total": 1.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 2.362456039248283
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/packages/urllib3/request.py",
+      "node_id": 69,
+      "node_type": "FunctionDef",
+      "name": "request",
+      "start_line": 58,
+      "end_line": 78,
+      "line_count": 21,
+      "signals": {
+        "sbfl": 0.08580080912295553,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.35236820578575134,
+        "structural": 0.0,
+        "combined": 0.5983969128706413,
+        "boosted": 0.5983969128706413
+      },
+      "negative_signals": {
+        "total": 0.075,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.0592194189509327
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/packages/urllib3/request.py",
+      "node_id": 174,
+      "node_type": "FunctionDef",
+      "name": "request_encode_body",
+      "start_line": 89,
+      "end_line": 141,
+      "line_count": 53,
+      "signals": {
+        "sbfl": 0.08580080912295553,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.3034186065196991,
+        "structural": 0.0,
+        "combined": 0.25162935326931535,
+        "boosted": 0.25162935326931535
+      },
+      "negative_signals": {
+        "total": 0.26254716981132076,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.55,
+        "safe_patterns": 0.01886792452830189
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.0592194189509327
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/packages/urllib3/request.py",
+      "node_id": 136,
+      "node_type": "FunctionDef",
+      "name": "request_encode_url",
+      "start_line": 80,
+      "end_line": 87,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.08580080912295553,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.12016426026821136,
+        "structural": 0.0,
+        "combined": 0.2243186998279582,
+        "boosted": 0.2243186998279582
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.0592194189509327
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/packages/urllib3/request.py",
+      "node_id": 18,
+      "node_type": "ClassDef",
+      "name": "RequestMethods",
+      "start_line": 18,
+      "end_line": 141,
+      "line_count": 124,
+      "signals": {
+        "sbfl": 0.364653438772561,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.04590211678299455,
+        "boosted": -0.04590211678299455
+      },
+      "negative_signals": {
+        "total": 0.135,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.45000000000000007,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.0592194189509327
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/packages/urllib3/request.py",
+      "node_id": 50,
+      "node_type": "FunctionDef",
+      "name": "urlopen",
+      "start_line": 52,
+      "end_line": 56,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.08580080912295553,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2294216901063919,
+        "structural": 0.0,
+        "combined": -0.052351259796650215,
+        "boosted": -0.052351259796650215
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.0592194189509327
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/packages/urllib3/request.py",
+      "node_id": 35,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 49,
+      "end_line": 50,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.5148048547377332,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1294277459383011,
+        "structural": 0.0,
+        "combined": -0.4566696470177694,
+        "boosted": -0.4566696470177694
+      },
+      "negative_signals": {
+        "total": 1.2000000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 2.0592194189509327
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/packages/urllib3/response.py",
+      "node_id": 179,
+      "node_type": "ClassDef",
+      "name": "HTTPResponse",
+      "start_line": 53,
+      "end_line": 312,
+      "line_count": 260,
+      "signals": {
+        "sbfl": 25.43073925892534,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 25.040001554007304,
+        "boosted": 25.040001554007304
+      },
+      "negative_signals": {
+        "total": 0.135,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.45000000000000007,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.091788104828538
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/packages/urllib3/response.py",
+      "node_id": 472,
+      "node_type": "FunctionDef",
+      "name": "read",
+      "start_line": 141,
+      "end_line": 217,
+      "line_count": 77,
+      "signals": {
+        "sbfl": 14.594176430115505,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.35717642307281494,
+        "structural": 0.0,
+        "combined": 14.920771871144124,
+        "boosted": 14.920771871144124
+      },
+      "negative_signals": {
+        "total": 0.2405844155844156,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.45000000000000007,
+        "safe_patterns": 0.03896103896103897
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.091788104828538
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/packages/urllib3/response.py",
+      "node_id": 780,
+      "node_type": "FunctionDef",
+      "name": "from_httplib",
+      "start_line": 243,
+      "end_line": 273,
+      "line_count": 31,
+      "signals": {
+        "sbfl": 12.809526977012535,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.42452237010002136,
+        "structural": 0.0,
+        "combined": 12.798175439913884,
+        "boosted": 12.798175439913884
+      },
+      "negative_signals": {
+        "total": 0.7450000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.091788104828538
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/packages/urllib3/response.py",
+      "node_id": 203,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 79,
+      "end_line": 102,
+      "line_count": 24,
+      "signals": {
+        "sbfl": 12.3508379401475,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.32574164867401123,
+        "structural": 0.0,
+        "combined": 12.265233017050338,
+        "boosted": 12.265233017050338
+      },
+      "negative_signals": {
+        "total": 0.6483333333333334,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.020833333333333336
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.091788104828538
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/packages/urllib3/response.py",
+      "node_id": 737,
+      "node_type": "FunctionDef",
+      "name": "stream",
+      "start_line": 219,
+      "end_line": 239,
+      "line_count": 21,
+      "signals": {
+        "sbfl": 7.887031984319326,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.16467151045799255,
+        "structural": 0.0,
+        "combined": 8.027784965438796,
+        "boosted": 8.027784965438796
+      },
+      "negative_signals": {
+        "total": 0.135,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.45000000000000007,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.091788104828538
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/packages/urllib3/response.py",
+      "node_id": 397,
+      "node_type": "FunctionDef",
+      "name": "release_conn",
+      "start_line": 117,
+      "end_line": 122,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 7.879094018489954,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.060395248234272,
+        "structural": 0.0,
+        "combined": 7.861903825967381,
+        "boosted": 7.861903825967381
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.091788104828538
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/packages/urllib3/response.py",
+      "node_id": 936,
+      "node_type": "FunctionDef",
+      "name": "closed",
+      "start_line": 288,
+      "end_line": 296,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 7.500521643057363,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.08312638103961945,
+        "structural": 0.0,
+        "combined": 7.641296669912284,
+        "boosted": 7.641296669912284
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.091788104828538
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/packages/urllib3/response.py",
+      "node_id": 918,
+      "node_type": "FunctionDef",
+      "name": "close",
+      "start_line": 283,
+      "end_line": 285,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 7.022903700940598,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 6.899952881268467,
+        "boosted": 6.899952881268467
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.091788104828538
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/packages/urllib3/response.py",
+      "node_id": 986,
+      "node_type": "FunctionDef",
+      "name": "fileno",
+      "start_line": 298,
+      "end_line": 305,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 6.194667255379249,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.18889138102531433,
+        "structural": 0.0,
+        "combined": 6.526802888765799,
+        "boosted": 6.526802888765799
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.091788104828538
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/packages/urllib3/response.py",
+      "node_id": 434,
+      "node_type": "FunctionDef",
+      "name": "data",
+      "start_line": 125,
+      "end_line": 131,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 6.194667255379249,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.05368857830762863,
+        "structural": 0.0,
+        "combined": 6.284421450431342,
+        "boosted": 6.284421450431342
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.091788104828538
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/packages/urllib3/response.py",
+      "node_id": 462,
+      "node_type": "FunctionDef",
+      "name": "tell",
+      "start_line": 133,
+      "end_line": 139,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 6.194667255379249,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.06031552702188492,
+        "structural": 0.0,
+        "combined": 6.116349958117003,
+        "boosted": 6.116349958117003
+      },
+      "negative_signals": {
+        "total": 0.18,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.091788104828538
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/packages/urllib3/response.py",
+      "node_id": 370,
+      "node_type": "FunctionDef",
+      "name": "get_redirect_location",
+      "start_line": 104,
+      "end_line": 115,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 6.194667255379249,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.36316341161727905,
+        "structural": 0.0,
+        "combined": 6.091558117601827,
+        "boosted": 6.091558117601827
+      },
+      "negative_signals": {
+        "total": 0.7450000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.35,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.091788104828538
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/packages/urllib3/response.py",
+      "node_id": 1024,
+      "node_type": "FunctionDef",
+      "name": "flush",
+      "start_line": 307,
+      "end_line": 309,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 6.194667255379249,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0020346837118268013,
+        "structural": 0.0,
+        "combined": 6.075378866388406,
+        "boosted": 6.075378866388406
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.091788104828538
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/packages/urllib3/response.py",
+      "node_id": 900,
+      "node_type": "FunctionDef",
+      "name": "getheader",
+      "start_line": 279,
+      "end_line": 280,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 6.194667255379249,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.18480896949768066,
+        "structural": 0.0,
+        "combined": 5.9453561873603205,
+        "boosted": 5.9453561873603205
+      },
+      "negative_signals": {
+        "total": 0.5800000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.091788104828538
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/packages/urllib3/response.py",
+      "node_id": 892,
+      "node_type": "FunctionDef",
+      "name": "getheaders",
+      "start_line": 276,
+      "end_line": 277,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 6.194667255379249,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.12945090234279633,
+        "structural": 0.0,
+        "combined": 5.885711666481528,
+        "boosted": 5.885711666481528
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.091788104828538
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/packages/urllib3/response.py",
+      "node_id": 1053,
+      "node_type": "FunctionDef",
+      "name": "readable",
+      "start_line": 311,
+      "end_line": 312,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 6.194667255379249,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.12447284907102585,
+        "structural": 0.0,
+        "combined": 5.876751170592342,
+        "boosted": 5.876751170592342
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.091788104828538
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/packages/urllib3/response.py",
+      "node_id": 69,
+      "node_type": "FunctionDef",
+      "name": "decompress",
+      "start_line": 30,
+      "end_line": 43,
+      "line_count": 14,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.10997386276721954,
+        "structural": 1.5,
+        "combined": 3.1841824611777167,
+        "boosted": 3.1841824611777167
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.091788104828538
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/packages/urllib3/response.py",
+      "node_id": 25,
+      "node_type": "ClassDef",
+      "name": "DeflateDecoder",
+      "start_line": 20,
+      "end_line": 43,
+      "line_count": 24,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.02360655737704918,
+        "boosted": -0.02360655737704918
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.091788104828538
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/packages/urllib3/response.py",
+      "node_id": 55,
+      "node_type": "FunctionDef",
+      "name": "__getattr__",
+      "start_line": 27,
+      "end_line": 28,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.04760269075632095,
+        "structural": 0.0,
+        "combined": -0.45628236975337644,
+        "boosted": -0.04562823697533765
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.091788104828538
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/packages/urllib3/response.py",
+      "node_id": 153,
+      "node_type": "FunctionDef",
+      "name": "_get_decoder",
+      "start_line": 46,
+      "end_line": 50,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.05929531529545784,
+        "structural": 0.0,
+        "combined": -0.6581864652550613,
+        "boosted": -0.6581864652550613
+      },
+      "negative_signals": {
+        "total": 0.7600000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.091788104828538
+    },
+    {
+      "task_id": "psf__requests-1963",
+      "file_path": "/opt/SWE-bench/testbed/psf__requests/setup_psf__requests__2.3/requests/packages/urllib3/response.py",
+      "node_id": 28,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 22,
+      "end_line": 25,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.02631543204188347,
+        "structural": 0.0,
+        "combined": -0.8365666485541181,
+        "boosted": -0.8365666485541181
+      },
+      "negative_signals": {
+        "total": 0.8800000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 2.091788104828538
+    }
+  ]
+}

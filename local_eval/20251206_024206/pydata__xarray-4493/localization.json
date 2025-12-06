@@ -1,0 +1,9 @@
+{
+  "predicted_file": "/opt/SWE-bench/testbed/pydata__xarray/setup_pydata__xarray__0.12/xarray/core/variable.py",
+  "predicted_methods": [],
+  "localized_node_ids": [],
+  "localized_lines": [],
+  "file_correct": true,
+  "method_recall": 0.0,
+  "node_line_recall": 0.0
+}

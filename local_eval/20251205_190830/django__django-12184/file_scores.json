@@ -1,0 +1,13 @@
+{
+  "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/urls/resolvers.py": 1.0510373633370405,
+  "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/urls/base.py": 0.7374578056360515,
+  "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/test/testcases.py": 0.0,
+  "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/urls/conf.py": 0.0,
+  "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/urls/converters.py": 0.0,
+  "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/datastructures.py": 0.0,
+  "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/encoding.py": 0.0,
+  "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/functional.py": 0.0,
+  "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/http.py": 0.0,
+  "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/regex_helper.py": 0.0,
+  "/opt/SWE-bench/testbed/django__django/setup_django__django__3.1/django/utils/translation/trans_real.py": 0.0
+}

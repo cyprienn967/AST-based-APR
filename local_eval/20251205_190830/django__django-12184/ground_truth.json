@@ -1,0 +1,21 @@
+{
+  "files": [
+    "django/urls/resolvers.py"
+  ],
+  "lines": {
+    "django/urls/resolvers.py": [
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      158,
+      159
+    ]
+  },
+  "methods": [
+    "match"
+  ]
+}

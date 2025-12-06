@@ -1,0 +1,23 @@
+{
+  "files": [
+    "sympy/geometry/point.py"
+  ],
+  "lines": {
+    "sympy/geometry/point.py": [
+      278,
+      279,
+      280,
+      281,
+      282,
+      283,
+      284,
+      285,
+      286,
+      287
+    ]
+  },
+  "methods": [
+    "__rmul__",
+    "__mul__"
+  ]
+}

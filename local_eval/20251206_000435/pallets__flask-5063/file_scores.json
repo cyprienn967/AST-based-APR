@@ -1,0 +1,12 @@
+{
+  "/opt/SWE-bench/testbed/pallets__flask/setup_pallets__flask__2.3/src/flask/cli.py": 0.9736614536835839,
+  "/opt/SWE-bench/testbed/pallets__flask/setup_pallets__flask__2.3/src/flask/scaffold.py": 2.077855844669618,
+  "/opt/SWE-bench/testbed/pallets__flask/setup_pallets__flask__2.3/src/flask/helpers.py": 1.6348260488904274,
+  "/opt/SWE-bench/testbed/pallets__flask/setup_pallets__flask__2.3/src/flask/app.py": 1.4349831518231768,
+  "/opt/SWE-bench/testbed/pallets__flask/setup_pallets__flask__2.3/src/flask/ctx.py": 1.587450786638754,
+  "/opt/SWE-bench/testbed/pallets__flask/setup_pallets__flask__2.3/src/flask/templating.py": 1.5336231610144648,
+  "/opt/SWE-bench/testbed/pallets__flask/setup_pallets__flask__2.3/src/flask/config.py": 1.2124355652982142,
+  "/opt/SWE-bench/testbed/pallets__flask/setup_pallets__flask__2.3/src/flask/json/provider.py": 1.2124355652982142,
+  "/opt/SWE-bench/testbed/pallets__flask/setup_pallets__flask__2.3/src/flask/blueprints.py": 0.0,
+  "/opt/SWE-bench/testbed/pallets__flask/setup_pallets__flask__2.3/src/flask/testing.py": 0.0
+}

@@ -1,0 +1,24 @@
+{
+  "predicted_file": "/opt/SWE-bench/testbed/pylint-dev__pylint/setup_pylint-dev__pylint__2.14/pylint/config/exceptions.py",
+  "predicted_methods": [
+    "__init__"
+  ],
+  "localized_node_ids": [
+    14,
+    9,
+    27,
+    34,
+    35
+  ],
+  "localized_lines": [
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "file_correct": false,
+  "method_recall": 0.0,
+  "node_line_recall": 0.0
+}

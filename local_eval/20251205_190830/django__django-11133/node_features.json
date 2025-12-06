@@ -1,0 +1,4083 @@
+{
+  "task_id": "django__django-11133",
+  "num_files_processed": 5,
+  "files": [
+    {
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/cookie.py",
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.0,
+      "num_nodes": 1,
+      "num_buggy_nodes": 0
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/core/serializers/json.py",
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.0,
+      "num_nodes": 9,
+      "num_buggy_nodes": 0
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856,
+      "num_nodes": 73,
+      "num_buggy_nodes": 2
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/core/handlers/base.py",
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 0.0,
+      "num_nodes": 7,
+      "num_buggy_nodes": 0
+    },
+    {
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/dispatch/dispatcher.py",
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0,
+      "num_nodes": 13,
+      "num_buggy_nodes": 0
+    }
+  ],
+  "num_nodes": 103,
+  "num_buggy_nodes": 2,
+  "nodes": [
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/cookie.py",
+      "node_id": 23,
+      "node_type": "FunctionDef",
+      "name": "parse_cookie",
+      "start_line": 10,
+      "end_line": 26,
+      "line_count": 17,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.22657272219657898,
+        "structural": 0.0,
+        "combined": 0.16667705379999606,
+        "boosted": 0.16667705379999606
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 5,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/core/serializers/json.py",
+      "node_id": 270,
+      "node_type": "FunctionDef",
+      "name": "Deserializer",
+      "start_line": 61,
+      "end_line": 73,
+      "line_count": 13,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.22925730049610138,
+        "structural": 0.0,
+        "combined": 0.2990092947391364,
+        "boosted": 0.2990092947391364
+      },
+      "negative_signals": {
+        "total": 0.07615384615384616,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.11538461538461538
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/core/serializers/json.py",
+      "node_id": 32,
+      "node_type": "FunctionDef",
+      "name": "_init_options",
+      "start_line": 23,
+      "end_line": 31,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1173238456249237,
+        "structural": 0.0,
+        "combined": 0.18522138366332422,
+        "boosted": 0.18522138366332422
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/core/serializers/json.py",
+      "node_id": 123,
+      "node_type": "FunctionDef",
+      "name": "end_serialization",
+      "start_line": 37,
+      "end_line": 42,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.09779904782772064,
+        "structural": 0.0,
+        "combined": 0.15873059378220486,
+        "boosted": 0.15873059378220486
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/core/serializers/json.py",
+      "node_id": 359,
+      "node_type": "FunctionDef",
+      "name": "default",
+      "start_line": 81,
+      "end_line": 104,
+      "line_count": 24,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.17776018381118774,
+        "structural": 0.0,
+        "combined": 0.11740422829603533,
+        "boosted": 0.11740422829603533
+      },
+      "negative_signals": {
+        "total": 0.13333333333333336,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.33333333333333337
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/core/serializers/json.py",
+      "node_id": 171,
+      "node_type": "FunctionDef",
+      "name": "end_object",
+      "start_line": 44,
+      "end_line": 54,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.04124457389116287,
+        "structural": 0.0,
+        "combined": 0.024327645591505756,
+        "boosted": 0.024327645591505756
+      },
+      "negative_signals": {
+        "total": 0.018181818181818184,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.045454545454545456
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/core/serializers/json.py",
+      "node_id": 352,
+      "node_type": "ClassDef",
+      "name": "DjangoJSONEncoder",
+      "start_line": 76,
+      "end_line": 104,
+      "line_count": 29,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.12865384615384615,
+        "boosted": -0.12865384615384615
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/core/serializers/json.py",
+      "node_id": 23,
+      "node_type": "ClassDef",
+      "name": "Serializer",
+      "start_line": 19,
+      "end_line": 58,
+      "line_count": 40,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.1453846153846154,
+        "boosted": -0.1453846153846154
+      },
+      "negative_signals": {
+        "total": 0.03,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/core/serializers/json.py",
+      "node_id": 256,
+      "node_type": "FunctionDef",
+      "name": "getvalue",
+      "start_line": 56,
+      "end_line": 58,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.16530299186706543,
+        "structural": 0.0,
+        "combined": -0.25110846079312843,
+        "boosted": -0.25110846079312843
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/core/serializers/json.py",
+      "node_id": 105,
+      "node_type": "FunctionDef",
+      "name": "start_serialization",
+      "start_line": 33,
+      "end_line": 35,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.06895416975021362,
+        "structural": 0.0,
+        "combined": -0.30453634060346163,
+        "boosted": -0.30453634060346163
+      },
+      "negative_signals": {
+        "total": 0.42,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 3,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1371,
+      "node_type": "FunctionDef",
+      "name": "content",
+      "start_line": 310,
+      "end_line": 322,
+      "line_count": 13,
+      "signals": {
+        "sbfl": 0.9997476746715216,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.34255778789520264,
+        "structural": 3.0,
+        "combined": 7.609362445571059,
+        "boosted": 15.218724891142118
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1357,
+      "node_type": "FunctionDef",
+      "name": "content",
+      "start_line": 306,
+      "end_line": 307,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.6269737410884743,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.09092292189598083,
+        "structural": 3.0,
+        "combined": 6.249559731684036,
+        "boosted": 12.499119463368071
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1270,
+      "node_type": "ClassDef",
+      "name": "HttpResponse",
+      "start_line": 278,
+      "end_line": 341,
+      "line_count": 64,
+      "signals": {
+        "sbfl": 1.3026983632768914,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 3.0,
+        "combined": 7.2082897611263546,
+        "boosted": 7.2082897611263546
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 57,
+      "node_type": "ClassDef",
+      "name": "HttpResponseBase",
+      "start_line": 28,
+      "end_line": 275,
+      "line_count": 248,
+      "signals": {
+        "sbfl": 6.513728781970539,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 6.320395448637206,
+        "boosted": 6.320395448637206
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": true,
+        "method_match": false,
+        "lines_in_patch": [
+          229,
+          230,
+          231,
+          232,
+          233,
+          234,
+          235
+        ],
+        "num_buggy_lines": 7
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 2198,
+      "node_type": "FunctionDef",
+      "name": "content",
+      "start_line": 487,
+      "end_line": 490,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.14731422066688538,
+        "structural": 3.0,
+        "combined": 6.143015059565985,
+        "boosted": 6.143015059565985
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1567,
+      "node_type": "FunctionDef",
+      "name": "content",
+      "start_line": 362,
+      "end_line": 366,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.20099295675754547,
+        "structural": 3.0,
+        "combined": 5.819099150120571,
+        "boosted": 5.819099150120571
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1512,
+      "node_type": "FunctionDef",
+      "name": "writelines",
+      "start_line": 339,
+      "end_line": 341,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.31516895885731244,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.15337848663330078,
+        "structural": 1.2,
+        "combined": 2.869637331571447,
+        "boosted": 5.739274663142894
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1279,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 287,
+      "end_line": 290,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.7642191682270214,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2907211184501648,
+        "structural": 1.2,
+        "combined": 2.80536664380291,
+        "boosted": 5.61073328760582
+      },
+      "negative_signals": {
+        "total": 0.8800000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1107,
+      "node_type": "FunctionDef",
+      "name": "make_bytes",
+      "start_line": 223,
+      "end_line": 237,
+      "line_count": 15,
+      "signals": {
+        "sbfl": 2.7201862977060074,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.30400335788726807,
+        "structural": 1.5,
+        "combined": 5.480994492440725,
+        "boosted": 5.480994492440725
+      },
+      "negative_signals": {
+        "total": 0.7783333333333335,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.2333333333333333
+      },
+      "ground_truth": {
+        "is_buggy": true,
+        "method_match": true,
+        "lines_in_patch": [
+          229,
+          230,
+          231,
+          232,
+          233,
+          234,
+          235
+        ],
+        "num_buggy_lines": 7
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1499,
+      "node_type": "FunctionDef",
+      "name": "getvalue",
+      "start_line": 333,
+      "end_line": 334,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.31516895885731244,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2403872311115265,
+        "structural": 1.2,
+        "combined": 2.6067907060408557,
+        "boosted": 5.213581412081711
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1469,
+      "node_type": "FunctionDef",
+      "name": "write",
+      "start_line": 327,
+      "end_line": 328,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.31516895885731244,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.22971567511558533,
+        "structural": 1.2,
+        "combined": 2.587581905248162,
+        "boosted": 5.175163810496324
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1488,
+      "node_type": "FunctionDef",
+      "name": "tell",
+      "start_line": 330,
+      "end_line": 331,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.31516895885731244,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.21912261843681335,
+        "structural": 1.2,
+        "combined": 2.5685144032263723,
+        "boosted": 5.1370288064527445
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1507,
+      "node_type": "FunctionDef",
+      "name": "writable",
+      "start_line": 336,
+      "end_line": 337,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.31516895885731244,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.16243837773799896,
+        "structural": 1.2,
+        "combined": 2.4664827699685064,
+        "boosted": 4.932965539937013
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1161,
+      "node_type": "FunctionDef",
+      "name": "close",
+      "start_line": 244,
+      "end_line": 251,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 1.6025840654054502,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0916978195309639,
+        "structural": 1.5,
+        "combined": 4.763339065292368,
+        "boosted": 4.763339065292368
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 383,
+      "node_type": "FunctionDef",
+      "name": "_content_type_for_repr",
+      "start_line": 104,
+      "end_line": 105,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 1.6025840654054502,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.15380370616912842,
+        "structural": 1.5,
+        "combined": 4.338355467692677,
+        "boosted": 4.338355467692677
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 64,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 38,
+      "end_line": 61,
+      "line_count": 24,
+      "signals": {
+        "sbfl": 3.766836077082767,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.36028891801834106,
+        "structural": 0.0,
+        "combined": 3.7207862370426623,
+        "boosted": 3.7207862370426623
+      },
+      "negative_signals": {
+        "total": 0.6816666666666668,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.10416666666666667
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 404,
+      "node_type": "FunctionDef",
+      "name": "_convert_to_charset",
+      "start_line": 107,
+      "end_line": 132,
+      "line_count": 26,
+      "signals": {
+        "sbfl": 3.0107737132480934,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.29215380549430847,
+        "structural": 0.0,
+        "combined": 3.4165182223603465,
+        "boosted": 3.4165182223603465
+      },
+      "negative_signals": {
+        "total": 0.10615384615384615,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.11538461538461539
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 236,
+      "node_type": "FunctionDef",
+      "name": "charset",
+      "start_line": 76,
+      "end_line": 84,
+      "line_count": 9,
+      "signals": {
+        "sbfl": 2.9721317609658806,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0943450927734375,
+        "structural": 0.0,
+        "combined": 3.0971142182806486,
+        "boosted": 3.0971142182806486
+      },
+      "negative_signals": {
+        "total": 0.04000000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1715,
+      "node_type": "FunctionDef",
+      "name": "_set_streaming_content",
+      "start_line": 400,
+      "end_line": 410,
+      "line_count": 11,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.34253990650177,
+        "structural": 1.5,
+        "combined": 2.970657853208562,
+        "boosted": 2.970657853208562
+      },
+      "negative_signals": {
+        "total": 0.6400000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1585,
+      "node_type": "FunctionDef",
+      "name": "streaming_content",
+      "start_line": 369,
+      "end_line": 370,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2596726417541504,
+        "structural": 1.5,
+        "combined": 2.9263354863402666,
+        "boosted": 2.9263354863402666
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1602,
+      "node_type": "FunctionDef",
+      "name": "streaming_content",
+      "start_line": 373,
+      "end_line": 374,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1496208906173706,
+        "structural": 1.5,
+        "combined": 2.728242334294063,
+        "boosted": 2.728242334294063
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1618,
+      "node_type": "FunctionDef",
+      "name": "_set_streaming_content",
+      "start_line": 376,
+      "end_line": 380,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.10924400389194489,
+        "structural": 1.5,
+        "combined": 2.4339510349624898,
+        "boosted": 2.4339510349624898
+      },
+      "negative_signals": {
+        "total": 0.7600000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1066,
+      "node_type": "FunctionDef",
+      "name": "delete_cookie",
+      "start_line": 212,
+      "end_line": 219,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 1.6025840654054502,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2160765379667282,
+        "structural": 0.0,
+        "combined": 1.9872207584767436,
+        "boosted": 1.9872207584767436
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 309,
+      "node_type": "FunctionDef",
+      "name": "serialize_headers",
+      "start_line": 90,
+      "end_line": 99,
+      "line_count": 10,
+      "signals": {
+        "sbfl": 1.6025840654054502,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.16977989673614502,
+        "structural": 0.0,
+        "combined": 1.8128115354444896,
+        "boosted": 1.8128115354444896
+      },
+      "negative_signals": {
+        "total": 0.09,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 192,
+      "node_type": "FunctionDef",
+      "name": "reason_phrase",
+      "start_line": 64,
+      "end_line": 69,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 1.6025840654054502,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.09705355763435364,
+        "structural": 0.0,
+        "combined": 1.614054662695674,
+        "boosted": 1.614054662695674
+      },
+      "negative_signals": {
+        "total": 0.16,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1002,
+      "node_type": "FunctionDef",
+      "name": "setdefault",
+      "start_line": 203,
+      "end_line": 206,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 1.6025840654054502,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.04140963405370712,
+        "structural": 0.0,
+        "combined": 1.5249708690677144,
+        "boosted": 1.5249708690677144
+      },
+      "negative_signals": {
+        "total": 0.15,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1218,
+      "node_type": "FunctionDef",
+      "name": "flush",
+      "start_line": 256,
+      "end_line": 257,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 1.6025840654054502,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.22619539499282837,
+        "structural": 0.0,
+        "combined": 1.4086605075753371,
+        "boosted": 1.4086605075753371
+      },
+      "negative_signals": {
+        "total": 0.6,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 1.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1201,
+      "node_type": "FunctionDef",
+      "name": "write",
+      "start_line": 253,
+      "end_line": 254,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 1.6025840654054502,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1759745478630066,
+        "structural": 0.0,
+        "combined": 1.3782629827416577,
+        "boosted": 1.3782629827416577
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1222,
+      "node_type": "FunctionDef",
+      "name": "tell",
+      "start_line": 259,
+      "end_line": 260,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 1.6025840654054502,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.15619038045406342,
+        "structural": 0.0,
+        "combined": 1.3426514814055601,
+        "boosted": 1.3426514814055601
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1253,
+      "node_type": "FunctionDef",
+      "name": "writelines",
+      "start_line": 274,
+      "end_line": 275,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 1.6025840654054502,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.14476625621318817,
+        "structural": 0.0,
+        "combined": 1.3220880577719847,
+        "boosted": 1.3220880577719847
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1243,
+      "node_type": "FunctionDef",
+      "name": "seekable",
+      "start_line": 268,
+      "end_line": 269,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 1.6025840654054502,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.13539594411849976,
+        "structural": 0.0,
+        "combined": 1.3052214960015456,
+        "boosted": 1.3052214960015456
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1238,
+      "node_type": "FunctionDef",
+      "name": "readable",
+      "start_line": 265,
+      "end_line": 266,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 1.6025840654054502,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.12804991006851196,
+        "structural": 0.0,
+        "combined": 1.2919986347115675,
+        "boosted": 1.2919986347115675
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 672,
+      "node_type": "FunctionDef",
+      "name": "get",
+      "start_line": 154,
+      "end_line": 155,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 1.8388118610362172,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0012458525598049164,
+        "structural": 0.0,
+        "combined": 1.2599791268266618,
+        "boosted": 1.2599791268266618
+      },
+      "negative_signals": {
+        "total": 0.5800000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.1
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1248,
+      "node_type": "FunctionDef",
+      "name": "writable",
+      "start_line": 271,
+      "end_line": 272,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 1.6025840654054502,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1093241348862648,
+        "structural": 0.0,
+        "combined": 1.2582922393835225,
+        "boosted": 1.2582922393835225
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 294,
+      "node_type": "FunctionDef",
+      "name": "charset",
+      "start_line": 87,
+      "end_line": 88,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 1.6025840654054502,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.09179084002971649,
+        "structural": 0.0,
+        "combined": 1.2267323086417357,
+        "boosted": 1.2267323086417357
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 661,
+      "node_type": "FunctionDef",
+      "name": "items",
+      "start_line": 151,
+      "end_line": 152,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 1.6025840654054502,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.07758074998855591,
+        "structural": 0.0,
+        "combined": 1.2011541465676465,
+        "boosted": 1.2011541465676465
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 221,
+      "node_type": "FunctionDef",
+      "name": "reason_phrase",
+      "start_line": 72,
+      "end_line": 73,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 1.6025840654054502,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.05852241441607475,
+        "structural": 0.0,
+        "combined": 1.1668491425371805,
+        "boosted": 1.1668491425371805
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 699,
+      "node_type": "FunctionDef",
+      "name": "set_cookie",
+      "start_line": 157,
+      "end_line": 201,
+      "line_count": 45,
+      "signals": {
+        "sbfl": 1.6025840654054502,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.23596815764904022,
+        "structural": 0.0,
+        "combined": 1.1447998674532924,
+        "boosted": 1.1447998674532924
+      },
+      "negative_signals": {
+        "total": 0.8583333333333334,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.13333333333333333
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1025,
+      "node_type": "FunctionDef",
+      "name": "set_signed_cookie",
+      "start_line": 208,
+      "end_line": 210,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 1.6025840654054502,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.18558445572853088,
+        "structural": 0.0,
+        "combined": 0.8750231824909992,
+        "boosted": 0.8750231824909992
+      },
+      "negative_signals": {
+        "total": 1.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 638,
+      "node_type": "FunctionDef",
+      "name": "has_header",
+      "start_line": 145,
+      "end_line": 147,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 1.6025840654054502,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.04440616816282272,
+        "structural": 0.0,
+        "combined": 0.5909022648727246,
+        "boosted": 0.5909022648727246
+      },
+      "negative_signals": {
+        "total": 1.09,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1332,
+      "node_type": "FunctionDef",
+      "name": "serialize",
+      "start_line": 299,
+      "end_line": 301,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.31516895885731244,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.18896663188934326,
+        "structural": 1.2,
+        "combined": 2.588695993032324,
+        "boosted": 0.5177391986064648
+      },
+      "negative_signals": {
+        "total": 0.46499999999999997,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1307,
+      "node_type": "FunctionDef",
+      "name": "__repr__",
+      "start_line": 292,
+      "end_line": 297,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.31516895885731244,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1891968548297882,
+        "structural": 1.2,
+        "combined": 2.512497491099318,
+        "boosted": 0.5024994982198636
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1458,
+      "node_type": "FunctionDef",
+      "name": "__iter__",
+      "start_line": 324,
+      "end_line": 325,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.31516895885731244,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.08329898864030838,
+        "structural": 1.2,
+        "combined": 2.3240318695926634,
+        "boosted": 0.4648063739185327
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 554,
+      "node_type": "FunctionDef",
+      "name": "__setitem__",
+      "start_line": 134,
+      "end_line": 137,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 2.2293058317530003,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.12790711224079132,
+        "structural": 0.0,
+        "combined": 2.2173880961520167,
+        "boosted": 0.22173880961520168
+      },
+      "negative_signals": {
+        "total": 0.24,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 619,
+      "node_type": "FunctionDef",
+      "name": "__getitem__",
+      "start_line": 142,
+      "end_line": 143,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 1.6025840654054502,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.06732013076543808,
+        "structural": 0.0,
+        "combined": 1.1826850319660345,
+        "boosted": 0.11826850319660345
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 601,
+      "node_type": "FunctionDef",
+      "name": "__delitem__",
+      "start_line": 139,
+      "end_line": 140,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 1.6025840654054502,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": 1.061508796588246,
+        "boosted": 0.1061508796588246
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 53,
+      "node_type": "ClassDef",
+      "name": "BadHeaderError",
+      "start_line": 24,
+      "end_line": 25,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.001075268817204301,
+        "boosted": -0.001075268817204301
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 2152,
+      "node_type": "ClassDef",
+      "name": "HttpResponseRedirect",
+      "start_line": 471,
+      "end_line": 472,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.001075268817204301,
+        "boosted": -0.001075268817204301
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 2159,
+      "node_type": "ClassDef",
+      "name": "HttpResponsePermanentRedirect",
+      "start_line": 475,
+      "end_line": 476,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.001075268817204301,
+        "boosted": -0.001075268817204301
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 2223,
+      "node_type": "ClassDef",
+      "name": "HttpResponseBadRequest",
+      "start_line": 493,
+      "end_line": 494,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.001075268817204301,
+        "boosted": -0.001075268817204301
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 2230,
+      "node_type": "ClassDef",
+      "name": "HttpResponseNotFound",
+      "start_line": 497,
+      "end_line": 498,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.001075268817204301,
+        "boosted": -0.001075268817204301
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 2237,
+      "node_type": "ClassDef",
+      "name": "HttpResponseForbidden",
+      "start_line": 501,
+      "end_line": 502,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.001075268817204301,
+        "boosted": -0.001075268817204301
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 2314,
+      "node_type": "ClassDef",
+      "name": "HttpResponseGone",
+      "start_line": 521,
+      "end_line": 522,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.001075268817204301,
+        "boosted": -0.001075268817204301
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 2321,
+      "node_type": "ClassDef",
+      "name": "HttpResponseServerError",
+      "start_line": 525,
+      "end_line": 526,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.001075268817204301,
+        "boosted": -0.001075268817204301
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 2328,
+      "node_type": "ClassDef",
+      "name": "Http404",
+      "start_line": 529,
+      "end_line": 530,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.001075268817204301,
+        "boosted": -0.001075268817204301
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 2166,
+      "node_type": "ClassDef",
+      "name": "HttpResponseNotModified",
+      "start_line": 479,
+      "end_line": 490,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.0064516129032258064,
+        "boosted": -0.0064516129032258064
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 2244,
+      "node_type": "ClassDef",
+      "name": "HttpResponseNotAllowed",
+      "start_line": 505,
+      "end_line": 518,
+      "line_count": 14,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.007526881720430107,
+        "boosted": -0.007526881720430107
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 2027,
+      "node_type": "ClassDef",
+      "name": "HttpResponseRedirectBase",
+      "start_line": 450,
+      "end_line": 468,
+      "line_count": 19,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.01021505376344086,
+        "boosted": -0.01021505376344086
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1649,
+      "node_type": "FunctionDef",
+      "name": "__iter__",
+      "start_line": 382,
+      "end_line": 383,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.18269740045070648,
+        "structural": 0.0,
+        "combined": -0.21221994800593266,
+        "boosted": -0.021221994800593266
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 2122,
+      "node_type": "FunctionDef",
+      "name": "__repr__",
+      "start_line": 462,
+      "end_line": 468,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.17439404129981995,
+        "structural": 0.0,
+        "combined": -0.22985416652053917,
+        "boosted": -0.02298541665205392
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 2283,
+      "node_type": "FunctionDef",
+      "name": "__repr__",
+      "start_line": 512,
+      "end_line": 518,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1444007307291031,
+        "structural": 0.0,
+        "combined": -0.28384212554782956,
+        "boosted": -0.028384212554782958
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1804,
+      "node_type": "FunctionDef",
+      "name": "set_headers",
+      "start_line": 412,
+      "end_line": 447,
+      "line_count": 36,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.39903032779693604,
+        "structural": 0.0,
+        "combined": -0.06443358200852606,
+        "boosted": -0.06443358200852606
+      },
+      "negative_signals": {
+        "total": 0.7633333333333335,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.08333333333333334
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1669,
+      "node_type": "ClassDef",
+      "name": "FileResponse",
+      "start_line": 389,
+      "end_line": 447,
+      "line_count": 59,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.07672043010752688,
+        "boosted": -0.07672043010752688
+      },
+      "negative_signals": {
+        "total": 0.045000000000000005,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1529,
+      "node_type": "ClassDef",
+      "name": "StreamingHttpResponse",
+      "start_line": 344,
+      "end_line": 386,
+      "line_count": 43,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.09811827956989247,
+        "boosted": -0.09811827956989247
+      },
+      "negative_signals": {
+        "total": 0.075,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 2332,
+      "node_type": "ClassDef",
+      "name": "JsonResponse",
+      "start_line": 533,
+      "end_line": 558,
+      "line_count": 26,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.14897849462365592,
+        "boosted": -0.14897849462365592
+      },
+      "negative_signals": {
+        "total": 0.135,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.45000000000000007,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 2337,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 547,
+      "end_line": 558,
+      "line_count": 12,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.24533766508102417,
+        "structural": 0.0,
+        "combined": -0.23817714909071572,
+        "boosted": -0.23817714909071572
+      },
+      "negative_signals": {
+        "total": 0.6733333333333335,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.08333333333333334
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1657,
+      "node_type": "FunctionDef",
+      "name": "getvalue",
+      "start_line": 385,
+      "end_line": 386,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1491323709487915,
+        "structural": 0.0,
+        "combined": -0.27263700110937966,
+        "boosted": -0.27263700110937966
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1538,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 355,
+      "end_line": 359,
+      "line_count": 5,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2673749029636383,
+        "structural": 0.0,
+        "combined": -0.4014133467084619,
+        "boosted": -0.4014133467084619
+      },
+      "negative_signals": {
+        "total": 0.8800000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 2038,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 453,
+      "end_line": 458,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.17394493520259857,
+        "structural": 0.0,
+        "combined": -0.4701249230869356,
+        "boosted": -0.4701249230869356
+      },
+      "negative_signals": {
+        "total": 0.7800000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 1678,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 395,
+      "end_line": 398,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.13308507204055786,
+        "structural": 0.0,
+        "combined": -0.6425974079614046,
+        "boosted": -0.6425974079614046
+      },
+      "negative_signals": {
+        "total": 0.8800000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.4,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 314,
+      "node_type": "FunctionDef",
+      "name": "to_bytes",
+      "start_line": 92,
+      "end_line": 93,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.26348885893821716,
+        "structural": 0.0,
+        "combined": -0.7667953227284136,
+        "boosted": -0.7667953227284136
+      },
+      "negative_signals": {
+        "total": 1.2400000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 2251,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 508,
+      "end_line": 510,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.10749877989292145,
+        "structural": 0.0,
+        "combined": -0.8681150994185479,
+        "boosted": -0.8681150994185479
+      },
+      "negative_signals": {
+        "total": 1.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/http/response.py",
+      "node_id": 2173,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 482,
+      "end_line": 484,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.09719838947057724,
+        "structural": 0.0,
+        "combined": -0.8866558021787675,
+        "boosted": -0.8866558021787675
+      },
+      "negative_signals": {
+        "total": 1.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 1,
+      "is_gt_file": true,
+      "file_score": 2.0707654653685856
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/core/handlers/base.py",
+      "node_id": 51,
+      "node_type": "FunctionDef",
+      "name": "load_middleware",
+      "start_line": 23,
+      "end_line": 62,
+      "line_count": 40,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2790329158306122,
+        "structural": 0.0,
+        "combined": 0.32497009186859593,
+        "boosted": 0.32497009186859593
+      },
+      "negative_signals": {
+        "total": 0.105,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.037500000000000006
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/core/handlers/base.py",
+      "node_id": 639,
+      "node_type": "FunctionDef",
+      "name": "process_exception_by_middleware",
+      "start_line": 149,
+      "end_line": 158,
+      "line_count": 10,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.11071601510047913,
+        "structural": 0.0,
+        "combined": 0.12121653802423593,
+        "boosted": 0.12121653802423593
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/core/handlers/base.py",
+      "node_id": 670,
+      "node_type": "FunctionDef",
+      "name": "reset_urlconf",
+      "start_line": 161,
+      "end_line": 163,
+      "line_count": 3,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.02133103460073471,
+        "structural": 0.0,
+        "combined": -0.41702582446566544,
+        "boosted": -0.41702582446566544
+      },
+      "negative_signals": {
+        "total": 0.44999999999999996,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.7,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.1,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/core/handlers/base.py",
+      "node_id": 298,
+      "node_type": "FunctionDef",
+      "name": "get_response",
+      "start_line": 71,
+      "end_line": 83,
+      "line_count": 13,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1595776528120041,
+        "structural": 0.0,
+        "combined": -0.42125420084200726,
+        "boosted": -0.42125420084200726
+      },
+      "negative_signals": {
+        "total": 0.6850000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.15000000000000002,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/core/handlers/base.py",
+      "node_id": 237,
+      "node_type": "FunctionDef",
+      "name": "make_view_atomic",
+      "start_line": 64,
+      "end_line": 69,
+      "line_count": 6,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.09804339706897736,
+        "structural": 0.0,
+        "combined": -0.4743652587698168,
+        "boosted": -0.4743652587698168
+      },
+      "negative_signals": {
+        "total": 0.6400000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/core/handlers/base.py",
+      "node_id": 34,
+      "node_type": "ClassDef",
+      "name": "BaseHandler",
+      "start_line": 17,
+      "end_line": 158,
+      "line_count": 142,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.49662650602409636,
+        "boosted": -0.49662650602409636
+      },
+      "negative_signals": {
+        "total": 0.24,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.3,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/core/handlers/base.py",
+      "node_id": 362,
+      "node_type": "FunctionDef",
+      "name": "_get_response",
+      "start_line": 85,
+      "end_line": 147,
+      "line_count": 63,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.16212373971939087,
+        "structural": 0.0,
+        "combined": -0.6406041187632721,
+        "boosted": -0.6406041187632721
+      },
+      "negative_signals": {
+        "total": 0.8185714285714286,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.07142857142857142
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 2,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/dispatch/dispatcher.py",
+      "node_id": 131,
+      "node_type": "FunctionDef",
+      "name": "connect",
+      "start_line": 49,
+      "end_line": 111,
+      "line_count": 63,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.2634662389755249,
+        "structural": 0.0,
+        "combined": 0.219989393234875,
+        "boosted": 0.219989393234875
+      },
+      "negative_signals": {
+        "total": 0.1895238095238095,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.30000000000000004,
+        "safe_patterns": 0.023809523809523808
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/dispatch/dispatcher.py",
+      "node_id": 521,
+      "node_type": "FunctionDef",
+      "name": "send_robust",
+      "start_line": 178,
+      "end_line": 212,
+      "line_count": 35,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.19619710743427277,
+        "structural": 0.0,
+        "combined": 0.19719588927210194,
+        "boosted": 0.19719588927210194
+      },
+      "negative_signals": {
+        "total": 0.12000000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.30000000000000004,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/dispatch/dispatcher.py",
+      "node_id": 461,
+      "node_type": "FunctionDef",
+      "name": "send",
+      "start_line": 152,
+      "end_line": 176,
+      "line_count": 25,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.1637885570526123,
+        "structural": 0.0,
+        "combined": 0.19413447118785282,
+        "boosted": 0.19413447118785282
+      },
+      "negative_signals": {
+        "total": 0.075,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/dispatch/dispatcher.py",
+      "node_id": 882,
+      "node_type": "FunctionDef",
+      "name": "_decorator",
+      "start_line": 285,
+      "end_line": 291,
+      "line_count": 7,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.12378248572349548,
+        "structural": 0.0,
+        "combined": 0.15561669348037405,
+        "boosted": 0.15561669348037405
+      },
+      "negative_signals": {
+        "total": 0.06,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.15
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/dispatch/dispatcher.py",
+      "node_id": 8,
+      "node_type": "FunctionDef",
+      "name": "_make_id",
+      "start_line": 7,
+      "end_line": 10,
+      "line_count": 4,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0984921082854271,
+        "structural": 0.0,
+        "combined": 0.053176205872672896,
+        "boosted": 0.053176205872672896
+      },
+      "negative_signals": {
+        "total": 0.12,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.2,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/dispatch/dispatcher.py",
+      "node_id": 328,
+      "node_type": "FunctionDef",
+      "name": "disconnect",
+      "start_line": 113,
+      "end_line": 147,
+      "line_count": 35,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0951082855463028,
+        "structural": 0.0,
+        "combined": 0.030236009873756013,
+        "boosted": 0.030236009873756013
+      },
+      "negative_signals": {
+        "total": 0.105,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.1,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/dispatch/dispatcher.py",
+      "node_id": 614,
+      "node_type": "FunctionDef",
+      "name": "_clear_dead_receivers",
+      "start_line": 214,
+      "end_line": 221,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.00821917808219178,
+        "boosted": -0.00821917808219178
+      },
+      "negative_signals": {
+        "total": 0.0,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/dispatch/dispatcher.py",
+      "node_id": 876,
+      "node_type": "FunctionDef",
+      "name": "receiver",
+      "start_line": 272,
+      "end_line": 292,
+      "line_count": 21,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.04963912069797516,
+        "structural": 0.0,
+        "combined": -0.0357963537808267,
+        "boosted": -0.0357963537808267
+      },
+      "negative_signals": {
+        "total": 0.10357142857142856,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.25,
+        "safe_patterns": 0.07142857142857142
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/dispatch/dispatcher.py",
+      "node_id": 668,
+      "node_type": "FunctionDef",
+      "name": "_live_receivers",
+      "start_line": 223,
+      "end_line": 260,
+      "line_count": 38,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.10772296786308289,
+        "structural": 0.0,
+        "combined": -0.037245016894756476,
+        "boosted": -0.037245016894756476
+      },
+      "negative_signals": {
+        "total": 0.19210526315789472,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.3,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.10526315789473685
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/dispatch/dispatcher.py",
+      "node_id": 54,
+      "node_type": "ClassDef",
+      "name": "Signal",
+      "start_line": 19,
+      "end_line": 269,
+      "line_count": 251,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.34787671232876716,
+        "boosted": -0.34787671232876716
+      },
+      "negative_signals": {
+        "total": 0.09000000000000001,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.30000000000000004,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/dispatch/dispatcher.py",
+      "node_id": 57,
+      "node_type": "FunctionDef",
+      "name": "__init__",
+      "start_line": 28,
+      "end_line": 47,
+      "line_count": 20,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.11735579371452332,
+        "structural": 0.0,
+        "combined": -0.5293075165193376,
+        "boosted": -0.5293075165193376
+      },
+      "negative_signals": {
+        "total": 0.7200000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.0,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.2,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/dispatch/dispatcher.py",
+      "node_id": 865,
+      "node_type": "FunctionDef",
+      "name": "_remove_receiver",
+      "start_line": 262,
+      "end_line": 269,
+      "line_count": 8,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -0.5482191780821918,
+        "boosted": -0.5482191780821918
+      },
+      "negative_signals": {
+        "total": 0.54,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.0,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.0
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    },
+    {
+      "task_id": "django__django-11133",
+      "file_path": "/opt/SWE-bench/testbed/django__django/setup_django__django__3.0/django/dispatch/dispatcher.py",
+      "node_id": 445,
+      "node_type": "FunctionDef",
+      "name": "has_listeners",
+      "start_line": 149,
+      "end_line": 150,
+      "line_count": 2,
+      "signals": {
+        "sbfl": 0.0,
+        "trace": 0.0,
+        "slice": 0.0,
+        "semantic": 0.0,
+        "structural": 0.0,
+        "combined": -1.2020547945205482,
+        "boosted": -1.2020547945205482
+      },
+      "negative_signals": {
+        "total": 1.2000000000000002,
+        "pass_only_execution": 0.0,
+        "is_boilerplate": 0.8,
+        "too_simple": 0.9,
+        "too_complex": 0.0,
+        "in_except_handler": 0.0,
+        "is_test_debug": 0.0,
+        "docstring_quality": 0.0,
+        "safe_patterns": 0.05
+      },
+      "ground_truth": {
+        "is_buggy": false,
+        "method_match": false,
+        "lines_in_patch": [],
+        "num_buggy_lines": 0
+      },
+      "file_rank": 4,
+      "is_gt_file": false,
+      "file_score": 0.0
+    }
+  ]
+}

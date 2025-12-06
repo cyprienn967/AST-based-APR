@@ -1,0 +1,19 @@
+{
+  "files": [
+    "xarray/core/groupby.py"
+  ],
+  "lines": {
+    "xarray/core/groupby.py": [
+      436,
+      437,
+      438,
+      439,
+      440,
+      441,
+      442
+    ]
+  },
+  "methods": [
+    "__iter__"
+  ]
+}
