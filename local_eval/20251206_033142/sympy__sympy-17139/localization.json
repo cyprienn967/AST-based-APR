@@ -1,9 +1,0 @@
-{
-  "predicted_file": "/opt/SWE-bench/testbed/sympy__sympy/setup_sympy__sympy__1.5/sympy/core/expr.py",
-  "predicted_methods": [],
-  "localized_node_ids": [],
-  "localized_lines": [],
-  "file_correct": false,
-  "method_recall": 0.0,
-  "node_line_recall": 0.0
-}
